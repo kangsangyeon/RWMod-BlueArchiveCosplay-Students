@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- begin Race_BACharacter -->
+    <AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+        <defName>Race_BACharacter</defName>
+        <label>BACharacter</label>
+
+        <!-- begin alienRace -->
+        <alienRace>
+
+            <!-- begin graphic paths -->
+            <!-- reference: https://github.com/erdelf/AlienRaces/wiki/Graphic-Paths -->
+            <graphicPaths>
+                <!-- body는 part generator에서 정의합니다. -->
+                <!-- <body></body> -->
+                
+                <head>Pawn/Arona/Face</head>
+
+                <!-- CutoutComplex 로 대체해보기 -->
+                <skinShader>CutoutSkin</skinShader>
+                <skinColor>(1,1,1,1)</skinColor>
+            </graphicPaths>
+            <!-- end graphic paths -->
+
+            <!-- begin general settings -->
+            <generalSettings>
+                <maleGenderProbability>0.00000000001</maleGenderProbability>
+                <immuneToAge>false</immuneToAge>
+                <additionalTraits>0</additionalTraits>
+                <immuneToXenophobia>true</immuneToXenophobia>
+
+                <alienPartGenerator>
+                    <atlasScale>4</atlasScale>
+                    <borderScale>1</borderScale>
+                    <headOffset>(-0.1, 0.0)</headOffset>
+                    <customDrawSize>(1, 1)</customDrawSize>
+                    <customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
+                    <!-- <headBodyPartDef>PNHead</headBodyPartDef> -->
+
+                    <!-- begin headTypes -->
+                    <headTypes Inherit="False">
+                        <li>Female_AverageNormal</li>
+                    </headTypes>
+                    <!-- end headTypes -->
+
+                    <!-- begin bodyTypes -->
+                    <bodyTypes>
+                        <li>Female</li>
+                    </bodyTypes>
+                    <!-- end bodyTypes -->
+
+                    <!-- 색상 관련 -->
+                    <colorChannels>
+                        <li>
+                            <name>CC_Skin</name>
+                            <first Class="ColorGenerator_Options">
+                                <options>
+                                    <li>
+                                        <weight>10</weight>
+                                        <only>(255,255,255)</only>
+                                    </li>
+                                </options>
+                            </first>
+                        </li>
+                        <li>
+                            <name>CC_Hair</name>
+                            <first Class="ColorGenerator_Options">
+                                <options>
+                                    <li>
+                                        <weight>10</weight>
+                                        <only>(255,255,255)</only>
+                                    </li>
+                                </options>
+                            </first>
+                        </li>
+                    </colorChannels>
+
+                    <!-- begin body addons -->
+                    <bodyAddons>
+
+                        <!-- begin body addon head -->
+                        <li>
+                            <!-- <bodyPart>BAHead</bodyPart> -->
+                            <path>Pawn/Arona/Hair</path>
+                            <drawSize>1</drawSize>
+                            <shaderType>CutoutComplex</shaderType>
+                            <inFrontOfBody>false</inFrontOfBody>
+                            <colorChannel>CC_Hair</colorChannel>
+                            <drawnInBed>true</drawnInBed>
+                            <drawnDesiccated>true</drawnDesiccated>
+                            <alignWithHead>true</alignWithHead>
+                            <offsets>
+                                <north>
+                                    <layerOffset>-0.275</layerOffset>
+                                    <bodyTypes>
+                                        <Female>(0,0)</Female>
+                                    </bodyTypes>
+                                </north>
+                                <south>
+                                    <layerOffset>-0.326</layerOffset>
+                                    <bodyTypes>
+                                        <Female>(0,0)</Female>
+                                    </bodyTypes>
+                                </south>
+                                <east>
+                                    <layerOffset>-0.326</layerOffset>
+                                    <bodyTypes>
+                                        <Female>(0,0)</Female>
+                                    </bodyTypes>
+                                </east>
+                            </offsets>
+                            <hiddenUnderApparelTag>
+                                <li MayRequire="Ludeon.RimWorld.Ideology">PN_Burka</li>
+                            </hiddenUnderApparelTag>
+                        </li>
+                        <!-- end body addon head -->
+
+                    </bodyAddons>
+                    <!-- end body addons -->
+
+                </alienPartGenerator>
+            </generalSettings>
+            <!-- end general settings -->
+
+            <!-- begin styleSettings -->
+            <styleSettings>
+                <li>
+                    <key>HairDef</key>
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+            </styleSettings>
+            <!-- end styleSettings -->
+
+        </alienRace>
+        <!-- end alienRace -->
+
+    </AlienRace.ThingDef_AlienRace>
+    <!-- end Race_BlueArchiveCosplayCharacter -->
+
+</Defs>
