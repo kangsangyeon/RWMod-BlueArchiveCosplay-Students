@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- begin BA_HairDef_Arona -->
+    <HairDef>
+        <defName>BA_HairDef_Arona</defName>
+        <label>BA Arona Hair</label>
+        <styleGender>Female</styleGender>
+        <texPath>Pawn/Arona/Hair</texPath>
+    </HairDef>
+
+</Defs>
