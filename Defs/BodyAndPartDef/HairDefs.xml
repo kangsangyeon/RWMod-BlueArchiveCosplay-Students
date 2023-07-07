@@ -8,5 +8,6 @@
         <styleGender>Female</styleGender>
         <texPath>Pawn/Arona/Hair</texPath>
     </HairDef>
+    <!-- end BA_HairDef_Arona -->
 
 </Defs>

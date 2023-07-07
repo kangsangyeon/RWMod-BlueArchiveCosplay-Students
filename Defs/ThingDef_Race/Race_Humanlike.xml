@@ -12,10 +12,8 @@
             <!-- begin graphic paths -->
             <!-- reference: https://github.com/erdelf/AlienRaces/wiki/Graphic-Paths -->
             <graphicPaths>
-                <!-- body는 part generator에서 정의합니다. -->
                 <!-- <body></body> -->
-
-                <head>Pawn/Arona/Face</head>
+                <!-- <head>Pawn/Arona/Face</head> -->
             </graphicPaths>
             <!-- end graphic paths -->
 
@@ -35,11 +33,10 @@
                     <headOffset>(-0.1, 0.0)</headOffset>
                     <customDrawSize>(1, 1)</customDrawSize>
                     <customPortraitDrawSize>(1, 1)</customPortraitDrawSize>
-                    <!-- <headBodyPartDef>PNHead</headBodyPartDef> -->
 
                     <!-- begin headTypes -->
                     <headTypes Inherit="False">
-                        <li>Female_AverageNormal</li>
+                        <li>BA_HeadTypeDef_Arona</li>
                     </headTypes>
                     <!-- end headTypes -->
 
@@ -67,6 +64,6 @@
         <!-- end alienRace -->
 
     </AlienRace.ThingDef_AlienRace>
-    <!-- end Race_BlueArchiveCosplayCharacter -->
+    <!-- end Race_BACharacter -->
 
 </Defs>
