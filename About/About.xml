@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>BlueArchive Cosplay - Race</name>
-	<packageId>bluearchive.race</packageId>
+	<name>BlueArchive Cosplay - Students</name>
+	<packageId>bluearchive.students</packageId>
 	<author>WIP</author>
 
 	<supportedVersions>
@@ -9,7 +9,7 @@
 	</supportedVersions>
 
 	<description>
-		BlueArchive Cosplay - Race
+		BlueArchive Cosplay - Students
 	</description>
 
 	<modDependencies>
