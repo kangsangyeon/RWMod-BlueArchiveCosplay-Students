@@ -16,8 +16,10 @@ namespace BlueArchiveStudents
             if (_map != null && RCellFinder.TryFindRandomPawnEntryCell(out result, _map, 0.2f))
             {
                 generatingPawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist, Faction.OfPlayer);
-
                 _pawnKindDef.Fill(generatingPawn);
+
+                if (_pawnKindDef.apparels != null)
+                    GenerateAndWearApparel(_pawnKindDef, generatingPawn);
 
                 Thing weapon = null;
                 if (_pawnKindDef.weaponDef != null)
@@ -42,6 +44,16 @@ namespace BlueArchiveStudents
             _weapon.GetComp<CompBiocodable>().CodeFor(_pawn);
             _pawn.equipment.AddEquipment(_weapon);
             return _weapon;
+        }
+
+        private void GenerateAndWearApparel(PawnKindTemplateDef _pawnKindDef, Pawn _pawn)
+        {
+            foreach (ThingDef _apparel in _pawnKindDef.apparels)
+            {
+                Apparel _newApparel = ThingMaker.MakeThing(_apparel) as Apparel;
+                _newApparel.GetComp<CompBiocodable>()?.CodeFor(_pawn);
+                _pawn.apparel.Wear(_newApparel);
+            }
         }
     }
 }
