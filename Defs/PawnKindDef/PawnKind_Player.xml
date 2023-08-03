@@ -2,8 +2,28 @@
 <Defs>
 
 	<!-- begin BA_Base -->
-	<PawnKindDef Abstract="True" Name="PawnKind_BA_Base">
-		<race>Race_BACharacter</race>
+	<PawnKindDef Abstract="True" Name="BA_PawnKind_Base">
+		<race>BA_Race_ARBase</race>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+
+		<!-- begin xenotypeSet -->
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
+				<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
+				<Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
+				<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0</Sanguophage>
+				<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
+				<Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0</Impid>
+				<Waster MayRequire="Ludeon.RimWorld.Biotech">0</Waster>
+				<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
+				<Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+			</xenotypeChances>
+		</xenotypeSet>
+		<!-- end xenotypeSet -->
+
 		<combatPower>30</combatPower>
 		<isFighter>false</isFighter>
 		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
@@ -18,7 +38,6 @@
 		<apparelTags>
 			<!-- <li>PN_Apparel</li> -->
 		</apparelTags>
-		<!-- <defaultFactionType>Paniel_PlayerFaction</defaultFactionType> -->
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
 		<minGenerationAge>20</minGenerationAge>
 		<maxGenerationAge>23</maxGenerationAge>
@@ -30,11 +49,11 @@
 	<!-- end BA_Base -->
 
 	<!-- begin BA_Arona -->
-	<PawnKindDef ParentName="PawnKind_BA_Base">
+	<PawnKindDef ParentName="BA_PawnKind_Base">
 		<defName>BA_Arona</defName>
 		<label>BA Arona</label>
-		<!-- <fixedGender>Female</fixedGender> -->
-		<forcedHair>BA_HairDef_Arona</forcedHair>
+		<fixedGender>Female</fixedGender>
+		<!-- <forcedHair>BA_HairDef_Arona</forcedHair> -->
 		<forcedHairColor>(1,1,1,1)</forcedHairColor>
 		<skinColorOverride>(1,1,1,1)</skinColorOverride>
 	</PawnKindDef>

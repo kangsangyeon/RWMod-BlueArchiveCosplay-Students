@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- begin BA_HeadTypeDef_Arona -->
+    <!-- begin BA_HeadTypeDef_Base -->
     <HeadTypeDef ParentName="AverageBase">
-        <defName>BA_HeadTypeDef_Arona</defName>
-        <graphicPath>Pawn/Arona/Face</graphicPath>
+        <defName>BA_HeadTypeDef_Base</defName>
+        <graphicPath>BA/Pawn/Head/Head</graphicPath>
         <gender>Female</gender>
     </HeadTypeDef>
-    <!-- end BA_HeadTypeDef_Arona -->
+    <!-- end BA_HeadTypeDef_Base -->
 
 </Defs>

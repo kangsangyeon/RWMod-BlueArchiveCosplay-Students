@@ -6,7 +6,7 @@
         <defName>BA_HairDef_Arona</defName>
         <label>BA Arona Hair</label>
         <styleGender>Female</styleGender>
-        <texPath>Pawn/Arona/Hair</texPath>
+        <texPath>BA/Pawn/Arona/Hair</texPath>
     </HairDef>
     <!-- end BA_HairDef_Arona -->
 
