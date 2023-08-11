@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Humanoid Alien Races</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+
+                <!-- begin A컵 바디 추가 -->
+                <li Class="PatchOperationTest">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes[li="BABodyBase_ACup"]</xpath>
+                    <success>Invert</success>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes</xpath>
+                    <value>
+                        <li>BABodyBase_ACup</li>
+                    </value>
+                </li>
+                <!-- end A컵 바디 추가 -->
+
+                <!-- begin F컵 바디 추가 -->
+                <li Class="PatchOperationTest">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes[li="BABodyBase_FCup"]</xpath>
+                    <success>Invert</success>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes</xpath>
+                    <value>
+                        <li>BABodyBase_FCup</li>
+                    </value>
+                </li>
+                <!-- end F컵 바디 추가 -->
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
