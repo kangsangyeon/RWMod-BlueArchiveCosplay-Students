@@ -235,8 +235,8 @@
                         <west>(0.10, 0.06)</west>
                     </headOffsetDirectional>
                     <customDrawSize>(1.0, 1.0)</customDrawSize>
-                    <customHeadDrawSize>(0.70, 0.70)</customHeadDrawSize>
                     <customPortraitDrawSize>(1.0, 1.0)</customPortraitDrawSize>
+                    <customHeadDrawSize>(0.70, 0.70)</customHeadDrawSize>
                     <customPortraitHeadDrawSize>(0.70, 0.70)</customPortraitHeadDrawSize>
 
                     <!-- begin headTypes -->
