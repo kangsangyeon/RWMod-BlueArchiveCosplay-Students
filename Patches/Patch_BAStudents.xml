@@ -8,33 +8,126 @@
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
+            <!-- Type_Normal -->
 
                 <!-- begin A컵 바디 추가 -->
                 <li Class="PatchOperationTest">
                     <xpath>
-                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes[li="BABodyBase_ACup"]</xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes[li="BABodyBase_Normal_ACup"]</xpath>
                     <success>Invert</success>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>
                         /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes</xpath>
                     <value>
-                        <li>BABodyBase_ACup</li>
+                        <li>BABodyBase_Normal_ACup</li>
                     </value>
                 </li>
                 <!-- end A컵 바디 추가 -->
 
-                <!-- begin F컵 바디 추가 -->
+                <!-- begin C컵 바디 추가 -->
                 <li Class="PatchOperationTest">
                     <xpath>
-                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes[li="BABodyBase_FCup"]</xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes[li="BABodyBase_Normal_CCup"]</xpath>
                     <success>Invert</success>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>
                         /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes</xpath>
                     <value>
-                        <li>BABodyBase_FCup</li>
+                        <li>BABodyBase_Normal_CCup</li>
+                    </value>
+                </li>
+                <!-- end C컵 바디 추가 -->
+
+                <!-- begin C컵 바디 추가 -->
+                <li Class="PatchOperationTest">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes[li="BABodyBase_Normal_DCup"]</xpath>
+                    <success>Invert</success>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes</xpath>
+                    <value>
+                        <li>BABodyBase_Normal_DCup</li>
+                    </value>
+                </li>
+                <!-- end C컵 바디 추가 -->
+
+                <!-- begin F컵 바디 추가 -->
+                <li Class="PatchOperationTest">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes[li="BABodyBase_Normal_FCup"]</xpath>
+                    <success>Invert</success>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes</xpath>
+                    <value>
+                        <li>BABodyBase_Normal_FCup</li>
+                    </value>
+                </li>
+                <!-- end F컵 바디 추가 -->
+
+            <!-- Type_Thin -->
+            
+                <!-- begin A컵 바디 추가 -->
+                <li Class="PatchOperationTest">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes[li="BABodyBase_Thin_ACup"]</xpath>
+                    <success>Invert</success>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes</xpath>
+                    <value>
+                        <li>BABodyBase_Thin_ACup</li>
+                    </value>
+                </li>
+                <!-- end A컵 바디 추가 -->
+
+                <!-- begin C컵 바디 추가 -->
+                <li Class="PatchOperationTest">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes[li="BABodyBase_Thin_CCup"]</xpath>
+                    <success>Invert</success>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes</xpath>
+                    <value>
+                        <li>BABodyBase_Thin_CCup</li>
+                    </value>
+                </li>
+                <!-- end C컵 바디 추가 -->
+
+                <!-- begin C컵 바디 추가 -->
+                <li Class="PatchOperationTest">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes[li="BABodyBase_Thin_DCup"]</xpath>
+                    <success>Invert</success>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes</xpath>
+                    <value>
+                        <li>BABodyBase_Thin_DCup</li>
+                    </value>
+                </li>
+                <!-- end C컵 바디 추가 -->
+
+                <!-- begin F컵 바디 추가 -->
+                <li Class="PatchOperationTest">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes[li="BABodyBase_Thin_FCup"]</xpath>
+                    <success>Invert</success>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>
+                        /Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/bodyTypes</xpath>
+                    <value>
+                        <li>BABodyBase_Thin_FCup</li>
                     </value>
                 </li>
                 <!-- end F컵 바디 추가 -->

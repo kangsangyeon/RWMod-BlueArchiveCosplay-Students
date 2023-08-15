@@ -247,7 +247,7 @@
 
                     <!-- begin bodyTypes -->
                     <bodyTypes Inherit="False">
-                        <li>BABodyBase_FCup</li>
+                        <li>BABodyBase_Thin_CCup</li>
                     </bodyTypes>
                     <!-- end bodyTypes -->
 
@@ -281,6 +281,7 @@
         <!-- end alienRace -->
 
     </AlienRace.ThingDef_AlienRace>
+    
     <!-- end Race_BACharacter -->
 
 </Defs>
