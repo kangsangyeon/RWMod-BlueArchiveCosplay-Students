@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+        <defName>BAApparel</defName>
+        <label>BA Apparel</label>
+        <parent>Apparel</parent>
+    </ThingCategoryDef>
+
+    <ThingDef Abstract="True" Name="BA_ApparelBase" ParentName="ApparelMakeableBase">
+        <techLevel>Medieval</techLevel>
+        <apparel>
+            <tags>
+                <li>BA_Apparel</li>
+            </tags>
+        </apparel>
+        <thingCategories Inherit="False">
+            <li>BAApparel</li>
+        </thingCategories>
+    </ThingDef>
+
+    <ThingDef ParentName="BA_ApparelBase">
+        <defName>BA_MakotoApparel</defName>
+        <label>BA Makoto Apparel</label>
+        <description>this is a makoto apparel.</description>
+        <graphicData>
+            <texPath>BA/Apparel/Makoto_1</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+        </graphicData>
+
+        <statBases>
+            <MaxHitPoints>200</MaxHitPoints>
+            <WorkToMake>37000</WorkToMake>
+            <Mass>0.5</Mass>
+            <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.60</ArmorRating_Heat>
+            <Insulation_Cold>65</Insulation_Cold>
+            <Insulation_Heat>47.5</Insulation_Heat>
+            <EquipDelay>3</EquipDelay>
+        </statBases>
+
+        <equippedStatOffsets>
+            <MoveSpeed>0.2</MoveSpeed>
+            <SocialImpact>0.1</SocialImpact>
+        </equippedStatOffsets>
+
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>BA/Apparel/Makoto</wornGraphicPath>
+            <layers>
+                <li>OnSkin</li>
+            </layers>
+        </apparel>
+
+        <recipeMaker>
+            <researchPrerequisite>MultiAnalyzer</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>TableMachining</li>
+            </recipeUsers>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+        </recipeMaker>
+
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>100</weight>
+                    <only>(1,1,1)</only>
+                </li>
+            </options>
+        </colorGenerator>
+
+    </ThingDef>
+
+</Defs>
