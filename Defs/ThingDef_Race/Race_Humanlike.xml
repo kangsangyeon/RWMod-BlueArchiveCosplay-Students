@@ -25,9 +25,8 @@
             <PainShockThreshold>0.75</PainShockThreshold>
             <ComfyTemperatureMin>18</ComfyTemperatureMin>
             <ComfyTemperatureMax>31</ComfyTemperatureMax>
-            <ToxicResistance>-1</ToxicResistance><!-- 직접 독성민감도 -->
-            <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">-1</ToxicEnvironmentResistance><!--
-          환경 독성민감도 -->
+            <ToxicResistance>-1</ToxicResistance>            <!-- 직접 독성민감도 -->
+            <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">-1</ToxicEnvironmentResistance>            <!-- 환경 독성민감도 -->
             <!--스펙설정(전투)-->
             <MoveSpeed>4.5</MoveSpeed>
             <AimingDelayFactor>0.8</AimingDelayFactor>
@@ -145,12 +144,12 @@
                     <li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
                     <li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
                     <li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
-                    <li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13
-                    years to
-              avoid spawning pawns who are very close to becoming adults -->
+                    <li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>
+                    <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->
                     <li MayRequire="Ludeon.RimWorld.Biotech">(12.51,0)</li>
                     <li MayRequire="Ludeon.RimWorld.Biotech">(13,0)</li>
-                    <li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li><!-- End exclude -->
+                    <!-- End exclude -->
+                    <li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li>
                     <li MayRequire="Ludeon.RimWorld.Biotech">(13.999,130)</li>
                     <li>(14,0)</li>
                     <li MayRequire="Ludeon.RimWorld.Biotech">(14.001,130)</li>
@@ -198,8 +197,7 @@
     </ThingDef>
 
     <!-- begin Race_BACharacter -->
-    <AlienRace.ThingDef_AlienRace Name="BA_Race_ARBase"
-        ParentName="BA_Race_VanillaBase">
+    <AlienRace.ThingDef_AlienRace Name="BA_Race_ARBase" ParentName="BA_Race_VanillaBase">
         <defName>BA_Race_ARBase</defName>
         <label>BlueArchive Student</label>
 
@@ -247,7 +245,14 @@
 
                     <!-- begin bodyTypes -->
                     <bodyTypes Inherit="False">
+                        <li>BABodyBase_Normal_ACup</li>
+                        <li>BABodyBase_Normal_CCup</li>
+                        <li>BABodyBase_Normal_DCup</li>
+                        <li>BABodyBase_Normal_FCup</li>
+                        <li>BABodyBase_Thin_ACup</li>
                         <li>BABodyBase_Thin_CCup</li>
+                        <li>BABodyBase_Thin_DCup</li>
+                        <li>BABodyBase_Thin_FCup</li>
                     </bodyTypes>
                     <!-- end bodyTypes -->
 
@@ -281,7 +286,7 @@
         <!-- end alienRace -->
 
     </AlienRace.ThingDef_AlienRace>
-    
+
     <!-- end Race_BACharacter -->
 
 </Defs>
