@@ -258,6 +258,55 @@
 
                     <!-- begin body addons -->
                     <bodyAddons>
+
+                        <!-- hair back layer -->
+                        <li>
+                            <path>BA/Empty</path>
+                            <bodyPart>Head</bodyPart>
+                            <hediffGraphics>
+                                <BA_PawnHediff_Arona>BA/Pawn/Arona/Test</BA_PawnHediff_Arona>
+                            </hediffGraphics>
+                            <inFrontOfBody>true</inFrontOfBody>
+                            <colorChannel>base</colorChannel>
+                            <drawSize>1</drawSize>
+                            <angle>0</angle>
+                            <defaultOffset>Tail</defaultOffset>
+                            <shaderType>Cutout</shaderType>
+                            <offsets>
+                                <south>
+                                    <bodyTypes>
+                                        <Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+                                    </bodyTypes>
+                                    <offset>(-0.42,0.56)</offset>
+                                    <layerOffset>-0.7</layerOffset>
+                                </south>
+
+                                <north>
+                                    <bodyTypes>
+                                        <Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+                                    </bodyTypes>
+                                    <offset>(0,0.55)</offset>
+                                    <layerOffset>-0.7</layerOffset>
+                                </north>
+
+                                <east>
+                                    <bodyTypes>
+                                        <Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+                                    </bodyTypes>
+                                    <offset>(-0.42,0.53)</offset>
+                                    <layerOffset>-0.7</layerOffset>
+                                </east>
+
+                                <west>
+                                    <bodyTypes>
+                                        <Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
+                                    </bodyTypes>
+                                    <offset>(-0.42,0.53)</offset>
+                                    <layerOffset>-0.7</layerOffset>
+                                </west>
+                            </offsets>
+                        </li>
+
                     </bodyAddons>
                     <!-- end body addons -->
 

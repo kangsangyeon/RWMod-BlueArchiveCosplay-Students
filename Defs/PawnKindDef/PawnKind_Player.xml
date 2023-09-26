@@ -48,15 +48,4 @@
 	</PawnKindDef>
 	<!-- end BA_Base -->
 
-	<!-- begin BA_Arona -->
-	<PawnKindDef ParentName="BA_PawnKind_Base">
-		<defName>BA_Arona</defName>
-		<label>BA Arona</label>
-		<fixedGender>Female</fixedGender>
-		<!-- <forcedHair>BA_HairDef_Arona</forcedHair> -->
-		<forcedHairColor>(1,1,1,1)</forcedHairColor>
-		<skinColorOverride>(1,1,1,1)</skinColorOverride>
-	</PawnKindDef>
-	<!-- end BA_Arona -->
-
 </Defs>
