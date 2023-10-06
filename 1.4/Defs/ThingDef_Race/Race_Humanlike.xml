@@ -227,15 +227,15 @@
                     <borderScale>1</borderScale>
                     <!-- <headOffset>(0.0, 0.07)</headOffset> -->
                     <headOffsetDirectional>
-                        <north>(0, 0.07)</north>
-                        <south>(0, 0.07)</south>
-                        <east>(-0.10, 0.06)</east>
-                        <west>(0.10, 0.06)</west>
+                        <north>(0, -0.18)</north>
+                        <south>(0, -0.18)</south>
+                        <east>(-0.130, -0.18)</east>
+                        <west>(0.115, -0.18)</west>
                     </headOffsetDirectional>
-                    <customDrawSize>(1.0, 1.0)</customDrawSize>
-                    <customPortraitDrawSize>(1.0, 1.0)</customPortraitDrawSize>
-                    <customHeadDrawSize>(0.70, 0.70)</customHeadDrawSize>
-                    <customPortraitHeadDrawSize>(0.70, 0.70)</customPortraitHeadDrawSize>
+                    <customDrawSize>(1.2, 1.2)</customDrawSize>
+                    <customPortraitDrawSize>(1.2, 1.2)</customPortraitDrawSize>
+                    <customHeadDrawSize>(0.96, 0.96)</customHeadDrawSize>
+                    <customPortraitHeadDrawSize>(0.96, 0.96)</customPortraitHeadDrawSize>
 
                     <!-- begin headTypes -->
                     <headTypes Inherit="False">
