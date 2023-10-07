@@ -26,7 +26,7 @@
         <title>Makoto</title>
         <titleShort>Makoto</titleShort>
         <baseDesc>Makoto</baseDesc>
-        <bodyTypeFemale>BABodyBase_Normal_ACup</bodyTypeFemale>
+        <bodyTypeFemale>BABodyBase_Normal_CCup</bodyTypeFemale>
         <disallowedTraits>
             <Pyromaniac>0</Pyromaniac>
         </disallowedTraits>

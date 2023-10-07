@@ -20,6 +20,57 @@
         </thingCategories>
     </ThingDef>
 
+    <!-- Headgear -->
+
+   <ThingDef ParentName="HatMakeableBase">
+        <defName>BA_Makoto_headgear</defName>
+        <label>BA Makoto headgear</label>
+        <description>Makoto headgear</description>
+        <graphicData>
+            <texPath>BA/Makoto/Apparel/makoto_gear_1</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <WorkToMake>5000</WorkToMake>
+            <Mass>0.15</Mass>
+            <MaxHitPoints>250</MaxHitPoints>
+            <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.50</ArmorRating_Heat>
+            <Insulation_Cold>10</Insulation_Cold> 
+            <Insulation_Heat>10</Insulation_Heat>
+            <Beauty>5</Beauty> 
+            <EquipDelay>0.5</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <SocialImpact>0.2</SocialImpact>
+            <PsychicSensitivity>-0.2</PsychicSensitivity>
+        </equippedStatOffsets>
+        <costList>
+            <Cloth>100</Cloth>
+            <DevilstrandCloth>50</DevilstrandCloth>
+        </costList>
+        <generateCommonality>0</generateCommonality>
+        <apparel>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <wornGraphicPath>BA/Makoto/Apparel/makoto_gear</wornGraphicPath>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>RGBA(1,1,1,1)</only>
+                </li>
+            </options>
+        </colorGenerator>
+    </ThingDef>
+
+
     <ThingDef ParentName="BA_ApparelBase">
         <defName>BA_MakotoApparel</defName>
         <label>BA Makoto Apparel</label>
