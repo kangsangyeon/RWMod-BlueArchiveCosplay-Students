@@ -230,7 +230,7 @@
                         <north>(0, -0.18)</north>
                         <south>(0, -0.18)</south>
                         <east>(-0.130, -0.18)</east>
-                        <west>(0.115, -0.18)</west>
+                        <west>(0.130, -0.18)</west>
                     </headOffsetDirectional>
                     <customDrawSize>(1.2, 1.2)</customDrawSize>
                     <customPortraitDrawSize>(1.2, 1.2)</customPortraitDrawSize>
@@ -264,46 +264,60 @@
                             <path>BA/Empty</path>
                             <bodyPart>Head</bodyPart>
                             <hediffGraphics>
-                                <BA_PawnHediff_Arona>BA/Pawn/Arona/Test</BA_PawnHediff_Arona>
+                                <BA_PawnHediff_Makoto>BA/Makoto/makoto_hairback</BA_PawnHediff_Makoto>
                             </hediffGraphics>
                             <inFrontOfBody>true</inFrontOfBody>
                             <colorChannel>base</colorChannel>
                             <drawSize>1</drawSize>
                             <angle>0</angle>
-                            <defaultOffset>Tail</defaultOffset>
+                            <defaultOffset>Head</defaultOffset>
                             <shaderType>Cutout</shaderType>
                             <offsets>
                                 <south>
-                                    <bodyTypes>
-                                        <Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
-                                    </bodyTypes>
-                                    <offset>(-0.42,0.56)</offset>
+                                    <offset>(0,-0.37)</offset>
                                     <layerOffset>-0.7</layerOffset>
                                 </south>
-
-                                <north>
-                                    <bodyTypes>
-                                        <Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
-                                    </bodyTypes>
-                                    <offset>(0,0.55)</offset>
-                                    <layerOffset>-0.7</layerOffset>
-                                </north>
-
                                 <east>
-                                    <bodyTypes>
-                                        <Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
-                                    </bodyTypes>
-                                    <offset>(-0.42,0.53)</offset>
+                                    <offset>(0.09,-0.37)</offset>
                                     <layerOffset>-0.7</layerOffset>
                                 </east>
-
                                 <west>
-                                    <bodyTypes>
-                                        <Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
-                                    </bodyTypes>
-                                    <offset>(-0.42,0.53)</offset>
+                                    <offset>(0.09,-0.37)</offset>
                                     <layerOffset>-0.7</layerOffset>
                                 </west>
+                            </offsets>
+                        </li>
+
+                        <!-- horn layer -->
+                        <li>
+                            <path>BA/Empty</path>
+                            <bodyPart>Head</bodyPart>
+                            <hediffGraphics>
+                                <BA_PawnHediff_Makoto>BA/Makoto/makoto_horn</BA_PawnHediff_Makoto>
+                            </hediffGraphics>
+                            <inFrontOfBody>true</inFrontOfBody>
+                            <colorChannel>base</colorChannel>
+                            <drawSize>1</drawSize>
+                            <angle>0</angle>
+                            <defaultOffset>Head</defaultOffset>
+                            <shaderType>Cutout</shaderType>
+                            <offsets>
+                                <south>
+                                    <offset>(0,-0.37)</offset>
+                                    <layerOffset>1</layerOffset>
+                                </south>
+                                <east>
+                                    <offset>(0.09,-0.37)</offset>
+                                    <layerOffset>1</layerOffset>
+                                </east>
+                                <west>
+                                    <offset>(0.09,-0.37)</offset>
+                                    <layerOffset>1</layerOffset>
+                                </west>
+                                <north>
+                                    <offset>(0,-0.195)</offset>
+                                    <layerOffset>-1</layerOffset>
+                                </north>
                             </offsets>
                         </li>
 

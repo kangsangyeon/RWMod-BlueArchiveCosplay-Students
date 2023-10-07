@@ -25,7 +25,7 @@
         <label>BA Makoto Apparel</label>
         <description>this is a makoto apparel.</description>
         <graphicData>
-            <texPath>BA/Apparel/Makoto_1</texPath>
+            <texPath>BA/Makoto/Apparel/makoto_1</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1</drawSize>
         </graphicData>
@@ -55,7 +55,7 @@
                 <li>Arms</li>
                 <li>Legs</li>
             </bodyPartGroups>
-            <wornGraphicPath>BA/Apparel/Makoto</wornGraphicPath>
+            <wornGraphicPath>BA/Makoto/Apparel/makoto</wornGraphicPath>
             <layers>
                 <li>OnSkin</li>
             </layers>

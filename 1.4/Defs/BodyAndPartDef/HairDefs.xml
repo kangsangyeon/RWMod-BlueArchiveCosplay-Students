@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <!-- begin BA_HairDef_Arona -->
+    <!-- begin BA_HairDef_Makoto -->
     <HairDef>
-        <defName>BA_HairDef_Arona</defName>
-        <label>BA Arona Hair</label>
+        <defName>BA_HairDef_Makoto</defName>
+        <label>BA Makoto Hair</label>
         <styleGender>Female</styleGender>
-        <texPath>BA/Pawn/Arona/Hair</texPath>
+        <texPath>BA/Makoto/makoto_hair</texPath>
     </HairDef>
-    <!-- end BA_HairDef_Arona -->
+    <!-- end BA_HairDef_Makoto -->
 
 </Defs>
