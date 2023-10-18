@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System.Reflection;
+using RimWorld;
 using RimWorld.Planet;
 using Verse;
 
@@ -9,14 +10,13 @@ namespace BlueArchiveStudents
         public static bool currentlyGenerating = false;
         protected static Pawn generatingPawn;
 
-        public void Generate(PawnKindTemplateDef _pawnKindDef, Map _map)
+        public static void Generate(PawnKindTemplateDef _pawnKindDef, Map _map)
         {
             currentlyGenerating = true;
-            IntVec3 result;
-            if (_map != null && RCellFinder.TryFindRandomPawnEntryCell(out result, _map, 0.2f))
+            IntVec3 _spawnPosition;
+            if (_map != null)
             {
-                generatingPawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist, Faction.OfPlayer);
-                _pawnKindDef.Fill(generatingPawn);
+                generatingPawn = _pawnKindDef.Spawn();
 
                 if (_pawnKindDef.apparels != null)
                     GenerateAndWearApparel(_pawnKindDef, generatingPawn);
@@ -31,14 +31,21 @@ namespace BlueArchiveStudents
                     generatingPawn.genes.SetXenotype(XenotypeDefOf.Baseliner);
                 }
 
-                GenSpawn.Spawn(generatingPawn, result, _map);
-                CameraJumper.TryJump(new GlobalTargetInfo(result, _map));
+                _spawnPosition = Current.CameraDriver.MapPosition;
+
+                GenSpawn.Spawn(generatingPawn, _spawnPosition, _map);
+
+                var _methodInfo = typeof(DebugToolsSpawning).GetMethod("PostPawnSpawn",
+                    BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
+                _methodInfo.Invoke(null, new object[] { generatingPawn });
+
+                CameraJumper.TryJump(new GlobalTargetInfo(_spawnPosition, _map));
             }
 
             currentlyGenerating = false;
         }
 
-        private ThingWithComps GenerateAndEquipWeapon(PawnKindTemplateDef _pawnKindDef, Pawn _pawn)
+        private static ThingWithComps GenerateAndEquipWeapon(PawnKindTemplateDef _pawnKindDef, Pawn _pawn)
         {
             ThingWithComps _weapon = ThingMaker.MakeThing(_pawnKindDef.weaponDef) as ThingWithComps;
             _weapon.GetComp<CompBiocodable>().CodeFor(_pawn);
@@ -46,7 +53,7 @@ namespace BlueArchiveStudents
             return _weapon;
         }
 
-        private void GenerateAndWearApparel(PawnKindTemplateDef _pawnKindDef, Pawn _pawn)
+        private static void GenerateAndWearApparel(PawnKindTemplateDef _pawnKindDef, Pawn _pawn)
         {
             foreach (ThingDef _apparel in _pawnKindDef.apparels)
             {

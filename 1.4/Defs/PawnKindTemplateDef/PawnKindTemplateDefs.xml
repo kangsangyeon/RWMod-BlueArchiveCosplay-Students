@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <BlueArchiveStudents.PawnKindTemplateDef>
+        <defName>makoto_template</defName>
+        <firstName>makoto</firstName>
+        <lastName>lastname</lastName>
+        <nickname>nickname</nickname>
+        <!-- <age>12</age>
+        <realAge>1</realAge> -->
+        <isMale>false</isMale>
+        <childHood>BA_Backstory_Makoto_Childhood</childHood>
+        <bodyTypeDef>BABodyBase_Normal_CCup</bodyTypeDef>
+        <headTypeDef>BA_HeadTypeDef_Base</headTypeDef>
+        <hair>BA_HairDef_Makoto</hair>
+        <pawnKindDef>BA_Makoto</pawnKindDef>
+        <apparels>
+            <li>BA_MakotoApparel</li>
+            <li>BA_Makoto_headgear</li>
+        </apparels>
+    </BlueArchiveStudents.PawnKindTemplateDef>
+
+</Defs>
