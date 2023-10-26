@@ -77,48 +77,5 @@ namespace BlueArchiveStudents
         /// 이 타입의 pawn이 스폰될 때 기본적으로 장착될 의상 목록입니다.
         /// </summary>
         public List<ThingDef> apparels;
-
-        public Pawn Spawn()
-        {
-            if (pawnKindDef == null)
-            {
-                // pawnKindDef 속성을 설정하지 않은 경우, 기본적으로 Colonist로 스폰합니다.
-                pawnKindDef = PawnKindDefOf.Colonist;
-            }
-
-            Pawn _pawn = PawnGenerator.GeneratePawn(pawnKindDef, Faction.OfPlayer);
-            _pawn.Name = (Name)new NameTriple(this.firstName, this.nickname, this.lastName);
-            _pawn.needs.food.CurLevel = _pawn.needs.food.MaxLevel;
-            _pawn.gender = this.isMale ? Gender.Male : Gender.Female;
-            _pawn.story.Childhood = this.childHood ?? _pawn.story.Childhood;
-            _pawn.story.Adulthood = this.adultHood ?? _pawn.story.Adulthood;
-            _pawn.story.bodyType = this.bodyTypeDef ?? _pawn.story.bodyType;
-            _pawn.story.headType = this.headTypeDef ?? _pawn.story.headType;
-            _pawn.story.hairDef = this.hair ?? _pawn.story.hairDef;
-            _pawn.style.beardDef = this.beard ?? _pawn.style.beardDef;
-
-            // error 나이를 강제로 고치면 문제가 발생합니다.
-            // _pawn.ageTracker.AgeBiologicalTicks = (long)this.age * 3600000L; // 1000시간당 나이 + 1, 1시간은 3600초
-            // _pawn.ageTracker.AgeChronologicalTicks = (long)this.realAge * 3600000L;
-
-            if (overrideSkinColor)
-                _pawn.story.skinColorOverride = this.skinColor;
-
-            if (overrideHairColor)
-                _pawn.story.HairColor = this.hairColor;
-
-            _pawn.Notify_DisabledWorkTypesChanged();
-
-            if (bodyTypeDef != null)
-                Verse.Log.Message($"bodyTypeDefName: {bodyTypeDef.defName}");
-
-            if (headTypeDef != null)
-                Verse.Log.Message($"headTypeDefName: {headTypeDef.defName}");
-
-            if (hair != null)
-                Verse.Log.Message($"hairDefName: {hair.defName}");
-
-            return _pawn;
-        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Reflection;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -8,36 +9,21 @@ namespace BlueArchiveStudents
     public class PawnKindTemplateGenerator
     {
         public static bool currentlyGenerating = false;
-        protected static Pawn generatingPawn;
 
-        public static void Generate(PawnKindTemplateDef _pawnKindDef, Map _map)
+        public static void Generate(PawnKindTemplateDef _templateDef, Map _map)
         {
             currentlyGenerating = true;
-            IntVec3 _spawnPosition;
+
             if (_map != null)
             {
-                generatingPawn = _pawnKindDef.Spawn();
+                Pawn _generatingPawn = GenerateWithTemplate(_templateDef);
 
-                if (_pawnKindDef.apparels != null)
-                    GenerateAndWearApparel(_pawnKindDef, generatingPawn);
-
-                Thing weapon = null;
-                if (_pawnKindDef.weaponDef != null)
-                    weapon = GenerateAndEquipWeapon(_pawnKindDef, generatingPawn);
-
-                if (ModLister.BiotechInstalled)
-                {
-                    generatingPawn.genes = new Pawn_GeneTracker(generatingPawn);
-                    generatingPawn.genes.SetXenotype(XenotypeDefOf.Baseliner);
-                }
-
-                _spawnPosition = Current.CameraDriver.MapPosition;
-
-                GenSpawn.Spawn(generatingPawn, _spawnPosition, _map);
+                IntVec3 _spawnPosition = Current.CameraDriver.MapPosition;
+                GenSpawn.Spawn(_generatingPawn, _spawnPosition, _map);
 
                 var _methodInfo = typeof(DebugToolsSpawning).GetMethod("PostPawnSpawn",
                     BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
-                _methodInfo.Invoke(null, new object[] { generatingPawn });
+                _methodInfo.Invoke(null, new object[] { _generatingPawn });
 
                 CameraJumper.TryJump(new GlobalTargetInfo(_spawnPosition, _map));
             }
@@ -45,22 +31,69 @@ namespace BlueArchiveStudents
             currentlyGenerating = false;
         }
 
-        private static ThingWithComps GenerateAndEquipWeapon(PawnKindTemplateDef _pawnKindDef, Pawn _pawn)
+        private static void GenerateAndEquipWeapon(ThingDef _weaponDef, Pawn _pawn)
         {
-            ThingWithComps _weapon = ThingMaker.MakeThing(_pawnKindDef.weaponDef) as ThingWithComps;
-            _weapon.GetComp<CompBiocodable>().CodeFor(_pawn);
+            ThingWithComps _weapon = ThingMaker.MakeThing(_weaponDef) as ThingWithComps;
+            _weapon.GetComp<CompBiocodable>()?.CodeFor(_pawn);
             _pawn.equipment.AddEquipment(_weapon);
-            return _weapon;
         }
 
-        private static void GenerateAndWearApparel(PawnKindTemplateDef _pawnKindDef, Pawn _pawn)
+        private static void GenerateAndWearApparel(IEnumerable<ThingDef> _apparelDefs, Pawn _pawn)
         {
-            foreach (ThingDef _apparel in _pawnKindDef.apparels)
+            foreach (var _apparelDef in _apparelDefs)
             {
-                Apparel _newApparel = ThingMaker.MakeThing(_apparel) as Apparel;
+                Apparel _newApparel = ThingMaker.MakeThing(_apparelDef) as Apparel;
                 _newApparel.GetComp<CompBiocodable>()?.CodeFor(_pawn);
                 _pawn.apparel.Wear(_newApparel);
             }
+        }
+
+        private static Pawn GenerateWithTemplate(PawnKindTemplateDef _templateDef)
+        {
+            PawnKindDef _pawnKindDef = _templateDef.pawnKindDef;
+
+            if (_pawnKindDef == null)
+            {
+                // pawnKindDef 속성을 설정하지 않은 경우, 기본적으로 Colonist로 스폰합니다.
+                _pawnKindDef = PawnKindDefOf.Colonist;
+            }
+
+            Pawn _pawn = PawnGenerator.GeneratePawn(_pawnKindDef, Faction.OfPlayer);
+            _pawn.Name = (Name)new NameTriple(_templateDef.firstName, _templateDef.nickname, _templateDef.lastName);
+            _pawn.needs.food.CurLevel = _pawn.needs.food.MaxLevel;
+            _pawn.gender = _templateDef.isMale ? Gender.Male : Gender.Female;
+            _pawn.story.Childhood = _templateDef.childHood ?? _pawn.story.Childhood;
+            _pawn.story.Adulthood = _templateDef.adultHood ?? _pawn.story.Adulthood;
+            _pawn.story.bodyType = _templateDef.bodyTypeDef ?? _pawn.story.bodyType;
+            _pawn.story.headType = _templateDef.headTypeDef ?? _pawn.story.headType;
+            _pawn.story.hairDef = _templateDef.hair ?? _pawn.story.hairDef;
+            _pawn.style.beardDef = _templateDef.beard ?? _pawn.style.beardDef;
+
+            // error 나이를 강제로 고치면 문제가 발생합니다.
+            // _pawn.ageTracker.AgeBiologicalTicks = (long)this.age * 3600000L; // 1000시간당 나이 + 1, 1시간은 3600초
+            // _pawn.ageTracker.AgeChronologicalTicks = (long)this.realAge * 3600000L;
+
+            if (_templateDef.overrideSkinColor)
+                _pawn.story.skinColorOverride = _templateDef.skinColor;
+
+            if (_templateDef.overrideHairColor)
+                _pawn.story.HairColor = _templateDef.hairColor;
+
+            if (_templateDef.apparels != null)
+                GenerateAndWearApparel(_templateDef.apparels, _pawn);
+
+            if (_templateDef.weaponDef != null)
+                GenerateAndEquipWeapon(_templateDef.weaponDef, _pawn);
+
+            if (ModLister.BiotechInstalled && ModLister.HasActiveModWithName("Biotech"))
+            {
+                _pawn.genes = new Pawn_GeneTracker(_pawn);
+                _pawn.genes.SetXenotype(XenotypeDefOf.Baseliner);
+            }
+
+            _pawn.Notify_DisabledWorkTypesChanged();
+
+            return _pawn;
         }
     }
 }
