@@ -201,6 +201,9 @@
         <defName>BA_Race_ARBase</defName>
         <label>BlueArchive Student</label>
 
+        <!-- 이후 patch로 component를 추가하기 위해서 빈 element를 추가합니다. -->
+        <comps />
+
         <!-- begin alienRace -->
         <alienRace>
 
@@ -349,7 +352,6 @@
         <!-- end alienRace -->
 
     </AlienRace.ThingDef_AlienRace>
-
-    <!-- end Race_BACharacter -->
+    <!-- end BA_Race_ARBase -->
 
 </Defs>
