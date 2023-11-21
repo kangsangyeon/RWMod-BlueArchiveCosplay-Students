@@ -66,7 +66,7 @@ namespace BlueArchiveStudents
         /// <summary>
         /// 이 타입의 pawnkind입니다.
         /// </summary>
-        public PawnKindDef pawnKindDef = PawnKindDefOf.Colonist;
+        public PawnKindDef pawnKindDef;
 
         /// <summary>
         /// 이 타입의 pawn이 스폰될 때 기본적으로 장착될 무기입니다.
