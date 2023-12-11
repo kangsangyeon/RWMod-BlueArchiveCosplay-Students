@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+<!-- Pandemonium Society -->
 
     <!-- begin BA_HairDef_Makoto -->
     <HairDef>
@@ -9,5 +10,14 @@
         <texPath>BA/Makoto/makoto_hair</texPath>
     </HairDef>
     <!-- end BA_HairDef_Makoto -->
+
+    <!-- begin BA_HairDef_Satsuki -->
+    <HairDef>
+        <defName>BA_HairDef_Satsuki</defName>
+        <label>BA Satsuki Hair</label>
+        <styleGender>Female</styleGender>
+        <texPath>BA/Satsuki/satsuki_hair</texPath>
+    </HairDef>
+    <!-- end BA_HairDef_Satsuki -->
 
 </Defs>

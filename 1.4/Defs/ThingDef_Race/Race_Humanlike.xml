@@ -269,6 +269,7 @@
                             <bodyPart>Head</bodyPart>
                             <hediffGraphics>
                                 <BA_PawnHediff_Makoto>BA/Makoto/makoto_hairback</BA_PawnHediff_Makoto>
+                                <BA_PawnHediff_Satsuki>BA/Satsuki/satsuki_hairback</BA_PawnHediff_Satsuki>
                             </hediffGraphics>
                             <inFrontOfBody>true</inFrontOfBody>
                             <colorChannel>base</colorChannel>
@@ -298,6 +299,7 @@
                             <bodyPart>Head</bodyPart>
                             <hediffGraphics>
                                 <BA_PawnHediff_Makoto>BA/Makoto/makoto_horn</BA_PawnHediff_Makoto>
+                                <BA_PawnHediff_Satsuki>BA/Satsuki/satsuki_horn</BA_PawnHediff_Satsuki>
                             </hediffGraphics>
                             <inFrontOfBody>true</inFrontOfBody>
                             <colorChannel>base</colorChannel>

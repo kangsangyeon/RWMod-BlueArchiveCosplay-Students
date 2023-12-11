@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- begin BA_Satsuki -->
+    <PawnKindDef ParentName="BA_PawnKind_Base">
+        <defName>BA_Satsuki</defName>
+        <label>게헨나 만마전 의원</label>
+        <fixedGender>Female</fixedGender>
+        <forcedHair>BA_HairDef_Satsuki</forcedHair>
+        <forcedHairColor>(1,1,1,1)</forcedHairColor>
+        <skinColorOverride>(1,1,1,1)</skinColorOverride>
+
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>BA_SpawnCategory_Satsuki</li>
+                </categories>
+            </li>
+        </backstoryFiltersOverride>
+
+    </PawnKindDef>
+    <!-- end BA_Satsuki -->
+
+    <!-- begin BA_Backstory_Satsuki_Base -->
+    <AlienRace.AlienBackstoryDef Name="BA_Backstory_Satsuki_Base" Abstract="True">
+        <title>Satsuki</title>
+        <titleShort>Satsuki</titleShort>
+        <baseDesc>Satsuki</baseDesc>
+        <bodyTypeFemale>BABodyBase_Normal_CCup</bodyTypeFemale>
+        <disallowedTraits>
+            <Pyromaniac>0</Pyromaniac>
+        </disallowedTraits>
+        <spawnCategories>
+            <li>BA_SpawnCategory_Satsuki</li>
+        </spawnCategories>
+        <forcedHediffs>
+            <li>BA_PawnHediff_Satsuki</li>
+        </forcedHediffs>
+    </AlienRace.AlienBackstoryDef>
+    <!-- end BA_Backstory_Satsuki_Base -->
+
+    <!-- begin BA_Backstory_Satsuki_Childhood -->
+    <AlienRace.AlienBackstoryDef ParentName="BA_Backstory_Satsuki_Base">
+        <defName>BA_Backstory_Satsuki_Childhood</defName>
+        <slot>Childhood</slot>
+    </AlienRace.AlienBackstoryDef>
+    <!-- end BA_Backstory_Satsuki_Childhood -->
+
+    <!-- begin BA_Backstory_Satsuki_Adulthood -->
+    <AlienRace.AlienBackstoryDef ParentName="BA_Backstory_Satsuki_Base">
+        <defName>BA_Backstory_Satsuki_Adulthood</defName>
+        <slot>Adulthood</slot>
+    </AlienRace.AlienBackstoryDef>
+    <!-- end BA_Backstory_Satsuki_Adulthood -->
+
+    <!-- begin BA_PawnHediff_Satsuki -->
+    <HediffDef>
+        <defName>BA_PawnHediff_Satsuki</defName>
+        <label>BA_PawnHediff_Satsuki</label>
+        <description>BA_PawnHediff_Satsuki.</description>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <isBad>false</isBad>
+    </HediffDef>
+    <!-- end BA_PawnHediff_Satsuki -->
+
+</Defs>
