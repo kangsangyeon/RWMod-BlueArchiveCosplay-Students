@@ -3,11 +3,11 @@
 
     <BlueArchiveStudents.PawnKindTemplateDef>
         <defName>makoto_template</defName>
-        <firstName>makoto</firstName>
-        <lastName>lastname</lastName>
-        <nickname>nickname</nickname>
-        <!-- <age>12</age>
-        <realAge>1</realAge> -->
+        <firstName>Hanuma</firstName>
+        <lastName>ㅤ</lastName>
+        <nickname>Makoto</nickname>
+        <!-- <age>17</age>
+        <realAge>17</realAge> -->
         <isMale>false</isMale>
         <childHood>BA_Backstory_Makoto_Childhood</childHood>
         <bodyTypeDef>BABodyBase_Normal_CCup</bodyTypeDef>

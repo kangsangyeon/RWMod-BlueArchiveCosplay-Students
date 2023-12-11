@@ -96,7 +96,7 @@
             <body>Human</body>
             <bloodDef>Filth_Blood</bloodDef>
             <meatColor>(219, 105, 82)</meatColor>
-            <baseBodySize>0.95</baseBodySize>
+            <baseBodySize>1</baseBodySize>
             <baseHealthScale>1.0</baseHealthScale>
             <baseHungerRate>1.0</baseHungerRate>
             <foodType>OmnivoreHuman</foodType>
@@ -226,19 +226,20 @@
                 <immuneToXenophobia>true</immuneToXenophobia>
 
                 <alienPartGenerator>
-                    <atlasScale>4</atlasScale>
+                    <atlasScale>1</atlasScale>
                     <borderScale>1</borderScale>
                     <!-- <headOffset>(0.0, 0.07)</headOffset> -->
                     <headOffsetDirectional>
-                        <north>(0, -0.18)</north>
-                        <south>(0, -0.18)</south>
-                        <east>(-0.130, -0.18)</east>
-                        <west>(0.130, -0.18)</west>
+                        <north>(0, -0.35)</north>
+                        <south>(0, -0.35)</south>
+                        <east>(-0.130, -0.35)</east>
+                        <west>(0.130, -0.35)</west>
                     </headOffsetDirectional>
-                    <customDrawSize>(1.2, 1.2)</customDrawSize>
+                    <!-- 1.2 -->
+                    <customDrawSize>(1.2, 1.2)</customDrawSize> 
                     <customPortraitDrawSize>(1.2, 1.2)</customPortraitDrawSize>
-                    <customHeadDrawSize>(0.96, 0.96)</customHeadDrawSize>
-                    <customPortraitHeadDrawSize>(0.96, 0.96)</customPortraitHeadDrawSize>
+                    <customHeadDrawSize>(1.2, 1.2)</customHeadDrawSize>
+                    <customPortraitHeadDrawSize>(1.2, 1.2)</customPortraitHeadDrawSize>
 
                     <!-- begin headTypes -->
                     <headTypes Inherit="False">
@@ -271,21 +272,21 @@
                             </hediffGraphics>
                             <inFrontOfBody>true</inFrontOfBody>
                             <colorChannel>base</colorChannel>
-                            <drawSize>1</drawSize>
+                            <drawSize>1.2</drawSize>
                             <angle>0</angle>
                             <defaultOffset>Head</defaultOffset>
                             <shaderType>Cutout</shaderType>
                             <offsets>
                                 <south>
-                                    <offset>(0,-0.37)</offset>
+                                    <offset>(0,-0.5)</offset>
                                     <layerOffset>-0.7</layerOffset>
                                 </south>
                                 <east>
-                                    <offset>(0.095,-0.344)</offset>
+                                    <offset>(0.1,-0.5)</offset>
                                     <layerOffset>-0.7</layerOffset>
                                 </east>
                                 <west>
-                                    <offset>(0.095,-0.344)</offset>
+                                    <offset>(0.1,-0.5)</offset>
                                     <layerOffset>-0.7</layerOffset>
                                 </west>
                             </offsets>
@@ -300,25 +301,25 @@
                             </hediffGraphics>
                             <inFrontOfBody>true</inFrontOfBody>
                             <colorChannel>base</colorChannel>
-                            <drawSize>1</drawSize>
+                            <drawSize>1.2</drawSize>
                             <angle>0</angle>
                             <defaultOffset>Head</defaultOffset>
                             <shaderType>Cutout</shaderType>
                             <offsets>
                                 <south>
-                                    <offset>(0,-0.37)</offset>
+                                    <offset>(0,-0.5)</offset>
                                     <layerOffset>1</layerOffset>
                                 </south>
                                 <east>
-                                    <offset>(0.09,-0.37)</offset>
+                                    <offset>(0.1,-0.544)</offset>
                                     <layerOffset>1</layerOffset>
                                 </east>
                                 <west>
-                                    <offset>(0.09,-0.37)</offset>
+                                    <offset>(0.1,-0.544)</offset>
                                     <layerOffset>1</layerOffset>
                                 </west>
                                 <north>
-                                    <offset>(0,-0.195)</offset>
+                                    <offset>(0,-0.35)</offset>
                                     <layerOffset>-1</layerOffset>
                                 </north>
                             </offsets>

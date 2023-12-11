@@ -4,7 +4,7 @@
     <!-- begin BA_Makoto -->
     <PawnKindDef ParentName="BA_PawnKind_Base">
         <defName>BA_Makoto</defName>
-        <label>BA Makoto</label>
+        <label>게헨나 만마전 학생회장</label>
         <fixedGender>Female</fixedGender>
         <forcedHair>BA_HairDef_Makoto</forcedHair>
         <forcedHairColor>(1,1,1,1)</forcedHairColor>
