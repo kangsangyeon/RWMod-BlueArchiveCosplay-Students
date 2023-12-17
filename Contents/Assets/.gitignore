@@ -1,0 +1,5 @@
+# 이 폴더는 Unity Editor에서 생성한 Asset Bundle이 위치할 폴더입니다.
+# Unity Editor에서 생성될 것이기 때문에, 기본적으로 어떠한 파일도 추적 대상에서 포함되지 않도록 합니다.
+# 이 파일은 Asset Bundle 파일이 생성될 대상 폴더 placeholder로써 사용하기 위해 생성했습니다.
+*
+!.gitignore
