@@ -1,0 +1,1 @@
+dotnet build Assembly-CSharp.csproj -property:OutputPath=../1.4/Assemblies -property:OutputType=Library -property:Configuration=Release -property:AssemblyName=BlueArchiveStudentsUnityProject
