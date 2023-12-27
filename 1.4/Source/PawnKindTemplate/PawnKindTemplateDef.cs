@@ -22,15 +22,15 @@ namespace BlueArchiveStudents
 
         public BackstoryDef adultHood;
 
-        // /// <summary>
-        // /// 이 타입의 pawn에 부여되는 기본 생체 나이입니다.
-        // /// </summary>
-        // public int age = 16;
-        //
-        // /// <summary>
-        // /// 이 타입의 pawn에 부여되는 실제 인게임 나이입니다.
-        // /// </summary>
-        // public int realAge = -1;
+        /// <summary>
+        /// 이 타입의 pawn에 부여되는 기본 생체 나이입니다.
+        /// </summary>
+        public int age = 16;
+        
+        /// <summary>
+        /// 이 타입의 pawn에 부여되는 실제 인게임 나이입니다.
+        /// </summary>
+        public int realAge = -1;
 
         /// <summary>
         /// 이 타입의 pawn이 남성인지 또는 여성인지 구분합니다.

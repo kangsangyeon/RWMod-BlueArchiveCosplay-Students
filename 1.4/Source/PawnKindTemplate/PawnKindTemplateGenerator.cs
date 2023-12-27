@@ -70,8 +70,8 @@ namespace BlueArchiveStudents
             _pawn.style.beardDef = _templateDef.beard ?? _pawn.style.beardDef;
 
             // error 나이를 강제로 고치면 문제가 발생합니다.
-            // _pawn.ageTracker.AgeBiologicalTicks = (long)this.age * 3600000L; // 1000시간당 나이 + 1, 1시간은 3600초
-            // _pawn.ageTracker.AgeChronologicalTicks = (long)this.realAge * 3600000L;
+            _pawn.ageTracker.AgeBiologicalTicks = (long)_templateDef.age * 3600000L; // 1000시간당 나이 + 1, 1시간은 3600초
+            _pawn.ageTracker.AgeChronologicalTicks = (long)_templateDef.realAge * 3600000L;
 
             if (_templateDef.overrideSkinColor)
                 _pawn.story.skinColorOverride = _templateDef.skinColor;
