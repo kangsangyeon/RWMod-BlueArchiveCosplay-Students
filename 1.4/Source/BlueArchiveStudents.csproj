@@ -88,7 +88,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Impl\BAPawnTemplateGenerator.cs" />
+    <Compile Include="Impl\PawnTemplateDebug.cs" />
     <Compile Include="Impl\WeightTable\CharacterTable.cs" />
     <Compile Include="Impl\WeightTable\TestWeightTable.cs" />
     <Compile Include="PawnKindTemplate\PawnKindTemplateDef.cs" />
