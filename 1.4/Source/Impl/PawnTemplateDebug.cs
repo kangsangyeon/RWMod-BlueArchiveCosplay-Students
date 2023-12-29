@@ -49,7 +49,7 @@ namespace BlueArchiveStudents
             foreach (var x in m_DefList)
             {
                 options.Add(new DebugMenuOption(
-                    $"[{x.defName}]",
+                    $"[{x.pawnKindDef.defName}]",
                     DebugMenuOptionMode.Action,
                     () => PawnKindTemplateGenerator.Generate(x, Verse.Current.Game.CurrentMap)));
             }
@@ -67,7 +67,7 @@ namespace BlueArchiveStudents
             foreach (var x in m_DefList)
             {
                 options.Add(new DebugMenuOption(
-                    $"[{x.defName}]",
+                    $"[{x.pawnKindDef.defName}]",
                     DebugMenuOptionMode.Action,
                     () => TrySpawn(x)));
             }
