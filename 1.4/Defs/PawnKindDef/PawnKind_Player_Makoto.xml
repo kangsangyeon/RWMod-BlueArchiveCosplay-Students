@@ -9,6 +9,8 @@
         <forcedHair>BA_HairDef_Makoto</forcedHair>
         <forcedHairColor>(1,1,1,1)</forcedHairColor>
         <skinColorOverride>(1,1,1,1)</skinColorOverride>
+        <!-- <minGenerationAge>17</minGenerationAge>
+		<maxGenerationAge>17</maxGenerationAge> -->
 
         <backstoryFiltersOverride>
             <li>

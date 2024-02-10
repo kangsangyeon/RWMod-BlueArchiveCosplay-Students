@@ -230,10 +230,10 @@
                     <borderScale>1</borderScale>
                     <!-- <headOffset>(0.0, 0.07)</headOffset> -->
                     <headOffsetDirectional>
-                        <north>(0, -0.35)</north>
-                        <south>(0, -0.35)</south>
-                        <east>(-0.130, -0.35)</east>
-                        <west>(0.130, -0.35)</west>
+                        <north>(0, -0.31)</north>
+                        <south>(0, -0.31)</south>
+                        <east>(-0.130, -0.32)</east>
+                        <west>(0.130, -0.32)</west>
                     </headOffsetDirectional>
                     <!-- 1.2 -->
                     <customDrawSize>(1.2, 1.2)</customDrawSize> 
@@ -253,6 +253,7 @@
                         <li>BABodyBase_Normal_CCup</li>
                         <li>BABodyBase_Normal_DCup</li>
                         <li>BABodyBase_Normal_FCup</li>
+                        <li>BABodyBase_Thin_AACup</li>
                         <li>BABodyBase_Thin_ACup</li>
                         <li>BABodyBase_Thin_CCup</li>
                         <li>BABodyBase_Thin_DCup</li>
@@ -270,6 +271,7 @@
                             <hediffGraphics>
                                 <BA_PawnHediff_Makoto>BA/Makoto/makoto_hairback</BA_PawnHediff_Makoto>
                                 <BA_PawnHediff_Satsuki>BA/Satsuki/satsuki_hairback</BA_PawnHediff_Satsuki>
+                                <BA_PawnHediff_Iroha>BA/Iroha/iroha_hairback</BA_PawnHediff_Iroha>
                             </hediffGraphics>
                             <inFrontOfBody>true</inFrontOfBody>
                             <colorChannel>base</colorChannel>
@@ -283,11 +285,11 @@
                                     <layerOffset>-0.7</layerOffset>
                                 </south>
                                 <east>
-                                    <offset>(0.1,-0.5)</offset>
+                                    <offset>(0.105,-0.51)</offset>
                                     <layerOffset>-0.7</layerOffset>
                                 </east>
                                 <west>
-                                    <offset>(0.1,-0.5)</offset>
+                                    <offset>(0.105,-0.51)</offset>
                                     <layerOffset>-0.7</layerOffset>
                                 </west>
                             </offsets>

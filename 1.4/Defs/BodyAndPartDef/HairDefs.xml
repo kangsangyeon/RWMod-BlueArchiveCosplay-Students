@@ -20,4 +20,13 @@
     </HairDef>
     <!-- end BA_HairDef_Satsuki -->
 
+    <!-- begin BA_HairDef_Iroha -->
+    <HairDef>
+        <defName>BA_HairDef_Iroha</defName>
+        <label>BA Iroha Hair</label>
+        <styleGender>Female</styleGender>
+        <texPath>BA/Iroha/iroha_hair</texPath>
+    </HairDef>
+    <!-- end BA_HairDef_Satsuki -->
+
 </Defs>

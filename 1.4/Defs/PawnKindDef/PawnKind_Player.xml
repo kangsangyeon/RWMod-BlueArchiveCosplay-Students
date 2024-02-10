@@ -39,8 +39,8 @@
 			<!-- <li>PN_Apparel</li> -->
 		</apparelTags>
 		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
-		<minGenerationAge>20</minGenerationAge>
-		<maxGenerationAge>23</maxGenerationAge>
+		<!-- <minGenerationAge>17</minGenerationAge>
+		<maxGenerationAge>17</maxGenerationAge> -->
 		<initialWillRange>10~13</initialWillRange>
 		<initialResistanceRange>38~58</initialResistanceRange>
 		<humanPregnancyChance>0</humanPregnancyChance>
