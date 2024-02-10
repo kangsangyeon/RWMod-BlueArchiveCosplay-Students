@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Verse;
 
@@ -18,6 +19,7 @@ namespace BlueArchiveStudents
             m_DefList = new List<PawnKindTemplateDef>();
             foreach (var _def in DefDatabase<PawnKindTemplateDef>.AllDefs)
                 m_DefList.Add(_def);
+            m_DefList.SortStable((a, b) => String.Compare(a.nickname, b.nickname, StringComparison.Ordinal));
         }
 
         private static void TrySpawn(PawnKindTemplateDef _template)
