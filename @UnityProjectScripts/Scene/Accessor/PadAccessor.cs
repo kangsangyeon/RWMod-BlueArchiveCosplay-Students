@@ -14,4 +14,6 @@ public class PadAccessor : MonoBehaviour
     public Button UpdateButton;
     public Text BlueStoneText;
     public GameObject AronaPopup;
+    public Button HomeButton;
+    public Image HomeButton_Border;
 }

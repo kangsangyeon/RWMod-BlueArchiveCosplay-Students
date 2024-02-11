@@ -74,17 +74,21 @@ crashlytics-build.properties
 
 # Assets폴더 내 특정 폴더 내 파일들을 제외한 모든 파일들을 제외합니다.
 Assets/**/*.*
+!Assets/Resources/**/*.*
+!Assets/Resources.meta
 !Assets/@MyProject/**/*.*
 !Assets/@MyProject.meta
 !Assets/@AssetStore/**/*.*
 !Assets/@AssetStore.meta
+!Assets/Plugins/**/*.*
+!Assets/Plugins.meta
 !Assets/NuGet.config
 !Assets/NuGet.config.meta
 !Assets/packages.config
 !Assets/packages.config.meta
 
-# Assets/Plugins 폴더 하위에 있는 모든 assembly definition을 포함합니다.
-!Assets/Plugins/**/*.asmdef
+# # Assets/Plugins 폴더 하위에 있는 모든 assembly definition을 포함합니다.
+# !Assets/Plugins/**/*.asmdef
 
 # Temporary auto-generated Android Assets
 [Aa]ssets/[Ss]treamingAssets/aa.meta

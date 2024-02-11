@@ -1,6 +1,6 @@
-using System;
 using DG.Tweening;
 using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 
 namespace @UnityProjectScripts
@@ -9,6 +9,7 @@ namespace @UnityProjectScripts
     {
         [SerializeField] private PadAccessor accessor;
         private Sequence aronaPopupSequence;
+        private Tweener homeButtonTweener;
 
         private void Start()
         {
@@ -34,6 +35,15 @@ namespace @UnityProjectScripts
                 .Subscribe(_ => ShowAronaPopup())
                 .AddTo(gameObject);
 
+
+            StartRotateHomeButton(30f);
+            accessor.HomeButton.OnPointerEnterAsObservable()
+                .Subscribe(_ => StartRotateHomeButton(120f))
+                .AddTo(gameObject);
+            accessor.HomeButton.OnPointerExitAsObservable()
+                .Subscribe(_ => StartRotateHomeButton(30f))
+                .AddTo(gameObject);
+
             accessor.AronaPopup.GetComponent<CanvasGroup>().alpha = 0f;
         }
 
@@ -52,6 +62,19 @@ namespace @UnityProjectScripts
                         0.3f, Vector3.right * 3f, 15, 0, false, false))
                 .AppendInterval(1)
                 .Append(DOTween.To(() => _canvasGroup.alpha, _v => _canvasGroup.alpha = _v, 0, 0.3f));
+        }
+
+        private void StartRotateHomeButton(float _rotationPerSec)
+        {
+            homeButtonTweener?.Kill();
+
+            homeButtonTweener = accessor.HomeButton_Border.transform
+                .DOLocalRotate(
+                    new Vector3(0f, 0f, 360),
+                    360 / _rotationPerSec)
+                .SetRelative()
+                .SetLoops(-1)
+                .SetEase(Ease.Linear);
         }
     }
 }

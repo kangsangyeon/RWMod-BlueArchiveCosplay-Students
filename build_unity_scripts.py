@@ -1,3 +1,4 @@
+import os
 import shutil
 import subprocess
 
@@ -17,3 +18,10 @@ shutil.copy(build_dll_file_path, assemblies_dir_path)
 shutil.copy(build_pdb_file_path, assemblies_dir_path)
 shutil.copy(build_dll_file_path, unity_project_scripts_dir_path)
 shutil.copy(build_pdb_file_path, unity_project_scripts_dir_path)
+
+# plugins 폴더 내 모든 dll 파일을 찾아서 Unity Project Scripts 폴더로 복사합니다.
+for root, dirs, files in os.walk(f'./{project_name}/Plugins'):
+    for file in files:
+        if file.endswith('.dll'):
+            filePath = f'{root}/{file}'
+            shutil.copy(filePath, unity_project_scripts_dir_path)
