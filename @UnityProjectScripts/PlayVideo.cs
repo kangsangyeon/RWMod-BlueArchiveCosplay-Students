@@ -6,21 +6,21 @@ public class PlayVideo : MonoBehaviour
     public static System.Action<PlayVideo> onPlayStart;
     public static System.Action<PlayVideo> onPlayEnd;
 
-    private CanvasGroup videoUiPanel;
+    private GameObject videoUiPanel;
     private VideoPlayer videoPlayer;
 
     private void Start()
     {
-        videoUiPanel = GameObject.Find("VideoPanel").GetComponent<CanvasGroup>();
+        videoUiPanel = GameObject.Find("VideoPanel");
         videoPlayer = GetComponentInChildren<VideoPlayer>();
 
-        videoUiPanel.alpha = 1f;
+        videoUiPanel.gameObject.SetActive(true);
         videoPlayer.Play();
         onPlayStart?.Invoke(this);
 
         videoPlayer.loopPointReached += source =>
         {
-            videoUiPanel.alpha = 0f;
+            videoUiPanel.gameObject.SetActive(false);
             videoPlayer.targetTexture.Release();
 
             onPlayEnd?.Invoke(this);

@@ -14,14 +14,13 @@ namespace BlueArchiveStudents.UI
 
         private bool isInitialized = false;
         private Camera canvasCam;
-        private bool isOpen = false;
         private Coroutine coroutine;
         private AssetBundle Asset;
         private float lastClickedTime;
 
-        public override void DoWindowContents(Rect inRect)
+        public override void PreOpen()
         {
-            Log.Message("BA_GachaTabWindow::DoWindowContents()");
+            base.PreOpen();
 
             if (isInitialized == false)
             {
@@ -33,33 +32,31 @@ namespace BlueArchiveStudents.UI
 
                 var _eventSystemPrefab = Asset.LoadAsset<GameObject>("EventSystem");
                 var _uiCameraPrefab = Asset.LoadAsset<GameObject>("UICamera");
-                var _canvasPrefab = Asset.LoadAsset<GameObject>("UICanvas_StudentGacha");
+                var _canvasPrefab = Asset.LoadAsset<GameObject>("UICanvas_Gacha");
                 var _videoPlayerGachaPrefab = Asset.LoadAsset<GameObject>("VideoPlayer_Gacha");
+                var _padCanvasPrefab = Asset.LoadAsset<GameObject>("UICanvas_Pad");
 
                 var _eventSystem = Object.Instantiate(_eventSystemPrefab).GetComponent<EventSystem>();
                 var _uiCamera = Object.Instantiate(_uiCameraPrefab).GetComponent<Camera>();
-                var _canvas = Object.Instantiate(_canvasPrefab).GetComponent<Canvas>();
-                var _videoPlayerGacha = Object.Instantiate(_videoPlayerGachaPrefab);
+                // var _canvas = Object.Instantiate(_canvasPrefab).GetComponent<Canvas>();
+                // var _videoPlayerGacha = Object.Instantiate(_videoPlayerGachaPrefab);
+                var _padCanvas = Object.Instantiate(_padCanvasPrefab).GetComponent<Canvas>();
 
                 canvasCam = _uiCamera;
                 canvasCam.clearFlags = CameraClearFlags.Depth;
-                _canvas.worldCamera = _uiCamera;
+                // _canvas.worldCamera = _uiCamera;
+                // _padCanvas.renderMode = RenderMode.ScreenSpaceCamera;
+                _padCanvas.worldCamera = _uiCamera;
             }
-
-            Log.Message($"Rect size: {inRect.size}, center: {inRect.center}");
-            this.Close();
         }
 
-        private void ToggleShowWindow()
+        public override void DoWindowContents(Rect inRect)
         {
-            Log.Message("BA_GachaTabWindow::ToggleShowWindow()");
-
-            isOpen = !isOpen;
         }
 
         private IEnumerator WindowCoroutine()
         {
-            while (isOpen)
+            while (IsOpen)
             {
                 if (canvasCam != null)
                     canvasCam.Render();
