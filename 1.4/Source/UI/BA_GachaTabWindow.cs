@@ -74,9 +74,17 @@ namespace BlueArchiveStudents.UI
             padCanvas.worldCamera = _uiCamera;
 
             padCanvas.gameObject.OnEnableAsObservable()
-                .Subscribe(_ => Current.Game.tickManager.CurTimeSpeed = TimeSpeed.Paused);
+                .Subscribe(_ =>
+                {
+                    BAStudents.DisableIMGUI = true;
+                    Current.Game.tickManager.CurTimeSpeed = TimeSpeed.Paused;
+                });
             padCanvas.gameObject.OnDisableAsObservable()
-                .Subscribe(_ => Current.Game.tickManager.CurTimeSpeed = TimeSpeed.Normal);
+                .Subscribe(_ =>
+                {
+                    BAStudents.DisableIMGUI = false;
+                    Current.Game.tickManager.CurTimeSpeed = TimeSpeed.Normal;
+                });
 
             padAccessor.HomeButton.OnClickAsObservable()
                 .Subscribe(_ => padCanvas.gameObject.SetActive(false));
