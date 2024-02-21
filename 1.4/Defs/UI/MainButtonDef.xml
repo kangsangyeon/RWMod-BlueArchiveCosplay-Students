@@ -10,6 +10,7 @@
         <buttonVisible>true</buttonVisible>
         <iconPath>UI/BA_MainTab</iconPath>
         <minimized>true</minimized>
+        <closesWorldView>true</closesWorldView>
     </MainButtonDef>
 
 </Defs>
