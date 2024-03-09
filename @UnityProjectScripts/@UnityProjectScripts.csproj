@@ -462,8 +462,20 @@
     <Compile Include="Plugins\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Plugins\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Plugins\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Resource\Data\StudentData.cs" />
+    <Compile Include="Resource\Data\ClubData.cs" />
+    <Compile Include="Resource\Data\SchoolData.cs" />
+    <Compile Include="Scene\Accessor\StudentAccessor.cs" />
+    <Compile Include="Scene\Accessor\ClubAccessor.cs" />
+    <Compile Include="Scene\Accessor\MainScreenAccessor.cs" />
     <Compile Include="Scene\Accessor\PadAccessor.cs" />
+    <Compile Include="Scene\Accessor\StudentListScreenAccessor.cs" />
+    <Compile Include="Scene\Sub\DropdownSizeFitter.cs" />
+    <Compile Include="Scene\Sub\GameResourceLoader.cs" />
+    <Compile Include="Scene\UI\MainScreenUI.cs" />
     <Compile Include="Scene\UI\PadUI.cs" />
+    <Compile Include="Scene\UI\StudentListScreenUI.cs" />
+    <Compile Include="Resource\GameResource.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Plugins\com.neuecc.unirx@284d5c50d3\Asynchronous.meta" />
