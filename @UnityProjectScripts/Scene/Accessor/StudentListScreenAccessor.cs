@@ -7,7 +7,7 @@ public class StudentListScreenAccessor : MonoBehaviour
 {
     public Image ClubPlaceholder;
     public InputField SearchInput;
-    public Image SortOptionButton;
+    public Dropdown SortBySchoolDropdown;
     public Image BackButton;
     public Image Background;
 }

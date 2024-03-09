@@ -5796,7 +5796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClubPlaceholder: {fileID: 5457004988480298083}
   SearchInput: {fileID: 3389845858871353049}
-  SortOptionButton: {fileID: 0}
+  SortBySchoolDropdown: {fileID: 4953681022307150998}
   BackButton: {fileID: 1493668346573785040}
   Background: {fileID: 5403315620967243393}
 --- !u!114 &4034819230901205308
