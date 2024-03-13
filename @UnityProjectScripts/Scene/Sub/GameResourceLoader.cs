@@ -31,8 +31,6 @@ namespace UnityProjectScripts
                 }
                 .Select(x => Load<Sprite>("Sprite/UI/Student/Attribute", $"Student_Attribute_Frame_{x.ToString()}"))
                 .ToList();
-
-            Debug.Log(GameResource.SynergeDeactivatedSprite);
         }
 
         private T Load<T>(string _resourcesDirectoryAddress, string _bundleAssetName) where T : Object
