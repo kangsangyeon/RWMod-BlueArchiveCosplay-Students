@@ -2,6 +2,7 @@ using System.Collections.Generic;
 
 public class ClubData
 {
+    public int Id;
     public string Name;
-    public List<string> StudentList;
+    public List<int> StudentList;
 }

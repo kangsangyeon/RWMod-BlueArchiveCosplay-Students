@@ -462,6 +462,20 @@
     <Compile Include="Plugins\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Plugins\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Plugins\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Enumerable.cs" />
+    <Compile Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Operate.cs" />
+    <Compile Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Traverse.cs" />
+    <Compile Include="Plugins\LitJson\IJsonWrapper.cs" />
+    <Compile Include="Plugins\LitJson\JsonData.cs" />
+    <Compile Include="Plugins\LitJson\JsonException.cs" />
+    <Compile Include="Plugins\LitJson\JsonMapper.cs" />
+    <Compile Include="Plugins\LitJson\JsonMockWrapper.cs" />
+    <Compile Include="Plugins\LitJson\JsonReader.cs" />
+    <Compile Include="Plugins\LitJson\JsonWriter.cs" />
+    <Compile Include="Plugins\LitJson\Lexer.cs" />
+    <Compile Include="Plugins\LitJson\Netstandard15Polyfill.cs" />
+    <Compile Include="Plugins\LitJson\ParserToken.cs" />
+    <Compile Include="Resource\Data\DataFile.cs" />
     <Compile Include="Resource\Data\StudentData.cs" />
     <Compile Include="Resource\Data\ClubData.cs" />
     <Compile Include="Resource\Data\SchoolData.cs" />
@@ -724,6 +738,7 @@
     <Content Include="Plugins\com.neuecc.unirx@284d5c50d3\UnityWinRTBridge.meta" />
     <Content Include="Plugins\com.neuecc.unirx@284d5c50d3\UnityWinRTBridge\Thread.cs.meta" />
     <Content Include="Plugins\com.neuecc.unirx@284d5c50d3\UnityWinRTBridge\ThreadPoolScheduler_UnityWinRT.cs.meta" />
+    <Content Include="Plugins\DOTween\DOTween.dll" />
     <Content Include="Plugins\DOTween\Modules\DOTweenModuleAudio.cs.meta" />
     <Content Include="Plugins\DOTween\Modules\DOTweenModuleEPOOutline.cs.meta" />
     <Content Include="Plugins\DOTween\Modules\DOTweenModulePhysics.cs.meta" />
@@ -732,6 +747,15 @@
     <Content Include="Plugins\DOTween\Modules\DOTweenModuleUI.cs.meta" />
     <Content Include="Plugins\DOTween\Modules\DOTweenModuleUnityVersion.cs.meta" />
     <Content Include="Plugins\DOTween\Modules\DOTweenModuleUtils.cs.meta" />
+    <Content Include="Plugins\LINQtoGameObject\LinqToGameObject.asmdef" />
+    <Content Include="Plugins\LINQtoGameObject\LinqToGameObject.asmdef.meta" />
+    <Content Include="Plugins\LINQtoGameObject\Scripts.meta" />
+    <Content Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Enumerable.cs.meta" />
+    <Content Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Operate.cs.meta" />
+    <Content Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Traverse.cs.meta" />
+    <Content Include="Plugins\LitJson\AssemblyInfo.cs.in" />
+    <Content Include="Plugins\LitJson\LitJSON.csproj" />
+    <Content Include="Plugins\LitJson\litjson.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

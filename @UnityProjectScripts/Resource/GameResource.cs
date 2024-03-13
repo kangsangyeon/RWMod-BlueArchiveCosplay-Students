@@ -3,13 +3,16 @@ using UnityEngine;
 
 public static class GameResource
 {
-    public static Dictionary<string, SchoolData> SchoolTable;
-    public static Dictionary<string, ClubData> ClubTable;
-    public static Dictionary<string, StudentData> StudentTable;
+    public static Dictionary<int, SchoolData> SchoolTable;
+    public static Dictionary<int, ClubData> ClubTable;
+    public static Dictionary<int, StudentData> StudentTable;
 
     public static AssetBundle Bundle;
     public static GameObject ClubPrefab;
     public static GameObject StudentPrefab;
-    public static Dictionary<string, Sprite> StudentThumbnailSprites;
+    public static Sprite SynergeActivatedSprite;
+    public static Sprite SynergeDeactivatedSprite;
+    public static Dictionary<int, Sprite> SchoolLogoSprites;
+    public static Dictionary<int, Sprite> StudentPortraitSprites;
     public static List<Sprite> StudentAttributeFrameSprites;
 }

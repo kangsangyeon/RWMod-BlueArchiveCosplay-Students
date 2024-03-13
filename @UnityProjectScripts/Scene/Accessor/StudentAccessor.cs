@@ -6,5 +6,5 @@ using UnityEngine.UI;
 public class StudentAccessor : MonoBehaviour
 {
     public Image Frame;
-    public Image Thumbnail;
+    public Image Portrait;
 }

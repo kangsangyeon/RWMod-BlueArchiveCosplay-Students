@@ -1,0 +1,36 @@
+{
+  "StudentData": [
+    {
+      "Id": 1001,
+      "Name": "hello",
+      "Age": 14,
+      "Attribute": 2,
+      "DefaultShooting": 0,
+      "DefaultMelee": 0,
+      "DefaultConstruction": 0,
+      "DefaultMining": 0,
+      "DefaultCooking": 0,
+      "DefaultPlants": 0,
+      "DefaultAnimals": 0,
+      "DefaultCrafting": 0,
+      "DefaultArtistic": 0,
+      "DefaultMedical": 0,
+      "DefaultSocial": 0,
+      "DefaultIntellectual": 0
+    }
+  ],
+  "ClubData": [
+    {
+      "Id": 2001,
+      "Name": "dummy club",
+      "StudentList": [1001]
+    }
+  ],
+  "SchoolData": [
+    {
+      "Id": 3001,
+      "Name": "test school",
+      "ClubList": [2001]
+    }
+  ]
+}
