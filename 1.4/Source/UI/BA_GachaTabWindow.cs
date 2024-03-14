@@ -52,14 +52,17 @@ namespace BlueArchiveStudents.UI
             var _currentMod =
                 LoadedModManager.RunningMods.FirstOrDefault(x => x.PackageId == "bluearchive.students");
             Asset = AssetBundle.LoadFromFile($"{_currentMod.RootDir}/Contents/Assets/assetbundle00");
+            GameResource.Bundle = Asset;
 
             var _eventSystemPrefab = Asset.LoadAsset<GameObject>("EventSystem");
+            var _gameResourceLoaderPrefab = Asset.LoadAsset<GameObject>("GameResourceLoader");
             var _uiCameraPrefab = Asset.LoadAsset<GameObject>("UICamera");
             var _canvasPrefab = Asset.LoadAsset<GameObject>("UICanvas_Gacha");
             var _videoPlayerGachaPrefab = Asset.LoadAsset<GameObject>("VideoPlayer_Gacha");
             var _padCanvasPrefab = Asset.LoadAsset<GameObject>("UICanvas_Pad");
 
             var _eventSystem = Object.Instantiate(_eventSystemPrefab).GetComponent<EventSystem>();
+            var _gameResourceLoader = Object.Instantiate(_gameResourceLoaderPrefab);
             var _uiCamera = Object.Instantiate(_uiCameraPrefab).GetComponent<Camera>();
             // var _canvas = Object.Instantiate(_canvasPrefab).GetComponent<Canvas>();
             // var _videoPlayerGacha = Object.Instantiate(_videoPlayerGachaPrefab);
