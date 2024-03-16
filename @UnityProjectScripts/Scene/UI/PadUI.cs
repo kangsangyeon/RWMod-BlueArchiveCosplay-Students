@@ -12,6 +12,9 @@ namespace UnityProjectScripts
 
         private void Start()
         {
+            accessor.MainScreen.gameObject.SetActive(true);
+            accessor.StudentListScreen.gameObject.SetActive(false);
+
             StartRotateHomeButton(30f);
             accessor.HomeButton.OnPointerEnterAsObservable()
                 .Subscribe(_ => StartRotateHomeButton(120f))

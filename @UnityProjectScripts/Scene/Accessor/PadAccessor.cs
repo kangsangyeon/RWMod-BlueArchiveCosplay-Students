@@ -7,6 +7,8 @@ public class PadAccessor : MonoBehaviour
 {
     public Button HomeButton;
     public Image HomeButton_Border;
-    public GameObject MainScreen;
-    public GameObject StudentListScreen;
+    public RawImage ScreenOverlay_Transition;
+    public MainScreenAccessor MainScreen;
+    public StudentListScreenAccessor StudentInfoScreen;
+    public StudentListScreenAccessor StudentListScreen;
 }

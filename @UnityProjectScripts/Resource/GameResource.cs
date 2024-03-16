@@ -15,4 +15,12 @@ public static class GameResource
     public static Dictionary<int, Sprite> SchoolLogoSprites;
     public static Dictionary<int, Sprite> StudentPortraitSprites;
     public static List<Sprite> StudentAttributeFrameSprites;
+
+    public static T Load<T>(string _resourcesDirectoryAddress, string _bundleAssetName) where T : Object
+    {
+        if (Bundle != null)
+            return Bundle.LoadAsset<T>(_bundleAssetName);
+        else
+            return Resources.Load<T>(_resourcesDirectoryAddress + "/" + _bundleAssetName);
+    }
 }

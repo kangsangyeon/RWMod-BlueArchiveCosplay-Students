@@ -1,4 +1,5 @@
 using System.Linq;
+using UniRx;
 using Unity.Linq;
 using UnityEngine;
 
@@ -7,9 +8,20 @@ namespace UnityProjectScripts
     public class StudentListScreenUI : MonoBehaviour
     {
         public StudentListScreenAccessor accessor;
+        private PadAccessor padAccessor;
 
         private void Start()
         {
+            padAccessor = FindObjectOfType<PadAccessor>();
+
+            accessor.BackButton.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    accessor.gameObject.SetActive(false);
+                    padAccessor.MainScreen.gameObject.SetActive(true);
+                })
+                .AddTo(gameObject);
+
             accessor.ClubHolder.gameObject.Descendants().Destroy();
 
             foreach (var _shcoolPair in GameResource.SchoolTable)
