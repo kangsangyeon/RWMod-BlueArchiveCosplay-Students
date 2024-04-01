@@ -54,6 +54,12 @@ namespace UnityProjectScripts
             GameResource.SchoolTable =
                 _data.SchoolData?.ToDictionary(x => x.Id, x => x)
                 ?? new Dictionary<int, SchoolData>();
+            GameResource.SkillTable =
+                _data.SkillData?.ToDictionary(x => x.Id, x => x)
+                ?? new Dictionary<int, SkillData>();
+            GameResource.WeaponTable =
+                _data.WeaponData?.ToDictionary(x => x.Id, x => x)
+                ?? new Dictionary<int, WeaponData>();
         }
     }
 }

@@ -12,6 +12,8 @@ public class StudentData
     public string Name;
     public int Age;
     public StudentAttribute Attribute;
+    public int SkillId;
+    public int WeaponId;
 
     public int DefaultShooting;
     public int DefaultMelee;

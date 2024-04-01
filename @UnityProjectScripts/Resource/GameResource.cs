@@ -6,6 +6,8 @@ public static class GameResource
     public static Dictionary<int, SchoolData> SchoolTable;
     public static Dictionary<int, ClubData> ClubTable;
     public static Dictionary<int, StudentData> StudentTable;
+    public static Dictionary<int, SkillData> SkillTable;
+    public static Dictionary<int, WeaponData> WeaponTable;
 
     public static AssetBundle Bundle;
     public static GameObject ClubPrefab;
