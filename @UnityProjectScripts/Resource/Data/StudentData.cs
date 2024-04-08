@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public enum StudentAttribute
 {
     Attack,
@@ -27,4 +29,7 @@ public class StudentData
     public int DefaultMedical;
     public int DefaultSocial;
     public int DefaultIntellectual;
+
+    public Vector3 FullshotHaloStartPos;
+    public Vector3 FullshotHaloEndPos;
 }
