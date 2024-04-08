@@ -465,6 +465,7 @@
     <Compile Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Enumerable.cs" />
     <Compile Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Operate.cs" />
     <Compile Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Traverse.cs" />
+    <Compile Include="Plugins\LitJsonUnity\LitJsonUnityBindings.cs" />
     <Compile Include="Plugins\LitJson\IJsonWrapper.cs" />
     <Compile Include="Plugins\LitJson\JsonData.cs" />
     <Compile Include="Plugins\LitJson\JsonException.cs" />
