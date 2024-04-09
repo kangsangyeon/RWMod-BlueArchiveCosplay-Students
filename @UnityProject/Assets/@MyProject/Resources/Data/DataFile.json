@@ -19,8 +19,9 @@
       "DefaultMedical": 4,
       "DefaultSocial": 5,
       "DefaultIntellectual": 6,
+      "FullshotHaloSize": { "x": 200, "y": 200 },
       "FullshotHaloStartPos": { "x": 6, "y": 480, "z": 0 },
-      "FullshotHaloEndPos": { "x": 6, "y": 500, "z": 0 }
+      "FullshotHaloEndPos": { "x": 6, "y": 490, "z": 0 }
     }
   ],
   "ClubData": [

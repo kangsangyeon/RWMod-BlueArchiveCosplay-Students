@@ -30,6 +30,7 @@ public class StudentData
     public int DefaultSocial;
     public int DefaultIntellectual;
 
+    public Vector2 FullshotHaloSize;
     public Vector3 FullshotHaloStartPos;
     public Vector3 FullshotHaloEndPos;
 }
