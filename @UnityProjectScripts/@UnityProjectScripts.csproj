@@ -35,6 +35,9 @@
     <Reference Include="DOTween">
       <HintPath>Plugins\DOTween\DOTween.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Plugins\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
@@ -465,25 +468,34 @@
     <Compile Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Enumerable.cs" />
     <Compile Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Operate.cs" />
     <Compile Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Traverse.cs" />
-    <Compile Include="Plugins\LitJsonUnity\LitJsonUnityBindings.cs" />
-    <Compile Include="Plugins\LitJson\IJsonWrapper.cs" />
-    <Compile Include="Plugins\LitJson\JsonData.cs" />
-    <Compile Include="Plugins\LitJson\JsonException.cs" />
-    <Compile Include="Plugins\LitJson\JsonMapper.cs" />
-    <Compile Include="Plugins\LitJson\JsonMockWrapper.cs" />
-    <Compile Include="Plugins\LitJson\JsonReader.cs" />
-    <Compile Include="Plugins\LitJson\JsonWriter.cs" />
-    <Compile Include="Plugins\LitJson\Lexer.cs" />
-    <Compile Include="Plugins\LitJson\Netstandard15Polyfill.cs" />
-    <Compile Include="Plugins\LitJson\ParserToken.cs" />
+    <Compile Include="Plugins\NewtonsoftJsonUnity\ColorJsonConverter.cs" />
+    <Compile Include="Plugins\NewtonsoftJsonUnity\JsonHelper.cs" />
+    <Compile Include="Plugins\NewtonsoftJsonUnity\JsonSerializationBinder.cs" />
+    <Compile Include="Plugins\NewtonsoftJsonUnity\JsonUnityHelper.cs" />
+    <Compile Include="Plugins\NewtonsoftJsonUnity\ValueTuple2JsonConverter.cs" />
+    <Compile Include="Plugins\NewtonsoftJsonUnity\Vector2JsonConverter.cs" />
+    <Compile Include="Plugins\NewtonsoftJsonUnity\Vector3JsonConverter.cs" />
+    <Compile Include="Plugins\TemplateTable\ITemplateTable.cs" />
+    <Compile Include="Plugins\TemplateTable\ITemplateTableLoader.cs" />
+    <Compile Include="Plugins\TemplateTable\StreamGenericHelper.cs" />
+    <Compile Include="Plugins\TemplateTable\TemplateTable.cs" />
+    <Compile Include="Plugins\TemplateTable\TemplateTableBsonPackIO.cs" />
+    <Compile Include="Plugins\TemplateTable\TemplateTableBsonPackLoader.cs" />
+    <Compile Include="Plugins\TemplateTable\TemplateTableBsonPackPatchLoader.cs" />
+    <Compile Include="Plugins\TemplateTable\TemplateTableBsonPackSaver.cs" />
+    <Compile Include="Plugins\TemplateTable\TemplateTableJsonLoader.cs" />
+    <Compile Include="Plugins\TemplateTable\TemplateTableJsonPatchLoader.cs" />
+    <Compile Include="Plugins\TemplateTable\TemplateTableJsonSaver.cs" />
     <Compile Include="Resource\DataHelper.cs" />
     <Compile Include="Resource\Data\ClubData.cs" />
     <Compile Include="Resource\Data\DataFile.cs" />
     <Compile Include="Resource\Data\SchoolData.cs" />
+    <Compile Include="Resource\Data\SkillActionData.cs" />
     <Compile Include="Resource\Data\SkillData.cs" />
     <Compile Include="Resource\Data\StudentData.cs" />
     <Compile Include="Resource\Data\WeaponData.cs" />
     <Compile Include="Resource\GameResource.cs" />
+    <Compile Include="Scene\Accessor\ExSkillInfoAccessor.cs" />
     <Compile Include="Scene\Accessor\StudentAccessor.cs" />
     <Compile Include="Scene\Accessor\ClubAccessor.cs" />
     <Compile Include="Scene\Accessor\MainScreenAccessor.cs" />
@@ -759,9 +771,6 @@
     <Content Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Enumerable.cs.meta" />
     <Content Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Operate.cs.meta" />
     <Content Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Traverse.cs.meta" />
-    <Content Include="Plugins\LitJson\AssemblyInfo.cs.in" />
-    <Content Include="Plugins\LitJson\LitJSON.csproj" />
-    <Content Include="Plugins\LitJson\litjson.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,10 @@
-using System.Collections.Generic;
+using System;
+using System.IO;
 using System.Linq;
+using Newtonsoft.Json;
+using TemplateTable;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace UnityProjectScripts
 {
@@ -43,23 +47,28 @@ namespace UnityProjectScripts
 
         private void LoadDataTable()
         {
-            var _asset = Load<TextAsset>("Data", "DataFile");
-            var _data = LitJson.JsonMapper.ToObject<DataFile>(_asset.text);
-            GameResource.StudentTable =
-                _data.StudentData?.ToDictionary(x => x.Id, x => x)
-                ?? new Dictionary<int, StudentData>();
-            GameResource.ClubTable =
-                _data.ClubData?.ToDictionary(x => x.Id, x => x)
-                ?? new Dictionary<int, ClubData>();
-            GameResource.SchoolTable =
-                _data.SchoolData?.ToDictionary(x => x.Id, x => x)
-                ?? new Dictionary<int, SchoolData>();
-            GameResource.SkillTable =
-                _data.SkillData?.ToDictionary(x => x.Id, x => x)
-                ?? new Dictionary<int, SkillData>();
-            GameResource.WeaponTable =
-                _data.WeaponData?.ToDictionary(x => x.Id, x => x)
-                ?? new Dictionary<int, WeaponData>();
+            var _studentTableJson = Load<TextAsset>("Data", "DataTable_1000_Student").text;
+            var _clubTableJson = Load<TextAsset>("Data", "DataTable_2000_Club").text;
+            var _schoolTableJson = Load<TextAsset>("Data", "DataTable_3000_School").text;
+            var _skillTableJson = Load<TextAsset>("Data", "DataTable_4000_Skill").text;
+            var _weaponTableJson = Load<TextAsset>("Data", "DataTable_5000_Weapon").text;
+            GameResource.StudentTable = LoadTemplateTable<int, StudentData>(_studentTableJson);
+            GameResource.ClubTable = LoadTemplateTable<int, ClubData>(_clubTableJson);
+            GameResource.SchoolTable = LoadTemplateTable<int, SchoolData>(_schoolTableJson);
+            GameResource.SkillTable = LoadTemplateTable<int, SkillData>(_skillTableJson);
+            GameResource.WeaponTable = LoadTemplateTable<int, WeaponData>(_weaponTableJson);
+        }
+
+        private TemplateTable<TKey, TValue> LoadTemplateTable<TKey, TValue>(string _json)
+            where TKey : IComparable
+            where TValue : class, new()
+        {
+            var _loader = new TemplateTableJsonLoader<TKey, TValue>(
+                new JsonTextReader(new StringReader(_json)),
+                JsonSerializer.Create(JsonUnityHelper.DeserializerSettings), false);
+            var _table = new TemplateTable<TKey, TValue>();
+            _table.Load(_loader);
+            return _table;
         }
     }
 }

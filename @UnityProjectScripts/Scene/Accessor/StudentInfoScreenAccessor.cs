@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class StudentInfoScreenAccessor : MonoBehaviour
 {
+    public GameObject FullshotParent;
+    public Image FullshotImage;
+    public Image FullshotHaloImage;
     public Image ExpBar;
     public Text LevelText;
     public Image AttributeIcon;
@@ -28,8 +31,10 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public Text BasicTab_WeaponInfo_WeaponTypeText;
     public GameObject BasicTab_WeaponInfo_StarHolder;
     public Image BasicTab_WeaponInfo_WeaponImage;
-    public GameObject FullshotParent;
-    public Image FullshotImage;
-    public Image FullshotHaloImage;
+    public Image LevelUpTab_ExSkillInfo_ExSkillHolder;
+    public Image LevelUpTab_ExSkillInfo_ExSkillExpBar;
+    public Text LevelUpTab_ExSkillInfo_ExSkillExpText;
+    public Text LevelUpTab_LevelUpBox_DollorText;
+    public Image LevelUpTab_LevelUpBox_LevelUpButton;
     public Image BackButton;
 }
