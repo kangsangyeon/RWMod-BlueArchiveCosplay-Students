@@ -51,11 +51,13 @@ namespace UnityProjectScripts
             var _clubTableJson = Load<TextAsset>("Data", "DataTable_2000_Club").text;
             var _schoolTableJson = Load<TextAsset>("Data", "DataTable_3000_School").text;
             var _skillTableJson = Load<TextAsset>("Data", "DataTable_4000_Skill").text;
-            var _weaponTableJson = Load<TextAsset>("Data", "DataTable_5000_Weapon").text;
+            var _skillLevelTableJson = Load<TextAsset>("Data", "DataTable_5000_SkillLevel").text;
+            var _weaponTableJson = Load<TextAsset>("Data", "DataTable_6000_Weapon").text;
             GameResource.StudentTable = LoadTemplateTable<int, StudentData>(_studentTableJson);
             GameResource.ClubTable = LoadTemplateTable<int, ClubData>(_clubTableJson);
             GameResource.SchoolTable = LoadTemplateTable<int, SchoolData>(_schoolTableJson);
             GameResource.SkillTable = LoadTemplateTable<int, SkillData>(_skillTableJson);
+            GameResource.SkillLevelTable = LoadTemplateTable<(int, int), SkillLevelData>(_skillLevelTableJson);
             GameResource.WeaponTable = LoadTemplateTable<int, WeaponData>(_weaponTableJson);
         }
 

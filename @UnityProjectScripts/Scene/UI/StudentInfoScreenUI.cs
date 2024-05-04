@@ -1,7 +1,9 @@
+using System.Linq;
 using DG.Tweening;
 using UniRx;
 using Unity.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UnityProjectScripts
 {
@@ -83,20 +85,13 @@ namespace UnityProjectScripts
                 $"{_data.DefaultAnimals}\n{_data.DefaultCrafting}\n{_data.DefaultArtistic}\n{_data.DefaultMedical}\n{_data.DefaultSocial}\n{_data.DefaultIntellectual}";
 
             var _skillData = GameResource.SkillTable[_data.SkillId];
-            // var _skillLevelData = GameResource.SkillLevelTable[(_data.SkillId, 0)]; // temp: 임시적으로 스킬 레벨을 1으로 간주합니다.
-            if (string.IsNullOrEmpty(_skillData.OverrideCommonIconName))
-            {
-                Accessor.BasicTab_ExSkillInfo_Thumbnail.sprite =
-                    GameResource.Load<Sprite>($"Skill/{_skillData.Id}", $"Skill_Icon_{_skillData.Id}");
-            }
-            else
-            {
-                Accessor.BasicTab_ExSkillInfo_Thumbnail.sprite =
-                    GameResource.Load<Sprite>("Skill/Common", $"Skill_Icon_Common_{_skillData.OverrideCommonIconName}");
-            }
-
-            Accessor.BasicTab_ExSkillInfo_SkillNameText.text = _skillData.Name;
-            // Accessor.BasicTab_ExSkillInfo_SkillDescriptionText.text = _skillLevelData.Description;
+            var _skillLevelData = GameResource.SkillLevelTable[(_data.SkillId, 1)]; // temp: 임시적으로 스킬 레벨을 1으로 간주합니다.
+            var _skillLevels =
+                GameResource.SkillLevelTable.Values
+                    .Where(x => x.Id.SkillId == _skillData.Id).ToList();
+            var _skillInfoUI = Accessor.BasicTab_ExSkillInfo.GetComponent<ExSkillInfoUI>();
+            _skillInfoUI.UpdateUI(_skillData, _skillLevelData, _skillLevelData.Id.Level == _skillLevels.Count - 1,
+                false);
 
             var _weaponData = GameResource.WeaponTable[_data.WeaponId];
             Accessor.BasicTab_WeaponInfo_WeaponTypeText.text = _weaponData.Type.ToString();
@@ -108,11 +103,59 @@ namespace UnityProjectScripts
             for (int i = 0; i < _weaponData.Star; ++i)
                 Instantiate(_blueStarPrefab, Accessor.BasicTab_WeaponInfo_StarHolder.transform);
 
-            // var _exSkillInfoPrefab = GameResource.Load<GameObject>("Prefab/UI", "ExSkillInfo");
-            // for (int i = 0; i < _skillData.; i++)
-            // {
-            //     
-            // }
+            // 레벨 업 탭의 내용을 표시합니다.
+            var _exSkillInfoPrefab = GameResource.Load<GameObject>("Prefab/UI", "ExSkillInfo");
+            Accessor.LevelUpTab_ExSkillInfo_ExSkillHolder.Children().Destroy();
+            for (int i = 0; i < _skillLevels.Count; i++)
+            {
+                var _go = Instantiate(_exSkillInfoPrefab, Accessor.LevelUpTab_ExSkillInfo_ExSkillHolder.transform);
+                var _accessor = _go.GetComponent<ExSkillInfoUI>();
+                bool _isMaxLevel = i == _skillLevels.Count - 1;
+                bool _isUnlocked = i > _skillLevelData.Id.Level - 1;
+                _accessor.UpdateUI(_skillData, _skillLevels[i], _isMaxLevel, _isUnlocked);
+            }
+
+            // 현재 레벨 이후의 스킬들에 잠김 아이콘을 표시합니다.
+
+            // 탭 전환 버튼 이벤트 액션을 설정합니다.
+            Accessor.TabButtonBox_BasicTabButton.OnClickAsObservable()
+                .Subscribe(_ => SetVisibleTab(0));
+            Accessor.TabButtonBox_LevelUpTabButton.OnClickAsObservable()
+                .Subscribe(_ => SetVisibleTab(1));
+
+            // 탭의 기본 활성 상태를 설정합니다.
+            SetVisibleTab(0);
+        }
+
+        private void SetVisibleTab(int _tabIndex)
+        {
+            ColorUtility.TryParseHtmlString("#D7EAF1", out var _enableButtonColor);
+            ColorUtility.TryParseHtmlString("#2F363C", out var _enableTextColor);
+            ColorUtility.TryParseHtmlString("#2D4A75", out var _disableButtonColor);
+            ColorUtility.TryParseHtmlString("#FFFFFF", out var _disableTextColor);
+
+            Accessor.BasicTab.gameObject.SetActive(false);
+            Accessor.LevelUpTab.gameObject.SetActive(false);
+            Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = _disableButtonColor;
+            Accessor.TabButtonBox_BasicTabButton_Text.color = _disableTextColor;
+            Accessor.TabButtonBox_LevelUpTabButton.GetComponent<Image>().color = _disableButtonColor;
+            Accessor.TabButtonBox_LevelUpTabButton_Text.color = _disableTextColor;
+            Accessor.TabButtonBox_ShinbiTabButton.GetComponent<Image>().color = _disableButtonColor;
+            Accessor.TabButtonBox_ShinbiTabButton_Text.color = _disableTextColor;
+
+            switch (_tabIndex)
+            {
+                case 0:
+                    Accessor.BasicTab.gameObject.SetActive(true);
+                    Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = _enableButtonColor;
+                    Accessor.TabButtonBox_BasicTabButton_Text.color = _enableTextColor;
+                    break;
+                case 1:
+                    Accessor.LevelUpTab.gameObject.SetActive(true);
+                    Accessor.TabButtonBox_LevelUpTabButton.GetComponent<Image>().color = _enableButtonColor;
+                    Accessor.TabButtonBox_LevelUpTabButton_Text.color = _enableTextColor;
+                    break;
+            }
         }
     }
 }

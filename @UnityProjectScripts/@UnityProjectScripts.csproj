@@ -504,6 +504,7 @@
     <Compile Include="Scene\Accessor\StudentListScreenAccessor.cs" />
     <Compile Include="Scene\Sub\DropdownSizeFitter.cs" />
     <Compile Include="Scene\Sub\GameResourceLoader.cs" />
+    <Compile Include="Scene\UI\ExSkillInfoUI.cs" />
     <Compile Include="Scene\UI\MainScreenUI.cs" />
     <Compile Include="Scene\UI\PadUI.cs" />
     <Compile Include="Scene\UI\StudentInfoScreenUI.cs" />

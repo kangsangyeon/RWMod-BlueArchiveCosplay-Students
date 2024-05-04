@@ -28,7 +28,8 @@ namespace TemplateTable
             _delayedLoad = delayedLoad;
         }
 
-        public IEnumerable<KeyValuePair<TKey, TemplateTableLoadData<TKey, TValue>>> Load()
+        public IEnumerable<KeyValuePair<TKey, TemplateTableLoadData<TKey, TValue>>> 
+            Load()
         {
             return _delayedLoad ? LoadDelayed() : LoadNow();
         }
