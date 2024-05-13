@@ -34,5 +34,8 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public Text LevelUpTab_ExSkillInfo_ExSkillExpText;
     public Text LevelUpTab_LevelUpBox_DollorText;
     public Image LevelUpTab_LevelUpBox_LevelUpButton;
-    public Image BackButton;
+    public Text DollorText;
+    public Text PyroxenesText;
+    public Button BackButton;
+    public Button HomeButton;
 }
