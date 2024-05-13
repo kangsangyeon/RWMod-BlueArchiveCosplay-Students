@@ -16,16 +16,16 @@ namespace UnityProjectScripts
 
             GameResource.StudentPrefab = Load<GameObject>("Prefab/UI", "Student");
             GameResource.ClubPrefab = Load<GameObject>("Prefab/UI", "Club");
-            GameResource.SynergeActivatedSprite = Load<Sprite>("Sprite/UI/Various/Synergy", "Synergy_Icon_True");
-            GameResource.SynergeDeactivatedSprite = Load<Sprite>("Sprite/UI/Various/Synergy", "Synergy_Icon_False");
+            GameResource.SynergyActivatedSprite = Load<Sprite>("Sprite/UI/Access/Synergy", "Synergy_Icon_True");
+            GameResource.SynergyDeactivatedSprite = Load<Sprite>("Sprite/UI/Access/Synergy", "Synergy_Icon_False");
             GameResource.SchoolLogoSprites =
                 GameResource.SchoolTable.ToDictionary(
                     x => x.Key,
-                    x => Load<Sprite>("Sprite/UI/School/Icon", $"School_Icon_{x.Key}"));
+                    x => Load<Sprite>($"School/Icon", $"School_Icon_{x.Key}"));
             GameResource.StudentPortraitSprites =
                 GameResource.StudentTable.ToDictionary(
                     x => x.Key,
-                    x => Load<Sprite>("Sprite/UI/Student/Portrait", $"Student_Portrait_{x.Key}"));
+                    x => Load<Sprite>($"Student/{x.Key}", $"Student_Portrait_{x.Key}"));
             GameResource.StudentAttributeFrameSprites = new[]
                 {
                     StudentAttribute.Attack,
@@ -33,7 +33,10 @@ namespace UnityProjectScripts
                     StudentAttribute.Support,
                     StudentAttribute.Heal
                 }
-                .Select(x => Load<Sprite>("Sprite/UI/Student/Attribute", $"Student_Attribute_Frame_{x.ToString()}"))
+                .Select(x =>
+                    Load<Sprite>(
+                        "Sprite/UI/Access/Student/Attribute",
+                        $"Student_Attribute_Frame_{x.ToString()}"))
                 .ToList();
         }
 

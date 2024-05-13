@@ -14,8 +14,8 @@ public static class GameResource
     public static AssetBundle Bundle;
     public static GameObject ClubPrefab;
     public static GameObject StudentPrefab;
-    public static Sprite SynergeActivatedSprite;
-    public static Sprite SynergeDeactivatedSprite;
+    public static Sprite SynergyActivatedSprite;
+    public static Sprite SynergyDeactivatedSprite;
     public static Dictionary<int, Sprite> SchoolLogoSprites;
     public static Dictionary<int, Sprite> StudentPortraitSprites;
     public static List<Sprite> StudentAttributeFrameSprites;
