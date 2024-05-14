@@ -21,7 +21,7 @@ namespace UnityProjectScripts
                 .Subscribe(_ =>
                 {
                     Accessor.gameObject.SetActive(false);
-                    PadAccessor.StudentInfoScreen.gameObject.SetActive(true);
+                    PadAccessor.StudentListScreen.gameObject.SetActive(true);
                 })
                 .AddTo(gameObject);
 

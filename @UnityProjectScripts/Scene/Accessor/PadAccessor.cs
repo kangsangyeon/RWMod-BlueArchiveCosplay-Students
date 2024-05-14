@@ -9,6 +9,6 @@ public class PadAccessor : MonoBehaviour
     public Image HomeButton_Border;
     public RawImage ScreenOverlay_Transition;
     public MainScreenAccessor MainScreen;
-    public StudentListScreenAccessor StudentInfoScreen;
+    public StudentInfoScreenAccessor StudentInfoScreen;
     public StudentListScreenAccessor StudentListScreen;
 }

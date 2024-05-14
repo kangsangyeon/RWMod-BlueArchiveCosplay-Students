@@ -1,5 +1,6 @@
 using System.Linq;
 using UniRx;
+using UniRx.Triggers;
 using Unity.Linq;
 using UnityEngine;
 
@@ -37,8 +38,6 @@ namespace UnityProjectScripts
                 var _clubList = _shcoolPair.Value.ClubList.Select(x => GameResource.ClubTable[x]).ToList();
                 foreach (var _clubPair in _clubList)
                 {
-                    Debug.Log($"{_clubPair.Id}: {_clubPair.Name}");
-
                     var _clubGo = Instantiate(GameResource.ClubPrefab, accessor.ClubHolder.transform);
                     var _clubAccessor = _clubGo.GetComponent<ClubAccessor>();
 
@@ -59,6 +58,16 @@ namespace UnityProjectScripts
                             GameResource.StudentAttributeFrameSprites[(int)_student.Attribute];
                         _studentAccessor.Portrait.sprite =
                             GameResource.StudentPortraitSprites[_student.Id];
+
+                        _studentAccessor.Frame.OnPointerClickAsObservable()
+                            .Subscribe(_ =>
+                            {
+                                accessor.gameObject.SetActive(false);
+                                padAccessor.StudentInfoScreen.gameObject.SetActive(true);
+                                var _ui = padAccessor.StudentInfoScreen.gameObject.GetComponent<StudentInfoScreenUI>();
+                                _ui.CharId.Value = _student.Id;
+                            })
+                            .AddTo(gameObject);
                     }
                 }
             }
