@@ -496,6 +496,7 @@
     <Compile Include="Resource\Data\WeaponData.cs" />
     <Compile Include="Resource\GameResource.cs" />
     <Compile Include="Scene\Accessor\ExSkillInfoAccessor.cs" />
+    <Compile Include="Scene\Accessor\ScreenTopBarAccessor.cs" />
     <Compile Include="Scene\Accessor\StudentAccessor.cs" />
     <Compile Include="Scene\Accessor\ClubAccessor.cs" />
     <Compile Include="Scene\Accessor\MainScreenAccessor.cs" />

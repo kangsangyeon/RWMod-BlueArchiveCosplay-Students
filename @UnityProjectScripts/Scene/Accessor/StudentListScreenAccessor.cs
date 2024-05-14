@@ -8,6 +8,6 @@ public class StudentListScreenAccessor : MonoBehaviour
     public Image ClubHolder;
     public InputField SearchInput;
     public Dropdown SortBySchoolDropdown;
-    public Button BackButton;
     public Image Background;
+    public ScreenTopBarAccessor ScreenTopBar;
 }

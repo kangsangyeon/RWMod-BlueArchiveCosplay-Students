@@ -14,7 +14,15 @@ namespace UnityProjectScripts
         {
             padAccessor = FindObjectOfType<PadAccessor>();
 
-            accessor.BackButton.OnClickAsObservable()
+            accessor.ScreenTopBar.BackButton.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    accessor.gameObject.SetActive(false);
+                    padAccessor.MainScreen.gameObject.SetActive(true);
+                })
+                .AddTo(gameObject);
+
+            accessor.ScreenTopBar.HomeButton.OnClickAsObservable()
                 .Subscribe(_ =>
                 {
                     accessor.gameObject.SetActive(false);

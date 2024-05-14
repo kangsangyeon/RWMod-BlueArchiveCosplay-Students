@@ -11,9 +11,28 @@ namespace UnityProjectScripts
     {
         public StudentInfoScreenAccessor Accessor;
         public ReactiveProperty<int> CharId = new ReactiveProperty<int>(0);
+        private PadAccessor PadAccessor;
 
         private void Start()
         {
+            PadAccessor = FindObjectOfType<PadAccessor>();
+
+            Accessor.ScreenTopBar.BackButton.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    Accessor.gameObject.SetActive(false);
+                    PadAccessor.StudentInfoScreen.gameObject.SetActive(true);
+                })
+                .AddTo(gameObject);
+
+            Accessor.ScreenTopBar.HomeButton.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    Accessor.gameObject.SetActive(false);
+                    PadAccessor.MainScreen.gameObject.SetActive(true);
+                })
+                .AddTo(gameObject);
+
             CharId
                 .Where(x => x > 0)
                 .Subscribe(UpdateChar);
