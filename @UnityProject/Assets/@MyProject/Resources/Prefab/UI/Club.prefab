@@ -449,7 +449,7 @@ MonoBehaviour:
     m_AlignByGeometry: 1
     m_RichText: 0
     m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\uD310\uD14C\uBAA8\uB2C8\uC6C0 \uC18C\uC0AC\uC774\uC5B4\uD2F0"
 --- !u!1 &8314638306417587693
