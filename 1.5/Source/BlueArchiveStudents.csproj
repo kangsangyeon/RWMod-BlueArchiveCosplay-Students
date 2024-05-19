@@ -38,9 +38,6 @@
       <HintPath>..\..\..\Mod_Harmony\Current\Assemblies\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="@UnityProjectScripts">
-      <HintPath>..\Assemblies\@UnityProjectScripts.dll</HintPath>
-    </Reference>
     <Reference Include="AlienRace">
       <HintPath>..\..\..\XXL_HAR\1.4\Assemblies\AlienRace.dll</HintPath>
       <Private>False</Private>
@@ -85,6 +82,9 @@
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityProjectScripts">
+      <HintPath>..\Assemblies\UnityProjectScripts.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
