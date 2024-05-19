@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!-- Pandemonium Society -->
+
+    <!-- begin BA_HairDef_Makoto -->
+    <HairDef>
+        <defName>BA_HairDef_Makoto</defName>
+        <label>BA Makoto Hair</label>
+        <styleGender>Female</styleGender>
+        <texPath>BA/Makoto/makoto_hair</texPath>
+    </HairDef>
+    <!-- end BA_HairDef_Makoto -->
+
+    <!-- begin BA_HairDef_Satsuki -->
+    <HairDef>
+        <defName>BA_HairDef_Satsuki</defName>
+        <label>BA Satsuki Hair</label>
+        <styleGender>Female</styleGender>
+        <texPath>BA/Satsuki/satsuki_hair</texPath>
+    </HairDef>
+    <!-- end BA_HairDef_Satsuki -->
+
+    <!-- begin BA_HairDef_Iroha -->
+    <HairDef>
+        <defName>BA_HairDef_Iroha</defName>
+        <label>BA Iroha Hair</label>
+        <styleGender>Female</styleGender>
+        <texPath>BA/Iroha/iroha_hair</texPath>
+    </HairDef>
+    <!-- end BA_HairDef_Satsuki -->
+
+</Defs>

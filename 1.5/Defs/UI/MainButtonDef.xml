@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <MainButtonDef>
+        <defName>BAGachaTabButton</defName>
+        <label>BAGachaTab</label>
+        <description>Open or Close the Blue Archive Gacha Tab</description>
+        <tabWindowClass>BlueArchiveStudents.UI.BA_GachaTabWindow</tabWindowClass>
+        <order>0</order>
+        <buttonVisible>true</buttonVisible>
+        <iconPath>UI/BA_MainTab</iconPath>
+        <minimized>true</minimized>
+        <closesWorldView>true</closesWorldView>
+    </MainButtonDef>
+
+</Defs>

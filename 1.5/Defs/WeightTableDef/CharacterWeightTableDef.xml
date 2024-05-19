@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <BlueArchiveStudents.CharacterTableDef>
+        <defName>table_character-gacha</defName>
+        <items>
+
+            <li>
+                <pawnKindTemplateDef>makoto_template</pawnKindTemplateDef>
+                <weight>2</weight>
+            </li>
+
+            <li>
+                <pawnKindTemplateDef>makoto_template</pawnKindTemplateDef>
+                <weight>10</weight>
+            </li>
+
+        </items>
+    </BlueArchiveStudents.CharacterTableDef>
+
+</Defs>

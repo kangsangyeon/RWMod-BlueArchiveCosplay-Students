@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- Pandemonium Society -->
+
+    <!-- makoto -->
+
+    <BlueArchiveStudents.PawnKindTemplateDef>
+        <defName>makoto_template</defName>
+        <firstName>Hanuma</firstName>
+        <lastName>ㅤ</lastName>
+        <nickname>Makoto</nickname>
+        <age>17</age>
+        <realAge>17</realAge>
+        <isMale>false</isMale>
+        <childHood>BA_Backstory_Makoto_Childhood</childHood>
+        <bodyTypeDef>BABodyBase_Normal_CCup</bodyTypeDef>
+        <headTypeDef>BA_HeadTypeDef_Base</headTypeDef>
+        <hair>BA_HairDef_Makoto</hair>
+        <pawnKindDef>BA_Makoto</pawnKindDef>
+        <apparels>
+            <li>BA_MakotoApparel</li>
+            <li>BA_Makoto_headgear</li>
+        </apparels>
+    </BlueArchiveStudents.PawnKindTemplateDef>
+
+    <!-- satsuki -->
+
+    <BlueArchiveStudents.PawnKindTemplateDef>
+        <defName>satsuki_template</defName>
+        <firstName>ㅤ</firstName>
+        <lastName>ㅤ</lastName>
+        <nickname>Satsuki</nickname>
+        <!-- <age>17</age>
+        <realAge>17</realAge> -->
+        <isMale>false</isMale>
+        <childHood>BA_Backstory_Satsuki_Childhood</childHood>
+        <bodyTypeDef>BABodyBase_Normal_FCup</bodyTypeDef>
+        <headTypeDef>BA_HeadTypeDef_Base</headTypeDef>
+        <hair>BA_HairDef_Satsuki</hair>
+        <pawnKindDef>BA_Satsuki</pawnKindDef>
+        <apparels>
+            <li>BA_SatsukiApparel</li>
+            <li>BA_Satsuki_headgear</li>
+        </apparels>
+    </BlueArchiveStudents.PawnKindTemplateDef>
+    
+    <!-- iroha -->
+
+    <BlueArchiveStudents.PawnKindTemplateDef>
+        <defName>iroha_template</defName>
+        <firstName>Natsume</firstName>
+        <lastName>ㅤ</lastName>
+        <nickname>Iroha</nickname>
+        <!-- <age>17</age>
+        <realAge>17</realAge> -->
+        <isMale>false</isMale>
+        <childHood>BA_Backstory_Iroha_Childhood</childHood>
+        <bodyTypeDef>BABodyBase_Thin_AACup</bodyTypeDef>
+        <headTypeDef>BA_HeadTypeDef_Base</headTypeDef>
+        <hair>BA_HairDef_Iroha</hair>
+        <pawnKindDef>BA_Iroha</pawnKindDef>
+        <apparels>
+            <li>BA_IrohaApparel</li>
+            <li>BA_IrohaOuterApparel</li>
+            <li>BA_Iroha_headgear</li>
+        </apparels>
+    </BlueArchiveStudents.PawnKindTemplateDef>
+
+
+</Defs>

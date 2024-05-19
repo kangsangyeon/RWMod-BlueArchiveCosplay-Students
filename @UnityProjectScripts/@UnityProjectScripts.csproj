@@ -8,8 +8,8 @@
     <ProjectGuid>9c86f8d2-0923-447b-8730-eecde4f6062c</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>@UnityProjectScripts</RootNamespace>
-    <AssemblyName>@UnityProjectScripts</AssemblyName>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>UnityProjectScripts</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
