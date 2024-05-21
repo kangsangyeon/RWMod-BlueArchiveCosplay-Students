@@ -230,13 +230,21 @@
                     <borderScale>1</borderScale>
                     <!-- <headOffset>(0.0, 0.07)</headOffset> -->
                     <headOffsetDirectional>
-                        <north>(0, -0.31)</north>
-                        <south>(0, -0.31)</south>
-                        <east>(-0.130, -0.32)</east>
-                        <west>(0.130, -0.32)</west>
+                        <north>
+                            <offset>(0, -0.31)</offset>
+                        </north>
+                        <south>
+                            <offset>(0, -0.31)</offset>
+                        </south>
+                        <east>
+                            <offset>(-0.130, -0.32)</offset>
+                        </east>
+                        <west>
+                            <offset>(0.130, -0.32)</offset>
+                        </west>
                     </headOffsetDirectional>
                     <!-- 1.2 -->
-                    <customDrawSize>(1.2, 1.2)</customDrawSize> 
+                    <customDrawSize>(1.2, 1.2)</customDrawSize>
                     <customPortraitDrawSize>(1.2, 1.2)</customPortraitDrawSize>
                     <customHeadDrawSize>(1.2, 1.2)</customHeadDrawSize>
                     <customPortraitHeadDrawSize>(1.2, 1.2)</customPortraitHeadDrawSize>

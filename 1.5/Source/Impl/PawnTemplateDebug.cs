@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using LudeonTK;
 using Verse;
 
 namespace BlueArchiveStudents
@@ -41,8 +42,9 @@ namespace BlueArchiveStudents
                 PawnKindTemplateGenerator.Generate(_template, Verse.Current.Game.CurrentMap);
         }
 
-        [DebugAction("BlueArchiveStudents", "Spawn BA Pawn", false, false, false, 0, false,
-            allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("BlueArchiveStudents", "Spawn BA Pawn",
+            false, false, false, false,
+            0, false, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void SpawnBAPawn()
         {
             TryLoadAllDefs();
@@ -59,8 +61,9 @@ namespace BlueArchiveStudents
             Find.WindowStack.Add(new Dialog_DebugOptionListLister(options));
         }
 
-        [DebugAction("BlueArchiveStudents", "Try Spawn BA Pawn", false, false, false, 0, false,
-            allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("BlueArchiveStudents", "Try Spawn BA Pawn",
+            false, false, false, false,
+            0, false, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void TrySpawnBAPawn()
         {
             TryLoadAllDefs();

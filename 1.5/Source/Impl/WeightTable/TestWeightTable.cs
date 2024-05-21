@@ -1,11 +1,13 @@
-﻿using Verse;
+﻿using LudeonTK;
+using Verse;
 
 namespace BlueArchiveStudents
 {
     public static class TestWeightTable
     {
         [DebugAction("BlueArchiveStudents", "Test WeightTable::GetRandomItem",
-            false, false, false, 0, false)]
+            false, false, false, false,
+            0, false)]
         public static void TestGetRandomItem()
         {
             var _item = WeightTables.GetRandomItem("table_character-gacha") as CharacterTableItem;
