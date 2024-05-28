@@ -37,7 +37,12 @@ namespace UnityProjectScripts
                 .Where(x => x > 0)
                 .Subscribe(UpdateChar);
 
-            CharId.Value = 1001;
+            if (CharId.Value == 0)
+            {
+                // 개발 중, 첫 시작 화면이 학생 정보 화면일때,
+                // 임시로 가장 처음에 1001번 캐릭터가 보여지도록 설정합니다.
+                CharId.Value = 1001;
+            }
         }
 
         private void UpdateChar(int _id)
