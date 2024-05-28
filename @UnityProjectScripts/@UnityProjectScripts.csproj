@@ -36,7 +36,7 @@
       <HintPath>Plugins\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>Plugins\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+      <HintPath>Plugins\NewtonsoftJson@12.0.3\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -34,10 +34,6 @@ for root, dirs, files in os.walk(f'./{project_name}/Plugins'):
     for file in files:
         if file.endswith('.dll'):
             filePath = f'{root}/{file}'
-            # netstandard는 UnityProject로 복사하지 않습니다.
-            # 하지만 UnityProject에는 이미 2.1.0.0 파일이 내장되어 있으며 UnityProject에 복사할 경우 에러가 발생합니다.
-            # Json.Net가 netstandard 2.0.0.0 파일을 필요로 하기 때문에 Assemblies 폴더에는 추가되어야 합니다.
-            if file != 'netstandard.dll':
-                shutil.copy(filePath, unity_project_scripts_dir_path)
+            shutil.copy(filePath, unity_project_scripts_dir_path)
             shutil.copy(filePath, assemblies_dir_path_14)
             shutil.copy(filePath, assemblies_dir_path_15)

@@ -273,7 +273,7 @@
                     <bodyAddons>
 
                         <!-- hair back layer -->
-                        <li>
+                        <!-- <li>
                             <path>BA/Empty</path>
                             <bodyPart>Head</bodyPart>
                             <hediffGraphics>
@@ -301,10 +301,37 @@
                                     <layerOffset>-0.7</layerOffset>
                                 </west>
                             </offsets>
+                        </li> -->
+
+                        <li>
+                            <path>BA/Makoto/makoto_hairback</path>
+                            <conditions>
+                                <Hediff>BA_PawnHediff_Makoto</Hediff>
+                            </conditions>
+                            <inFrontOfBody>true</inFrontOfBody>
+                            <colorChannel>base</colorChannel>
+                            <drawSize>1.2</drawSize>
+                            <angle>0</angle>
+                            <defaultOffset>Head</defaultOffset>
+                            <shaderType>Cutout</shaderType>
+                            <offsets>
+                                <south>
+                                    <offset>(0,-0.5)</offset>
+                                    <layerOffset>-0.7</layerOffset>
+                                </south>
+                                <east>
+                                    <offset>(0.105,-0.51)</offset>
+                                    <layerOffset>-0.7</layerOffset>
+                                </east>
+                                <west>
+                                    <offset>(0.105,-0.51)</offset>
+                                    <layerOffset>-0.7</layerOffset>
+                                </west>
+                            </offsets>
                         </li>
 
                         <!-- horn layer -->
-                        <li>
+                        <!-- <li>
                             <path>BA/Empty</path>
                             <bodyPart>Head</bodyPart>
                             <hediffGraphics>
@@ -335,7 +362,7 @@
                                     <layerOffset>-1</layerOffset>
                                 </north>
                             </offsets>
-                        </li>
+                        </li> -->
 
                     </bodyAddons>
                     <!-- end body addons -->
