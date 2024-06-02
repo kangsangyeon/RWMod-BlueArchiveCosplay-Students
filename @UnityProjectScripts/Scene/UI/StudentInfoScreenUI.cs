@@ -71,26 +71,34 @@ namespace UnityProjectScripts
             // todo: exp fill 설정
             // Accessor.ExpBar.fillAmount
 
-            // 캐릭터와 헤일로 애니메이션을 재생합니다.
             var _haloRect = Accessor.FullshotHaloImage.GetComponent<RectTransform>();
             var _haloGroup = Accessor.FullshotHaloImage.GetComponent<CanvasGroup>();
-            var _fullshotGroup = Accessor.FullshotParent.GetComponent<CanvasGroup>();
-            var _fullshotRect = Accessor.FullshotParent.GetComponent<RectTransform>();
+            var _fullshotParentGroup = Accessor.FullshotParent.GetComponent<CanvasGroup>();
+            var _fullshotParentRect = Accessor.FullshotParent.GetComponent<RectTransform>();
+            var _fullshotRect = Accessor.FullshotImage.GetComponent<RectTransform>();
 
-            _fullshotRect.anchoredPosition = new Vector2(0f, -20f);
-            _fullshotGroup.alpha = 0f;
+            // fullshot의 크기를 조정합니다.
+            _fullshotRect.anchorMin = Vector2.zero;
+            _fullshotRect.anchorMax = Vector2.one;
+            _fullshotRect.offsetMin = new Vector2(_data.FullshotPos.x, _data.FullshotPos.y);
+            _fullshotRect.offsetMax = new Vector2(_data.FullshotPos.x, _data.FullshotPos.y);
+            Debug.Log(_data.FullshotPos);
+
+            // 캐릭터와 헤일로 애니메이션을 재생합니다.
+            _fullshotParentRect.anchoredPosition = new Vector2(0f, -20f);
+            _fullshotParentGroup.alpha = 0f;
             _haloGroup.alpha = 0f;
             _haloRect.sizeDelta = _data.FullshotHaloSize;
             DOTween.Kill(Accessor.FullshotParent);
             DOTween.Sequence()
-                .Append(_fullshotGroup.DOFade(1f, 1f))
-                .Join(_fullshotRect.DOAnchorPos(Vector3.zero, 1f))
+                .Append(_fullshotParentGroup.DOFade(1f, 1f))
+                .Join(_fullshotParentRect.DOAnchorPos(Vector3.zero, 1f))
                 .Append(_haloGroup.DOFade(1f, 1f))
                 .SetId(Accessor.FullshotParent);
 
-            _fullshotRect.DOKill();
-            _fullshotRect.anchoredPosition = Vector2.zero;
-            _fullshotRect.DOAnchorPos(Vector2.up * 5f, 3f)
+            _fullshotParentRect.DOKill();
+            _fullshotParentRect.anchoredPosition = Vector2.zero;
+            _fullshotParentRect.DOAnchorPos(Vector2.up * 5f, 3f)
                 .SetEase(Ease.InOutSine)
                 .SetLoops(-1, LoopType.Yoyo);
 

@@ -33,4 +33,5 @@ public class StudentData
     public Vector2 FullshotHaloSize;
     public Vector3 FullshotHaloStartPos;
     public Vector3 FullshotHaloEndPos;
+    public Vector2 FullshotPos;
 }
