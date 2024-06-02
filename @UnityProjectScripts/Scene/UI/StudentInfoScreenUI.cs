@@ -73,31 +73,33 @@ namespace UnityProjectScripts
 
             // 캐릭터와 헤일로 애니메이션을 재생합니다.
             var _haloRect = Accessor.FullshotHaloImage.GetComponent<RectTransform>();
+            var _haloGroup = Accessor.FullshotHaloImage.GetComponent<CanvasGroup>();
             var _fullshotGroup = Accessor.FullshotParent.GetComponent<CanvasGroup>();
             var _fullshotRect = Accessor.FullshotParent.GetComponent<RectTransform>();
 
             _fullshotRect.anchoredPosition = new Vector2(0f, -20f);
             _fullshotGroup.alpha = 0f;
+            _haloGroup.alpha = 0f;
             _haloRect.sizeDelta = _data.FullshotHaloSize;
             DOTween.Kill(Accessor.FullshotParent);
             DOTween.Sequence()
                 .Append(_fullshotGroup.DOFade(1f, 1f))
                 .Join(_fullshotRect.DOAnchorPos(Vector3.zero, 1f))
-                .OnComplete(() =>
-                {
-                    _haloRect.DOKill();
-                    _haloRect.anchoredPosition = _data.FullshotHaloStartPos;
-                    _haloRect.DOAnchorPos(_data.FullshotHaloEndPos, 2f)
-                        .SetEase(Ease.InOutSine)
-                        .SetLoops(-1, LoopType.Yoyo);
-
-                    _fullshotRect.DOKill();
-                    _fullshotRect.anchoredPosition = Vector2.zero;
-                    _fullshotRect.DOAnchorPos(Vector2.up * 5f, 3f)
-                        .SetEase(Ease.InOutSine)
-                        .SetLoops(-1, LoopType.Yoyo);
-                })
+                .Append(_haloGroup.DOFade(1f, 1f))
                 .SetId(Accessor.FullshotParent);
+
+            _fullshotRect.DOKill();
+            _fullshotRect.anchoredPosition = Vector2.zero;
+            _fullshotRect.DOAnchorPos(Vector2.up * 5f, 3f)
+                .SetEase(Ease.InOutSine)
+                .SetLoops(-1, LoopType.Yoyo);
+
+            _haloRect.DOKill();
+            _haloRect.anchoredPosition = _data.FullshotHaloStartPos;
+            _haloRect.DOAnchorPos(_data.FullshotHaloEndPos, 2f)
+                .SetEase(Ease.InOutSine)
+                .SetLoops(-1, LoopType.Yoyo);
+
 
             // 기본 정보 탭의 내용을 표시합니다.
             Accessor.BasicTab_StatInfo_SDFullShot.sprite =
