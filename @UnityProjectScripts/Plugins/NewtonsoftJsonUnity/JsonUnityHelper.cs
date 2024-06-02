@@ -18,6 +18,7 @@ public static class JsonUnityHelper
                 var _converter = _jsonSettings.Converters.ToList();
                 _converter.Add(new Vector2JsonConverter());
                 _converter.Add(new Vector3JsonConverter());
+                _converter.Add(new Vector4JsonConverter());
                 _converter.Add(new ValueTuple2JsonConverter());
                 _converter.Add(new ColorJsonConverter());
                 _jsonSettings.Converters = _converter.ToArray();
@@ -42,6 +43,7 @@ public static class JsonUnityHelper
                 var _converter = _jsonSettings.Converters.ToList();
                 _converter.Add(new Vector2JsonConverter());
                 _converter.Add(new Vector3JsonConverter());
+                _converter.Add(new Vector4JsonConverter());
                 _converter.Add(new ValueTuple2JsonConverter());
                 _converter.Add(new ColorJsonConverter());
                 _jsonSettings.Converters = _converter.ToArray();

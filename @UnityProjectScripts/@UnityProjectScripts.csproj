@@ -475,6 +475,7 @@
     <Compile Include="Plugins\NewtonsoftJsonUnity\ValueTuple2JsonConverter.cs" />
     <Compile Include="Plugins\NewtonsoftJsonUnity\Vector2JsonConverter.cs" />
     <Compile Include="Plugins\NewtonsoftJsonUnity\Vector3JsonConverter.cs" />
+    <Compile Include="Plugins\NewtonsoftJsonUnity\Vector4JsonConverter.cs" />
     <Compile Include="Plugins\TemplateTable\ITemplateTable.cs" />
     <Compile Include="Plugins\TemplateTable\ITemplateTableLoader.cs" />
     <Compile Include="Plugins\TemplateTable\StreamGenericHelper.cs" />

@@ -80,9 +80,9 @@ namespace UnityProjectScripts
             // fullshot의 크기를 조정합니다.
             _fullshotRect.anchorMin = Vector2.zero;
             _fullshotRect.anchorMax = Vector2.one;
-            _fullshotRect.offsetMin = new Vector2(_data.FullshotPos.x, _data.FullshotPos.y);
-            _fullshotRect.offsetMax = new Vector2(_data.FullshotPos.x, _data.FullshotPos.y);
-            Debug.Log(_data.FullshotPos);
+            _fullshotRect.offsetMin = new Vector2(_data.FullshotRectOffset.x, _data.FullshotRectOffset.y);
+            _fullshotRect.offsetMax = new Vector2(-_data.FullshotRectOffset.z, -_data.FullshotRectOffset.w);
+            Debug.Log(_data.FullshotRectOffset);
 
             // 캐릭터와 헤일로 애니메이션을 재생합니다.
             _fullshotParentRect.anchoredPosition = new Vector2(0f, -20f);
