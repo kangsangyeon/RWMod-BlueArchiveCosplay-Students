@@ -7,4 +7,5 @@ public class StudentAccessor : MonoBehaviour
 {
     public Image Frame;
     public Image Portrait;
+    public Image OverlayOnSearchFailed;
 }

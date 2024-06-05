@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using UniRx;
 using UniRx.Triggers;
@@ -10,10 +11,12 @@ namespace UnityProjectScripts
     {
         public StudentListScreenAccessor accessor;
         private PadAccessor padAccessor;
+        private Dictionary<int, StudentAccessor> studentAccessorById;
 
         private void Start()
         {
             padAccessor = FindObjectOfType<PadAccessor>();
+            studentAccessorById = new Dictionary<int, StudentAccessor>();
 
             accessor.ScreenTopBar.BackButton.OnClickAsObservable()
                 .Subscribe(_ =>
@@ -68,9 +71,60 @@ namespace UnityProjectScripts
                                 _ui.CharId.Value = _student.Id;
                             })
                             .AddTo(gameObject);
+
+                        studentAccessorById.Add(_student.Id, _studentAccessor);
                     }
                 }
             }
+
+            accessor.SearchInput.OnValueChangedAsObservable()
+                .Subscribe(input =>
+                {
+                    if (input.Length <= 1)
+                    {
+                        // 검색어가 1글자 이하인 경우, 필터링하지 않습니다.
+                        foreach (var _pair in studentAccessorById)
+                            _pair.Value.OverlayOnSearchFailed.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        var _studentIds = new HashSet<int>();
+
+                        var _searchedStudentData =
+                            GameResource.StudentTable.Values
+                                .Where(x => x.Name.Contains(input)).ToList();
+
+                        var _searchedSchoolData =
+                            GameResource.SchoolTable.Values
+                                .Where(x => x.Name.Contains(input)).ToList();
+
+                        var _searchedClubData =
+                            GameResource.ClubTable.Values
+                                .Where(x => x.Name.Contains(input)).ToList();
+
+                        foreach (var _data in _searchedSchoolData)
+                        {
+                            _searchedClubData.AddRange(
+                                _data.ClubList.Select(x => GameResource.ClubTable[x]));
+                        }
+
+                        foreach (var _data in _searchedClubData)
+                        {
+                            foreach (var _id in _data.StudentList)
+                                _studentIds.Add(_id);
+                        }
+
+                        foreach (var _data in _searchedStudentData)
+                            _studentIds.Add(_data.Id);
+
+                        foreach (var _pair in studentAccessorById)
+                        {
+                            bool _searchFailed = !_studentIds.Contains(_pair.Key);
+                            _pair.Value.OverlayOnSearchFailed.gameObject.SetActive(_searchFailed);
+                        }
+                    }
+                })
+                .AddTo(gameObject);
         }
     }
 }
