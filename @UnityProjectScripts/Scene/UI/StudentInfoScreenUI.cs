@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using UniRx;
@@ -120,9 +121,9 @@ namespace UnityProjectScripts
 
             var _skillData = GameResource.SkillTable[_data.SkillId];
             var _skillLevelData = GameResource.SkillLevelTable[(_data.SkillId, 1)]; // temp: 임시적으로 스킬 레벨을 1으로 간주합니다.
-            var _skillLevels =
-                GameResource.SkillLevelTable.Values
-                    .Where(x => x.Id.SkillId == _skillData.Id).ToList();
+            var _skillLevels = new List<SkillLevelData>();
+            for (int i = 0; i < 5; ++i)
+                _skillLevels.Add(GameResource.SkillLevelTable[(_data.SkillId, i + 1)]);
             var _skillInfoUI = Accessor.BasicTab_ExSkillInfo.GetComponent<ExSkillInfoUI>();
             _skillInfoUI.UpdateUI(_skillData, _skillLevelData, _skillLevelData.Id.Level == _skillLevels.Count - 1,
                 false);
