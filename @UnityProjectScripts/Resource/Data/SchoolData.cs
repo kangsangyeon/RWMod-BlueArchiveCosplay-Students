@@ -5,4 +5,5 @@ public class SchoolData
     public int Id;
     public string Name;
     public List<int> ClubList;
+    public string BackgroundPath;
 }

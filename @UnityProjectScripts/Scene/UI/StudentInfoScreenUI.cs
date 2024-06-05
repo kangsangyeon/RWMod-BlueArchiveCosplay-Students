@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using DG.Tweening;
 using UniRx;
@@ -63,6 +64,16 @@ namespace UnityProjectScripts
             for (int i = 0; i < 5; ++i)
                 Instantiate(_yellowStarPrefab, Accessor.StarHolder.transform);
 
+            var _clubData =
+                GameResource.ClubTable.Values
+                    .First(x => x.StudentList.Contains(_id));
+            var _schoolData =
+                GameResource.SchoolTable.Values
+                    .First(x => x.ClubList.Contains(_clubData.Id));
+            var _directory = Path.GetDirectoryName(_schoolData.BackgroundPath);
+            var _fileName = Path.GetFileName(_schoolData.BackgroundPath);
+            Accessor.Background.sprite = GameResource.Load<Sprite>(_directory, _fileName);
+
             Accessor.AttributeText.text = _data.Attribute.ToStringKr();
             // todo: attribute icon 설정
             // Accessor.AttributeIcon.sprite 
@@ -83,7 +94,6 @@ namespace UnityProjectScripts
             _fullshotRect.anchorMax = Vector2.one;
             _fullshotRect.offsetMin = new Vector2(_data.FullshotRectOffset.x, _data.FullshotRectOffset.w);
             _fullshotRect.offsetMax = new Vector2(-_data.FullshotRectOffset.z, -_data.FullshotRectOffset.y);
-            Debug.Log(_data.FullshotRectOffset);
 
             // 캐릭터와 헤일로 애니메이션을 재생합니다.
             _fullshotParentRect.anchoredPosition = new Vector2(0f, -20f);
