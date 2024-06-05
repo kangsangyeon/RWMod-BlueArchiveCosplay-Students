@@ -11,11 +11,13 @@ namespace UnityProjectScripts
     {
         public StudentListScreenAccessor accessor;
         private PadAccessor padAccessor;
+        private Dictionary<int, ClubAccessor> clubAccessorById;
         private Dictionary<int, StudentAccessor> studentAccessorById;
 
         private void Start()
         {
             padAccessor = FindObjectOfType<PadAccessor>();
+            clubAccessorById = new Dictionary<int, ClubAccessor>();
             studentAccessorById = new Dictionary<int, StudentAccessor>();
 
             accessor.ScreenTopBar.BackButton.OnClickAsObservable()
@@ -39,18 +41,20 @@ namespace UnityProjectScripts
             foreach (var _shcoolPair in GameResource.SchoolTable)
             {
                 var _clubList = _shcoolPair.Value.ClubList.Select(x => GameResource.ClubTable[x]).ToList();
-                foreach (var _clubPair in _clubList)
+                foreach (var _club in _clubList)
                 {
                     var _clubGo = Instantiate(GameResource.ClubPrefab, accessor.ClubHolder.transform);
                     var _clubAccessor = _clubGo.GetComponent<ClubAccessor>();
 
                     _clubAccessor.StudentHolder.Descendants().Destroy();
-                    _clubAccessor.ClubName.text = _clubPair.Name;
+                    _clubAccessor.ClubName.text = _club.Name;
                     _clubAccessor.Logo.sprite = GameResource.SchoolLogoSprites[_shcoolPair.Key];
                     // temp: 임시적으로 모든 클럽의 시너지가 비활성화 되어있다고 간주합니다.
                     _clubAccessor.SynergyThumbnail.sprite = GameResource.SynergyDeactivatedSprite;
 
-                    var _studentList = _clubPair.StudentList.Select(x => GameResource.StudentTable[x]).ToList();
+                    clubAccessorById.Add(_club.Id, _clubAccessor);
+
+                    var _studentList = _club.StudentList.Select(x => GameResource.StudentTable[x]).ToList();
                     foreach (var _student in _studentList)
                     {
                         var _studentGo =
@@ -121,6 +125,18 @@ namespace UnityProjectScripts
                         {
                             bool _searchFailed = !_studentIds.Contains(_pair.Key);
                             _pair.Value.OverlayOnSearchFailed.gameObject.SetActive(_searchFailed);
+                        }
+
+                        if (_studentIds.Count == 1)
+                        {
+                            // 한 명의 캐릭터로 특정된다면, 그 캐릭터의 위치로 자동 스크롤합니다.
+                            var _studentId = _studentIds.First();
+                            var _clubData = GameResource.ClubTable.Values
+                                .FirstOrDefault(x => x.StudentList.Contains(_studentId));
+                            var _clubAccessor = clubAccessorById[_clubData.Id];
+                            int _clubOrder = _clubAccessor.transform.ChildIndexOfSelf();
+                            float _position = (float)_clubOrder / _clubAccessor.transform.parent.childCount;
+                            accessor.ClubScrollRect.normalizedPosition = new Vector2(0, _position);
                         }
                     }
                 })

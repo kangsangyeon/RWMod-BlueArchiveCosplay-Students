@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class StudentListScreenAccessor : MonoBehaviour
 {
-    public Image ClubHolder;
     public InputField SearchInput;
     public Dropdown SortBySchoolDropdown;
+    public ScrollRect ClubScrollRect;
+    public Image ClubHolder;
     public Image Background;
     public ScreenTopBarAccessor ScreenTopBar;
 }
