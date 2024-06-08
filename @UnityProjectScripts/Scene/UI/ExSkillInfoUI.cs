@@ -34,9 +34,9 @@ namespace UnityProjectScripts
             else if (_studentData.Attribute == StudentAttribute.Defense)
                 ColorUtility.TryParseHtmlString("#065BAB", out _thumbnailBgColor);
             else if (_studentData.Attribute == StudentAttribute.Support)
-                ColorUtility.TryParseHtmlString("#88F284", out _thumbnailBgColor);
-            else if (_studentData.Attribute == StudentAttribute.Heal)
                 ColorUtility.TryParseHtmlString("#BD8801", out _thumbnailBgColor);
+            else if (_studentData.Attribute == StudentAttribute.Heal)
+                ColorUtility.TryParseHtmlString("#88F284", out _thumbnailBgColor);
 
             Accessor.Thumbnail.sprite = _thumbnailSprite;
             Accessor.ThumbnailBackground.color = _thumbnailBgColor;
