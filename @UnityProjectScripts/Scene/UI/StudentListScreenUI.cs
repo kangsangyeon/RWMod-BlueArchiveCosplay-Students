@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UniRx;
@@ -135,8 +136,10 @@ namespace UnityProjectScripts
                                 .FirstOrDefault(x => x.StudentList.Contains(_studentId));
                             var _clubAccessor = clubAccessorById[_clubData.Id];
                             int _clubOrder = _clubAccessor.transform.ChildIndexOfSelf();
-                            float _position = (float)_clubOrder / _clubAccessor.transform.parent.childCount;
+                            float _position = (float)_clubOrder / (_clubAccessor.transform.parent.childCount - 1);
+                            _position = 1 - _position;
                             accessor.ClubScrollRect.normalizedPosition = new Vector2(0, _position);
+                            Debug.Log(_position);
                         }
                     }
                 })
