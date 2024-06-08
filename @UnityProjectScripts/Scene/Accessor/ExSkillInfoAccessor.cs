@@ -7,9 +7,9 @@ public class ExSkillInfoAccessor : MonoBehaviour
 {
     public Text SkillDescriptionText;
     public Text SkillNameText;
+    public Image ThumbnailBackground;
     public Image Badge;
     public Image Thumbnail;
     public Image LevelImage;
-    public GameObject StarHolder;
     public Image Background;
 }

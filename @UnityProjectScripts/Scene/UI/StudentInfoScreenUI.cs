@@ -135,8 +135,8 @@ namespace UnityProjectScripts
             for (int i = 0; i < 5; ++i)
                 _skillLevels.Add(GameResource.SkillLevelTable[(_data.SkillId, i + 1)]);
             var _skillInfoUI = Accessor.BasicTab_ExSkillInfo.GetComponent<ExSkillInfoUI>();
-            _skillInfoUI.UpdateUI(_skillData, _skillLevelData, _skillLevelData.Id.Level == _skillLevels.Count - 1,
-                false);
+            _skillInfoUI.UpdateUI(_data, _skillData, _skillLevelData,
+                _skillLevelData.Id.Level == _skillLevels.Count - 1, false);
 
             var _weaponData = GameResource.WeaponTable[_data.WeaponId];
             Accessor.BasicTab_WeaponInfo_WeaponTypeText.text = _weaponData.Type.ToString();
@@ -157,7 +157,7 @@ namespace UnityProjectScripts
                 var _accessor = _go.GetComponent<ExSkillInfoUI>();
                 bool _isMaxLevel = i == _skillLevels.Count - 1;
                 bool _isUnlocked = i > _skillLevelData.Id.Level - 1;
-                _accessor.UpdateUI(_skillData, _skillLevels[i], _isMaxLevel, _isUnlocked);
+                _accessor.UpdateUI(_data, _skillData, _skillLevels[i], _isMaxLevel, _isUnlocked);
             }
 
             // 현재 레벨 이후의 스킬들에 잠김 아이콘을 표시합니다.

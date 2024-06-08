@@ -233,10 +233,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkillDescriptionText: {fileID: 8579148361373572865}
   SkillNameText: {fileID: 4838730249438357262}
+  ThumbnailBackground: {fileID: 1934311301697343012}
   Badge: {fileID: 7537063090471551387}
   Thumbnail: {fileID: 7994754558314827933}
   LevelImage: {fileID: 4169800097945182359}
-  StarHolder: {fileID: 7637301534328898062}
   Background: {fileID: 4908241052722381708}
 --- !u!114 &7574663466489386738
 MonoBehaviour:
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 1934311301697343012}
   - component: {fileID: 6326760166471642271}
   m_Layer: 5
-  m_Name: (ThumbnailBackground)*
+  m_Name: ThumbnailBackground*
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
