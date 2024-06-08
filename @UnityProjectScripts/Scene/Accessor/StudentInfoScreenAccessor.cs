@@ -7,6 +7,7 @@ public class StudentInfoScreenAccessor : MonoBehaviour
 {
     public Image ExpBar;
     public Text LevelText;
+    public Image AttributeBox;
     public Image AttributeIcon;
     public Text AttributeText;
     public Text NameText;

@@ -75,8 +75,13 @@ namespace UnityProjectScripts
             Accessor.Background.sprite = GameResource.Load<Sprite>(_directory, _fileName);
 
             Accessor.AttributeText.text = _data.Attribute.ToStringKr();
-            // todo: attribute icon 설정
-            // Accessor.AttributeIcon.sprite 
+            Accessor.AttributeIcon.sprite = GameResource.Load<Sprite>(
+                "Sprite/UI/Access/Student/Attribute",
+                $"Student_Attribute_Icon_{_data.Attribute.ToString()}");
+
+            // AttributeText의 길이가 달라지면 레이아웃이 이를 감지하지 못해 텍스트와 아이콘과 겹치는 문제가 발생합니다.
+            // 따라서 레이아웃을 강제로 새로고침합니다.
+            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)Accessor.AttributeBox.transform);
 
             // todo: level text 설정
             // Accessor.LevelText.text = 
