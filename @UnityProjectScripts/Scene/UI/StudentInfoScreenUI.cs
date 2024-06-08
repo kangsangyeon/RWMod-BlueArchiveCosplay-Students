@@ -146,7 +146,7 @@ namespace UnityProjectScripts
             var _weaponData = GameResource.WeaponTable[_data.WeaponId];
             Accessor.BasicTab_WeaponInfo_WeaponTypeText.text = _weaponData.Type.ToString();
             Accessor.BasicTab_WeaponInfo_WeaponImage.sprite =
-                GameResource.Load<Sprite>($"Weapon/{_weaponData.Id}", $"Weapon_Icon_{_weaponData.Id}");
+                GameResource.Load<Sprite>($"Weapon", $"Weapon_Icon_{_weaponData.Id}");
 
             var _blueStarPrefab = GameResource.Load<GameObject>("Prefab/UI", "BlueStar");
             Accessor.BasicTab_WeaponInfo_StarHolder.Children().Destroy();
