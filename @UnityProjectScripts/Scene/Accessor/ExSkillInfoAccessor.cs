@@ -11,5 +11,6 @@ public class ExSkillInfoAccessor : MonoBehaviour
     public Image Badge;
     public Image Thumbnail;
     public Image LevelImage;
+    public GameObject StarHolder;
     public Image Background;
 }

@@ -1,3 +1,4 @@
+using Unity.Linq;
 using UnityEngine;
 
 namespace UnityProjectScripts
@@ -40,6 +41,16 @@ namespace UnityProjectScripts
 
             Accessor.Thumbnail.sprite = _thumbnailSprite;
             Accessor.ThumbnailBackground.color = _thumbnailBgColor;
+
+            // 스킬 레벨의 별만큼 별을 보여줍니다.
+            // 단, 기본 정보탭의 스킬 UI에는 별을 보여주지 않습니다.
+            if (Accessor.StarHolder != null)
+            {
+                var _yellowStarPrefab = GameResource.Load<GameObject>("Prefab/UI", "YellowStar");
+                Accessor.StarHolder.Children().Destroy();
+                for (int i = 0; i < _skillLevelData.Star; ++i)
+                    Accessor.StarHolder.Add(_yellowStarPrefab);
+            }
         }
     }
 }

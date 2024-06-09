@@ -2,6 +2,7 @@ public class SkillLevelData
 {
     public (int SkillId, int Level) Id;
     public string Description;
+    public int Star;
     public SkillActionData[] ActionSequence;
 }
 

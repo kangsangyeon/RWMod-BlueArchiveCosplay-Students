@@ -237,6 +237,7 @@ MonoBehaviour:
   Badge: {fileID: 7537063090471551387}
   Thumbnail: {fileID: 7994754558314827933}
   LevelImage: {fileID: 4169800097945182359}
+  StarHolder: {fileID: 7637301534328898062}
   Background: {fileID: 4908241052722381708}
 --- !u!114 &7574663466489386738
 MonoBehaviour:
