@@ -497,6 +497,7 @@
     <Compile Include="Resource\Data\StudentData.cs" />
     <Compile Include="Resource\Data\WeaponData.cs" />
     <Compile Include="Resource\GameResource.cs" />
+    <Compile Include="Resource\SaveData.cs" />
     <Compile Include="Scene\Accessor\ExSkillInfoAccessor.cs" />
     <Compile Include="Scene\Accessor\ScreenTopBarAccessor.cs" />
     <Compile Include="Scene\Accessor\StudentAccessor.cs" />

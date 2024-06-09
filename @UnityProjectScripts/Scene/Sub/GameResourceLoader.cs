@@ -13,6 +13,7 @@ namespace UnityProjectScripts
         private void Awake()
         {
             LoadDataTable();
+            TryInitializeSaveData();
 
             GameResource.StudentPrefab = Load<GameObject>("Prefab/UI", "Student");
             GameResource.ClubPrefab = Load<GameObject>("Prefab/UI", "Club");
@@ -74,6 +75,41 @@ namespace UnityProjectScripts
             var _table = new TemplateTable<TKey, TValue>();
             _table.Load(_loader);
             return _table;
+        }
+
+        private void TryInitializeSaveData()
+        {
+            if (GameResource.Save == null)
+            {
+                var _save = new SaveData();
+                _save.Pyroxenes = 0;
+                _save.StudentSaveData =
+                    GameResource.StudentTable.Values.ToDictionary(
+                        x => x.Id,
+                        x => new StudentSaveData()
+                        {
+                            Id = x.Id,
+                            Unlock = true,
+                            Level = 1,
+                            Exp = 0,
+                        });
+
+                GameResource.Save = _save;
+                return;
+            }
+
+            foreach (var _data in GameResource.StudentTable.Values)
+            {
+                if (GameResource.Save.StudentSaveData.ContainsKey(_data.Id))
+                    continue;
+                GameResource.Save.StudentSaveData.Add(_data.Id, new StudentSaveData()
+                {
+                    Id = _data.Id,
+                    Unlock = true,
+                    Level = 1,
+                    Exp = 0,
+                });
+            }
         }
     }
 }

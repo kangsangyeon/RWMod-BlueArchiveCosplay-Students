@@ -139,7 +139,6 @@ namespace UnityProjectScripts
                             float _position = (float)_clubOrder / (_clubAccessor.transform.parent.childCount - 1);
                             _position = 1 - _position;
                             accessor.ClubScrollRect.normalizedPosition = new Vector2(0, _position);
-                            Debug.Log(_position);
                         }
                     }
                 })

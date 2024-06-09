@@ -4,6 +4,8 @@ using TemplateTable;
 
 public static class GameResource
 {
+    public static SaveData Save;
+
     public static TemplateTable<int, SchoolData> SchoolTable;
     public static TemplateTable<int, ClubData> ClubTable;
     public static TemplateTable<int, StudentData> StudentTable;
