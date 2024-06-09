@@ -70,8 +70,11 @@ namespace UnityProjectScripts
             var _schoolData =
                 GameResource.SchoolTable.Values
                     .First(x => x.ClubList.Contains(_clubData.Id));
-            var _directory = Path.GetDirectoryName(_schoolData.BackgroundPath);
-            var _fileName = Path.GetFileName(_schoolData.BackgroundPath);
+            string _bgPath = string.IsNullOrEmpty(_data.OverrideBgPath)
+                ? _schoolData.BgPath
+                : _data.OverrideBgPath;
+            var _directory = Path.GetDirectoryName(_bgPath);
+            var _fileName = Path.GetFileName(_bgPath);
             Accessor.Background.sprite = GameResource.Load<Sprite>(_directory, _fileName);
 
             Accessor.AttributeText.text = _data.Attribute.ToStringKr();
