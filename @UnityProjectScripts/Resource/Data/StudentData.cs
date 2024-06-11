@@ -34,5 +34,6 @@ public class StudentData
     public Vector3 FullshotHaloStartPos;
     public Vector3 FullshotHaloEndPos;
     public Vector4 FullshotRectOffset;
+    public bool FrontHalo;
     public string OverrideBgPath;
 }

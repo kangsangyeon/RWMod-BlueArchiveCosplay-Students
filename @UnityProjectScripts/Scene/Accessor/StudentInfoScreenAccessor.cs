@@ -33,7 +33,8 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public Text LevelUpTab_LevelUpBox_DollorText;
     public Image LevelUpTab_LevelUpBox_LevelUpButton;
     public GameObject FullshotParent;
-    public Image FullshotHaloImage;
+    public Image FullshotBackHaloImage;
+    public Image FullshotFrontHaloImage;
     public Image FullshotImage;
     public Image Background;
     public ScreenTopBarAccessor ScreenTopBar;

@@ -51,10 +51,24 @@ namespace UnityProjectScripts
         {
             var _data = GameResource.StudentTable[_id];
 
+            Image _haloImage;
+            if (_data.FrontHalo)
+            {
+                _haloImage = Accessor.FullshotFrontHaloImage;
+                Accessor.FullshotFrontHaloImage.gameObject.SetActive(true);
+                Accessor.FullshotBackHaloImage.gameObject.SetActive(false);
+            }
+            else
+            {
+                _haloImage = Accessor.FullshotBackHaloImage;
+                Accessor.FullshotFrontHaloImage.gameObject.SetActive(false);
+                Accessor.FullshotBackHaloImage.gameObject.SetActive(true);
+            }
+
             // 왼쪽에 위치한 캐릭터 정보와 레벨, 경험치를 표시합니다.
             Accessor.FullshotImage.sprite =
                 GameResource.Load<Sprite>($"Student/{_data.Id}", $"Student_Fullshot_{_data.Id}");
-            Accessor.FullshotHaloImage.sprite =
+            _haloImage.sprite =
                 GameResource.Load<Sprite>($"Student/{_data.Id}", $"Student_Fullshot_Halo_{_data.Id}");
 
             Accessor.NameText.text = _data.Name;
@@ -91,8 +105,8 @@ namespace UnityProjectScripts
             // todo: exp fill 설정
             // Accessor.ExpBar.fillAmount
 
-            var _haloRect = Accessor.FullshotHaloImage.GetComponent<RectTransform>();
-            var _haloGroup = Accessor.FullshotHaloImage.GetComponent<CanvasGroup>();
+            var _haloRect = _haloImage.GetComponent<RectTransform>();
+            var _haloGroup = _haloImage.GetComponent<CanvasGroup>();
             var _fullshotParentGroup = Accessor.FullshotParent.GetComponent<CanvasGroup>();
             var _fullshotParentRect = Accessor.FullshotParent.GetComponent<RectTransform>();
             var _fullshotRect = Accessor.FullshotImage.GetComponent<RectTransform>();
