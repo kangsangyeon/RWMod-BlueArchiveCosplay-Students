@@ -1,3 +1,5 @@
+using System;
+using DG.Tweening;
 using Unity.Linq;
 using UnityEngine;
 
@@ -6,6 +8,8 @@ namespace UnityProjectScripts
     public class ExSkillInfoUI : MonoBehaviour
     {
         public ExSkillInfoAccessor Accessor;
+        private bool checkScroll;
+        private Sequence descriptionTextSequence;
 
         public void UpdateUI(StudentData _studentData, SkillData _skillData, SkillLevelData _skillLevelData,
             bool _isMaxLevel, bool _isUnlocked)
@@ -51,6 +55,44 @@ namespace UnityProjectScripts
                 for (int i = 0; i < _skillLevelData.Star; ++i)
                     Accessor.StarHolder.Add(_yellowStarPrefab);
             }
+
+            checkScroll = false;
+        }
+
+        private void TryStartScroll()
+        {
+            if (checkScroll)
+                return;
+            checkScroll = true;
+
+            // Description이 Description Mask의 범위를 벗어나는 경우,
+            // 세로로 텍스트를 내리는 애니메이션을 재생합니다.
+            descriptionTextSequence?.Kill();
+            float _heightDelta =
+                Accessor.SkillDescriptionText.preferredHeight -
+                Accessor.SkillDescriptionMask.rectTransform.sizeDelta.y;
+            if (_heightDelta > 0)
+            {
+                float _scrollDuration =
+                    (_heightDelta / Accessor.SkillDescriptionText.fontSize) * 2f; // font size height마다 2초씩 스크롤. (font size가 대략 한 줄 크기)
+                descriptionTextSequence = DOTween.Sequence();
+                descriptionTextSequence
+                    .AppendInterval(1f)
+                    .Append(Accessor.SkillDescriptionText.rectTransform.DOAnchorPosY(_heightDelta, _scrollDuration))
+                    .Append(Accessor.SkillDescriptionText.DOFade(0f, 1f))
+                    .AppendCallback(() => Accessor.SkillDescriptionText.rectTransform.anchoredPosition = Vector2.zero)
+                    .Append(Accessor.SkillDescriptionText.DOFade(1f, 1f))
+                    .SetLoops(-1);
+            }
+        }
+
+        private void OnRenderObject()
+        {
+            // 설명이 길다면 스크롤을 합니다.
+            //   *게임 오브젝트가 생성된 프레임에는 레이아웃 계산이 이루어지지 않아
+            //   height를 정확히 얻을 수 없기 때문에 한 프레임 이상 기다려야 합니다.
+            //   따라서 OnRenderObject 이벤트에 이를 추가합니다.
+            TryStartScroll();
         }
     }
 }
