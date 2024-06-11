@@ -65,6 +65,11 @@ namespace UnityProjectScripts
                 return;
             checkScroll = true;
 
+            Accessor.SkillDescriptionText.rectTransform.anchoredPosition = Vector2.zero;
+            var _color = Accessor.SkillDescriptionText.color;
+            _color.a = 1f;
+            Accessor.SkillDescriptionText.color = _color;
+
             // Description이 Description Mask의 범위를 벗어나는 경우,
             // 세로로 텍스트를 내리는 애니메이션을 재생합니다.
             descriptionTextSequence?.Kill();
@@ -73,8 +78,9 @@ namespace UnityProjectScripts
                 Accessor.SkillDescriptionMask.rectTransform.sizeDelta.y;
             if (_heightDelta > 0)
             {
+                // 대략 한 줄마다 스크롤 시간 2초 증가 (font size가 대략 한 줄 크기)
                 float _scrollDuration =
-                    (_heightDelta / Accessor.SkillDescriptionText.fontSize) * 2f; // font size height마다 2초씩 스크롤. (font size가 대략 한 줄 크기)
+                    (_heightDelta / Accessor.SkillDescriptionText.fontSize) * 2f;
                 descriptionTextSequence = DOTween.Sequence();
                 descriptionTextSequence
                     .AppendInterval(1f)
