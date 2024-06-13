@@ -154,7 +154,8 @@ namespace UnityProjectScripts
             var _skillData = GameResource.SkillTable[_data.SkillId];
             var _skillLevelData = GameResource.SkillLevelTable[(_data.SkillId, 1)]; // temp: 임시적으로 스킬 레벨을 1으로 간주합니다.
             var _skillLevels = new List<SkillLevelData>();
-            for (int i = 0; i < 5; ++i)
+            int _maxSkillLevel = _data.MaxSkillLevel ?? 5;
+            for (int i = 0; i < _maxSkillLevel; ++i)
                 _skillLevels.Add(GameResource.SkillLevelTable[(_data.SkillId, i + 1)]);
             var _skillInfoUI = Accessor.BasicTab_ExSkillInfo.GetComponent<ExSkillInfoUI>();
             _skillInfoUI.UpdateUI(_data, _skillData, _skillLevelData,

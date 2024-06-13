@@ -16,6 +16,7 @@ public class StudentData
     public StudentAttribute Attribute;
     public int SkillId;
     public int WeaponId;
+    public int? MaxSkillLevel;
 
     public int DefaultShooting;
     public int DefaultMelee;
