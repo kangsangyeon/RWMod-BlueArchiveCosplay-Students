@@ -80,7 +80,7 @@ namespace UnityProjectScripts
             {
                 // 대략 한 줄마다 스크롤 시간 2초 증가 (font size가 대략 한 줄 크기)
                 float _scrollDuration =
-                    (_heightDelta / Accessor.SkillDescriptionText.fontSize) * 2f;
+                    (_heightDelta / Accessor.SkillDescriptionText.fontSize) * 3f;
                 descriptionTextSequence = DOTween.Sequence();
                 descriptionTextSequence
                     .AppendInterval(1f)
