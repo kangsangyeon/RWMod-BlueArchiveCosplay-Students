@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using UniRx;
 using UniRx.Triggers;
 using Unity.Linq;
@@ -113,6 +114,9 @@ namespace UnityProjectScripts
                                 _data.ClubList.Select(x => GameResource.ClubTable[x]));
                         }
 
+                        bool _onlyOneClubSearched =
+                            _searchedStudentData.Count == 0 && _searchedClubData.Count == 1;
+
                         foreach (var _data in _searchedClubData)
                         {
                             foreach (var _id in _data.StudentList)
@@ -128,21 +132,33 @@ namespace UnityProjectScripts
                             _pair.Value.OverlayOnSearchFailed.gameObject.SetActive(_searchFailed);
                         }
 
-                        if (_studentIds.Count == 1)
+                        if (_onlyOneClubSearched)
+                        {
+                            // 하나의 클럽으로 특정된다면, 그 클럽의 위치로 자동 스크롤합니다.
+                            var _clubData = _searchedClubData.First();
+                            ScrollTo(_clubData.Id);
+                        }
+                        else if (_studentIds.Count == 1)
                         {
                             // 한 명의 캐릭터로 특정된다면, 그 캐릭터의 위치로 자동 스크롤합니다.
                             var _studentId = _studentIds.First();
                             var _clubData = GameResource.ClubTable.Values
                                 .FirstOrDefault(x => x.StudentList.Contains(_studentId));
-                            var _clubAccessor = clubAccessorById[_clubData.Id];
-                            int _clubOrder = _clubAccessor.transform.ChildIndexOfSelf();
-                            float _position = (float)_clubOrder / (_clubAccessor.transform.parent.childCount - 1);
-                            _position = 1 - _position;
-                            accessor.ClubScrollRect.normalizedPosition = new Vector2(0, _position);
+                            ScrollTo(_clubData.Id);
                         }
                     }
                 })
                 .AddTo(gameObject);
+        }
+
+        private void ScrollTo(int _clubId)
+        {
+            var _clubAccessor = clubAccessorById[_clubId];
+            int _clubOrder = _clubAccessor.transform.ChildIndexOfSelf();
+            float _position = (float)_clubOrder / (_clubAccessor.transform.parent.childCount - 1);
+            _position = 1 - _position;
+            accessor.ClubScrollRect.DOKill();
+            accessor.ClubScrollRect.DOVerticalNormalizedPos(_position, 0.1f);
         }
     }
 }
