@@ -17,7 +17,9 @@ namespace UnityProjectScripts
             Accessor.SkillNameText.text = _skillData.Name;
             Accessor.SkillDescriptionText.text = _skillLevelData.Description;
             Accessor.Badge.gameObject.SetActive(_isMaxLevel);
-            Accessor.LevelImage.gameObject.SetActive(_isMaxLevel);
+            Accessor.MaxLevelImage.gameObject.SetActive(_isMaxLevel);
+            Accessor.LevelText.gameObject.SetActive(!_isMaxLevel);
+            Accessor.LevelText.text = $"Lv. {_skillLevelData.Id.Level}";
 
             Sprite _thumbnailSprite;
             Color _thumbnailBgColor = Color.white;
