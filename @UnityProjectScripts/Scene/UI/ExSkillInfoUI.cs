@@ -18,7 +18,6 @@ namespace UnityProjectScripts
             Accessor.SkillDescriptionText.text = _skillLevelData.Description;
             Accessor.Badge.gameObject.SetActive(_isMaxLevel);
             Accessor.LevelImage.gameObject.SetActive(_isMaxLevel);
-            Accessor.Background.gameObject.SetActive(_isUnlocked);
 
             Sprite _thumbnailSprite;
             Color _thumbnailBgColor = Color.white;
@@ -55,6 +54,11 @@ namespace UnityProjectScripts
                 for (int i = 0; i < _skillLevelData.Star; ++i)
                     Accessor.StarHolder.Add(_yellowStarPrefab);
             }
+
+            if (Accessor.LockOverlay != null)
+                Accessor.LockOverlay.gameObject.SetActive(_isUnlocked);
+            if (Accessor.LockOverlayText != null)
+                Accessor.LockOverlayText.text = $"Lv. {_skillLevelData.Id.Level}";
 
             checkScroll = false;
         }

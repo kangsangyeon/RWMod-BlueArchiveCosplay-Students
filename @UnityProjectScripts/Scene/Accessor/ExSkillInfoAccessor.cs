@@ -13,5 +13,6 @@ public class ExSkillInfoAccessor : MonoBehaviour
     public Image Thumbnail;
     public Image LevelImage;
     public GameObject StarHolder;
-    public Image Background;
+    public Image LockOverlay;
+    public Text LockOverlayText;
 }
