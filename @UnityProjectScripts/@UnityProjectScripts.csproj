@@ -494,10 +494,12 @@
     <Compile Include="Resource\Data\SchoolData.cs" />
     <Compile Include="Resource\Data\SkillActionData.cs" />
     <Compile Include="Resource\Data\SkillData.cs" />
+    <Compile Include="Resource\Data\StudentAttributeData.cs" />
     <Compile Include="Resource\Data\StudentData.cs" />
     <Compile Include="Resource\Data\WeaponData.cs" />
     <Compile Include="Resource\GameResource.cs" />
     <Compile Include="Resource\SaveData.cs" />
+    <Compile Include="Scene\Accessor\StudentTooltipAccessor.cs" />
     <Compile Include="Scene\Accessor\ExSkillInfoAccessor.cs" />
     <Compile Include="Scene\Accessor\ScreenTopBarAccessor.cs" />
     <Compile Include="Scene\Accessor\StudentAccessor.cs" />

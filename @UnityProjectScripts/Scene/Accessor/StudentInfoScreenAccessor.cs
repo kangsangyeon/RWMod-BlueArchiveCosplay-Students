@@ -12,6 +12,7 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public Text AttributeText;
     public Text NameText;
     public GameObject StarHolder;
+    public StudentTooltipAccessor[] Tooltips;
     public Button TabButtonBox_BasicTabButton;
     public Text TabButtonBox_BasicTabButton_Text;
     public Button TabButtonBox_LevelUpTabButton;

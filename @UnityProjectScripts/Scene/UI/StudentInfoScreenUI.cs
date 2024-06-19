@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using DG.Tweening;
 using UniRx;
+using UniRx.Triggers;
 using Unity.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -141,6 +142,31 @@ namespace UnityProjectScripts
                 .SetEase(Ease.InOutSine)
                 .SetLoops(-1, LoopType.Yoyo);
 
+            // 툴팁을 설정합니다.
+            Accessor.Tooltips[0].Icon.sprite = Accessor.AttributeIcon.sprite;
+            Accessor.Tooltips[0].TooltipText.text =
+                GameResource.StudentAttributeTable[_data.Attribute].Description;
+            Accessor.Tooltips[1].gameObject.SetActive(false); // todo: passive를 가지고 있는 경우, 인덱스1 툴팁의 속성을 설정해야 함
+            for (int i = 0; i < 2; ++i)
+            {
+                var _canvasGroup = Accessor.Tooltips[i].TooltipBox.GetComponent<CanvasGroup>();
+                _canvasGroup.alpha = 0f;
+                Accessor.Tooltips[i].HexImage.OnPointerEnterAsObservable()
+                    .Subscribe(_ =>
+                    {
+                        _canvasGroup.DOKill();
+                        _canvasGroup.DOFade(1f, .2f);
+                    })
+                    .AddTo(gameObject);
+                Accessor.Tooltips[i].HexImage.OnPointerExitAsObservable()
+                    .Subscribe(_ =>
+                    {
+                        _canvasGroup.DOKill();
+                        _canvasGroup.DOFade(0f, .2f);
+                    })
+                    .AddTo(gameObject);
+            }
+
 
             // 기본 정보 탭의 내용을 표시합니다.
             Accessor.BasicTab_StatInfo_SDFullShot.sprite =
@@ -182,8 +208,6 @@ namespace UnityProjectScripts
                 bool _isUnlocked = i > _skillLevelData.Id.Level - 1;
                 _accessor.UpdateUI(_data, _skillData, _skillLevels[i], _isMaxLevel, _isUnlocked);
             }
-
-            // 현재 레벨 이후의 스킬들에 잠김 아이콘을 표시합니다.
 
             // 탭 전환 버튼 이벤트 액션을 설정합니다.
             Accessor.TabButtonBox_BasicTabButton.OnClickAsObservable()
