@@ -491,6 +491,7 @@
     <Compile Include="Resource\DataHelper.cs" />
     <Compile Include="Resource\Data\ClubData.cs" />
     <Compile Include="Resource\Data\DataFile.cs" />
+    <Compile Include="Resource\Data\PassiveSkillData.cs" />
     <Compile Include="Resource\Data\SchoolData.cs" />
     <Compile Include="Resource\Data\SkillActionData.cs" />
     <Compile Include="Resource\Data\SkillData.cs" />

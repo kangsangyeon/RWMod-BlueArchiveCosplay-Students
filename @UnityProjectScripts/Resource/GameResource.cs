@@ -12,6 +12,7 @@ public static class GameResource
     public static TemplateTable<int, SkillData> SkillTable;
     public static TemplateTable<(int, int), SkillLevelData> SkillLevelTable;
     public static TemplateTable<int, WeaponData> WeaponTable;
+    public static TemplateTable<int, PassiveSkillData> PassiveSkillTable;
     public static TemplateTable<StudentAttribute, StudentAttributeData> StudentAttributeTable;
 
     public static AssetBundle Bundle;

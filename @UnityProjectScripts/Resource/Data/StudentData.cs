@@ -15,6 +15,7 @@ public class StudentData
     public int Age;
     public StudentAttribute Attribute;
     public int SkillId;
+    public int PassiveSkillId;
     public int WeaponId;
     public int? MaxSkillLevel;
 

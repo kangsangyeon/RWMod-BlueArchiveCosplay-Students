@@ -146,7 +146,15 @@ namespace UnityProjectScripts
             Accessor.Tooltips[0].Icon.sprite = Accessor.AttributeIcon.sprite;
             Accessor.Tooltips[0].TooltipText.text =
                 GameResource.StudentAttributeTable[_data.Attribute].Description;
-            Accessor.Tooltips[1].gameObject.SetActive(false); // todo: passive를 가지고 있는 경우, 인덱스1 툴팁의 속성을 설정해야 함
+            Accessor.Tooltips[1].gameObject.SetActive(_data.PassiveSkillId > 0);
+            if (_data.PassiveSkillId > 0)
+            {
+                var _passiveSkillData = GameResource.PassiveSkillTable.TryGet(_data.PassiveSkillId);
+                Accessor.Tooltips[1].Icon.sprite =
+                    GameResource.Load<Sprite>("PassiveSkill/Icon", $"PassiveSkill_Icon_{_passiveSkillData.IconName}");
+                Accessor.Tooltips[1].TooltipText.text = _passiveSkillData.Description;
+            }
+
             for (int i = 0; i < 2; ++i)
             {
                 var _canvasGroup = Accessor.Tooltips[i].TooltipBox.GetComponent<CanvasGroup>();
