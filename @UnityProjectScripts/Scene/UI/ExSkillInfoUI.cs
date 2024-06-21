@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using Unity.Linq;
 using UnityEngine;
@@ -21,19 +20,9 @@ namespace UnityProjectScripts
             Accessor.LevelText.gameObject.SetActive(!_isMaxLevel);
             Accessor.LevelText.text = $"Lv. {_skillLevelData.Id.Level}";
 
-            Sprite _thumbnailSprite;
+            Sprite _thumbnailSprite =
+                GameResource.Load<Sprite>($"Skill/Icon", $"Skill_Icon_{_skillData.IconName}");
             Color _thumbnailBgColor = Color.white;
-
-            if (string.IsNullOrEmpty(_skillData.OverrideCommonIconName))
-            {
-                _thumbnailSprite =
-                    GameResource.Load<Sprite>($"Skill/{_skillData.Id}", $"Skill_Icon_{_skillData.Id}");
-            }
-            else
-            {
-                _thumbnailSprite =
-                    GameResource.Load<Sprite>("Skill/Common", $"Skill_Icon_Common_{_skillData.OverrideCommonIconName}");
-            }
 
             if (_studentData.Attribute == StudentAttribute.Attack)
                 ColorUtility.TryParseHtmlString("#CC1A25", out _thumbnailBgColor);
