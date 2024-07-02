@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class StudentInfoScreenAccessor : MonoBehaviour
 {
+    public RawImage FullshotImage;
     public Image ExpBar;
     public Text LevelText;
     public Image AttributeBox;
@@ -33,10 +34,6 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public Text LevelUpTab_ExSkillInfo_ExSkillExpText;
     public Text LevelUpTab_LevelUpBox_DollorText;
     public Image LevelUpTab_LevelUpBox_LevelUpButton;
-    public GameObject FullshotParent;
-    public Image FullshotBackHaloImage;
-    public Image FullshotFrontHaloImage;
-    public Image FullshotImage;
     public Image Background;
     public ScreenTopBarAccessor ScreenTopBar;
 }

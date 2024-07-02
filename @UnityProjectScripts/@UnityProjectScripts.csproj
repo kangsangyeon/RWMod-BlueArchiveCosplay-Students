@@ -500,6 +500,7 @@
     <Compile Include="Resource\Data\WeaponData.cs" />
     <Compile Include="Resource\GameResource.cs" />
     <Compile Include="Resource\SaveData.cs" />
+    <Compile Include="Scene\Accessor\FullshotRenderAccessor.cs" />
     <Compile Include="Scene\Accessor\StudentTooltipAccessor.cs" />
     <Compile Include="Scene\Accessor\ExSkillInfoAccessor.cs" />
     <Compile Include="Scene\Accessor\ScreenTopBarAccessor.cs" />

@@ -32,10 +32,10 @@ public class StudentData
     public int DefaultSocial;
     public int DefaultIntellectual;
 
-    public Vector2 FullshotHaloSize;
-    public Vector3 FullshotHaloStartPos;
-    public Vector3 FullshotHaloEndPos;
-    public Vector4 FullshotRectOffset;
+    public Vector2 FullshotPos;
+    public Vector2 FullshotHaloStartPos;
+    public Vector2 FullshotHaloEndPos;
+    public Vector2 FullshotBgPos;
     public bool FrontHalo;
     public string OverrideBgPath;
 }

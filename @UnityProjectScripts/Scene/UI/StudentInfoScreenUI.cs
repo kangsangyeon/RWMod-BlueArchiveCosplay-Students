@@ -51,26 +51,21 @@ namespace UnityProjectScripts
         private void UpdateChar(int _id)
         {
             var _data = GameResource.StudentTable[_id];
+            var _fullshotRenderAccessor = FindObjectOfType<FullshotRenderAccessor>();
 
-            Image _haloImage;
             if (_data.FrontHalo)
-            {
-                _haloImage = Accessor.FullshotFrontHaloImage;
-                Accessor.FullshotFrontHaloImage.gameObject.SetActive(true);
-                Accessor.FullshotBackHaloImage.gameObject.SetActive(false);
-            }
+                _fullshotRenderAccessor.FullshotHalo.sortingOrder = 10; // fullshot과 fullshot face의 order는 5~6
             else
-            {
-                _haloImage = Accessor.FullshotBackHaloImage;
-                Accessor.FullshotFrontHaloImage.gameObject.SetActive(false);
-                Accessor.FullshotBackHaloImage.gameObject.SetActive(true);
-            }
+                _fullshotRenderAccessor.FullshotHalo.sortingOrder = 4;
+
 
             // 왼쪽에 위치한 캐릭터 정보와 레벨, 경험치를 표시합니다.
-            Accessor.FullshotImage.sprite =
+            _fullshotRenderAccessor.Fullshot.sprite =
                 GameResource.Load<Sprite>($"Student/{_data.Id}", $"Student_Fullshot_{_data.Id}");
-            _haloImage.sprite =
+            _fullshotRenderAccessor.FullshotHalo.sprite =
                 GameResource.Load<Sprite>($"Student/{_data.Id}", $"Student_Fullshot_Halo_{_data.Id}");
+            _fullshotRenderAccessor.FullshotBg.sprite =
+                GameResource.Load<Sprite>($"Student/{_data.Id}", $"Student_Fullshot_Bg_{_data.Id}");
 
             Accessor.NameText.text = _data.Name;
 
@@ -106,40 +101,36 @@ namespace UnityProjectScripts
             // todo: exp fill 설정
             // Accessor.ExpBar.fillAmount
 
-            var _haloRect = _haloImage.GetComponent<RectTransform>();
-            var _haloGroup = _haloImage.GetComponent<CanvasGroup>();
-            var _fullshotParentGroup = Accessor.FullshotParent.GetComponent<CanvasGroup>();
-            var _fullshotParentRect = Accessor.FullshotParent.GetComponent<RectTransform>();
-            var _fullshotRect = Accessor.FullshotImage.GetComponent<RectTransform>();
-
-            // fullshot의 크기를 조정합니다.
-            _fullshotRect.anchorMin = Vector2.zero;
-            _fullshotRect.anchorMax = Vector2.one;
-            _fullshotRect.offsetMin = new Vector2(_data.FullshotRectOffset.x, _data.FullshotRectOffset.w);
-            _fullshotRect.offsetMax = new Vector2(-_data.FullshotRectOffset.z, -_data.FullshotRectOffset.y);
-
             // 캐릭터와 헤일로 애니메이션을 재생합니다.
-            _fullshotParentRect.anchoredPosition = new Vector2(0f, -20f);
-            _fullshotParentGroup.alpha = 0f;
-            _haloGroup.alpha = 0f;
-            _haloRect.sizeDelta = _data.FullshotHaloSize;
-            DOTween.Kill(Accessor.FullshotParent);
-            DOTween.Sequence()
-                .Append(_fullshotParentGroup.DOFade(1f, 1f))
-                .Join(_fullshotParentRect.DOAnchorPos(Vector3.zero, 1f))
-                .Append(_haloGroup.DOFade(1f, 1f))
-                .SetId(Accessor.FullshotParent);
+            var _fullshotRect = (RectTransform)Accessor.FullshotImage.transform;
+            var _fullshotGroup = Accessor.FullshotImage.GetComponent<CanvasGroup>();
+            var _fullshotTf = _fullshotRenderAccessor.Fullshot.transform;
+            var _fullshotHaloTf = _fullshotRenderAccessor.FullshotHalo.transform;
+            var _fullshotBgTf = _fullshotRenderAccessor.FullshotBg.transform;
 
-            _fullshotParentRect.DOKill();
-            _fullshotParentRect.anchoredPosition = Vector2.zero;
-            _fullshotParentRect.DOAnchorPos(Vector2.up * 5f, 3f)
-                .SetEase(Ease.InOutSine)
+            DOTween.Kill(Accessor.FullshotImage);
+            _fullshotRenderAccessor.Fullshot.DOKill();
+            _fullshotRenderAccessor.FullshotHalo.DOKill();
+
+            _fullshotGroup.alpha = 0f;
+            DOTween.Sequence()
+                .Append(_fullshotGroup.DOFade(1f, 1f))
+                .SetId(Accessor.FullshotImage);
+
+            _fullshotTf.localPosition = _data.FullshotPos;
+            _fullshotHaloTf.localPosition = _data.FullshotHaloStartPos;
+            _fullshotBgTf.localPosition = _data.FullshotBgPos;
+
+            DOTween.Sequence(_fullshotRenderAccessor.Fullshot)
+                .Append(_fullshotTf.DOLocalMove(_data.FullshotPos + Vector2.up * 0.08f, 3f).SetEase(Ease.InOutSine))
+                .Append(_fullshotTf.DOLocalMove(_data.FullshotPos, 3f).SetEase(Ease.InOutSine))
+                .SetEase(Ease.Linear)
                 .SetLoops(-1, LoopType.Yoyo);
 
-            _haloRect.DOKill();
-            _haloRect.anchoredPosition = _data.FullshotHaloStartPos;
-            _haloRect.DOAnchorPos(_data.FullshotHaloEndPos, 2f)
-                .SetEase(Ease.InOutSine)
+            DOTween.Sequence(_fullshotRenderAccessor.FullshotHalo)
+                .Append(_fullshotHaloTf.DOLocalMove(_data.FullshotHaloEndPos, 2f).SetEase(Ease.InOutSine))
+                .Append(_fullshotHaloTf.DOLocalMove(_data.FullshotHaloStartPos, 2f).SetEase(Ease.InOutSine))
+                .SetEase(Ease.Linear)
                 .SetLoops(-1, LoopType.Yoyo);
 
             // 툴팁을 설정합니다.
