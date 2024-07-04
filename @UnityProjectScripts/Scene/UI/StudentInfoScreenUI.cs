@@ -66,6 +66,8 @@ namespace UnityProjectScripts
                 GameResource.Load<Sprite>($"Student/{_data.Id}", $"Student_Fullshot_Halo_{_data.Id}");
             _fullshotRenderAccessor.FullshotBg.sprite =
                 GameResource.Load<Sprite>($"Student/{_data.Id}", $"Student_Fullshot_Bg_{_data.Id}");
+            _fullshotRenderAccessor.Camera.transform.localPosition = new Vector3(_data.CamPos.x, _data.CamPos.y, -10f);
+            _fullshotRenderAccessor.Camera.orthographicSize = _data.CamOrthoSize;
 
             Accessor.NameText.text = _data.Name;
 
@@ -117,19 +119,19 @@ namespace UnityProjectScripts
                 .Append(_fullshotGroup.DOFade(1f, 1f))
                 .SetId(Accessor.FullshotImage);
 
-            _fullshotTf.localPosition = _data.FullshotPos;
-            _fullshotHaloTf.localPosition = _data.FullshotHaloStartPos;
+            _fullshotTf.localPosition = Vector2.zero;
+            _fullshotHaloTf.localPosition = _data.FullshotHaloPos;
             _fullshotBgTf.localPosition = _data.FullshotBgPos;
 
             DOTween.Sequence(_fullshotRenderAccessor.Fullshot)
-                .Append(_fullshotTf.DOLocalMove(_data.FullshotPos + Vector2.up * 0.08f, 3f).SetEase(Ease.InOutSine))
-                .Append(_fullshotTf.DOLocalMove(_data.FullshotPos, 3f).SetEase(Ease.InOutSine))
+                .Append(_fullshotTf.DOLocalMove(Vector2.up * 0.08f, 3f).SetEase(Ease.InOutSine))
+                .Append(_fullshotTf.DOLocalMove(Vector2.zero, 3f).SetEase(Ease.InOutSine))
                 .SetEase(Ease.Linear)
                 .SetLoops(-1, LoopType.Yoyo);
 
             DOTween.Sequence(_fullshotRenderAccessor.FullshotHalo)
-                .Append(_fullshotHaloTf.DOLocalMove(_data.FullshotHaloEndPos, 2f).SetEase(Ease.InOutSine))
-                .Append(_fullshotHaloTf.DOLocalMove(_data.FullshotHaloStartPos, 2f).SetEase(Ease.InOutSine))
+                .Append(_fullshotHaloTf.DOLocalMove(_data.FullshotHaloPos + Vector2.up * 0.08f, 2f).SetEase(Ease.InOutSine))
+                .Append(_fullshotHaloTf.DOLocalMove(_data.FullshotHaloPos, 2f).SetEase(Ease.InOutSine))
                 .SetEase(Ease.Linear)
                 .SetLoops(-1, LoopType.Yoyo);
 
