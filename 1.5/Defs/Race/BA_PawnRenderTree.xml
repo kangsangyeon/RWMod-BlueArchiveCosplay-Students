@@ -6,6 +6,7 @@
     <root Class="PawnRenderNodeProperties_Parent">
       <debugLabel>Root</debugLabel>
       <tagDef>Root</tagDef>
+
       <children>
         <li>
           <debugLabel>Body</debugLabel>
@@ -16,6 +17,7 @@
           <colorType>Skin</colorType>
           <useRottenColor>true</useRottenColor>
           <useSkinShader>true</useSkinShader>
+
           <children>
             <li Class="PawnRenderNodeProperties_Tattoo" MayRequire="Ludeon.RimWorld.Ideology">
               <debugLabel>Body tattoo</debugLabel>

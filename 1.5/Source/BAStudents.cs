@@ -4,11 +4,12 @@ using Verse;
 namespace BlueArchiveStudents
 {
     [StaticConstructorOnStartup]
-    public static class HarmonyPatches
+    public static class HarmonyPatcher
     {
-        static HarmonyPatches()
+        static HarmonyPatcher()
         {
-            new HarmonyLib.Harmony("BlueArchiveStudents").PatchAll(Assembly.GetExecutingAssembly());
+            new HarmonyLib.Harmony("BlueArchiveStudents")
+                .PatchAll(Assembly.GetExecutingAssembly());
         }
     }
 

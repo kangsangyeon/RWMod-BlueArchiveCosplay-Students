@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <BodyTypeDef Name="BA_BodyTypeDef_Female_Normal_A" ParentName="Core_Female">
+    <defName>BA_BodyTypeDef_Female_Normal_A</defName>
+    <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_A</bodyNakedGraphicPath>
+  </BodyTypeDef>
+
+</Defs>

@@ -97,6 +97,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BAStudents.cs" />
+    <Compile Include="Common\RimWorld\BA_PawnKindDef.cs" />
+    <Compile Include="Common\RimWorld\HarmonyPatches.cs" />
     <Compile Include="Harmony\PatchDisableIMGUI.cs" />
     <Compile Include="Impl\PawnTemplateDebug.cs" />
     <Compile Include="Impl\WeightTable\CharacterTable.cs" />
