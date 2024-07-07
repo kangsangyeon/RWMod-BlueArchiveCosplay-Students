@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <HeadTypeDef Name="BA_HeadTypeDef" ParentName="AverageBase">
+    <defName>BA_HeadTypeDef</defName>
+    <graphicPath>Things/Pawn/BA/Heads/Head</graphicPath>
+    <gender>None</gender>
+    <eyeOffsetEastWest>(0.1, 0, 0.17)</eyeOffsetEastWest>
+  </HeadTypeDef>
+
+</Defs>

@@ -23,11 +23,15 @@ public static class Patch_PawnGenerator_GenerateBodyType
             case Gender.Male:
                 if (_kindDef.forcedBodyType != null)
                     pawn.story.bodyType = _kindDef.forcedBodyType;
+                if (_kindDef.forcedHeadType != null)
+                    pawn.story.headType = _kindDef.forcedHeadType;
                 break;
 
             case Gender.Female:
                 if (_kindDef.forcedBodyTypeFemale != null)
                     pawn.story.bodyType = _kindDef.forcedBodyTypeFemale;
+                if (_kindDef.forcedHeadTypeFemale != null)
+                    pawn.story.headType = _kindDef.forcedHeadTypeFemale;
                 break;
         }
     }

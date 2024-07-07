@@ -4,6 +4,7 @@
   <BodyTypeDef Name="BA_BodyTypeDef_Female_Normal_A" ParentName="Core_Female">
     <defName>BA_BodyTypeDef_Female_Normal_A</defName>
     <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_A</bodyNakedGraphicPath>
+    <headOffset>(0, 0)</headOffset>
   </BodyTypeDef>
 
 </Defs>
