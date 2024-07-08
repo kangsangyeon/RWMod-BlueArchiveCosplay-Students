@@ -110,7 +110,7 @@
               <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
               <rotDrawMode>Fresh, Rotting</rotDrawMode>
               <colorType>Hair</colorType>
-              <skipFlag>Hair</skipFlag>
+              <!-- <skipFlag>Hair</skipFlag> --> <!-- 모자를 쓰면 헤어가 사라지는 문제를 해결 -->
               <baseLayer>62</baseLayer>
             </li>
             <li Class="PawnRenderNodeProperties_Overlay">
