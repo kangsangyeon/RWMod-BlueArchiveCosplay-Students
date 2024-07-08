@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <StyleItemCategoryDef>
+    <defName>BA_StyleItemCategory_Hair</defName>
+    <label>BA Hair</label>
+  </StyleItemCategoryDef>
+
+  <HairDef Abstract="True" Name="BA_Hair_Base">
+    <category>BA_StyleItemCategory_Hair</category>
+    <styleGender>Female</styleGender>
+    <styleTags>
+      <li>Rural</li>
+      <li>Urban</li>
+      <li>Tribal</li>
+      <li>BA_StyleTag</li>
+    </styleTags>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Makoto" ParentName="BA_Hair_Base">
+    <defName>BA_Hair_Makoto</defName>
+    <label>Makoto Hair</label>
+    <texPath>BA/Makoto/Makoto_Hair</texPath>
+  </HairDef>
+
+</Defs>

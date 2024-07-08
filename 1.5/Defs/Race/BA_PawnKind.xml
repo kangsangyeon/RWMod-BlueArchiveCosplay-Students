@@ -15,6 +15,7 @@
     <label>Makoto</label>
     <forcedBodyTypeFemale>BA_BodyTypeDef_Female_Normal_C</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadTypeDef</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Makoto</forcedHair>
 
     <apparelRequired>
       <li>BA_Apparel_Makoto_Headgear</li>
