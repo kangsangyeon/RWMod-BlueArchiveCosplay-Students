@@ -14,7 +14,7 @@
     <defName>BA_PawnKindDef_Makoto</defName>
     <label>Makoto</label>
     <forcedBodyTypeFemale>BA_BodyTypeDef_Female_Normal_C</forcedBodyTypeFemale>
-    <forcedHeadTypeFemale>BA_HeadTypeDef</forcedHeadTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Makoto</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Makoto</forcedHair>
 
     <apparelRequired>
