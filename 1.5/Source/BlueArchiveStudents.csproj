@@ -97,6 +97,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BAStudents.cs" />
+    <Compile Include="Common\RimWorld\BackHair\BA_HairDef.cs" />
+    <Compile Include="Common\RimWorld\BackHair\PawnRenderNode_BackHair.cs" />
     <Compile Include="Common\RimWorld\BA_PawnKindDef.cs" />
     <Compile Include="Common\RimWorld\HarmonyPatches.cs" />
     <Compile Include="Harmony\PatchDisableIMGUI.cs" />

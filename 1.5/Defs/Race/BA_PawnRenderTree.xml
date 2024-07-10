@@ -8,6 +8,15 @@
       <tagDef>Root</tagDef>
 
       <children>
+        <!-- 뒷머리 레이어 -->
+        <li>
+          <debugLabel>BackHair</debugLabel>
+          <nodeClass>BlueArchiveStudents.PawnRenderNode_BackHair</nodeClass>
+          <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+          <rotDrawMode>Fresh, Rotting</rotDrawMode>
+          <colorType>Hair</colorType>
+          <baseLayer>-1</baseLayer>
+        </li>
         <li>
           <debugLabel>Body</debugLabel>
           <nodeClass>PawnRenderNode_Body</nodeClass>
@@ -134,89 +143,6 @@
               <debugLabel>Status overlay</debugLabel>
               <workerClass>PawnRenderNodeWorker_OverlayStatus</workerClass>
               <baseLayer>100</baseLayer>
-            </li>
-          </children>
-        </li>
-        <li Class="PawnRenderNodeProperties_Carried">
-          <debugLabel>Weapon/carried thing</debugLabel>
-          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
-        </li>
-      </children>
-    </root>
-  </PawnRenderTreeDef>
-
-  <PawnRenderTreeDef>
-    <defName>Animal</defName>
-    <root Class="PawnRenderNodeProperties_Parent">
-      <debugLabel>Root</debugLabel>
-      <tagDef>Root</tagDef>
-      <children>
-        <li>
-          <debugLabel>Body</debugLabel>
-          <tagDef>Body</tagDef>
-          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
-          <useRottenColor>true</useRottenColor>
-          <children>
-            <li>
-              <debugLabel>Wounds</debugLabel>
-              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
-              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
-              <overlayLayer>Body</overlayLayer>
-              <useGraphic>false</useGraphic>
-              <baseLayer>3</baseLayer>
-            </li>
-            <li>
-              <debugLabel>Pack</debugLabel>
-              <nodeClass>PawnRenderNode_AnimalPack</nodeClass>
-              <workerClass>PawnRenderNodeWorker_AnimalPack</workerClass>
-              <rotDrawMode>Fresh, Rotting</rotDrawMode>
-              <baseLayer>5</baseLayer>
-            </li>
-            <li>
-              <debugLabel>Firefoam</debugLabel>
-              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
-              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
-              <overlayLayer>Body</overlayLayer>
-              <useGraphic>false</useGraphic>
-              <baseLayer>10</baseLayer>
-            </li>
-          </children>
-        </li>
-        <li Class="PawnRenderNodeProperties_Carried">
-          <debugLabel>Carried thing</debugLabel>
-          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
-        </li>
-      </children>
-    </root>
-  </PawnRenderTreeDef>
-
-  <PawnRenderTreeDef>
-    <defName>Misc</defName>
-    <root Class="PawnRenderNodeProperties_Parent">
-      <debugLabel>Root</debugLabel>
-      <tagDef>Root</tagDef>
-      <children>
-        <li>
-          <debugLabel>Body</debugLabel>
-          <tagDef>Body</tagDef>
-          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
-          <useRottenColor>true</useRottenColor>
-          <children>
-            <li>
-              <debugLabel>Wounds</debugLabel>
-              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
-              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
-              <overlayLayer>Body</overlayLayer>
-              <useGraphic>false</useGraphic>
-              <baseLayer>3</baseLayer>
-            </li>
-            <li>
-              <debugLabel>Firefoam</debugLabel>
-              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
-              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
-              <overlayLayer>Body</overlayLayer>
-              <useGraphic>false</useGraphic>
-              <baseLayer>5</baseLayer>
             </li>
           </children>
         </li>
