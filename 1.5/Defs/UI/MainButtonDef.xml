@@ -5,7 +5,7 @@
         <defName>BAGachaTabButton</defName>
         <label>BAGachaTab</label>
         <description>Open or Close the Blue Archive Gacha Tab</description>
-        <tabWindowClass>BlueArchiveStudents.UI.BA_GachaTabWindow</tabWindowClass>
+        <tabWindowClass>BA.GachaTabWindow</tabWindowClass>
         <order>0</order>
         <buttonVisible>true</buttonVisible>
         <iconPath>UI/BA_MainTab</iconPath>

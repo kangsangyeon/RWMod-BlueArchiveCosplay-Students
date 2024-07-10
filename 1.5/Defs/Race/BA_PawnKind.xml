@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <PawnKindDef Abstract="True" Name="BA_PawnKindDef_Base" ParentName="Core_Colonist">
+    <race>BA_ThingDef_Race</race>
+    <fixedGender>Female</fixedGender>
+
+    <apparelTags>
+      <li>BA_ApparelTag</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKindDef_Makoto" ParentName="BA_PawnKindDef_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKindDef_Makoto</defName>
+    <label>Makoto</label>
+    <forcedBodyTypeFemale>BA_BodyTypeDef_Female_Normal_C</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadTypeDef</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Makoto</forcedHair>
+
+    <apparelRequired>
+      <li>BA_Apparel_Makoto_Headgear</li>
+      <li>BA_Apparel_Makoto_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+</Defs>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingCategoryDef>
+    <defName>BA_ThingCategory_Apparel</defName>
+    <label>BA Apparel</label>
+    <parent>Apparel</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>BA_ThingCategory_Headgear</defName>
+    <label>BA Headgear</label>
+    <parent>Apparel</parent>
+  </ThingCategoryDef>
+
+  <ThingDef Abstract="True" Name="BA_Apparel_Base" ParentName="ApparelMakeableBase">
+    <thingCategories Inherit="False">
+      <li>BA_ThingCategory_Apparel</li>
+    </thingCategories>
+
+    <apparel Inherit="False">
+      <tags>
+        <li>BA_ApparelTag</li>
+      </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+    </apparel>
+
+    <smeltable>false</smeltable>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>1600</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.08</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.2</SocialImpact>
+      <TradePriceImprovement>0.2</TradePriceImprovement>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.1</ToxicEnvironmentResistance>
+    </equippedStatOffsets>
+
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <displayPriority>265</displayPriority>
+    </recipeMaker>
+
+    <colorGenerator Class="ColorGenerator_White" />
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="BA_Headgear_Base" ParentName="HatMakeableBase">
+    <thingCategories Inherit="False">
+      <li>BA_ThingCategory_Headgear</li>
+    </thingCategories>
+
+    <apparel Inherit="False">
+      <tags>
+        <li>BA_ApparelTag</li>
+      </tags>
+      <parentTagDef>ApparelHead</parentTagDef>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+
+    <smeltable>false</smeltable>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>1600</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.08</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.2</SocialImpact>
+      <TradePriceImprovement>0.2</TradePriceImprovement>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.1</ToxicEnvironmentResistance>
+    </equippedStatOffsets>
+
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <displayPriority>265</displayPriority>
+    </recipeMaker>
+
+    <colorGenerator Class="ColorGenerator_White" />
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Makoto_Headgear" ParentName="BA_Headgear_Base">
+    <defName>BA_Apparel_Makoto_Headgear</defName>
+    <label>BA Makoto Headgear</label>
+    <description>Makoto Headgear</description>
+    <graphicData>
+      <texPath>BA/Makoto/Apparel/Makoto_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Makoto/Apparel/Makoto_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Satsuki_Headgear" ParentName="BA_Headgear_Base">
+    <defName>BA_Apparel_Satsuki_Headgear</defName>
+    <label>BA Satsuki Headgear</label>
+    <description>Satsuki Headgear</description>
+    <graphicData>
+      <texPath>BA/Satsuki/Apparel/Satsuki_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Satsuki/Apparel/Satsuki_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Iroha_Headgear" ParentName="BA_Headgear_Base">
+    <defName>BA_Apparel_Iroha_Headgear</defName>
+    <label>BA Iroha Headgear</label>
+    <description>Iroha Headgear</description>
+    <graphicData>
+      <texPath>BA/Iroha/Apparel/Iroha_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Iroha/Apparel/Iroha_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Makoto_Apparel" ParentName="BA_Apparel_Base">
+    <defName>BA_Apparel_Makoto_Apparel</defName>
+    <label>BA Makoto Apparel</label>
+    <description>this is a makoto apparel.</description>
+    <graphicData>
+      <texPath>BA/Makoto/Apparel/Makoto_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalC</li>
+      </tags>
+      <wornGraphicPath>BA/Makoto/Apparel/Makoto_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Satsuki_Apparel" ParentName="BA_Apparel_Base">
+    <defName>BA_Apparel_Satsuki_Apparel</defName>
+    <label>BA Satsuki Apparel</label>
+    <description>this is a satsuki apparel.</description>
+    <graphicData>
+      <texPath>BA/Satsuki/Apparel/Satsuki_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalF</li>
+      </tags>
+      <wornGraphicPath>BA/Satsuki/Apparel/Satsuki_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Iroha_Apparel" ParentName="BA_Apparel_Base">
+    <defName>BA_Apparel_Iroha_Apparel</defName>
+    <label>BA Iroha Apparel</label>
+    <description>this is a iroha apparel.</description>
+    <graphicData>
+      <texPath>BA/Iroha/Apparel/Iroha_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinAA</li>
+      </tags>
+      <wornGraphicPath>BA/Iroha/Apparel/Iroha_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Iroha_OuterApparel" ParentName="BA_Apparel_Base">
+    <defName>BA_Apparel_Iroha_OuterApparel</defName>
+    <label>BA Iroha Outer Apparel</label>
+    <description>this is a iroha apparel.</description>
+    <graphicData>
+      <texPath>BA/Iroha/Apparel/Iroha_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinAA</li>
+      </tags>
+      <wornGraphicPath>BA/Iroha/Apparel/Iroha_Outer</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+</Defs>

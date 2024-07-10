@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef Name="BA_ThingDef_Race" ParentName="Core_Human">
+    <defName>BA_ThingDef_Race</defName>
+    <label>blue archive student</label>
+    <description>A baseline human, mostly unmodified by gene engineering and mostly unchanged by evolutionary pressures on non-Earth planets.</description>
+    <race>
+      <renderTree>BA_PawnRenderTreeDef</renderTree>
+    </race>
+  </ThingDef>
+
+</Defs>

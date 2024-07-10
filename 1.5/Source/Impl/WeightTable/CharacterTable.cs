@@ -2,14 +2,14 @@
 using System.Linq;
 using Verse;
 
-namespace BlueArchiveStudents
+namespace BA
 {
     public class CharacterTableDef : Def, IWeightTable
     {
         public List<IWeightTableItem> Items =>
             items.Select(x => x as IWeightTableItem).ToList();
 
-        public List<BlueArchiveStudents.CharacterTableItem> items;
+        public List<CharacterTableItem> items;
     }
 
     public class CharacterTableItem : IWeightTableItem

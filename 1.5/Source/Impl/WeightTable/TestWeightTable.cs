@@ -1,7 +1,7 @@
 ﻿using LudeonTK;
 using Verse;
 
-namespace BlueArchiveStudents
+namespace BA
 {
     public static class TestWeightTable
     {

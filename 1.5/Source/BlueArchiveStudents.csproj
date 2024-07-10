@@ -7,7 +7,7 @@
     <ProjectGuid>{68A2EC44-1ECB-4FB1-9D96-038B9D915207}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BlueArchiveStudents</RootNamespace>
+    <RootNamespace>BA</RootNamespace>
     <AssemblyName>BlueArchiveStudents</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -97,16 +97,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BAStudents.cs" />
+    <Compile Include="Common\PawnKindTemplate\PawnKindTemplateDef.cs" />
+    <Compile Include="Common\PawnKindTemplate\PawnKindTemplateGenerator.cs" />
+    <Compile Include="Common\RimWorld\BackHair\HairDef.cs" />
+    <Compile Include="Common\RimWorld\BackHair\PawnRenderNode_BackHair.cs" />
+    <Compile Include="Common\RimWorld\PawnKindDef.cs" />
+    <Compile Include="Common\RimWorld\HarmonyPatches.cs" />
+    <Compile Include="Common\WeightTable\IWeightTable.cs" />
+    <Compile Include="Common\WeightTable\WeightTable.cs" />
     <Compile Include="Harmony\PatchDisableIMGUI.cs" />
     <Compile Include="Impl\PawnTemplateDebug.cs" />
     <Compile Include="Impl\WeightTable\CharacterTable.cs" />
     <Compile Include="Impl\WeightTable\TestWeightTable.cs" />
-    <Compile Include="PawnKindTemplate\PawnKindTemplateDef.cs" />
-    <Compile Include="PawnKindTemplate\PawnKindTemplateGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\BA_GachaTabWindow.cs" />
-    <Compile Include="WeightTable\WeightTable.cs" />
-    <Compile Include="WeightTable\IWeightTable.cs" />
+    <Compile Include="UI\GachaTabWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

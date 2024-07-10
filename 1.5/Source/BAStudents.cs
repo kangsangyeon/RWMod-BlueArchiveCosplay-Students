@@ -1,14 +1,15 @@
 using System.Reflection;
 using Verse;
 
-namespace BlueArchiveStudents
+namespace BA
 {
     [StaticConstructorOnStartup]
-    public static class HarmonyPatches
+    public static class HarmonyPatcher
     {
-        static HarmonyPatches()
+        static HarmonyPatcher()
         {
-            new HarmonyLib.Harmony("BlueArchiveStudents").PatchAll(Assembly.GetExecutingAssembly());
+            new HarmonyLib.Harmony("BlueArchiveStudents")
+                .PatchAll(Assembly.GetExecutingAssembly());
         }
     }
 
