@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Reflection;
-using AlienRace;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace BlueArchiveStudents
+namespace BA
 {
     public class PawnKindTemplateDef : Def
     {
@@ -50,7 +48,7 @@ namespace BlueArchiveStudents
         /// <summary>
         /// 이 타입의 pawn의 머리털 타입입니다.
         /// </summary>
-        public HairDef hair;
+        public RimWorld.HairDef hair;
 
         /// <summary>
         /// 이 타입의 pawn의 수염 타입입니다.
@@ -66,7 +64,7 @@ namespace BlueArchiveStudents
         /// <summary>
         /// 이 타입의 pawnkind입니다.
         /// </summary>
-        public PawnKindDef pawnKindDef;
+        public Verse.PawnKindDef pawnKindDef;
 
         /// <summary>
         /// 이 타입의 pawn이 스폰될 때 기본적으로 장착될 무기입니다.

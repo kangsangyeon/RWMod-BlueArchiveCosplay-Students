@@ -1,8 +1,8 @@
-using RimWorld;
 using HarmonyLib;
+using RimWorld;
 using Verse;
 
-namespace BlueArchiveStudents.Harmony
+namespace BA
 {
     [HarmonyPatch(typeof(UIRoot), "UIRootOnGUI")]
     public static class PatchDisableUIRootOnGUI

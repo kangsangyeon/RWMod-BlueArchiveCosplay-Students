@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Verse;
 
-namespace BlueArchiveStudents
+namespace BA
 {
     public class WeightTables
     {

@@ -4,7 +4,7 @@ using RimWorld;
 using RimWorld.Planet;
 using Verse;
 
-namespace BlueArchiveStudents
+namespace BA
 {
     public class PawnKindTemplateGenerator
     {
@@ -50,7 +50,7 @@ namespace BlueArchiveStudents
 
         private static Pawn GenerateWithTemplate(PawnKindTemplateDef _templateDef)
         {
-            PawnKindDef _pawnKindDef = _templateDef.pawnKindDef;
+            Verse.PawnKindDef _pawnKindDef = _templateDef.pawnKindDef;
 
             if (_pawnKindDef == null)
             {

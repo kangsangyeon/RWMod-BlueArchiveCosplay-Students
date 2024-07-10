@@ -8,9 +8,9 @@ using UnityEngine.EventSystems;
 using Verse;
 using Object = UnityEngine.Object;
 
-namespace BlueArchiveStudents.UI
+namespace BA
 {
-    public class BA_GachaTabWindow : MainTabWindow
+    public class GachaTabWindow : MainTabWindow
     {
         public override Vector2 InitialSize => new(0.0f, 0.0f);
 

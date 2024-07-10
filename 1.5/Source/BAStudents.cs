@@ -1,7 +1,7 @@
 using System.Reflection;
 using Verse;
 
-namespace BlueArchiveStudents
+namespace BA
 {
     [StaticConstructorOnStartup]
     public static class HarmonyPatcher

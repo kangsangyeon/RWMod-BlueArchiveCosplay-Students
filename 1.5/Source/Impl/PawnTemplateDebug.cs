@@ -4,7 +4,7 @@ using System.Linq;
 using LudeonTK;
 using Verse;
 
-namespace BlueArchiveStudents
+namespace BA
 {
     public static class PawnKindTemplateDebug
     {

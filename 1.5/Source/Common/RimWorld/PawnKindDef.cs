@@ -1,9 +1,9 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace BlueArchiveStudents;
+namespace BA;
 
-public class BA_PawnKindDef : PawnKindDef
+public class PawnKindDef : Verse.PawnKindDef
 {
     public BodyTypeDef forcedBodyType;
     public BodyTypeDef forcedBodyTypeFemale;

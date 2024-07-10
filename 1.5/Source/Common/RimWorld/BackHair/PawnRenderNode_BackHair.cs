@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Verse;
 
-namespace BlueArchiveStudents;
+namespace BA;
 
 public class PawnRenderNode_BackHair : PawnRenderNode
 {
@@ -14,7 +14,7 @@ public class PawnRenderNode_BackHair : PawnRenderNode
     {
         if (_pawn.story?.hairDef == null || _pawn.story.hairDef.noGraphic)
             return null;
-        if (_pawn.story?.hairDef is not BA_HairDef)
+        if (_pawn.story?.hairDef is not HairDef)
             return null;
         return HumanlikeMeshPoolUtility.GetHumanlikeHairSetForPawn(_pawn);
     }
@@ -23,7 +23,7 @@ public class PawnRenderNode_BackHair : PawnRenderNode
     {
         if (_pawn.story?.hairDef == null || _pawn.story.hairDef.noGraphic || _pawn.DevelopmentalStage.Baby() || _pawn.DevelopmentalStage.Newborn())
             return null;
-        var _baHairDef = _pawn.story?.hairDef as BA_HairDef;
+        var _baHairDef = _pawn.story?.hairDef as HairDef;
         if (_baHairDef == null)
             return null;
         var _shader = _baHairDef.overrideShaderTypeDef?.Shader ?? ShaderDatabase.CutoutHair;

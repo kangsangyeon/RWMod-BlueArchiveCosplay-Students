@@ -10,7 +10,7 @@
     </apparelTags>
   </PawnKindDef>
 
-  <PawnKindDef Name="BA_PawnKindDef_Makoto" ParentName="BA_PawnKindDef_Base" Class="BlueArchiveStudents.BA_PawnKindDef">
+  <PawnKindDef Name="BA_PawnKindDef_Makoto" ParentName="BA_PawnKindDef_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKindDef_Makoto</defName>
     <label>Makoto</label>
     <forcedBodyTypeFemale>BA_BodyTypeDef_Female_Normal_C</forcedBodyTypeFemale>

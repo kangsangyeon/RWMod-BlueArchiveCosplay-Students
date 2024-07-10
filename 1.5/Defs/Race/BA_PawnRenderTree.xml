@@ -11,7 +11,7 @@
         <!-- 뒷머리 레이어 -->
         <li>
           <debugLabel>BackHair</debugLabel>
-          <nodeClass>BlueArchiveStudents.PawnRenderNode_BackHair</nodeClass>
+          <nodeClass>BA.PawnRenderNode_BackHair</nodeClass>
           <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
           <rotDrawMode>Fresh, Rotting</rotDrawMode>
           <colorType>Hair</colorType>

@@ -1,8 +1,7 @@
 ﻿using HarmonyLib;
 using Verse;
 
-
-namespace BlueArchiveStudents;
+namespace BA;
 
 /**
  * harmony 함수의 매개변수의 이름은 실제 RimWorld dll에서 정의한 매개변수의 이름과 일치해야 정상 작동함.
@@ -15,7 +14,7 @@ public static class Patch_PawnGenerator_GenerateBodyType
     [HarmonyPostfix]
     public static void Postfix(Pawn pawn, PawnGenerationRequest request)
     {
-        if (!(pawn.kindDef is BA_PawnKindDef _kindDef))
+        if (!(pawn.kindDef is PawnKindDef _kindDef))
             return;
 
         switch (pawn.gender)
