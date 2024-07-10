@@ -5,7 +5,7 @@
     <race>BA_ThingDef_Race</race>
     <fixedGender>Female</fixedGender>
 
-    <apparelTags>
+    <apparelTags Inherit="False">
       <li>BA_ApparelTag</li>
     </apparelTags>
   </PawnKindDef>
