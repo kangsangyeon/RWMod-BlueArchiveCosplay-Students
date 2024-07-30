@@ -19,6 +19,7 @@
     </thingCategories>
 
     <apparel Inherit="False">
+      <useWornGraphicMask>true</useWornGraphicMask>
       <tags>
         <li>BA_ApparelTag</li>
       </tags>
@@ -70,6 +71,7 @@
     </thingCategories>
 
     <apparel Inherit="False">
+      <useWornGraphicMask>true</useWornGraphicMask>
       <tags>
         <li>BA_ApparelTag</li>
       </tags>
