@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>BA_Gene_SkinColor</defName>
+    <label>BA SkinColor</label>
+    <skinColorOverride>(255,255,255)</skinColorOverride>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>BA_Gene_HairColor</defName>
+    <label>BA HairColor</label>
+    <hairColorOverride>(255,255,255)</hairColorOverride>
+  </GeneDef>
+
+</Defs>

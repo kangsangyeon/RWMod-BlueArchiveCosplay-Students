@@ -10,7 +10,7 @@
     <category>BA_StyleItemCategory_Hair</category>
     <styleGender>Female</styleGender>
     <styleTags>
-      <li>BA_StyleTag</li>
+      <li>BA_HairTag</li>
     </styleTags>
   </HairDef>
 

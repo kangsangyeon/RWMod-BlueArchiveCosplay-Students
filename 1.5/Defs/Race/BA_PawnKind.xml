@@ -5,6 +5,12 @@
     <race>BA_ThingDef_Race</race>
     <fixedGender>Female</fixedGender>
 
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <BA_Xenotype>999</BA_Xenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+
     <apparelTags Inherit="False">
       <li>BA_ApparelTag</li>
     </apparelTags>

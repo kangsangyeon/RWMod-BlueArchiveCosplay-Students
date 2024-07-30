@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <XenotypeDef>
+    <defName>BA_Xenotype</defName>
+    <label>BA Xenotype</label>
+    <inheritable>true</inheritable>
+
+    <genes>
+      <!-- cosmetic -->
+      <li>Skin_SheerWhite</li>
+      <li>Hair_SnowWhite</li>
+      <li>Beard_NoBeardOnly</li>
+    </genes>
+  </XenotypeDef>
+
+</Defs>
