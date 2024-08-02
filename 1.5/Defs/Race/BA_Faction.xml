@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <FactionDef Abstract="True" ParentName="PlayerFactionBase" Name="BA_Faction">
+    <defName>BA_Faction</defName>
+    <allowedCultures Inherit="False">
+      <li>BA_Culture</li>
+    </allowedCultures>
+  </FactionDef>
+
+</Defs>

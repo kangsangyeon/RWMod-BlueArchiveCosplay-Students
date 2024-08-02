@@ -5,15 +5,17 @@
     <race>BA_Thing_Race</race>
     <fixedGender>Female</fixedGender>
 
+    <apparelTags Inherit="False">
+      <li>BA_ApparelTag</li>
+    </apparelTags>
+
     <xenotypeSet Inherit="False">
       <xenotypeChances>
         <BA_Xenotype>999</BA_Xenotype>
       </xenotypeChances>
     </xenotypeSet>
 
-    <apparelTags Inherit="False">
-      <li>BA_ApparelTag</li>
-    </apparelTags>
+    <defaultFactionType>BA_Faction</defaultFactionType>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Makoto" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
