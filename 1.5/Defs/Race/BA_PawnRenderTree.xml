@@ -2,7 +2,7 @@
 <Defs>
 
   <PawnRenderTreeDef>
-    <defName>BA_PawnRenderTreeDef</defName>
+    <defName>BA_PawnRenderTree</defName>
     <root Class="PawnRenderNodeProperties_Parent">
       <debugLabel>Root</debugLabel>
       <tagDef>Root</tagDef>

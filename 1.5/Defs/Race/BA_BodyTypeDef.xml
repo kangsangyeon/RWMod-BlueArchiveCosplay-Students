@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <BodyTypeDef Name="BA_BodyTypeDef_Female_Normal_A" ParentName="Core_Female">
-    <defName>BA_BodyTypeDef_Female_Normal_A</defName>
+  <BodyTypeDef Name="BA_BodyType_Female_Normal_A" ParentName="Core_Female">
+    <defName>BA_BodyType_Female_Normal_A</defName>
     <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_A</bodyNakedGraphicPath>
     <headOffset>(0, 0)</headOffset>
   </BodyTypeDef>
 
-  <BodyTypeDef Name="BA_BodyTypeDef_Female_Normal_B" ParentName="Core_Female">
-    <defName>BA_BodyTypeDef_Female_Normal_B</defName>
+  <BodyTypeDef Name="BA_BodyType_Female_Normal_B" ParentName="Core_Female">
+    <defName>BA_BodyType_Female_Normal_B</defName>
     <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_B</bodyNakedGraphicPath>
     <headOffset>(0, 0)</headOffset>
   </BodyTypeDef>
 
-  <BodyTypeDef Name="BA_BodyTypeDef_Female_Normal_C" ParentName="Core_Female">
-    <defName>BA_BodyTypeDef_Female_Normal_C</defName>
+  <BodyTypeDef Name="BA_BodyType_Female_Normal_C" ParentName="Core_Female">
+    <defName>BA_BodyType_Female_Normal_C</defName>
     <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_C</bodyNakedGraphicPath>
     <headOffset>(0, 0)</headOffset>
   </BodyTypeDef>
