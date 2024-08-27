@@ -98,15 +98,15 @@ namespace UnityProjectScripts
 
                         var _searchedStudentData =
                             GameResource.StudentTable.Values
-                                .Where(x => x.Name.Contains(input)).ToList();
+                                .Where(x => x.Name != null && x.Name.Contains(input)).ToList();
 
                         var _searchedSchoolData =
                             GameResource.SchoolTable.Values
-                                .Where(x => x.Name.Contains(input)).ToList();
+                                .Where(x => x.Name != null && x.Name.Contains(input)).ToList();
 
                         var _searchedClubData =
                             GameResource.ClubTable.Values
-                                .Where(x => x.Name.Contains(input)).ToList();
+                                .Where(x => x.Name != null && x.Name.Contains(input)).ToList();
 
                         foreach (var _data in _searchedSchoolData)
                         {
