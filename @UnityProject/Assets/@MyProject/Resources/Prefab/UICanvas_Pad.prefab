@@ -998,10 +998,10 @@ RectTransform:
   m_Father: {fileID: 5160825429709386867}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110.899994, y: -31}
-  m_SizeDelta: {x: 32, y: 28}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1929406442064298016
 MonoBehaviour:
@@ -1210,7 +1210,7 @@ GameObject:
   - component: {fileID: 7827694328008600170}
   - component: {fileID: 3101632083085772283}
   m_Layer: 5
-  m_Name: ExpItemIcon
+  m_Name: (ExpItemIconBox)_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1507,7 +1507,7 @@ GameObject:
   - component: {fileID: 5541052605353895062}
   - component: {fileID: 2827752737854353799}
   m_Layer: 5
-  m_Name: ItemIcon
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2568,7 +2568,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 27.376345, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3652648448972447494
 MonoBehaviour:
@@ -2913,7 +2913,7 @@ GameObject:
   - component: {fileID: 4813039135327624030}
   - component: {fileID: 2209172507083511698}
   m_Layer: 5
-  m_Name: (BottomLeft)*
+  m_Name: (Skill)_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3532,7 +3532,7 @@ GameObject:
   - component: {fileID: 456742532393741416}
   - component: {fileID: 2163093575886199300}
   m_Layer: 5
-  m_Name: CharItemIcon
+  m_Name: (CharItemIconBox)_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3774,7 +3774,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 27.376345, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5723987071073013045
 MonoBehaviour:
@@ -3884,7 +3884,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 27.376345, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7555163903195343257
 MonoBehaviour:
@@ -4908,7 +4908,7 @@ GameObject:
   - component: {fileID: 7459906005959574457}
   - component: {fileID: 674841260101530789}
   m_Layer: 5
-  m_Name: StarUpgradeBox
+  m_Name: (StarUpgradeBox)*
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4992,7 +4992,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 25, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796052053898878484
 MonoBehaviour:
@@ -5412,7 +5412,7 @@ GameObject:
   - component: {fileID: 5231908649782704257}
   - component: {fileID: 7980201100005094181}
   m_Layer: 5
-  m_Name: (ItemBox)*
+  m_Name: (IconBox)*
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5808,7 +5808,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 27.376345, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4376727848423913560
 MonoBehaviour:
@@ -6298,7 +6298,7 @@ GameObject:
   - component: {fileID: 2324176181698411661}
   - component: {fileID: 3966229185110456168}
   m_Layer: 5
-  m_Name: (ItemBox)*
+  m_Name: (IconBox)*
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7115,7 +7115,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 27.376345, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &270313198190962006
 MonoBehaviour:
@@ -7684,7 +7684,7 @@ GameObject:
   - component: {fileID: 4176022970115163407}
   - component: {fileID: 4432202371057405035}
   m_Layer: 5
-  m_Name: (ItemBox)*
+  m_Name: (IconBox)*
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12761,7 +12761,7 @@ GameObject:
   - component: {fileID: 2801212516757974263}
   - component: {fileID: 3146979703526053388}
   m_Layer: 5
-  m_Name: SkillIcon
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13211,7 +13211,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 27.376345, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6885270929837099765
 MonoBehaviour:
@@ -13840,10 +13840,10 @@ RectTransform:
   m_Father: {fileID: 5160825429709386867}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 87.799995, y: -31}
-  m_SizeDelta: {x: 32, y: 28}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8332239347391422804
 MonoBehaviour:
@@ -14206,7 +14206,7 @@ GameObject:
   - component: {fileID: 6706430853833547781}
   - component: {fileID: 1345792206025923688}
   m_Layer: 5
-  m_Name: Arrow
+  m_Name: Arrow!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14680,7 +14680,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 27.376345, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4417556541222289882
 MonoBehaviour:
@@ -14828,7 +14828,7 @@ GameObject:
   - component: {fileID: 2116198548741351661}
   - component: {fileID: 9105926879804756578}
   m_Layer: 5
-  m_Name: ItemIcon
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15425,10 +15425,10 @@ RectTransform:
   m_Father: {fileID: 5160825429709386867}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 64.7, y: -31}
-  m_SizeDelta: {x: 32, y: 28}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4994404806714282936
 MonoBehaviour:
@@ -15571,7 +15571,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 27.376345, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056387714541924395
 MonoBehaviour:
@@ -16212,7 +16212,7 @@ GameObject:
   - component: {fileID: 6367646521173661802}
   - component: {fileID: 5094732437286184688}
   m_Layer: 5
-  m_Name: SkillName
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16372,7 +16372,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 27.376345, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7360565392937206347
 MonoBehaviour:
@@ -16617,7 +16617,7 @@ GameObject:
   - component: {fileID: 8149372558134610220}
   - component: {fileID: 3392072482807502861}
   m_Layer: 5
-  m_Name: GameObject (2)
+  m_Name: GameObject (2)!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16868,7 +16868,7 @@ GameObject:
   - component: {fileID: 9174123253614801025}
   - component: {fileID: 1773621257621782569}
   m_Layer: 5
-  m_Name: StarsBefore
+  m_Name: StarsBefore[]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17305,7 +17305,6 @@ MonoBehaviour:
   m_Script: {fileID: 1866369897, guid: 477597f24b209a1418aa54c1dbbdf476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FullshotImage: {fileID: 5388822428422019129}
   ExpBar: {fileID: 8793931306107662269}
   LevelText: {fileID: 3799258186285181156}
   AttributeBox: {fileID: 4270244882049479555}
@@ -17336,6 +17335,34 @@ MonoBehaviour:
   LevelUpTab_ExSkillInfo_ExSkillExpText: {fileID: 4236103639011925248}
   LevelUpTab_LevelUpBox_DollorText: {fileID: 8566763650311112701}
   LevelUpTab_LevelUpBox_LevelUpButton: {fileID: 1752939706386443013}
+  ShinbiTab: {fileID: 3740120893097600399}
+  ShinbiTab_GrowthInfo_MaxLevel_Text: {fileID: 4332154753398802852}
+  ShinbiTab_GrowthInfo_Skill_Name: {fileID: 5094732437286184688}
+  ShinbiTab_GrowthInfo_Skill_HexImage: {fileID: 6809205504263642602}
+  ShinbiTab_GrowthInfo_Skill_Icon: {fileID: 3146979703526053388}
+  ShinbiTab_GrowthInfo_StarsAfter:
+  - {fileID: 1963122820817386747}
+  - {fileID: 7871594530694761080}
+  - {fileID: 7323727937415541276}
+  - {fileID: 1864932318584517524}
+  - {fileID: 7117021772679785169}
+  ShinbiTab_GrowthInfo_StarsBefore:
+  - {fileID: 4697251040040632861}
+  - {fileID: 7362238200738273030}
+  - {fileID: 207113632434020952}
+  - {fileID: 5020562081825619051}
+  - {fileID: 5705707950021848008}
+  ShinbiTab_ItemIcons_CharItemIconBox_CountText: {fileID: 951153272610038619}
+  ShinbiTab_ItemIcons_CharItemIconBox_Icon: {fileID: 8692431159497363385}
+  ShinbiTab_ItemIcons_ExpItemIconBox_CountText: {fileID: 7865107738208721391}
+  ShinbiTab_ItemIcons_ExpItemIconBox_Icon: {fileID: 2827752737854353799}
+  ShinbiTab_ItemIcons_ShiftingCraftIconBox_CountText: {fileID: 8686564950599696538}
+  ShinbiTab_ItemIcons_ShiftingCraftIconBox_Icon: {fileID: 9105926879804756578}
+  ShinbiTab_ItemIcons_SkillBookIconBox_CountText: {fileID: 3449057233431268321}
+  ShinbiTab_ItemIcons_SkillBookIconBox_Icon: {fileID: 2859478154062309830}
+  ShinbiTab_ShinbiUpBox_CostText: {fileID: 9107015304565546206}
+  ShinbiTab_ShinbiUpBox_Button: {fileID: 4147568911900027007}
+  FullshotImage: {fileID: 5388822428422019129}
   Background: {fileID: 7592857135247396551}
   ScreenTopBar: {fileID: 1232493629511532880}
 --- !u!114 &5896508374275738439
@@ -17443,7 +17470,7 @@ GameObject:
   - component: {fileID: 6128650455660627432}
   - component: {fileID: 8136863842722053928}
   m_Layer: 5
-  m_Name: SkillBookIcon
+  m_Name: (SkillBookIconBox)_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17564,7 +17591,7 @@ GameObject:
   - component: {fileID: 2410767684841480621}
   - component: {fileID: 2859478154062309830}
   m_Layer: 5
-  m_Name: ItemIcon
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18307,7 +18334,7 @@ GameObject:
   - component: {fileID: 8762021790064581463}
   - component: {fileID: 6826626702115461312}
   m_Layer: 5
-  m_Name: (BottomRight)*
+  m_Name: (MaxLevel)_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18402,7 +18429,7 @@ GameObject:
   - component: {fileID: 3589072633997980295}
   - component: {fileID: 8692431159497363385}
   m_Layer: 5
-  m_Name: ItemIcon
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19057,7 +19084,7 @@ GameObject:
   - component: {fileID: 7185740416156373520}
   - component: {fileID: 4332154753398802852}
   m_Layer: 5
-  m_Name: SkillLevelChangeText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19159,7 +19186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 86.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7902316055341267987
@@ -19269,10 +19296,10 @@ RectTransform:
   m_Father: {fileID: 5160825429709386867}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134, y: -31}
-  m_SizeDelta: {x: 32, y: 28}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4248921216818557456
 MonoBehaviour:
@@ -19997,7 +20024,7 @@ GameObject:
   - component: {fileID: 5621357279987870843}
   - component: {fileID: 2477008613484981434}
   m_Layer: 5
-  m_Name: StarUpgradeBox
+  m_Name: (StarUpgradeRow)*
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21011,7 +21038,7 @@ GameObject:
   - component: {fileID: 1096221190298714148}
   - component: {fileID: 2256010402407413680}
   m_Layer: 5
-  m_Name: ShiftingCraftIcon
+  m_Name: (ShiftingCraftIconBox)_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21618,7 +21645,7 @@ GameObject:
   - component: {fileID: 6228646125847157067}
   - component: {fileID: 1952607424799559221}
   m_Layer: 5
-  m_Name: (ItemBox)*
+  m_Name: (IconBox)*
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22372,7 +22399,7 @@ GameObject:
   - component: {fileID: 3209126679182339795}
   - component: {fileID: 5196673627648986754}
   m_Layer: 5
-  m_Name: GameObject (1)
+  m_Name: GameObject (1)!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23385,7 +23412,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 27.376345, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5767585302802010843
 MonoBehaviour:
@@ -23470,7 +23497,7 @@ GameObject:
   - component: {fileID: 6119065453631458816}
   - component: {fileID: 6954830214122727547}
   m_Layer: 5
-  m_Name: StarsAfter
+  m_Name: StarsAfter[]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23648,7 +23675,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 27.376345, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7624791611382942553
 MonoBehaviour:
@@ -23837,7 +23864,7 @@ GameObject:
   - component: {fileID: 8179277402213487139}
   - component: {fileID: 9006504586176243271}
   m_Layer: 5
-  m_Name: LeftCircle
+  m_Name: (LeftCircle)*
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26500,7 +26527,7 @@ PrefabInstance:
     - target: {fileID: 7606743131817136327, guid: e0bf3a9c4e209f540a74f055c12e2bac,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7606743131817136327, guid: e0bf3a9c4e209f540a74f055c12e2bac,
         type: 3}
@@ -26510,17 +26537,17 @@ PrefabInstance:
     - target: {fileID: 7606743131817136327, guid: e0bf3a9c4e209f540a74f055c12e2bac,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7606743131817136327, guid: e0bf3a9c4e209f540a74f055c12e2bac,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7606743131817136327, guid: e0bf3a9c4e209f540a74f055c12e2bac,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7606743131817136327, guid: e0bf3a9c4e209f540a74f055c12e2bac,
         type: 3}
@@ -26560,12 +26587,12 @@ PrefabInstance:
     - target: {fileID: 7606743131817136327, guid: e0bf3a9c4e209f540a74f055c12e2bac,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 41.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7606743131817136327, guid: e0bf3a9c4e209f540a74f055c12e2bac,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -31
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7606743131817136327, guid: e0bf3a9c4e209f540a74f055c12e2bac,
         type: 3}

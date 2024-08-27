@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class StudentInfoScreenAccessor : MonoBehaviour
 {
-    public RawImage FullshotImage;
     public Image ExpBar;
     public Text LevelText;
     public Image AttributeBox;
@@ -34,6 +33,24 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public Text LevelUpTab_ExSkillInfo_ExSkillExpText;
     public Text LevelUpTab_LevelUpBox_DollorText;
     public Image LevelUpTab_LevelUpBox_LevelUpButton;
+    public GameObject ShinbiTab;
+    public Text ShinbiTab_GrowthInfo_MaxLevel_Text;
+    public Text ShinbiTab_GrowthInfo_Skill_Name;
+    public Image ShinbiTab_GrowthInfo_Skill_HexImage;
+    public Image ShinbiTab_GrowthInfo_Skill_Icon;
+    public Image[] ShinbiTab_GrowthInfo_StarsAfter;
+    public Image[] ShinbiTab_GrowthInfo_StarsBefore;
+    public Text ShinbiTab_ItemIcons_CharItemIconBox_CountText;
+    public Image ShinbiTab_ItemIcons_CharItemIconBox_Icon;
+    public Text ShinbiTab_ItemIcons_ExpItemIconBox_CountText;
+    public Image ShinbiTab_ItemIcons_ExpItemIconBox_Icon;
+    public Text ShinbiTab_ItemIcons_ShiftingCraftIconBox_CountText;
+    public Image ShinbiTab_ItemIcons_ShiftingCraftIconBox_Icon;
+    public Text ShinbiTab_ItemIcons_SkillBookIconBox_CountText;
+    public Image ShinbiTab_ItemIcons_SkillBookIconBox_Icon;
+    public Text ShinbiTab_ShinbiUpBox_CostText;
+    public Image ShinbiTab_ShinbiUpBox_Button;
+    public RawImage FullshotImage;
     public Image Background;
     public ScreenTopBarAccessor ScreenTopBar;
 }

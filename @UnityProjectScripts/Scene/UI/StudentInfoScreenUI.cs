@@ -36,6 +36,17 @@ namespace UnityProjectScripts
                 })
                 .AddTo(gameObject);
 
+            // 탭 전환 버튼 이벤트 액션을 설정합니다.
+            Accessor.TabButtonBox_BasicTabButton.OnClickAsObservable()
+                .Subscribe(_ => SetVisibleTab(0));
+            Accessor.TabButtonBox_LevelUpTabButton.OnClickAsObservable()
+                .Subscribe(_ => SetVisibleTab(1));
+            Accessor.TabButtonBox_ShinbiTabButton.OnClickAsObservable()
+                .Subscribe(_ => SetVisibleTab(2));
+
+            // 탭의 기본 활성 상태를 설정합니다.
+            SetVisibleTab(0);
+
             CharId
                 .Where(x => x > 0)
                 .Subscribe(UpdateChar);
@@ -209,14 +220,7 @@ namespace UnityProjectScripts
                 bool _isUnlocked = i > _skillLevelData.Id.Level - 1;
                 _accessor.UpdateUI(_data, _skillData, _skillLevels[i], _isMaxLevel, _isUnlocked);
             }
-
-            // 탭 전환 버튼 이벤트 액션을 설정합니다.
-            Accessor.TabButtonBox_BasicTabButton.OnClickAsObservable()
-                .Subscribe(_ => SetVisibleTab(0));
-            Accessor.TabButtonBox_LevelUpTabButton.OnClickAsObservable()
-                .Subscribe(_ => SetVisibleTab(1));
-
-            // 탭의 기본 활성 상태를 설정합니다.
+            
             SetVisibleTab(0);
         }
 
@@ -229,6 +233,7 @@ namespace UnityProjectScripts
 
             Accessor.BasicTab.gameObject.SetActive(false);
             Accessor.LevelUpTab.gameObject.SetActive(false);
+            Accessor.ShinbiTab.gameObject.SetActive(false);
             Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = _disableButtonColor;
             Accessor.TabButtonBox_BasicTabButton_Text.color = _disableTextColor;
             Accessor.TabButtonBox_LevelUpTabButton.GetComponent<Image>().color = _disableButtonColor;
@@ -247,6 +252,11 @@ namespace UnityProjectScripts
                     Accessor.LevelUpTab.gameObject.SetActive(true);
                     Accessor.TabButtonBox_LevelUpTabButton.GetComponent<Image>().color = _enableButtonColor;
                     Accessor.TabButtonBox_LevelUpTabButton_Text.color = _enableTextColor;
+                    break;
+                case 2:
+                    Accessor.ShinbiTab.gameObject.SetActive(true);
+                    Accessor.TabButtonBox_ShinbiTabButton.GetComponent<Image>().color = _enableButtonColor;
+                    Accessor.TabButtonBox_ShinbiTabButton_Text.color = _enableTextColor;
                     break;
             }
         }
