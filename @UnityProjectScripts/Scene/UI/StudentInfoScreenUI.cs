@@ -44,6 +44,9 @@ namespace UnityProjectScripts
             Accessor.TabButtonBox_ShinbiTabButton.OnClickAsObservable()
                 .Subscribe(_ => SetVisibleTab(2));
 
+            Accessor.ShinbiTab_GrowthInfo_SkillButton.OnClickAsObservable()
+                .Subscribe(_ => SetVisibleTab(1));
+
             // 탭의 기본 활성 상태를 설정합니다.
             SetVisibleTab(0);
 
@@ -220,7 +223,15 @@ namespace UnityProjectScripts
                 bool _isUnlocked = i > _skillLevelData.Id.Level - 1;
                 _accessor.UpdateUI(_data, _skillData, _skillLevels[i], _isMaxLevel, _isUnlocked);
             }
-            
+
+            // 신비 탭의 내용을 표시합니다.
+            Sprite _thumbnailSprite =
+                GameResource.Load<Sprite>($"Skill/Icon", $"Skill_Icon_{_skillData.IconName}");
+
+            Accessor.ShinbiTab_GrowthInfo_SkillButton_Icon.sprite = _thumbnailSprite;
+            Accessor.ShinbiTab_GrowthInfo_SkillButton_HexImage.color = UIUtilProcedure.GetAttributeColor(_data.Attribute);
+            Accessor.ShinbiTab_GrowthInfo_SkillButton_Name.text = _skillData.Name;
+
             SetVisibleTab(0);
         }
 

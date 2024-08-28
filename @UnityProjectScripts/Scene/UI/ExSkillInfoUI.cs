@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace UnityProjectScripts
 {
-    public class ExSkillInfoUI : MonoBehaviour
+    public class
+        ExSkillInfoUI : MonoBehaviour
     {
         public ExSkillInfoAccessor Accessor;
         private bool checkScroll;
@@ -22,16 +23,7 @@ namespace UnityProjectScripts
 
             Sprite _thumbnailSprite =
                 GameResource.Load<Sprite>($"Skill/Icon", $"Skill_Icon_{_skillData.IconName}");
-            Color _thumbnailBgColor = Color.white;
-
-            if (_studentData.Attribute == StudentAttribute.Attack)
-                ColorUtility.TryParseHtmlString("#CC1A25", out _thumbnailBgColor);
-            else if (_studentData.Attribute == StudentAttribute.Defense)
-                ColorUtility.TryParseHtmlString("#065BAB", out _thumbnailBgColor);
-            else if (_studentData.Attribute == StudentAttribute.Support)
-                ColorUtility.TryParseHtmlString("#BD8801", out _thumbnailBgColor);
-            else if (_studentData.Attribute == StudentAttribute.Heal)
-                ColorUtility.TryParseHtmlString("#88F284", out _thumbnailBgColor);
+            Color _thumbnailBgColor = UIUtilProcedure.GetAttributeColor(_studentData.Attribute);
 
             Accessor.Thumbnail.sprite = _thumbnailSprite;
             Accessor.ThumbnailBackground.color = _thumbnailBgColor;

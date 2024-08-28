@@ -35,9 +35,10 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public Image LevelUpTab_LevelUpBox_LevelUpButton;
     public GameObject ShinbiTab;
     public Text ShinbiTab_GrowthInfo_MaxLevel_Text;
-    public Text ShinbiTab_GrowthInfo_Skill_Name;
-    public Image ShinbiTab_GrowthInfo_Skill_HexImage;
-    public Image ShinbiTab_GrowthInfo_Skill_Icon;
+    public Button ShinbiTab_GrowthInfo_SkillButton;
+    public Text ShinbiTab_GrowthInfo_SkillButton_Name;
+    public Image ShinbiTab_GrowthInfo_SkillButton_HexImage;
+    public Image ShinbiTab_GrowthInfo_SkillButton_Icon;
     public Image[] ShinbiTab_GrowthInfo_StarsAfter;
     public Image[] ShinbiTab_GrowthInfo_StarsBefore;
     public Text ShinbiTab_ItemIcons_CharItemIconBox_CountText;
