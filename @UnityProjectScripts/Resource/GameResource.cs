@@ -22,7 +22,7 @@ public static class GameResource
     public static Sprite SynergyDeactivatedSprite;
     public static Dictionary<int, Sprite> SchoolLogoSprites;
     public static Dictionary<int, Sprite> StudentPortraitSprites;
-    public static List<Sprite> StudentAttributeFrameSprites;
+    public static List<Sprite> StudentAttributeIconSprites;
 
     public static T Load<T>(string _resourcesDirectoryAddress, string _bundleAssetName) where T : Object
     {

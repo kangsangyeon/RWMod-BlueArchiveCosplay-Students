@@ -27,7 +27,7 @@ namespace UnityProjectScripts
                 GameResource.StudentTable.ToDictionary(
                     x => x.Key,
                     x => Load<Sprite>($"Student/{x.Key}", $"Student_Portrait_{x.Key}"));
-            GameResource.StudentAttributeFrameSprites = new[]
+            GameResource.StudentAttributeIconSprites = new[]
                 {
                     StudentAttribute.Attack,
                     StudentAttribute.Defense,
@@ -37,7 +37,7 @@ namespace UnityProjectScripts
                 .Select(x =>
                     Load<Sprite>(
                         "Sprite/UI/Access/Student/Attribute",
-                        $"Student_Attribute_Frame_{x.ToString()}"))
+                        $"Student_Attribute_Icon_{x.ToString()}"))
                 .ToList();
         }
 

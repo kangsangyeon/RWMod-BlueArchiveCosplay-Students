@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class StudentAccessor : MonoBehaviour
 {
-    public Image Frame;
-    public Image Portrait;
+    public Button Button;
     public Image OverlayOnSearchFailed;
+    public Image Portrait;
+    public Image AttributeBg;
+    public Image AttributeBg_Icon;
+    public Text Name;
 }

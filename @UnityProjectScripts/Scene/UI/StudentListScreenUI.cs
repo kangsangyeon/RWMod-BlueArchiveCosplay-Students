@@ -63,12 +63,15 @@ namespace UnityProjectScripts
                             Instantiate(GameResource.StudentPrefab, _clubAccessor.StudentHolder.transform);
                         var _studentAccessor = _studentGo.GetComponent<StudentAccessor>();
 
-                        _studentAccessor.Frame.sprite =
-                            GameResource.StudentAttributeFrameSprites[(int)_student.Attribute];
                         _studentAccessor.Portrait.sprite =
                             GameResource.StudentPortraitSprites[_student.Id];
+                        _studentAccessor.AttributeBg.color =
+                            UIUtilProcedure.GetAttributeColor(_student.Attribute);
+                        _studentAccessor.AttributeBg_Icon.sprite =
+                            GameResource.StudentAttributeIconSprites[(int)_student.Attribute];
+                        _studentAccessor.Name.text = _student.Name;
 
-                        _studentAccessor.Frame.OnPointerClickAsObservable()
+                        _studentAccessor.Button.OnClickAsObservable()
                             .Subscribe(_ =>
                             {
                                 accessor.gameObject.SetActive(false);
