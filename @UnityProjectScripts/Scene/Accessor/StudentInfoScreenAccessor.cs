@@ -26,7 +26,8 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public Text BasicTab_WeaponInfo_WeaponTypeText;
     public GameObject BasicTab_WeaponInfo_StarHolder;
     public Image BasicTab_WeaponInfo_WeaponImage;
-    public ExSkillInfoAccessor BasicTab_ExSkillInfo;
+    public Button BasicTab_SkillButton;
+    public ExSkillInfoAccessor BasicTab_SkillButton_ExSkillInfo;
     public GameObject LevelUpTab;
     public GameObject LevelUpTab_ExSkillInfo_ExSkillHolder;
     public Image LevelUpTab_ExSkillInfo_ExSkillExpBar;

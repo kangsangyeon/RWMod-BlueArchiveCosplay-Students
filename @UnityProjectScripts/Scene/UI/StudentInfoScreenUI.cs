@@ -44,6 +44,8 @@ namespace UnityProjectScripts
             Accessor.TabButtonBox_ShinbiTabButton.OnClickAsObservable()
                 .Subscribe(_ => SetVisibleTab(2));
 
+            Accessor.BasicTab_SkillButton.OnClickAsObservable()
+                .Subscribe(_ => SetVisibleTab(1));
             Accessor.ShinbiTab_GrowthInfo_SkillButton.OnClickAsObservable()
                 .Subscribe(_ => SetVisibleTab(1));
 
@@ -198,7 +200,7 @@ namespace UnityProjectScripts
             int _maxSkillLevel = _data.MaxSkillLevel ?? 5;
             for (int i = 0; i < _maxSkillLevel; ++i)
                 _skillLevels.Add(GameResource.SkillLevelTable[(_data.SkillId, i + 1)]);
-            var _skillInfoUI = Accessor.BasicTab_ExSkillInfo.GetComponent<ExSkillInfoUI>();
+            var _skillInfoUI = Accessor.BasicTab_SkillButton_ExSkillInfo.GetComponent<ExSkillInfoUI>();
             _skillInfoUI.UpdateUI(_data, _skillData, _skillLevelData,
                 _skillLevelData.Id.Level == _skillLevels.Count - 1, false);
 
