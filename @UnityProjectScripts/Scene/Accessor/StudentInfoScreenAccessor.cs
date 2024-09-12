@@ -23,11 +23,12 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public Image BasicTab_StatInfo_SDFullShot;
     public Text BasicTab_StatInfo_StatPage1Value;
     public Text BasicTab_StatInfo_StatPage2Value;
-    public Text BasicTab_WeaponInfo_WeaponTypeText;
-    public GameObject BasicTab_WeaponInfo_StarHolder;
-    public Image BasicTab_WeaponInfo_WeaponImage;
     public Button BasicTab_SkillButton;
     public ExSkillInfoAccessor BasicTab_SkillButton_ExSkillInfo;
+    public Button BasicTab_WeaponButton;
+    public Text BasicTab_WeaponButton_WeaponTypeText;
+    public GameObject BasicTab_WeaponButton_StarHolder;
+    public Image BasicTab_WeaponButton_WeaponImage;
     public GameObject LevelUpTab;
     public GameObject LevelUpTab_ExSkillInfo_ExSkillHolder;
     public Image LevelUpTab_ExSkillInfo_ExSkillExpBar;

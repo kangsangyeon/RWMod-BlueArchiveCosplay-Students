@@ -205,14 +205,14 @@ namespace UnityProjectScripts
                 _skillLevelData.Id.Level == _skillLevels.Count - 1, false);
 
             var _weaponData = GameResource.WeaponTable[_data.WeaponId];
-            Accessor.BasicTab_WeaponInfo_WeaponTypeText.text = _weaponData.Type.ToString();
-            Accessor.BasicTab_WeaponInfo_WeaponImage.sprite =
+            Accessor.BasicTab_WeaponButton_WeaponTypeText.text = _weaponData.Type.ToString();
+            Accessor.BasicTab_WeaponButton_WeaponImage.sprite =
                 GameResource.Load<Sprite>($"Weapon", $"Weapon_Icon_{_weaponData.Id}");
 
             var _blueStarPrefab = GameResource.Load<GameObject>("Prefab/UI", "BlueStar");
-            Accessor.BasicTab_WeaponInfo_StarHolder.Children().Destroy();
+            Accessor.BasicTab_WeaponButton_StarHolder.Children().Destroy();
             for (int i = 0; i < _weaponData.Star; ++i)
-                Instantiate(_blueStarPrefab, Accessor.BasicTab_WeaponInfo_StarHolder.transform);
+                Instantiate(_blueStarPrefab, Accessor.BasicTab_WeaponButton_StarHolder.transform);
 
             // 레벨 업 탭의 내용을 표시합니다.
             var _exSkillInfoPrefab = GameResource.Load<GameObject>("Prefab/UI", "ExSkillInfo");
