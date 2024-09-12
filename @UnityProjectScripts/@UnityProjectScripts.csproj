@@ -519,6 +519,7 @@
     <Compile Include="Scene\UI\PadUI.cs" />
     <Compile Include="Scene\UI\StudentInfoScreenUI.cs" />
     <Compile Include="Scene\UI\StudentListScreenUI.cs" />
+    <Compile Include="Scene\UI\WeaponPopupUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Plugins\com.neuecc.unirx@284d5c50d3\Asynchronous.meta" />

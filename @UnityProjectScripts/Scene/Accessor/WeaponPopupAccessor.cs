@@ -9,10 +9,10 @@ public class WeaponPopupAccessor : MonoBehaviour
     public Image LevelProgress_Fill;
     public Text LevelProgress_Text;
     public Text Level;
-    public Text SkillName;
     public Image[] Stars;
     public Text Type;
     public Image WeaponIcon;
+    public Text WeaponName;
     public Button TabButtonBox_BasicTab;
     public Text TabButtonBox_BasicTab_Text;
     public Button TabButtonBox_DetailTab;

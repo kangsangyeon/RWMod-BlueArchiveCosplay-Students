@@ -16832,6 +16832,7 @@ GameObject:
   - component: {fileID: 4638311472081712840}
   - component: {fileID: 2520089452402274400}
   - component: {fileID: 5749622054306296115}
+  - component: {fileID: 8379995481583876324}
   m_Layer: 5
   m_Name: WeaponPopup
   m_TagString: Untagged
@@ -16907,7 +16908,6 @@ MonoBehaviour:
   LevelProgress_Fill: {fileID: 7143409978810505305}
   LevelProgress_Text: {fileID: 5396039146076736709}
   Level: {fileID: 156807397871208816}
-  SkillName: {fileID: 8545052202293561616}
   Stars:
   - {fileID: 2492429341918365942}
   - {fileID: 6911456095820656918}
@@ -16916,6 +16916,7 @@ MonoBehaviour:
   - {fileID: 7240522429236893404}
   Type: {fileID: 4334684537841071041}
   WeaponIcon: {fileID: 5357352531386983342}
+  WeaponName: {fileID: 8545052202293561616}
   TabButtonBox_BasicTab: {fileID: 9109606210245882669}
   TabButtonBox_BasicTab_Text: {fileID: 7208796318959285730}
   TabButtonBox_DetailTab: {fileID: 4145062602331499304}
@@ -16923,6 +16924,20 @@ MonoBehaviour:
   TabContents_ViewMaxLevelInfoCheckboxButton: {fileID: 5923651776875484577}
   TabContents_ViewMaxLevelInfoCheckboxButton_Check: {fileID: 4167300066807953571}
   QuitButton: {fileID: 7555424956073093651}
+--- !u!114 &8379995481583876324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4714457893688301662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 686979295, guid: 477597f24b209a1418aa54c1dbbdf476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Accessor: {fileID: 5749622054306296115}
+  ViewMaxLevelInfo: 0
 --- !u!1 &4717040236585740958
 GameObject:
   m_ObjectHideFlags: 0
@@ -20351,6 +20366,7 @@ MonoBehaviour:
   ShinbiTab_ItemIcons_SkillBookIconBox_Icon: {fileID: 2859478154062309830}
   ShinbiTab_ShinbiUpBox_CostText: {fileID: 9107015304565546206}
   ShinbiTab_ShinbiUpBox_Button: {fileID: 4147568911900027007}
+  WeaponPopup: {fileID: 5749622054306296115}
   FullshotImage: {fileID: 5388822428422019129}
   Background: {fileID: 7592857135247396551}
   ScreenTopBar: {fileID: 1232493629511532880}
@@ -22162,7 +22178,7 @@ GameObject:
   - component: {fileID: 911395258091544710}
   - component: {fileID: 8545052202293561616}
   m_Layer: 5
-  m_Name: SkillName
+  m_Name: WeaponName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30690,12 +30706,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 013c6d85fc8dbb34abbfe0684122a577, type: 3}
---- !u!224 &4361517354974618799 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1520919152271981552, guid: 013c6d85fc8dbb34abbfe0684122a577,
-    type: 3}
-  m_PrefabInstance: {fileID: 2998371525661613919}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1232493629511532880 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4073199551077637647, guid: 013c6d85fc8dbb34abbfe0684122a577,
@@ -30708,6 +30718,12 @@ MonoBehaviour:
   m_Script: {fileID: 1094082464, guid: 477597f24b209a1418aa54c1dbbdf476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &4361517354974618799 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1520919152271981552, guid: 013c6d85fc8dbb34abbfe0684122a577,
+    type: 3}
+  m_PrefabInstance: {fileID: 2998371525661613919}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3866489071748380120
 PrefabInstance:
   m_ObjectHideFlags: 0

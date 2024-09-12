@@ -53,6 +53,7 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public Image ShinbiTab_ItemIcons_SkillBookIconBox_Icon;
     public Text ShinbiTab_ShinbiUpBox_CostText;
     public Image ShinbiTab_ShinbiUpBox_Button;
+    public WeaponPopupAccessor WeaponPopup;
     public RawImage FullshotImage;
     public Image Background;
     public ScreenTopBarAccessor ScreenTopBar;

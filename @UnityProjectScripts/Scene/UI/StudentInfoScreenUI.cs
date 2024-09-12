@@ -20,6 +20,7 @@ namespace UnityProjectScripts
         {
             PadAccessor = FindObjectOfType<PadAccessor>();
 
+            // 버튼 이벤트 액션을 설정.
             Accessor.ScreenTopBar.BackButton.OnClickAsObservable()
                 .Subscribe(_ =>
                 {
@@ -33,6 +34,17 @@ namespace UnityProjectScripts
                 {
                     Accessor.gameObject.SetActive(false);
                     PadAccessor.MainScreen.gameObject.SetActive(true);
+                })
+                .AddTo(gameObject);
+
+            Accessor.BasicTab_WeaponButton.OnClickAsObservable()
+                .Subscribe(_ =>
+                {
+                    var _ui = Accessor.WeaponPopup.GetComponent<WeaponPopupUI>();
+                    var _charData = GameResource.StudentTable[CharId.Value];
+                    var _weaponData = GameResource.WeaponTable[_charData.WeaponId];
+                    _ui.UpdateUI(_weaponData, 1, 0);
+                    Accessor.WeaponPopup.gameObject.SetActive(true);
                 })
                 .AddTo(gameObject);
 
@@ -55,6 +67,8 @@ namespace UnityProjectScripts
             CharId
                 .Where(x => x > 0)
                 .Subscribe(UpdateChar);
+            
+            Accessor.WeaponPopup.gameObject.SetActive(false);
 
             if (CharId.Value == 0)
             {
