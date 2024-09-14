@@ -65,7 +65,7 @@ namespace UnityProjectScripts
                 Accessor.SkillDescriptionMask.rectTransform.sizeDelta.y;
             if (_heightDelta > 0)
             {
-                // 대략 한 줄마다 스크롤 시간 2초 증가 (font size가 대략 한 줄 크기)
+                // 대략 한 줄마다 스크롤 시간 3초 증가 (font size가 대략 한 줄 크기)
                 float _scrollDuration =
                     (_heightDelta / Accessor.SkillDescriptionText.fontSize) * 3f;
                 descriptionTextSequence = DOTween.Sequence();

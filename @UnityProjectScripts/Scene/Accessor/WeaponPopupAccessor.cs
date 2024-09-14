@@ -12,7 +12,8 @@ public class WeaponPopupAccessor : MonoBehaviour
     public Image[] Stars;
     public Text Type;
     public Image WeaponIcon;
-    public Text WeaponName;
+    public Image WeaponNameMask;
+    public Text WeaponNameMask_Text;
     public Button TabButtonBox_BasicTab;
     public Text TabButtonBox_BasicTab_Text;
     public Button TabButtonBox_DetailTab;
