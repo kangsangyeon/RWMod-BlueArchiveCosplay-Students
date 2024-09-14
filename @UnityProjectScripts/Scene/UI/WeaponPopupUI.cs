@@ -61,7 +61,7 @@ public class WeaponPopupUI : MonoBehaviour
                 (_widthDelta / Accessor.WeaponNameMask_Text.fontSize) * 1;
             DOTween.Sequence()
                 .AppendInterval(1f)
-                .Append(Accessor.WeaponNameMask_Text.rectTransform.DOAnchorPosX(_widthDelta, _scrollDuration))
+                .Append(Accessor.WeaponNameMask_Text.rectTransform.DOAnchorPosX(_widthDelta * -1, _scrollDuration))
                 .Append(Accessor.WeaponNameMask_Text.DOFade(0f, 1f))
                 .AppendCallback(() => Accessor.WeaponNameMask_Text.rectTransform.anchoredPosition = Vector2.zero)
                 .Append(Accessor.WeaponNameMask_Text.DOFade(1f, 1f))
