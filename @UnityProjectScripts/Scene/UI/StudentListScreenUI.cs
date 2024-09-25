@@ -8,13 +8,11 @@ using UnityEngine;
 public class StudentListScreenUI : MonoBehaviour
 {
     public StudentListScreenAccessor accessor;
-    private PadAccessor padAccessor;
     private Dictionary<int, ClubAccessor> clubAccessorById;
     private Dictionary<int, StudentAccessor> studentAccessorById;
 
     private void Start()
     {
-        padAccessor = FindObjectOfType<PadAccessor>();
         clubAccessorById = new Dictionary<int, ClubAccessor>();
         studentAccessorById = new Dictionary<int, StudentAccessor>();
 
@@ -22,7 +20,7 @@ public class StudentListScreenUI : MonoBehaviour
             .Subscribe(_ =>
             {
                 accessor.gameObject.SetActive(false);
-                padAccessor.MainScreen.gameObject.SetActive(true);
+                Contents.Instance.Accessor.PadCanvas.MainScreen.gameObject.SetActive(true);
             })
             .AddTo(gameObject);
 
@@ -30,7 +28,7 @@ public class StudentListScreenUI : MonoBehaviour
             .Subscribe(_ =>
             {
                 accessor.gameObject.SetActive(false);
-                padAccessor.MainScreen.gameObject.SetActive(true);
+                Contents.Instance.Accessor.PadCanvas.MainScreen.gameObject.SetActive(true);
             })
             .AddTo(gameObject);
 
@@ -71,8 +69,8 @@ public class StudentListScreenUI : MonoBehaviour
                         .Subscribe(_ =>
                         {
                             accessor.gameObject.SetActive(false);
-                            padAccessor.StudentInfoScreen.gameObject.SetActive(true);
-                            var _ui = padAccessor.StudentInfoScreen.gameObject.GetComponent<StudentInfoScreenUI>();
+                            Contents.Instance.Accessor.PadCanvas.StudentInfoScreen.gameObject.SetActive(true);
+                            var _ui = Contents.Instance.Accessor.PadCanvas.StudentInfoScreen.gameObject.GetComponent<StudentInfoScreenUI>();
                             _ui.CharId.Value = _student.Id;
                         })
                         .AddTo(gameObject);

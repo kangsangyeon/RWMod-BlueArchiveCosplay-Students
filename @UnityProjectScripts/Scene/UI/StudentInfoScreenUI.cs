@@ -12,18 +12,15 @@ public class StudentInfoScreenUI : MonoBehaviour
 {
     public StudentInfoScreenAccessor Accessor;
     public ReactiveProperty<int> CharId = new ReactiveProperty<int>(0);
-    private PadAccessor PadAccessor;
 
     private void Start()
     {
-        PadAccessor = FindObjectOfType<PadAccessor>();
-
         // 버튼 이벤트 액션을 설정.
         Accessor.ScreenTopBar.BackButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
                 Accessor.gameObject.SetActive(false);
-                PadAccessor.StudentListScreen.gameObject.SetActive(true);
+                Contents.Instance.Accessor.PadCanvas.StudentListScreen.gameObject.SetActive(true);
             })
             .AddTo(gameObject);
 
@@ -31,7 +28,7 @@ public class StudentInfoScreenUI : MonoBehaviour
             .Subscribe(_ =>
             {
                 Accessor.gameObject.SetActive(false);
-                PadAccessor.MainScreen.gameObject.SetActive(true);
+                Contents.Instance.Accessor.PadCanvas.MainScreen.gameObject.SetActive(true);
             })
             .AddTo(gameObject);
 

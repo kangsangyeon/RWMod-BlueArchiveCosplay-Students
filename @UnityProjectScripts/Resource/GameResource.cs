@@ -25,6 +25,8 @@ public static class GameResource
     public static List<Sprite> StudentAttributeIconSprites;
 
     public static ParticleSystem TouchFxPrefab;
+    public static RenderTexture FullshotRT;
+    public static RenderTexture TransitionRT;
 
     public static T Load<T>(string _resourcesDirectoryAddress, string _bundleAssetName) where T : Object
     {

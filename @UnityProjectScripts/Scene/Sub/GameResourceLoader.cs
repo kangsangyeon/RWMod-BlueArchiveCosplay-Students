@@ -40,6 +40,10 @@ public class GameResourceLoader : MonoBehaviour
 
         GameResource.TouchFxPrefab =
             Load<ParticleSystem>("Vfx/Prefab", "PS_TouchFx");
+        GameResource.FullshotRT =
+            Load<RenderTexture>("RT", "RT_Fullshot");
+        GameResource.TransitionRT =
+            Load<RenderTexture>("RT", "RT_Transition");
     }
 
     private T Load<T>(string _resourcesDirectoryAddress, string _bundleAssetName) where T : Object

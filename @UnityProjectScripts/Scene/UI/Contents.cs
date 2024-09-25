@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
 
-public class Contents : MonoBehaviour
+public class Contents : MonoSingleton<Contents>
 {
     public ContentsAccessor Accessor;
+
+    private void Start()
+    {
+        GameResource.FullshotRT.Clear();
+        GameResource.TransitionRT.Clear();
+    }
 
     private void Update()
     {

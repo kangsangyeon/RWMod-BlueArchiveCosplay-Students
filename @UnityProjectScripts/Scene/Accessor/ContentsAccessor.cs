@@ -5,7 +5,7 @@ using UnityEngine;
 public class ContentsAccessor : MonoBehaviour
 {
     public FullshotRenderAccessor FullshotRender;
-    public GameObject PadCanvas;
+    public PadAccessor PadCanvas;
     public Camera UICamera;
     public GameObject UIParticleHolder;
 }

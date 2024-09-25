@@ -9991,6 +9991,8 @@ GameObject:
   - component: {fileID: 7542871074920093599}
   - component: {fileID: 6388131728347863173}
   - component: {fileID: 6392944356389428702}
+  - component: {fileID: 2374133813993753683}
+  - component: {fileID: 2005683858881131900}
   m_Layer: 5
   m_Name: PadCanvas
   m_TagString: Untagged
@@ -10078,6 +10080,37 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2374133813993753683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3360472268456067681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 228509317, guid: 477597f24b209a1418aa54c1dbbdf476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HomeButton: {fileID: 4464137383496017671}
+  HomeButton_Border: {fileID: 1876419439770325480}
+  ScreenOverlay_Transition: {fileID: 8500015393520505149}
+  MainScreen: {fileID: 879075960139179266}
+  StudentInfoScreen: {fileID: 409876057183402018}
+  StudentListScreen: {fileID: 1763884182060414916}
+--- !u!114 &2005683858881131900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3360472268456067681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11168257, guid: 477597f24b209a1418aa54c1dbbdf476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accessor: {fileID: 2374133813993753683}
 --- !u!1 &3378647675303209008
 GameObject:
   m_ObjectHideFlags: 0
@@ -11717,8 +11750,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3749297873020714732}
-  - component: {fileID: 2622711417676896710}
-  - component: {fileID: 3214540747557694314}
   m_Layer: 5
   m_Name: (Pad)*
   m_TagString: Untagged
@@ -11751,37 +11782,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1600, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2622711417676896710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3749297873020714733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 228509317, guid: 477597f24b209a1418aa54c1dbbdf476, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HomeButton: {fileID: 4464137383496017671}
-  HomeButton_Border: {fileID: 1876419439770325480}
-  ScreenOverlay_Transition: {fileID: 8500015393520505149}
-  MainScreen: {fileID: 879075960139179266}
-  StudentInfoScreen: {fileID: 409876057183402018}
-  StudentListScreen: {fileID: 1763884182060414916}
---- !u!114 &3214540747557694314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3749297873020714733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11168257, guid: 477597f24b209a1418aa54c1dbbdf476, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accessor: {fileID: 2622711417676896710}
 --- !u!1 &3749297873199799089
 GameObject:
   m_ObjectHideFlags: 0
@@ -12567,7 +12567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FullshotRender: {fileID: 5576431364605466753}
-  PadCanvas: {fileID: 3360472268456067681}
+  PadCanvas: {fileID: 2374133813993753683}
   UICamera: {fileID: 2069672625543769780}
   UIParticleHolder: {fileID: 4520091171631434233}
 --- !u!114 &1806859463113257659
@@ -24348,7 +24348,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7699343215894921140}
-  - component: {fileID: 6094109751971835400}
   m_Layer: 5
   m_Name: (ScreenOverlay)_
   m_TagString: Untagged
@@ -24376,27 +24375,6 @@ RectTransform:
   m_AnchoredPosition: {x: -30, y: 7}
   m_SizeDelta: {x: -260, y: -122}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!223 &6094109751971835400
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7011670946018353344}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 100
-  m_TargetDisplay: 0
 --- !u!1 &7026586754549736987
 GameObject:
   m_ObjectHideFlags: 0

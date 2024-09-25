@@ -229,8 +229,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\MonoSingleton.cs" />
     <Compile Include="Common\UtilProcedure.cs" />
-    <Compile Include="PlayVideo.cs" />
     <Compile Include="Plugins\com.neuecc.unirx@284d5c50d3\Asynchronous\WebRequestExtensions.cs" />
     <Compile Include="Plugins\com.neuecc.unirx@284d5c50d3\Disposables\BooleanDisposable.cs" />
     <Compile Include="Plugins\com.neuecc.unirx@284d5c50d3\Disposables\CancellationDisposable.cs" />
