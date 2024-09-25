@@ -55,7 +55,7 @@ public class MainScreenUI : MonoBehaviour
     private void ShowStudentInfoScreen()
     {
         var _videoAsset = GameResource.Load<VideoClip>("Video", "Transition");
-        _videoAsset.PlayVideoOntoRT(GameResource.TransitionRT)
+        _videoAsset.PlayVideoOntoRT(EVideoType.Transition)
             .AtTime(1f, () =>
             {
                 Contents.Instance.Accessor.PadCanvas.StudentListScreen.gameObject.SetActive(true);

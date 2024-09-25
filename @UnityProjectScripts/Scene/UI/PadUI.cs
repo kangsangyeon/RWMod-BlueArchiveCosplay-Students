@@ -12,6 +12,7 @@ public class PadUI : MonoBehaviour
     {
         accessor.MainScreen.gameObject.SetActive(true);
         accessor.StudentListScreen.gameObject.SetActive(false);
+        accessor.ScreenOverlay_Transition.gameObject.SetActive(false);
 
         StartRotateHomeButton(30f);
         accessor.HomeButton.OnPointerEnterAsObservable()

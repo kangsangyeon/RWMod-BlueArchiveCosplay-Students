@@ -2,6 +2,7 @@
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 
 public static class UIUtilProcedure
@@ -29,19 +30,33 @@ public static class UIUtilProcedure
         GL.Clear(true, true, Color.clear);
     }
 
-    public static VideoPlayer PlayVideoOntoRT(this VideoClip _clip, RenderTexture _rt, Action _onEnd = null)
+    public static VideoPlayer PlayVideoOntoRT(this VideoClip _clip, EVideoType _type, Action _onEnd = null)
     {
+        RenderTexture _rt = null;
+        RawImage _rawImage = null;
+        switch (_type)
+        {
+            case EVideoType.Transition:
+                _rt = GameResource.TransitionRT;
+                _rawImage = Contents.Instance.Accessor.PadCanvas.ScreenOverlay_Transition;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(_type), _type, null);
+        }
+
         var _playerGo = new GameObject("VideoPlayer_Transition");
         var _player = _playerGo.AddComponent<VideoPlayer>();
         _player.clip = _clip;
         _player.renderMode = VideoRenderMode.RenderTexture;
         _player.targetTexture = _rt;
         _player.Play();
+        _rawImage.gameObject.SetActive(true);
         _player.loopPointReached += source =>
         {
             _onEnd?.Invoke();
             _rt.Clear();
             UnityEngine.Object.Destroy(_playerGo);
+            _rawImage.gameObject.SetActive(false);
         };
         return _player;
     }
