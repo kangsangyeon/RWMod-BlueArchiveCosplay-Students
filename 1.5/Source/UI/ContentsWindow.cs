@@ -12,7 +12,7 @@ namespace BA
     {
         public override Vector2 InitialSize => new(0.0f, 0.0f);
 
-        private GameObject coreGo;
+        private CoreAccessor coreAccessor;
         private Contents contents;
         private bool isInitialized;
 
@@ -49,7 +49,8 @@ namespace BA
             var _contentsPrefab =
                 GameResource.Load<GameObject>("Prefab", "Contents");
 
-            coreGo = Object.Instantiate(_corePrefab);
+            coreAccessor = Object.Instantiate(_corePrefab).GetComponent<CoreAccessor>();
+            coreAccessor.Camera.gameObject.SetActive(false);
             contents = Object.Instantiate(_contentsPrefab).GetComponent<Contents>();
             contents.Accessor.gameObject.SetActive(false);
 
