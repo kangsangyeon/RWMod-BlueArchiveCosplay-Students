@@ -8,17 +8,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8140952663155806551}
+  - component: {fileID: 876321371458442707}
   - component: {fileID: 8140952663155806550}
   - component: {fileID: 8140952663155806549}
-  m_Layer: 0
+  - component: {fileID: 8735798220844272562}
+  m_Layer: 5
   m_Name: TouchFx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8140952663155806551
+--- !u!4 &876321371458442707
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8140952663155806548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 200, y: 200, z: 200}
   m_Children:
   - {fileID: 8140952664448795609}
   m_Father: {fileID: 0}
@@ -4786,9 +4787,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1206398957
+  m_SortingLayer: 1
+  m_SortingOrder: 10
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -4812,6 +4813,14 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!222 &8735798220844272562
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8140952663155806548}
+  m_CullTransparentMesh: 0
 --- !u!1 &8140952664448795614
 GameObject:
   m_ObjectHideFlags: 0
@@ -4823,7 +4832,7 @@ GameObject:
   - component: {fileID: 8140952664448795609}
   - component: {fileID: 8140952664448795608}
   - component: {fileID: 8140952664448795615}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4841,7 +4850,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8140952663155806551}
+  m_Father: {fileID: 876321371458442707}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &8140952664448795608
@@ -5576,7 +5585,7 @@ ParticleSystem:
     sphericalDirectionAmount: 1
     randomPositionAmount: 0
     radius:
-      value: 0.3
+      value: 0.25
       mode: 0
       spread: 0
       speed:
@@ -9633,9 +9642,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1206398957
+  m_SortingLayer: 1
+  m_SortingOrder: 11
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0

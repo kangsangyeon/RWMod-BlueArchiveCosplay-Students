@@ -24,6 +24,8 @@ public static class GameResource
     public static Dictionary<int, Sprite> StudentPortraitSprites;
     public static List<Sprite> StudentAttributeIconSprites;
 
+    public static ParticleSystem TouchFxPrefab;
+
     public static T Load<T>(string _resourcesDirectoryAddress, string _bundleAssetName) where T : Object
     {
         if (Bundle != null)

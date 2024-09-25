@@ -500,6 +500,7 @@
     <Compile Include="Resource\Data\WeaponData.cs" />
     <Compile Include="Resource\GameResource.cs" />
     <Compile Include="Resource\SaveData.cs" />
+    <Compile Include="Scene\Accessor\ContentsAccessor.cs" />
     <Compile Include="Scene\Accessor\FullshotRenderAccessor.cs" />
     <Compile Include="Scene\Accessor\StudentTooltipAccessor.cs" />
     <Compile Include="Scene\Accessor\ExSkillInfoAccessor.cs" />
@@ -514,6 +515,7 @@
     <Compile Include="Scene\UIUtilProcedure.cs" />
     <Compile Include="Scene\Sub\DropdownSizeFitter.cs" />
     <Compile Include="Scene\Sub\GameResourceLoader.cs" />
+    <Compile Include="Scene\UI\Contents.cs" />
     <Compile Include="Scene\UI\ExSkillInfoUI.cs" />
     <Compile Include="Scene\UI\MainScreenUI.cs" />
     <Compile Include="Scene\UI\PadUI.cs" />
