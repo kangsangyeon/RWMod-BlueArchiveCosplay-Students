@@ -1,0 +1,73 @@
+﻿using System.Linq;
+using RimWorld;
+using UniRx;
+using UniRx.Triggers;
+using UnityEngine;
+using Verse;
+using Object = UnityEngine.Object;
+
+namespace BA
+{
+    public class ContentsWindow : MainTabWindow
+    {
+        public override Vector2 InitialSize => new(0.0f, 0.0f);
+
+        private GameObject coreGo;
+        private Contents contents;
+        private bool isInitialized;
+
+        public override void PreOpen()
+        {
+            base.PreOpen();
+            TryInitialize();
+            contents.gameObject.SetActive(true);
+        }
+
+        public override void DoWindowContents(Rect inRect)
+        {
+            contents.Accessor.UICamera.Render();
+        }
+
+        private void TryInitialize()
+        {
+            if (isInitialized)
+                return;
+            isInitialized = true;
+
+            layer = WindowLayer.Super;
+            closeOnClickedOutside = false;
+            closeOnAccept = false;
+            closeOnCancel = false;
+
+            var _currentMod =
+                LoadedModManager.RunningMods.FirstOrDefault(x => x.PackageId == "bluearchive.students");
+            GameResource.Bundle =
+                AssetBundle.LoadFromFile($"{_currentMod.RootDir}/Contents/Assets/assetbundle00");
+
+            var _corePrefab =
+                GameResource.Load<GameObject>("Prefab", "Core");
+            var _contentsPrefab =
+                GameResource.Load<GameObject>("Prefab", "Contents");
+
+            coreGo = Object.Instantiate(_corePrefab);
+            contents = Object.Instantiate(_contentsPrefab).GetComponent<Contents>();
+            contents.Accessor.gameObject.SetActive(false);
+
+            contents.gameObject.OnEnableAsObservable()
+                .Subscribe(_ =>
+                {
+                    BAStudents.DisableIMGUI = true;
+                    Current.Game.tickManager.CurTimeSpeed = TimeSpeed.Paused;
+                });
+            contents.gameObject.OnDisableAsObservable()
+                .Subscribe(_ =>
+                {
+                    BAStudents.DisableIMGUI = false;
+                    Current.Game.tickManager.CurTimeSpeed = TimeSpeed.Normal;
+                });
+
+            contents.Accessor.PadCanvas.HomeButton.OnClickAsObservable()
+                .Subscribe(_ => contents.gameObject.SetActive(false));
+        }
+    }
+}

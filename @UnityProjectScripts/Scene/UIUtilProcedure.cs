@@ -25,9 +25,10 @@ public static class UIUtilProcedure
 
     public static void Clear(this RenderTexture _rt)
     {
-        // clear render texture
+        var _rtOrigin = RenderTexture.active;
         RenderTexture.active = _rt;
-        GL.Clear(true, true, Color.clear);
+        GL.Clear(true, true, Color.clear); // clear render texture
+        RenderTexture.active = _rtOrigin;
     }
 
     public static VideoPlayer PlayVideoOntoRT(this VideoClip _clip, EVideoType _type, Action _onEnd = null)
@@ -74,5 +75,18 @@ public static class UIUtilProcedure
                 }
             });
         return _player;
+    }
+
+    public static Texture2D ToTexture2D(this RenderTexture _rt)
+    {
+        Texture2D tex = new Texture2D(_rt.width, _rt.height, TextureFormat.RGB24, false);
+        var _oldRt = RenderTexture.active;
+        RenderTexture.active = _rt;
+
+        tex.ReadPixels(new Rect(0, 0, _rt.width, _rt.height), 0, 0);
+        tex.Apply();
+
+        RenderTexture.active = _oldRt;
+        return tex;
     }
 }

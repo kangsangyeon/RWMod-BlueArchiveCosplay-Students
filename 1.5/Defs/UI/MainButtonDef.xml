@@ -2,13 +2,13 @@
 
 <Defs>
     <MainButtonDef>
-        <defName>BAGachaTabButton</defName>
-        <label>BAGachaTab</label>
-        <description>Open or Close the Blue Archive Gacha Tab</description>
-        <tabWindowClass>BA.GachaTabWindow</tabWindowClass>
+        <defName>BAContentsWindowButton</defName>
+        <label>BAContentsWindowButton</label>
+        <description>Open or Close the Blue Archive Window</description>
+        <tabWindowClass>BA.ContentsWindow</tabWindowClass>
         <order>0</order>
         <buttonVisible>true</buttonVisible>
-        <iconPath>UI/BA_MainTab</iconPath>
+        <iconPath>UI/BA_ContentsTab</iconPath>
         <minimized>true</minimized>
         <closesWorldView>true</closesWorldView>
     </MainButtonDef>

@@ -110,7 +110,7 @@
     <Compile Include="Impl\WeightTable\CharacterTable.cs" />
     <Compile Include="Impl\WeightTable\TestWeightTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\GachaTabWindow.cs" />
+    <Compile Include="UI\ContentsWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
