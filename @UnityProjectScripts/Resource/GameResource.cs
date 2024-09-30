@@ -31,8 +31,16 @@ public static class GameResource
     public static T Load<T>(string _resourcesDirectoryAddress, string _bundleAssetName) where T : Object
     {
         if (Bundle != null)
+        {
+            if (typeof(Component).IsAssignableFrom(typeof(T)))
+            {
+                var _prefab = Bundle.LoadAsset<GameObject>(_bundleAssetName);
+                return _prefab.GetComponent<T>();
+            }
+
             return Bundle.LoadAsset<T>(_bundleAssetName);
-        else
-            return Resources.Load<T>(_resourcesDirectoryAddress + "/" + _bundleAssetName);
+        }
+
+        return Resources.Load<T>(_resourcesDirectoryAddress + "/" + _bundleAssetName);
     }
 }

@@ -4,7 +4,6 @@ using System.Linq;
 using Newtonsoft.Json;
 using TemplateTable;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 public class GameResourceLoader : MonoBehaviour
 {
@@ -13,18 +12,18 @@ public class GameResourceLoader : MonoBehaviour
         LoadDataTable();
         TryInitializeSaveData();
 
-        GameResource.StudentPrefab = Load<GameObject>("Prefab/UI", "Student");
-        GameResource.ClubPrefab = Load<GameObject>("Prefab/UI", "Club");
-        GameResource.SynergyActivatedSprite = Load<Sprite>("Sprite/UI/Access/Synergy", "Synergy_Icon_True");
-        GameResource.SynergyDeactivatedSprite = Load<Sprite>("Sprite/UI/Access/Synergy", "Synergy_Icon_False");
+        GameResource.StudentPrefab = GameResource.Load<GameObject>("Prefab/UI", "Student");
+        GameResource.ClubPrefab = GameResource.Load<GameObject>("Prefab/UI", "Club");
+        GameResource.SynergyActivatedSprite = GameResource.Load<Sprite>("Sprite/UI/Access/Synergy", "Synergy_Icon_True");
+        GameResource.SynergyDeactivatedSprite = GameResource.Load<Sprite>("Sprite/UI/Access/Synergy", "Synergy_Icon_False");
         GameResource.SchoolLogoSprites =
             GameResource.SchoolTable.ToDictionary(
                 x => x.Key,
-                x => Load<Sprite>($"School/Icon", $"School_Icon_{x.Key}"));
+                x => GameResource.Load<Sprite>($"School/Icon", $"School_Icon_{x.Key}"));
         GameResource.StudentPortraitSprites =
             GameResource.StudentTable.ToDictionary(
                 x => x.Key,
-                x => Load<Sprite>($"Student/{x.Key}", $"Student_Portrait_{x.Key}"));
+                x => GameResource.Load<Sprite>($"Student/{x.Key}", $"Student_Portrait_{x.Key}"));
         GameResource.StudentAttributeIconSprites = new[]
             {
                 StudentAttribute.Attack,
@@ -33,37 +32,29 @@ public class GameResourceLoader : MonoBehaviour
                 StudentAttribute.Heal
             }
             .Select(x =>
-                Load<Sprite>(
+                GameResource.Load<Sprite>(
                     "Sprite/UI/Access/Student/Attribute",
                     $"Student_Attribute_Icon_{x.ToString()}"))
             .ToList();
 
         GameResource.TouchFxPrefab =
-            Load<ParticleSystem>("Vfx/Prefab", "PS_TouchFx");
+            GameResource.Load<ParticleSystem>("Vfx/Prefab", "PS_TouchFx");
         GameResource.FullshotRT =
-            Load<RenderTexture>("RT", "RT_Fullshot");
+            GameResource.Load<RenderTexture>("RT", "RT_Fullshot");
         GameResource.TransitionRT =
-            Load<RenderTexture>("RT", "RT_Transition");
-    }
-
-    private T Load<T>(string _resourcesDirectoryAddress, string _bundleAssetName) where T : Object
-    {
-        if (GameResource.Bundle != null)
-            return GameResource.Bundle.LoadAsset<T>(_bundleAssetName);
-        else
-            return Resources.Load<T>(_resourcesDirectoryAddress + "/" + _bundleAssetName);
+            GameResource.Load<RenderTexture>("RT", "RT_Transition");
     }
 
     private void LoadDataTable()
     {
-        var _studentTableJson = Load<TextAsset>("Data", "DataTable_1000_Student").text;
-        var _clubTableJson = Load<TextAsset>("Data", "DataTable_2000_Club").text;
-        var _schoolTableJson = Load<TextAsset>("Data", "DataTable_3000_School").text;
-        var _skillTableJson = Load<TextAsset>("Data", "DataTable_4000_Skill").text;
-        var _skillLevelTableJson = Load<TextAsset>("Data", "DataTable_5000_SkillLevel").text;
-        var _weaponTableJson = Load<TextAsset>("Data", "DataTable_6000_Weapon").text;
-        var _passiveSkillTableJson = Load<TextAsset>("Data", "DataTable_7000_PassiveSkill").text;
-        var _studentAttributeTableJson = Load<TextAsset>("Data", "DataTable_StudentAttribute").text;
+        var _studentTableJson = GameResource.Load<TextAsset>("Data", "DataTable_1000_Student").text;
+        var _clubTableJson = GameResource.Load<TextAsset>("Data", "DataTable_2000_Club").text;
+        var _schoolTableJson = GameResource.Load<TextAsset>("Data", "DataTable_3000_School").text;
+        var _skillTableJson = GameResource.Load<TextAsset>("Data", "DataTable_4000_Skill").text;
+        var _skillLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_5000_SkillLevel").text;
+        var _weaponTableJson = GameResource.Load<TextAsset>("Data", "DataTable_6000_Weapon").text;
+        var _passiveSkillTableJson = GameResource.Load<TextAsset>("Data", "DataTable_7000_PassiveSkill").text;
+        var _studentAttributeTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttribute").text;
         GameResource.StudentTable = LoadTemplateTable<int, StudentData>(_studentTableJson);
         GameResource.ClubTable = LoadTemplateTable<int, ClubData>(_clubTableJson);
         GameResource.SchoolTable = LoadTemplateTable<int, SchoolData>(_schoolTableJson);
