@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
@@ -88,5 +89,13 @@ public static class UIUtilProcedure
 
         RenderTexture.active = _oldRt;
         return tex;
+    }
+
+    public static string FormatWeaponPopupDescription(string _str)
+    {
+        var _sb = new StringBuilder(_str)
+            .Replace("<h>", "<size=28>")
+            .Replace("</h>", "</size>");
+        return _sb.ToString();
     }
 }

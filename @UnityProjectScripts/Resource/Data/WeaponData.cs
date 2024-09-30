@@ -22,4 +22,5 @@ public class WeaponData
     public string Name;
     public int Star;
     public WeaponType Type;
+    public string Description;
 }

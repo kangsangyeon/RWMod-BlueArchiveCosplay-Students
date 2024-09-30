@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using UniRx;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponPopupUI : MonoBehaviour
 {
@@ -14,19 +15,30 @@ public class WeaponPopupUI : MonoBehaviour
             .Subscribe(_ => Accessor.gameObject.SetActive(false));
         Accessor.ConfirmButton.OnClickAsObservable()
             .Subscribe(_ => Accessor.gameObject.SetActive(false));
-        Accessor.TabContents_ViewMaxLevelInfoCheckboxButton.OnClickAsObservable()
+        Accessor.TabContents_BasicTab_ViewMaxLevelInfoCheckboxButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
                 ViewMaxLevelInfo = !ViewMaxLevelInfo;
-                Accessor.TabContents_ViewMaxLevelInfoCheckboxButton_Check.gameObject.SetActive(ViewMaxLevelInfo);
+                Accessor.TabContents_BasicTab_ViewMaxLevelInfoCheckboxButton_Check.gameObject.SetActive(ViewMaxLevelInfo);
             });
 
-        Accessor.TabContents_ViewMaxLevelInfoCheckboxButton_Check.gameObject.SetActive(ViewMaxLevelInfo);
+        Accessor.TabContents_BasicTab_ViewMaxLevelInfoCheckboxButton_Check.gameObject.SetActive(ViewMaxLevelInfo);
+
+        // 탭 전환 버튼 이벤트 액션을 설정합니다.
+        Accessor.TabButtonBox_BasicTabButton.OnClickAsObservable()
+            .Subscribe(_ => SetVisibleTab(0));
+        Accessor.TabButtonBox_DetailTabButton.OnClickAsObservable()
+            .Subscribe(_ => SetVisibleTab(1));
+
+        // 탭의 기본 활성 상태를 설정합니다.
+        SetVisibleTab(0);
     }
 
     public void UpdateUI(WeaponData _data, int _level, int _exp)
     {
         Accessor.WeaponNameMask_Text.text = _data.Name;
+        Accessor.TabContents_DetailTab_DescriptionMask_Text.text =
+            UIUtilProcedure.FormatWeaponPopupDescription(_data.Description);
         Accessor.Type.text = _data.Type.ToString();
         Accessor.Level.text = $"<i>Lv.{_level}</i>";
         Accessor.WeaponIcon.sprite =
@@ -35,6 +47,35 @@ public class WeaponPopupUI : MonoBehaviour
             Accessor.Stars[i].gameObject.SetActive(true);
         for (int i = _data.Star; i < 5; ++i)
             Accessor.Stars[i].gameObject.SetActive(false);
+    }
+
+    private void SetVisibleTab(int _tabIdx)
+    {
+        ColorUtility.TryParseHtmlString("#F1FBFD", out var _enableButtonColor);
+        ColorUtility.TryParseHtmlString("#636293", out var _enableTextColor);
+        ColorUtility.TryParseHtmlString("#A9E0F4", out var _disableButtonColor);
+        ColorUtility.TryParseHtmlString("#636293", out var _disableTextColor);
+
+        Accessor.TabContents_BasicTab.gameObject.SetActive(false);
+        Accessor.TabContents_DetailTab.gameObject.SetActive(false);
+        Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = _disableButtonColor;
+        Accessor.TabButtonBox_BasicTabButton_Text.color = _disableTextColor;
+        Accessor.TabButtonBox_DetailTabButton.GetComponent<Image>().color = _disableButtonColor;
+        Accessor.TabButtonBox_DetailTabButton_Text.color = _disableTextColor;
+
+        switch (_tabIdx)
+        {
+            case 0:
+                Accessor.TabContents_BasicTab.gameObject.SetActive(true);
+                Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = _enableButtonColor;
+                Accessor.TabButtonBox_BasicTabButton_Text.color = _enableTextColor;
+                break;
+            case 1:
+                Accessor.TabContents_DetailTab.gameObject.SetActive(true);
+                Accessor.TabButtonBox_DetailTabButton.GetComponent<Image>().color = _enableButtonColor;
+                Accessor.TabButtonBox_DetailTabButton_Text.color = _enableTextColor;
+                break;
+        }
     }
 
     private void TryStartScroll()
@@ -48,7 +89,7 @@ public class WeaponPopupUI : MonoBehaviour
         _color.a = 1f;
         Accessor.WeaponNameMask_Text.color = _color;
 
-        // Description이 Description Mask의 범위를 벗어나는 경우,
+        // Name이 Name Mask의 범위를 벗어나는 경우,
         // 세로로 텍스트를 내리는 애니메이션을 재생합니다.
         DOTween.Kill(Accessor.WeaponNameMask_Text);
         float _widthDelta =

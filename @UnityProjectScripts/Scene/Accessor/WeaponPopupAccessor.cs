@@ -14,11 +14,15 @@ public class WeaponPopupAccessor : MonoBehaviour
     public Image WeaponIcon;
     public Image WeaponNameMask;
     public Text WeaponNameMask_Text;
-    public Button TabButtonBox_BasicTab;
-    public Text TabButtonBox_BasicTab_Text;
-    public Button TabButtonBox_DetailTab;
-    public Text TabButtonBox_DetailTab_Text;
-    public Button TabContents_ViewMaxLevelInfoCheckboxButton;
-    public Image TabContents_ViewMaxLevelInfoCheckboxButton_Check;
+    public Button TabButtonBox_BasicTabButton;
+    public Text TabButtonBox_BasicTabButton_Text;
+    public Button TabButtonBox_DetailTabButton;
+    public Text TabButtonBox_DetailTabButton_Text;
+    public GameObject TabContents_BasicTab;
+    public Button TabContents_BasicTab_ViewMaxLevelInfoCheckboxButton;
+    public Image TabContents_BasicTab_ViewMaxLevelInfoCheckboxButton_Check;
+    public GameObject TabContents_DetailTab;
+    public GameObject TabContents_DetailTab_DescriptionMask;
+    public Text TabContents_DetailTab_DescriptionMask_Text;
     public Button QuitButton;
 }
