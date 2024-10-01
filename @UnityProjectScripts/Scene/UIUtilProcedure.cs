@@ -71,7 +71,7 @@ public static class UIUtilProcedure
             {
                 if (_player.time >= _time)
                 {
-                    _callback.Invoke();
+                    _callback?.Invoke();
                     _disposable.Dispose();
                 }
             });

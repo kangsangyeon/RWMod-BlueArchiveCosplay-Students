@@ -1,6 +1,7 @@
 using DG.Tweening;
 using UniRx;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class MainScreenUI : MonoBehaviour
@@ -55,7 +56,9 @@ public class MainScreenUI : MonoBehaviour
     private void ShowStudentInfoScreen()
     {
         var _videoAsset = GameResource.Load<VideoClip>("Video", "Transition");
-        _videoAsset.PlayVideoOntoRT(EVideoType.Transition)
+        var _raycaster = Contents.Instance.Accessor.PadCanvas.GetComponent<GraphicRaycaster>();
+        _raycaster.enabled = false;
+        _videoAsset.PlayVideoOntoRT(EVideoType.Transition, () => _raycaster.enabled = true)
             .AtTime(1f, () =>
             {
                 Contents.Instance.Accessor.PadCanvas.StudentListScreen.gameObject.SetActive(true);
