@@ -105,6 +105,7 @@
     <Compile Include="Common\RimWorld\HarmonyPatches.cs" />
     <Compile Include="Common\WeightTable\IWeightTable.cs" />
     <Compile Include="Common\WeightTable\WeightTable.cs" />
+    <Compile Include="Harmony\PatchDisableCamera.cs" />
     <Compile Include="Harmony\PatchDisableIMGUI.cs" />
     <Compile Include="Impl\PawnTemplateDebug.cs" />
     <Compile Include="Impl\WeightTable\CharacterTable.cs" />

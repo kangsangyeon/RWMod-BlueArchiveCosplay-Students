@@ -58,12 +58,14 @@ namespace BA
                 .Subscribe(_ =>
                 {
                     BAStudents.DisableIMGUI = true;
+                    BAStudents.DisableCamera = true;
                     Current.Game.tickManager.CurTimeSpeed = TimeSpeed.Paused;
                 });
             contents.gameObject.OnDisableAsObservable()
                 .Subscribe(_ =>
                 {
                     BAStudents.DisableIMGUI = false;
+                    BAStudents.DisableCamera = false;
                     Current.Game.tickManager.CurTimeSpeed = TimeSpeed.Normal;
                 });
 

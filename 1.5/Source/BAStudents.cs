@@ -8,6 +8,7 @@ namespace BA
     public static class BAStudents
     {
         public static bool DisableIMGUI = false;
+        public static bool DisableCamera = false;
 
         static BAStudents()
         {
