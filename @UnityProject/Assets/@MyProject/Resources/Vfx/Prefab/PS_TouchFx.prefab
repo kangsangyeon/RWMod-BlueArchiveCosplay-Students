@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8140952663155806549}
   - component: {fileID: 8735798220844272562}
   m_Layer: 5
-  m_Name: TouchFx
+  m_Name: PS_TouchFx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ ParticleSystem:
   serializedVersion: 6
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
