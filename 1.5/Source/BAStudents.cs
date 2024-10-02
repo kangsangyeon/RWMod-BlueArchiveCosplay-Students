@@ -9,6 +9,7 @@ namespace BA
     {
         public static bool DisableIMGUI = false;
         public static bool DisableCamera = false;
+        public static bool DisableAudio = false;
 
         static BAStudents()
         {
