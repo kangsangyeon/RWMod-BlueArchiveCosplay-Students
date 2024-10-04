@@ -55,7 +55,7 @@ public class MainScreenUI : MonoBehaviour
 
     private void ShowStudentInfoScreen()
     {
-        var _videoAsset = GameResource.Load<VideoClip>("Video", "Transition");
+        var _videoAsset = GameResource.Load<VideoClip>("UI/Video", "Transition");
         var _raycaster = Contents.Instance.Accessor.PadCanvas.GetComponent<GraphicRaycaster>();
         _raycaster.enabled = false;
         _videoAsset.PlayVideoOntoRT(EVideoType.Transition, () => _raycaster.enabled = true)

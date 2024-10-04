@@ -12,10 +12,10 @@ public class GameResourceLoader : MonoBehaviour
         LoadDataTable();
         TryInitializeSaveData();
 
-        GameResource.StudentPrefab = GameResource.Load<GameObject>("Prefab/UI", "Student");
-        GameResource.ClubPrefab = GameResource.Load<GameObject>("Prefab/UI", "Club");
-        GameResource.SynergyActivatedSprite = GameResource.Load<Sprite>("Sprite/UI/Access/Synergy", "Synergy_Icon_True");
-        GameResource.SynergyDeactivatedSprite = GameResource.Load<Sprite>("Sprite/UI/Access/Synergy", "Synergy_Icon_False");
+        GameResource.StudentPrefab = GameResource.Load<GameObject>("UI/Prefab", "Student");
+        GameResource.ClubPrefab = GameResource.Load<GameObject>("UI/Prefab", "Club");
+        GameResource.SynergyActivatedSprite = GameResource.Load<Sprite>("UI/Texture/Access/Synergy", "Synergy_Icon_True");
+        GameResource.SynergyDeactivatedSprite = GameResource.Load<Sprite>("UI/Texture/Access/Synergy", "Synergy_Icon_False");
         GameResource.SchoolLogoSprites =
             GameResource.SchoolTable.ToDictionary(
                 x => x.Key,
@@ -33,16 +33,16 @@ public class GameResourceLoader : MonoBehaviour
             }
             .Select(x =>
                 GameResource.Load<Sprite>(
-                    "Sprite/UI/Access/Student/Attribute",
+                    "UI/Texture/Access/Student/Attribute",
                     $"Student_Attribute_Icon_{x.ToString()}"))
             .ToList();
 
         GameResource.TouchFxPrefab =
             GameResource.Load<ParticleSystem>("Vfx/Prefab", "PS_TouchFx");
         GameResource.FullshotRT =
-            GameResource.Load<RenderTexture>("RT", "RT_Fullshot");
+            GameResource.Load<RenderTexture>("UI/RT", "RT_Fullshot");
         GameResource.TransitionRT =
-            GameResource.Load<RenderTexture>("RT", "RT_Transition");
+            GameResource.Load<RenderTexture>("UI/RT", "RT_Transition");
     }
 
     private void LoadDataTable()

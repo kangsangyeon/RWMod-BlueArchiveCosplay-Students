@@ -96,10 +96,11 @@ public class StudentInfoScreenUI : MonoBehaviour
 
         Accessor.NameText.text = _data.Name;
 
-        var _yellowStarPrefab = GameResource.Load<GameObject>("Prefab/UI", "YellowStar");
-        Accessor.StarHolder.Children().Destroy();
-        for (int i = 0; i < 5; ++i)
-            Instantiate(_yellowStarPrefab, Accessor.StarHolder.transform);
+        var _starCount = 5;
+        for (int i = 0; i < _starCount; ++i)
+            Accessor.Stars[i].gameObject.SetActive(true);
+        for (int i = _starCount; i < 5; ++i)
+            Accessor.Stars[i].gameObject.SetActive(false);
 
         var _clubData =
             GameResource.ClubTable.Values
@@ -116,7 +117,7 @@ public class StudentInfoScreenUI : MonoBehaviour
 
         Accessor.AttributeText.text = _data.Attribute.ToStringKr();
         Accessor.AttributeIcon.sprite = GameResource.Load<Sprite>(
-            "Sprite/UI/Access/Student/Attribute",
+            "UI/Texture/Access/Student/Attribute",
             $"Student_Attribute_Icon_{_data.Attribute.ToString()}");
 
         // AttributeText의 길이가 달라지면 레이아웃이 이를 감지하지 못해 텍스트와 아이콘과 겹치는 문제가 발생합니다.
@@ -218,13 +219,13 @@ public class StudentInfoScreenUI : MonoBehaviour
         Accessor.BasicTab_WeaponButton_WeaponImage.sprite =
             GameResource.Load<Sprite>($"Weapon", $"Weapon_Icon_{_weaponData.Id}");
 
-        var _blueStarPrefab = GameResource.Load<GameObject>("Prefab/UI", "BlueStar");
-        Accessor.BasicTab_WeaponButton_StarHolder.Children().Destroy();
         for (int i = 0; i < _weaponData.Star; ++i)
-            Instantiate(_blueStarPrefab, Accessor.BasicTab_WeaponButton_StarHolder.transform);
+            Accessor.BasicTab_WeaponButton_Stars[i].gameObject.SetActive(true);
+        for (int i = _weaponData.Star; i < 5; ++i)
+            Accessor.BasicTab_WeaponButton_Stars[i].gameObject.SetActive(false);
 
         // 레벨 업 탭의 내용을 표시합니다.
-        var _exSkillInfoPrefab = GameResource.Load<GameObject>("Prefab/UI", "ExSkillInfo");
+        var _exSkillInfoPrefab = GameResource.Load<GameObject>("UI/Prefab", "ExSkillInfo");
         Accessor.LevelUpTab_ExSkillInfo_ExSkillHolder.Children().Destroy();
         for (int i = 0; i < _skillLevels.Count; i++)
         {

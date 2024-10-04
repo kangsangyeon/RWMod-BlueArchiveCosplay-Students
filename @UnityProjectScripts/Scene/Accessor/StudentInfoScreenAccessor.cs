@@ -11,7 +11,7 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public Image AttributeIcon;
     public Text AttributeText;
     public Text NameText;
-    public GameObject StarHolder;
+    public Image[] Stars;
     public StudentTooltipAccessor[] Tooltips;
     public Button TabButtonBox_BasicTabButton;
     public Text TabButtonBox_BasicTabButton_Text;
@@ -27,7 +27,7 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public ExSkillInfoAccessor BasicTab_SkillButton_ExSkillInfo;
     public Button BasicTab_WeaponButton;
     public Text BasicTab_WeaponButton_WeaponTypeText;
-    public GameObject BasicTab_WeaponButton_StarHolder;
+    public Image[] BasicTab_WeaponButton_Stars;
     public Image BasicTab_WeaponButton_WeaponImage;
     public GameObject LevelUpTab;
     public GameObject LevelUpTab_ExSkillInfo_ExSkillHolder;
@@ -53,8 +53,8 @@ public class StudentInfoScreenAccessor : MonoBehaviour
     public Image ShinbiTab_ItemIcons_SkillBookIconBox_Icon;
     public Text ShinbiTab_ShinbiUpBox_CostText;
     public Image ShinbiTab_ShinbiUpBox_Button;
-    public WeaponPopupAccessor WeaponPopup;
     public RawImage FullshotImage;
     public Image Background;
     public ScreenTopBarAccessor ScreenTopBar;
+    public WeaponPopupAccessor WeaponPopup;
 }

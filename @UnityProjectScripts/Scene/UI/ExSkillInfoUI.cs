@@ -1,5 +1,4 @@
 using DG.Tweening;
-using Unity.Linq;
 using UnityEngine;
 
 public class ExSkillInfoUI : MonoBehaviour
@@ -27,12 +26,12 @@ public class ExSkillInfoUI : MonoBehaviour
 
         // 스킬 레벨의 별만큼 별을 보여줍니다.
         // 단, 기본 정보탭의 스킬 UI에는 별을 보여주지 않습니다.
-        if (Accessor.StarHolder != null)
+        if (Accessor.Stars != null && Accessor.Stars.Length > 0)
         {
-            var _yellowStarPrefab = GameResource.Load<GameObject>("Prefab/UI", "YellowStar");
-            Accessor.StarHolder.Children().Destroy();
             for (int i = 0; i < _skillLevelData.Star; ++i)
-                Accessor.StarHolder.Add(_yellowStarPrefab);
+                Accessor.Stars[i].gameObject.SetActive(true);
+            for (int i = _skillLevelData.Star; i < 5; ++i)
+                Accessor.Stars[i].gameObject.SetActive(false);
         }
 
         if (Accessor.LockOverlay != null)
