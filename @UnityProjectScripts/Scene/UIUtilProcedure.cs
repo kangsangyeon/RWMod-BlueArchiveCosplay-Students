@@ -13,13 +13,13 @@ public static class UIUtilProcedure
         Color _color = Color.white;
 
         if (_attribute == StudentAttribute.Attack)
-            ColorUtility.TryParseHtmlString("#CC1A25", out _color);
+            ColorUtility.TryParseHtmlString("#B02730", out _color);
         else if (_attribute == StudentAttribute.Defense)
             ColorUtility.TryParseHtmlString("#065BAB", out _color);
         else if (_attribute == StudentAttribute.Support)
             ColorUtility.TryParseHtmlString("#BD8801", out _color);
         else if (_attribute == StudentAttribute.Heal)
-            ColorUtility.TryParseHtmlString("#88F284", out _color);
+            ColorUtility.TryParseHtmlString("#65C16F", out _color);
 
         return _color;
     }
