@@ -12,6 +12,7 @@ public class StudentInfoScreenUI : MonoBehaviour
 {
     public StudentInfoScreenAccessor Accessor;
     public ReactiveProperty<int> CharId = new ReactiveProperty<int>(0);
+    private bool checkScroll;
 
     private void Start()
     {
@@ -163,7 +164,7 @@ public class StudentInfoScreenUI : MonoBehaviour
 
         // 툴팁을 설정합니다.
         Accessor.Tooltips[0].Icon.sprite = Accessor.AttributeIcon.sprite;
-        Accessor.Tooltips[0].TooltipText.text =
+        Accessor.Tooltips[0].TextMask_Text.text =
             GameResource.StudentAttributeTable[_data.Attribute].Description;
         Accessor.Tooltips[1].gameObject.SetActive(_data.PassiveSkillId > 0);
         if (_data.PassiveSkillId > 0)
@@ -171,7 +172,8 @@ public class StudentInfoScreenUI : MonoBehaviour
             var _passiveSkillData = GameResource.PassiveSkillTable.TryGet(_data.PassiveSkillId);
             Accessor.Tooltips[1].Icon.sprite =
                 GameResource.Load<Sprite>("PassiveSkill/Icon", $"PassiveSkill_Icon_{_passiveSkillData.IconName}");
-            Accessor.Tooltips[1].TooltipText.text = _passiveSkillData.Description;
+            Accessor.Tooltips[1].TextMask_Text.text = _passiveSkillData.Description;
+            TryStartScroll();
         }
 
         for (int i = 0; i < 2; ++i)
@@ -281,6 +283,39 @@ public class StudentInfoScreenUI : MonoBehaviour
                 Accessor.TabButtonBox_ShinbiTabButton.GetComponent<Image>().color = _enableButtonColor;
                 Accessor.TabButtonBox_ShinbiTabButton_Text.color = _enableTextColor;
                 break;
+        }
+    }
+
+    private void TryStartScroll()
+    {
+        if (checkScroll)
+            return;
+        checkScroll = true;
+
+        Accessor.Tooltips[1].TextMask_Text.rectTransform.anchoredPosition = Vector2.zero;
+        var _color = Accessor.Tooltips[1].TextMask_Text.color;
+        _color.a = 1f;
+        Accessor.Tooltips[1].TextMask_Text.color = _color;
+
+        // Description이 Description Mask의 범위를 벗어나는 경우,
+        // 세로로 텍스트를 내리는 애니메이션을 재생합니다.
+        DOTween.Kill(Accessor.Tooltips[1].gameObject);
+        float _heightDelta =
+            Accessor.Tooltips[1].TextMask_Text.preferredHeight -
+            Accessor.Tooltips[1].TextMask.rectTransform.rect.height;
+        if (_heightDelta > 0)
+        {
+            // 대략 한 줄마다 스크롤 시간 3초 증가 (font size가 대략 한 줄 크기)
+            float _scrollDuration =
+                (_heightDelta / Accessor.Tooltips[1].TextMask_Text.fontSize) * 3f;
+            DOTween.Sequence()
+                .AppendInterval(1f)
+                .Append(Accessor.Tooltips[1].TextMask_Text.rectTransform.DOAnchorPosY(_heightDelta, _scrollDuration))
+                .Append(Accessor.Tooltips[1].TextMask_Text.DOFade(0f, 1f))
+                .AppendCallback(() => Accessor.Tooltips[1].TextMask_Text.rectTransform.anchoredPosition = Vector2.zero)
+                .Append(Accessor.Tooltips[1].TextMask_Text.DOFade(1f, 1f))
+                .SetLoops(-1)
+                .SetId(Accessor.Tooltips[1].gameObject);
         }
     }
 }

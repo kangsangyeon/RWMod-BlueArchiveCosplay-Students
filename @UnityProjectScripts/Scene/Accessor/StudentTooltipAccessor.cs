@@ -8,5 +8,6 @@ public class StudentTooltipAccessor : MonoBehaviour
     public Image HexImage;
     public Image Icon;
     public Image TooltipBox;
-    public Text TooltipText;
+    public Image TextMask;
+    public Text TextMask_Text;
 }
