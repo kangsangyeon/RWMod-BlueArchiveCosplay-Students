@@ -8,7 +8,7 @@ namespace BA
      * 따라서 우리의 컨벤션에 맞추려 함부로 변경해서는 안됌.
      */
     [HarmonyPatch(typeof(PawnGenerator), "GenerateBodyType")]
-    public static class Patch_PawnGenerator_GenerateBodyType
+    public static class Harmony_PawnGenerator_GenerateBodyType
     {
         [HarmonyPostfix]
         public static void Postfix(Pawn pawn, PawnGenerationRequest request)

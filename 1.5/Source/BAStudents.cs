@@ -16,7 +16,12 @@ namespace BA
             new HarmonyLib.Harmony("BlueArchiveStudents")
                 .PatchAll(Assembly.GetExecutingAssembly());
 
-            Application.logMessageReceived += (_log, _trace, _type) => { Log.Message($"{_type.ToString()}::{_log}\n{_trace}"); };
+            Application.logMessageReceived += (_log, _trace, _type) =>
+            {
+                // BAU: blue archive unity
+                if (_log.StartsWith("BAU"))
+                    Log.Message($"{_type.ToString()}::{_log}\n{_trace}");
+            };
         }
     }
 }

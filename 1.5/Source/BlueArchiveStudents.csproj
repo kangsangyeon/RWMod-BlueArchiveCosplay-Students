@@ -104,8 +104,9 @@
     <Compile Include="Common\PawnKindTemplate\PawnKindTemplateGenerator.cs" />
     <Compile Include="Common\RimWorld\BackHair\HairDef.cs" />
     <Compile Include="Common\RimWorld\BackHair\PawnRenderNode_BackHair.cs" />
-    <Compile Include="Common\RimWorld\PawnKindDef.cs" />
-    <Compile Include="Common\RimWorld\HarmonyPatches.cs" />
+    <Compile Include="Common\RimWorld\RimworldEvent\RimworldEvent_Harmony.cs" />
+    <Compile Include="Common\RimWorld\PawnKindDef\PawnKindDef_Harmony.cs" />
+    <Compile Include="Common\RimWorld\PawnKindDef\PawnKindDef.cs" />
     <Compile Include="Common\WeightTable\IWeightTable.cs" />
     <Compile Include="Common\WeightTable\WeightTable.cs" />
     <Compile Include="Harmony\PatchDisableCamera.cs" />
