@@ -55,6 +55,7 @@ public class GameResourceLoader : MonoBehaviour
         var _weaponTableJson = GameResource.Load<TextAsset>("Data", "DataTable_6000_Weapon").text;
         var _passiveSkillTableJson = GameResource.Load<TextAsset>("Data", "DataTable_7000_PassiveSkill").text;
         var _studentAttributeTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttribute").text;
+        var _studentAttributeLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttributeLevel").text;
         GameResource.StudentTable = LoadTemplateTable<int, StudentData>(_studentTableJson);
         GameResource.ClubTable = LoadTemplateTable<int, ClubData>(_clubTableJson);
         GameResource.SchoolTable = LoadTemplateTable<int, SchoolData>(_schoolTableJson);
@@ -64,6 +65,8 @@ public class GameResourceLoader : MonoBehaviour
         GameResource.PassiveSkillTable = LoadTemplateTable<int, PassiveSkillData>(_passiveSkillTableJson);
         GameResource.StudentAttributeTable =
             LoadTemplateTable<StudentAttribute, StudentAttributeData>(_studentAttributeTableJson);
+        GameResource.StudentAttributeLevelTable =
+            LoadTemplateTable<(StudentAttribute, int), StudentAttributeLevelData>(_studentAttributeLevelTableJson);
     }
 
     private TemplateTable<TKey, TValue> LoadTemplateTable<TKey, TValue>(string _json)
