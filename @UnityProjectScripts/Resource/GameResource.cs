@@ -15,6 +15,7 @@ public static class GameResource
     public static TemplateTable<int, PassiveSkillData> PassiveSkillTable;
     public static TemplateTable<StudentAttribute, StudentAttributeData> StudentAttributeTable;
     public static TemplateTable<(StudentAttribute, int), StudentAttributeLevelData> StudentAttributeLevelTable;
+    public static TemplateTable<int, StudentLevelRequiredExpData> StudentLevelRequiredExpTable;
 
     public static AssetBundle Bundle;
     public static GameObject ClubPrefab;
