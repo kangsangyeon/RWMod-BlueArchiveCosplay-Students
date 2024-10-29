@@ -20,22 +20,15 @@
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
 			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
 		</li>
-		<li>
-			<packageId>erdelf.HumanoidAlienRaces</packageId>
-			<displayName>Humanoid Alien Races</displayName>
-			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=839005762</steamWorkshopUrl>
-		</li>
 	</modDependencies>
 
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>brrainz.harmony</li>
-		<li>erdelf.HumanoidAlienRaces</li>
 	</loadAfter>
 	<forceLoadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>brrainz.harmony</li>
-		<li>erdelf.HumanoidAlienRaces</li>
 	</forceLoadAfter>
 
 </ModMetaData>

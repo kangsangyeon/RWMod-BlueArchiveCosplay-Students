@@ -1,11 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-  <FactionDef Abstract="True" ParentName="PlayerFactionBase" Name="BA_Faction">
-    <defName>BA_Faction</defName>
+  <FactionDef Abstract="True" Name="BA_Faction_Base" ParentName="PlayerFactionBase">
+    <defName>BA_Faction_Base</defName>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
     <allowedCultures Inherit="False">
       <li>BA_Culture</li>
     </allowedCultures>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <BA_Xenotype>999</BA_Xenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+
+    <isPlayer>true</isPlayer>
+    <melaninRange>0~0</melaninRange>
+    <techLevel>Medieval</techLevel>
+
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">MaleSupremacy</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+    </disallowedMemes>
+
+    <disallowedPrecepts>
+      <li>Cannibalism_Classic</li>
+      <li>Slavery_Classic</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredStrong</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredRavenous</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">MeatEating_NonMeat_Disapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">MeatEating_NonMeat_Horrible</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">MeatEating_NonMeat_Abhorrent</li>
+    </disallowedPrecepts>
+
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+
+  <FactionDef ParentName="BA_Faction_Base">
+    <defName>BA_Faction_Player</defName>
+    <label>BA Faction Player</label>
+    <leaderTitle>representative</leaderTitle>
   </FactionDef>
 
 </Defs>

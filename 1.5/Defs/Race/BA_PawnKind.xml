@@ -15,7 +15,7 @@
       </xenotypeChances>
     </xenotypeSet>
 
-    <defaultFactionType>BA_Faction</defaultFactionType>
+    <defaultFactionType>BA_Faction_Player</defaultFactionType>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Makoto" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">

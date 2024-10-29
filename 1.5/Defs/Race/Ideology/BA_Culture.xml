@@ -3,6 +3,9 @@
 
   <CultureDef>
     <defName>BA_Culture</defName>
+    <label>BA Culture</label>
+    <description>BA Culture</description>
+    <iconPath>UI/BA_CultureIcon</iconPath>
     <styleItemTags>
       <li>
         <tag>NoBeard</tag>
@@ -15,6 +18,15 @@
         <weightFactor>1</weightFactor>
       </li>
     </styleItemTags>
+    <allowedPlaceTags>
+      <li>OriginTribal</li>
+    </allowedPlaceTags>
+
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoAstropolitan</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityAstropolitan</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerAstropolitan</deityTypeMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Astropolitan</leaderTitleMaker>
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalAstropolitan</festivalNameMaker>
   </CultureDef>
 
 </Defs>

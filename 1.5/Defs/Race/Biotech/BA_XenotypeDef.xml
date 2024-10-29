@@ -4,6 +4,7 @@
   <XenotypeDef>
     <defName>BA_Xenotype</defName>
     <label>BA Xenotype</label>
+    <iconPath>UI/BA_XenotypeIcon</iconPath>
     <inheritable>true</inheritable>
 
     <genes>
