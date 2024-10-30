@@ -38,10 +38,6 @@
       <HintPath>..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="AlienRace">
-      <HintPath>..\..\..\..\..\..\workshop\content\294100\839005762\1.5\Assemblies\AlienRace.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -99,8 +95,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BAStudents.cs" />
     <Compile Include="BA\BAPawnComp.cs" />
+    <Compile Include="BA\BAStudents.cs" />
+    <Compile Include="BA\Harmony\PatchDisableCamera.cs" />
+    <Compile Include="BA\Harmony\PatchDisableIMGUI.cs" />
+    <Compile Include="BA\Impl\PawnTemplateDebug.cs" />
+    <Compile Include="BA\Impl\WeightTable\CharacterTable.cs" />
+    <Compile Include="BA\Impl\WeightTable\TestWeightTable.cs" />
+    <Compile Include="BA\UI\ContentsWindow.cs" />
     <Compile Include="Common\RimworldEvent\RimworldEvent_Harmony.cs" />
     <Compile Include="Common\RimWorld\BackHair\HairDef.cs" />
     <Compile Include="Common\RimWorld\BackHair\PawnRenderNode_BackHair.cs" />
@@ -110,13 +112,7 @@
     <Compile Include="Common\RimWorld\PawnKindTemplate\PawnKindTemplateGenerator.cs" />
     <Compile Include="Common\WeightTable\IWeightTable.cs" />
     <Compile Include="Common\WeightTable\WeightTable.cs" />
-    <Compile Include="Harmony\PatchDisableCamera.cs" />
-    <Compile Include="Harmony\PatchDisableIMGUI.cs" />
-    <Compile Include="Impl\PawnTemplateDebug.cs" />
-    <Compile Include="Impl\WeightTable\CharacterTable.cs" />
-    <Compile Include="Impl\WeightTable\TestWeightTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\ContentsWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

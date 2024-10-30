@@ -43,4 +43,18 @@ namespace BA
             OnPostfix.OnNext((__instance, hitThing, blockedByShield));
         }
     }
+
+    [HarmonyPatch(typeof(Pawn), "SpawnSetup")]
+    public static class Harmony_Pawn_SpawnSetup
+    {
+        public static Subject<(Pawn instance, Map map, bool respawningAfterLoad)> OnPostfix = new();
+
+        [HarmonyPostfix]
+        public static void Postfix(Pawn __instance, Map map, bool respawningAfterLoad)
+        {
+            if (__instance.Dead || __instance.def == null || __instance.kindDef == null)
+                return;
+            OnPostfix.OnNext((__instance, map, respawningAfterLoad));
+        }
+    }
 }
