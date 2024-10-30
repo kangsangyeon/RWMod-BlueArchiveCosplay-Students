@@ -5,6 +5,7 @@
     <defName>BA_HeadType_Base</defName>
     <graphicPath>Things/Pawn/BA/Heads/Head</graphicPath>
     <gender>None</gender>
+    <randomChosen>false</randomChosen>
     <eyeOffsetEastWest>(0.1, 0, 0.17)</eyeOffsetEastWest>
   </HeadTypeDef>
 
