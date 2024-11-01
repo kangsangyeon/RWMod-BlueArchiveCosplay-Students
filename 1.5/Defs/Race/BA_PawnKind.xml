@@ -20,7 +20,7 @@
 
   <PawnKindDef Name="BA_PawnKind_Makoto" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Makoto</defName>
-    <label>Makoto</label>
+    <label>Makoto(1012)</label>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Makoto</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Makoto</forcedHair>

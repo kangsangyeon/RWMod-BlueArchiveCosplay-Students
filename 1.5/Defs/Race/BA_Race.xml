@@ -8,6 +8,10 @@
     <race>
       <renderTree>BA_PawnRenderTree</renderTree>
     </race>
+
+    <comps>
+      <li Class="BA.CompProperties_BAPawn" />
+    </comps>
   </ThingDef>
 
 </Defs>

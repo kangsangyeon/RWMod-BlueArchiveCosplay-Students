@@ -95,13 +95,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BA\BAPawnComp.cs" />
     <Compile Include="BA\BAStudents.cs" />
+    <Compile Include="BA\Const.cs" />
     <Compile Include="BA\Harmony\PatchDisableCamera.cs" />
     <Compile Include="BA\Harmony\PatchDisableIMGUI.cs" />
     <Compile Include="BA\Impl\PawnTemplateDebug.cs" />
     <Compile Include="BA\Impl\WeightTable\CharacterTable.cs" />
     <Compile Include="BA\Impl\WeightTable\TestWeightTable.cs" />
+    <Compile Include="BA\Rimworld\Comp_BAPawn\Comp_BAPawn.cs" />
+    <Compile Include="BA\Rimworld\Comp_BAPawn\CompProperties_BAPawn.cs" />
     <Compile Include="BA\UI\ContentsWindow.cs" />
     <Compile Include="Common\RimworldEvent\RimworldEvent_Harmony.cs" />
     <Compile Include="Common\RimWorld\BackHair\HairDef.cs" />

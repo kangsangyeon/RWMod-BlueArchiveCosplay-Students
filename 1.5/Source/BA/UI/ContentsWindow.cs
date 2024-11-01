@@ -1,10 +1,8 @@
-﻿using System.Linq;
-using RimWorld;
+﻿using RimWorld;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
 using Verse;
-using Object = UnityEngine.Object;
 
 namespace BA
 {
@@ -12,47 +10,36 @@ namespace BA
     {
         public override Vector2 InitialSize => new(0.0f, 0.0f);
 
-        private CoreAccessor coreAccessor;
-        private Contents contents;
-        private bool isInitialized;
+        private bool _setup;
 
         public override void PreOpen()
         {
             base.PreOpen();
-            TryInitialize();
-            contents.gameObject.SetActive(true);
+            TrySetup();
+            BAStudents.Contents.gameObject.SetActive(true);
         }
 
         public override void DoWindowContents(Rect inRect)
         {
-            contents.Accessor.UICamera.Render();
+            BAStudents.Contents.Accessor.UICamera.Render();
         }
 
-        private void TryInitialize()
+        private void TrySetup()
         {
-            if (isInitialized)
+            if (_setup)
                 return;
-            isInitialized = true;
+            _setup = true;
 
+            // tab window 속성 설정
             layer = WindowLayer.Super;
             closeOnClickedOutside = false;
             closeOnAccept = false;
             closeOnCancel = false;
 
-            var _currentMod =
-                LoadedModManager.RunningMods.FirstOrDefault(x => x.PackageId == "bluearchive.students");
-            GameResource.Bundle =
-                AssetBundle.LoadFromFile($"{_currentMod.RootDir}/Contents/Assets/assetbundle00");
-
-            var _corePrefab =
-                GameResource.Load<GameObject>("Prefab", "Core");
-            var _contentsPrefab =
-                GameResource.Load<GameObject>("Prefab", "Contents");
-
-            coreAccessor = Object.Instantiate(_corePrefab).GetComponent<CoreAccessor>();
-            coreAccessor.Camera.gameObject.SetActive(false);
-            contents = Object.Instantiate(_contentsPrefab).GetComponent<Contents>();
-            contents.Accessor.gameObject.SetActive(false);
+            // contents 오브젝트를 생성하고 이벤트 설정
+            var contents = Object.Instantiate(BAStudents.ContentsPrefab).GetComponent<Contents>();
+            contents.gameObject.SetActive(false);
+            BAStudents.Contents = contents;
 
             contents.gameObject.OnEnableAsObservable()
                 .Subscribe(_ =>
@@ -74,12 +61,15 @@ namespace BA
             contents.Accessor.PadCanvas.HomeButton.OnClickAsObservable()
                 .Subscribe(_ => contents.gameObject.SetActive(false));
 
-            this.ObserveEveryValueChanged(_ => BAStudents.DisableAudio)
+            contents.ObserveEveryValueChanged(_ => BAStudents.DisableAudio)
                 .Subscribe(v =>
                 {
                     Current.Root.soundRoot.sourcePool.sourcePoolCamera.cameraSourcesContainer.gameObject.SetActive(!v);
                     Current.Root.soundRoot.sourcePool.sourcePoolWorld.GetSourceWorld().gameObject.SetActive(!v);
                 });
+
+            contents.gameObject.OnDestroyAsObservable()
+                .Subscribe(_ => _setup = false);
         }
     }
 }

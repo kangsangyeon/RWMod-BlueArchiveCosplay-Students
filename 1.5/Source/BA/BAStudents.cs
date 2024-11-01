@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Reflection;
 using RimWorld;
 using UniRx;
@@ -13,6 +14,13 @@ namespace BA
         public static bool DisableCamera = false;
         public static bool DisableAudio = false;
 
+        public static CoreAccessor CoreAccessor;
+        public static Contents Contents;
+        public static GameObject CorePrefab;
+        public static GameObject ContentsPrefab;
+
+        private static bool _setup;
+
         static BAStudents()
         {
             new HarmonyLib.Harmony("BlueArchiveStudents")
@@ -22,6 +30,28 @@ namespace BA
 
             Harmony_Pawn_SpawnSetup.OnPostfix
                 .Subscribe(x => OnPawnSetup(x.instance, x.map, x.respawningAfterLoad));
+
+            TrySetup();
+        }
+
+        private static void TrySetup()
+        {
+            if (_setup)
+                return;
+            _setup = true;
+
+            var currentMod =
+                LoadedModManager.RunningMods.FirstOrDefault(x => x.PackageId == "bluearchive.students");
+            GameResource.Bundle =
+                AssetBundle.LoadFromFile($"{currentMod.RootDir}/Contents/Assets/assetbundle00");
+            CorePrefab =
+                GameResource.Load<GameObject>("Prefab", "Core");
+            ContentsPrefab =
+                GameResource.Load<GameObject>("Prefab", "Contents");
+
+            CoreAccessor = Object.Instantiate(CorePrefab).GetComponent<CoreAccessor>();
+            CoreAccessor.Camera.gameObject.SetActive(false);
+            Object.DontDestroyOnLoad(CoreAccessor.gameObject);
         }
 
         private static void OnUnityLogMessageReceived(string log, string stackTrace, LogType type)
@@ -37,13 +67,10 @@ namespace BA
                 return;
             if (instance.kindDef.race.race.Animal) // 동물이면 건너뜀
                 return;
-
-            if (instance.kindDef.defName.StartsWith("BA"))
-            {
-                Log.Message("No Tattoo 설정");
-                instance.style.BodyTattoo = TattooDefOf.NoTattoo_Body;
-                instance.style.FaceTattoo = TattooDefOf.NoTattoo_Face;
-            }
+            if (instance.kindDef.defName.StartsWith("BA") == false) // 우리 프로젝트에서 정의한 pawnkind 아니면 건너뜀
+                return;
+            instance.style.BodyTattoo = TattooDefOf.NoTattoo_Body;
+            instance.style.FaceTattoo = TattooDefOf.NoTattoo_Face;
         }
     }
 }
