@@ -14,18 +14,18 @@ namespace BA
 
         public StudentData StudentData => GameResource.StudentTable[StudentId];
         public Pawn Owner => parent as Pawn;
-        public SkillRecord ShootingSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Shooting);
-        public SkillRecord MeleeSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Melee);
-        public SkillRecord ConstructionSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Construction);
-        public SkillRecord MiningSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Mining);
-        public SkillRecord CookingSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Cooking);
-        public SkillRecord PlantsSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Plants);
-        public SkillRecord AnimalsSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Animals);
-        public SkillRecord CraftingSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Crafting);
-        public SkillRecord ArtisticSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Artistic);
-        public SkillRecord MedicalSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Medicine);
-        public SkillRecord SocialSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Social);
-        public SkillRecord IntellectualSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Intellectual);
+        public SkillRecord ShootingSkillRecord => Owner.skills.GetSkill(SkillDefOf.Shooting);
+        public SkillRecord MeleeSkillRecord => Owner.skills.GetSkill(SkillDefOf.Melee);
+        public SkillRecord ConstructionSkillRecord => Owner.skills.GetSkill(SkillDefOf.Construction);
+        public SkillRecord MiningSkillRecord => Owner.skills.GetSkill(SkillDefOf.Mining);
+        public SkillRecord CookingSkillRecord => Owner.skills.GetSkill(SkillDefOf.Cooking);
+        public SkillRecord PlantsSkillRecord => Owner.skills.GetSkill(SkillDefOf.Plants);
+        public SkillRecord AnimalsSkillRecord => Owner.skills.GetSkill(SkillDefOf.Animals);
+        public SkillRecord CraftingSkillRecord => Owner.skills.GetSkill(SkillDefOf.Crafting);
+        public SkillRecord ArtisticSkillRecord => Owner.skills.GetSkill(SkillDefOf.Artistic);
+        public SkillRecord MedicalSkillRecord => Owner.skills.GetSkill(SkillDefOf.Medicine);
+        public SkillRecord SocialSkillRecord => Owner.skills.GetSkill(SkillDefOf.Social);
+        public SkillRecord IntellectualSkillRecord => Owner.skills.GetSkill(SkillDefOf.Intellectual);
 
         public override void PostExposeData()
         {
