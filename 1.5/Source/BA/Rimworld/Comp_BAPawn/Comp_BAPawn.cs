@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Linq;
+using System.Text.RegularExpressions;
 using RimWorld;
 using Verse;
 
@@ -11,8 +12,20 @@ namespace BA
         public int Exp = 0;
         public int RequiredExp = int.MaxValue;
 
-        public StudentAttribute Attribute => GameResource.StudentTable[StudentId].Attribute;
+        public StudentData StudentData => GameResource.StudentTable[StudentId];
         public Pawn Owner => parent as Pawn;
+        public SkillRecord ShootingSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Shooting);
+        public SkillRecord MeleeSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Melee);
+        public SkillRecord ConstructionSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Construction);
+        public SkillRecord MiningSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Mining);
+        public SkillRecord CookingSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Cooking);
+        public SkillRecord PlantsSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Plants);
+        public SkillRecord AnimalsSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Animals);
+        public SkillRecord CraftingSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Crafting);
+        public SkillRecord ArtisticSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Artistic);
+        public SkillRecord MedicalSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Medicine);
+        public SkillRecord SocialSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Social);
+        public SkillRecord IntellectualSkillRecord => Owner.skills.skills.First(x => x.def == SkillDefOf.Intellectual);
 
         public override void PostExposeData()
         {
@@ -34,6 +47,34 @@ namespace BA
                 Level = 1;
                 Exp = 0;
                 UpdateRequiredExp();
+
+                // 스킬 레벨 초기화
+                ShootingSkillRecord.Level = StudentData.DefaultShooting;
+                MeleeSkillRecord.Level = StudentData.DefaultMelee;
+                ConstructionSkillRecord.Level = StudentData.DefaultConstruction;
+                MiningSkillRecord.Level = StudentData.DefaultMining;
+                CookingSkillRecord.Level = StudentData.DefaultCooking;
+                PlantsSkillRecord.Level = StudentData.DefaultPlants;
+                AnimalsSkillRecord.Level = StudentData.DefaultAnimals;
+                CraftingSkillRecord.Level = StudentData.DefaultCrafting;
+                ArtisticSkillRecord.Level = StudentData.DefaultArtistic;
+                MedicalSkillRecord.Level = StudentData.DefaultMedical;
+                SocialSkillRecord.Level = StudentData.DefaultSocial;
+                IntellectualSkillRecord.Level = StudentData.DefaultIntellectual;
+
+                // 스킬 경험치 배율(=passion) 축소
+                ShootingSkillRecord.passion = Passion.None;
+                MeleeSkillRecord.passion = Passion.None;
+                ConstructionSkillRecord.passion = Passion.None;
+                MiningSkillRecord.passion = Passion.None;
+                CookingSkillRecord.passion = Passion.None;
+                PlantsSkillRecord.passion = Passion.None;
+                AnimalsSkillRecord.passion = Passion.None;
+                CraftingSkillRecord.passion = Passion.None;
+                ArtisticSkillRecord.passion = Passion.None;
+                MedicalSkillRecord.passion = Passion.None;
+                SocialSkillRecord.passion = Passion.None;
+                IntellectualSkillRecord.passion = Passion.None;
             }
         }
 
@@ -43,8 +84,8 @@ namespace BA
                 return;
             if (!parent.IsHashIntervalTick(Const.TickPerSecond)) // 1초마다 tick 실행
                 return;
-            Log.Message(
-                $"BAPawnComp::CompTick() : id: {StudentId}, ageTracker.CurLifeStage.factor: {Owner.ageTracker.CurLifeStage.meleeDamageFactor}, GetStatValue({Owner.GetStatValue(StatDefOf.MeleeDamageFactor)})");
+            // Log.Message(
+            //     $"BAPawnComp::CompTick() : id: {StudentId}, ageTracker.CurLifeStage.factor: {Owner.ageTracker.CurLifeStage.meleeDamageFactor}, GetStatValue({Owner.GetStatValue(StatDefOf.MeleeDamageFactor)})");
             GainExpTick();
             TryLevelUpTick();
         }
@@ -57,8 +98,8 @@ namespace BA
             {
                 Exp -= RequiredExp;
                 ++Level;
+                TryLevelUpSkills();
                 UpdateRequiredExp();
-                Log.Message($"Level Up! {Level}");
             }
 
             if (Level >= Const.PawnMaxLevel)
@@ -78,6 +119,23 @@ namespace BA
                 RequiredExp = 0;
             else
                 RequiredExp = GameResource.StudentLevelRequiredExpTable[Level + 1].Value;
+        }
+
+        private void TryLevelUpSkills()
+        {
+            var attributeLevelData = GameResource.StudentAttributeLevelTable[(StudentData.Attribute, Level)];
+            ShootingSkillRecord.Level += attributeLevelData.Shooting;
+            MeleeSkillRecord.Level += attributeLevelData.Melee;
+            ConstructionSkillRecord.Level += attributeLevelData.Construction;
+            MiningSkillRecord.Level += attributeLevelData.Mining;
+            CookingSkillRecord.Level += attributeLevelData.Cooking;
+            PlantsSkillRecord.Level += attributeLevelData.Plants;
+            AnimalsSkillRecord.Level += attributeLevelData.Animals;
+            CraftingSkillRecord.Level += attributeLevelData.Crafting;
+            ArtisticSkillRecord.Level += attributeLevelData.Artistic;
+            MedicalSkillRecord.Level += attributeLevelData.Medical;
+            SocialSkillRecord.Level += attributeLevelData.Social;
+            IntellectualSkillRecord.Level += attributeLevelData.Intellectual;
         }
     }
 }
