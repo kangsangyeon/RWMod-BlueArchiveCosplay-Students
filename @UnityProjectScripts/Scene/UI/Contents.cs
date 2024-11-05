@@ -14,10 +14,10 @@ public class Contents : MonoSingleton<Contents>
     {
         if (Input.GetMouseButtonDown(0))
         {
-            var _psPosition = Accessor.UICamera.ScreenToWorldPoint(Input.mousePosition);
-            _psPosition.z = Accessor.UIParticleHolder.transform.position.z;
-            var _ps = Instantiate(GameResource.TouchFxPrefab, Accessor.UIParticleHolder.transform);
-            _ps.transform.position = _psPosition;
+            var psPosition = Accessor.UICamera.ScreenToWorldPoint(Input.mousePosition);
+            psPosition.z = Accessor.UIParticleHolder.transform.position.z;
+            var ps = Instantiate(GameResource.TouchFxPrefab, Accessor.UIParticleHolder.transform);
+            ps.transform.position = psPosition;
         }
     }
 }

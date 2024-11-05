@@ -5,29 +5,29 @@ namespace BA
 {
     public class PawnRenderNode_BackHair : PawnRenderNode
     {
-        public PawnRenderNode_BackHair(Pawn _pawn, PawnRenderNodeProperties _props, PawnRenderTree _tree)
-            : base(_pawn, _props, _tree)
+        public PawnRenderNode_BackHair(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree)
+            : base(pawn, props, tree)
         {
         }
 
-        public override GraphicMeshSet MeshSetFor(Pawn _pawn)
+        public override GraphicMeshSet MeshSetFor(Pawn pawn)
         {
-            if (_pawn.story?.hairDef == null || _pawn.story.hairDef.noGraphic)
+            if (pawn.story?.hairDef == null || pawn.story.hairDef.noGraphic)
                 return null;
-            if (_pawn.story?.hairDef is not HairDef)
+            if (pawn.story?.hairDef is not HairDef)
                 return null;
-            return HumanlikeMeshPoolUtility.GetHumanlikeHairSetForPawn(_pawn);
+            return HumanlikeMeshPoolUtility.GetHumanlikeHairSetForPawn(pawn);
         }
 
-        public override Graphic GraphicFor(Pawn _pawn)
+        public override Graphic GraphicFor(Pawn pawn)
         {
-            if (_pawn.story?.hairDef == null || _pawn.story.hairDef.noGraphic || _pawn.DevelopmentalStage.Baby() || _pawn.DevelopmentalStage.Newborn())
+            if (pawn.story?.hairDef == null || pawn.story.hairDef.noGraphic || pawn.DevelopmentalStage.Baby() || pawn.DevelopmentalStage.Newborn())
                 return null;
-            var _baHairDef = _pawn.story?.hairDef as HairDef;
-            if (_baHairDef == null)
+            var baHairDef = pawn.story?.hairDef as HairDef;
+            if (baHairDef == null)
                 return null;
-            var _shader = _baHairDef.overrideShaderTypeDef?.Shader ?? ShaderDatabase.CutoutHair;
-            return GraphicDatabase.Get<Graphic_Multi>(_baHairDef.texPathBackHair, _shader, Vector2.one, ColorFor(_pawn));
+            var shader = baHairDef.overrideShaderTypeDef?.Shader ?? ShaderDatabase.CutoutHair;
+            return GraphicDatabase.Get<Graphic_Multi>(baHairDef.texPathBackHair, shader, Vector2.one, ColorFor(pawn));
         }
     }
 }

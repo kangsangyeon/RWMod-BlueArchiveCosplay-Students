@@ -6,7 +6,7 @@ namespace BA
 {
     public class CharacterTableDef : Def, IWeightTable
     {
-        public List<IWeightTableItem> Items =>
+        List<IWeightTableItem> IWeightTable.Items =>
             items.Select(x => x as IWeightTableItem).ToList();
 
         public List<CharacterTableItem> items;

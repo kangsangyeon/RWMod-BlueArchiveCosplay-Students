@@ -2,9 +2,9 @@ using System;
 
 public static class DataHelper
 {
-    public static string ToStringKr(this StudentAttribute _value)
+    public static string ToStringKr(this StudentAttribute value)
     {
-        switch (_value)
+        switch (value)
         {
             case StudentAttribute.Attack:
                 return "딜러";
@@ -15,7 +15,7 @@ public static class DataHelper
             case StudentAttribute.Heal:
                 return "힐러";
             default:
-                throw new ArgumentOutOfRangeException(nameof(_value), _value, null);
+                throw new ArgumentOutOfRangeException(nameof(value), value, null);
         }
     }
 }

@@ -12,7 +12,7 @@ public class StudentInfoScreenUI : MonoBehaviour
 {
     public StudentInfoScreenAccessor Accessor;
     public ReactiveProperty<int> CharId = new ReactiveProperty<int>(0);
-    private bool checkScroll;
+    private bool _checkScroll;
 
     private void Start()
     {
@@ -36,10 +36,10 @@ public class StudentInfoScreenUI : MonoBehaviour
         Accessor.BasicTab_WeaponButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
-                var _ui = Accessor.WeaponPopup.GetComponent<WeaponPopupUI>();
-                var _charData = GameResource.StudentTable[CharId.Value];
-                var _weaponData = GameResource.WeaponTable[_charData.WeaponId];
-                _ui.UpdateUI(_weaponData, 1, 0);
+                var ui = Accessor.WeaponPopup.GetComponent<WeaponPopupUI>();
+                var charData = GameResource.StudentTable[CharId.Value];
+                var weaponData = GameResource.WeaponTable[charData.WeaponId];
+                ui.UpdateUI(weaponData, 1, 0);
                 Accessor.WeaponPopup.gameObject.SetActive(true);
             })
             .AddTo(gameObject);
@@ -74,52 +74,52 @@ public class StudentInfoScreenUI : MonoBehaviour
         }
     }
 
-    private void UpdateChar(int _id)
+    private void UpdateChar(int id)
     {
-        var _data = GameResource.StudentTable[_id];
-        var _fullshotRenderAccessor = FindObjectOfType<FullshotRenderAccessor>();
+        var data = GameResource.StudentTable[id];
+        var fullshotRenderAccessor = FindObjectOfType<FullshotRenderAccessor>();
 
-        if (_data.FrontHalo)
-            _fullshotRenderAccessor.FullshotHalo.sortingOrder = 10; // fullshot과 fullshot face의 order는 5~6
+        if (data.FrontHalo)
+            fullshotRenderAccessor.FullshotHalo.sortingOrder = 10; // fullshot과 fullshot face의 order는 5~6
         else
-            _fullshotRenderAccessor.FullshotHalo.sortingOrder = 4;
+            fullshotRenderAccessor.FullshotHalo.sortingOrder = 4;
 
 
         // 왼쪽에 위치한 캐릭터 정보와 레벨, 경험치를 표시합니다.
-        _fullshotRenderAccessor.Fullshot.sprite =
-            GameResource.Load<Sprite>($"Student/{_data.Id}", $"Student_Fullshot_{_data.Id}");
-        _fullshotRenderAccessor.FullshotHalo.sprite =
-            GameResource.Load<Sprite>($"Student/{_data.Id}", $"Student_Fullshot_Halo_{_data.Id}");
-        _fullshotRenderAccessor.FullshotBg.sprite =
-            GameResource.Load<Sprite>($"Student/{_data.Id}", $"Student_Fullshot_Bg_{_data.Id}");
-        _fullshotRenderAccessor.Camera.transform.localPosition = new Vector3(_data.CamPos.x, _data.CamPos.y, -10f);
-        _fullshotRenderAccessor.Camera.orthographicSize = _data.CamOrthoSize;
+        fullshotRenderAccessor.Fullshot.sprite =
+            GameResource.Load<Sprite>($"Student/{data.Id}", $"Student_Fullshot_{data.Id}");
+        fullshotRenderAccessor.FullshotHalo.sprite =
+            GameResource.Load<Sprite>($"Student/{data.Id}", $"Student_Fullshot_Halo_{data.Id}");
+        fullshotRenderAccessor.FullshotBg.sprite =
+            GameResource.Load<Sprite>($"Student/{data.Id}", $"Student_Fullshot_Bg_{data.Id}");
+        fullshotRenderAccessor.Camera.transform.localPosition = new Vector3(data.CamPos.x, data.CamPos.y, -10f);
+        fullshotRenderAccessor.Camera.orthographicSize = data.CamOrthoSize;
 
-        Accessor.NameText.text = _data.Name;
+        Accessor.NameText.text = data.Name;
 
-        var _starCount = 5;
-        for (int i = 0; i < _starCount; ++i)
+        var starCount = 5;
+        for (int i = 0; i < starCount; ++i)
             Accessor.Stars[i].gameObject.SetActive(true);
-        for (int i = _starCount; i < 5; ++i)
+        for (int i = starCount; i < 5; ++i)
             Accessor.Stars[i].gameObject.SetActive(false);
 
-        var _clubData =
+        var clubData =
             GameResource.ClubTable.Values
-                .First(x => x.StudentList.Contains(_id));
-        var _schoolData =
+                .First(x => x.StudentList.Contains(id));
+        var schoolData =
             GameResource.SchoolTable.Values
-                .First(x => x.ClubList.Contains(_clubData.Id));
-        string _bgPath = string.IsNullOrEmpty(_data.OverrideBgPath)
-            ? _schoolData.BgPath
-            : _data.OverrideBgPath;
-        var _directory = Path.GetDirectoryName(_bgPath);
-        var _fileName = Path.GetFileName(_bgPath);
-        Accessor.Background.sprite = GameResource.Load<Sprite>(_directory, _fileName);
+                .First(x => x.ClubList.Contains(clubData.Id));
+        string bgPath = string.IsNullOrEmpty(data.OverrideBgPath)
+            ? schoolData.BgPath
+            : data.OverrideBgPath;
+        var directory = Path.GetDirectoryName(bgPath);
+        var fileName = Path.GetFileName(bgPath);
+        Accessor.Background.sprite = GameResource.Load<Sprite>(directory, fileName);
 
-        Accessor.AttributeText.text = _data.Attribute.ToStringKr();
+        Accessor.AttributeText.text = data.Attribute.ToStringKr();
         Accessor.AttributeIcon.sprite = GameResource.Load<Sprite>(
             "UI/Texture/Access/Student/Attribute",
-            $"Student_Attribute_Icon_{_data.Attribute.ToString()}");
+            $"Student_Attribute_Icon_{data.Attribute.ToString()}");
 
         // AttributeText의 길이가 달라지면 레이아웃이 이를 감지하지 못해 텍스트와 아이콘과 겹치는 문제가 발생합니다.
         // 따라서 레이아웃을 강제로 새로고침합니다.
@@ -131,67 +131,67 @@ public class StudentInfoScreenUI : MonoBehaviour
         // Accessor.ExpBar.fillAmount
 
         // 캐릭터와 헤일로 애니메이션을 재생합니다.
-        var _fullshotRect = (RectTransform)Accessor.FullshotImage.transform;
-        var _fullshotGroup = Accessor.FullshotImage.GetComponent<CanvasGroup>();
-        var _fullshotTf = _fullshotRenderAccessor.Fullshot.transform;
-        var _fullshotHaloTf = _fullshotRenderAccessor.FullshotHalo.transform;
-        var _fullshotBgTf = _fullshotRenderAccessor.FullshotBg.transform;
+        var fullshotRect = (RectTransform)Accessor.FullshotImage.transform;
+        var fullshotGroup = Accessor.FullshotImage.GetComponent<CanvasGroup>();
+        var fullshotTf = fullshotRenderAccessor.Fullshot.transform;
+        var fullshotHaloTf = fullshotRenderAccessor.FullshotHalo.transform;
+        var fullshotBgTf = fullshotRenderAccessor.FullshotBg.transform;
 
         DOTween.Kill(Accessor.FullshotImage);
-        _fullshotRenderAccessor.Fullshot.DOKill();
-        _fullshotRenderAccessor.FullshotHalo.DOKill();
+        fullshotRenderAccessor.Fullshot.DOKill();
+        fullshotRenderAccessor.FullshotHalo.DOKill();
 
-        _fullshotGroup.alpha = 0f;
+        fullshotGroup.alpha = 0f;
         DOTween.Sequence()
-            .Append(_fullshotGroup.DOFade(1f, 1f))
+            .Append(fullshotGroup.DOFade(1f, 1f))
             .SetId(Accessor.FullshotImage);
 
-        _fullshotTf.localPosition = Vector2.zero;
-        _fullshotHaloTf.localPosition = _data.FullshotHaloPos;
-        _fullshotBgTf.localPosition = _data.FullshotBgPos;
+        fullshotTf.localPosition = Vector2.zero;
+        fullshotHaloTf.localPosition = data.FullshotHaloPos;
+        fullshotBgTf.localPosition = data.FullshotBgPos;
 
-        DOTween.Sequence(_fullshotRenderAccessor.Fullshot)
-            .Append(_fullshotTf.DOLocalMove(Vector2.up * 0.08f, 3f).SetEase(Ease.InOutSine))
-            .Append(_fullshotTf.DOLocalMove(Vector2.zero, 3f).SetEase(Ease.InOutSine))
+        DOTween.Sequence(fullshotRenderAccessor.Fullshot)
+            .Append(fullshotTf.DOLocalMove(Vector2.up * 0.08f, 3f).SetEase(Ease.InOutSine))
+            .Append(fullshotTf.DOLocalMove(Vector2.zero, 3f).SetEase(Ease.InOutSine))
             .SetEase(Ease.Linear)
             .SetLoops(-1, LoopType.Yoyo);
 
-        DOTween.Sequence(_fullshotRenderAccessor.FullshotHalo)
-            .Append(_fullshotHaloTf.DOLocalMove(_data.FullshotHaloPos + Vector2.up * 0.08f, 2f).SetEase(Ease.InOutSine))
-            .Append(_fullshotHaloTf.DOLocalMove(_data.FullshotHaloPos, 2f).SetEase(Ease.InOutSine))
+        DOTween.Sequence(fullshotRenderAccessor.FullshotHalo)
+            .Append(fullshotHaloTf.DOLocalMove(data.FullshotHaloPos + Vector2.up * 0.08f, 2f).SetEase(Ease.InOutSine))
+            .Append(fullshotHaloTf.DOLocalMove(data.FullshotHaloPos, 2f).SetEase(Ease.InOutSine))
             .SetEase(Ease.Linear)
             .SetLoops(-1, LoopType.Yoyo);
 
         // 툴팁을 설정합니다.
         Accessor.Tooltips[0].Icon.sprite = Accessor.AttributeIcon.sprite;
         Accessor.Tooltips[0].TextMask_Text.text =
-            GameResource.StudentAttributeTable[_data.Attribute].Description;
-        Accessor.Tooltips[1].gameObject.SetActive(_data.PassiveSkillId > 0);
-        if (_data.PassiveSkillId > 0)
+            GameResource.StudentAttributeTable[data.Attribute].Description;
+        Accessor.Tooltips[1].gameObject.SetActive(data.PassiveSkillId > 0);
+        if (data.PassiveSkillId > 0)
         {
-            var _passiveSkillData = GameResource.PassiveSkillTable.TryGet(_data.PassiveSkillId);
+            var passiveSkillData = GameResource.PassiveSkillTable.TryGet(data.PassiveSkillId);
             Accessor.Tooltips[1].Icon.sprite =
-                GameResource.Load<Sprite>("PassiveSkill/Icon", $"PassiveSkill_Icon_{_passiveSkillData.IconName}");
-            Accessor.Tooltips[1].TextMask_Text.text = _passiveSkillData.Description;
+                GameResource.Load<Sprite>("PassiveSkill/Icon", $"PassiveSkill_Icon_{passiveSkillData.IconName}");
+            Accessor.Tooltips[1].TextMask_Text.text = passiveSkillData.Description;
             TryStartScroll();
         }
 
         for (int i = 0; i < 2; ++i)
         {
-            var _canvasGroup = Accessor.Tooltips[i].TooltipBox.GetComponent<CanvasGroup>();
-            _canvasGroup.alpha = 0f;
+            var canvasGroup = Accessor.Tooltips[i].TooltipBox.GetComponent<CanvasGroup>();
+            canvasGroup.alpha = 0f;
             Accessor.Tooltips[i].HexImage.OnPointerEnterAsObservable()
                 .Subscribe(_ =>
                 {
-                    _canvasGroup.DOKill();
-                    _canvasGroup.DOFade(1f, .2f);
+                    canvasGroup.DOKill();
+                    canvasGroup.DOFade(1f, .2f);
                 })
                 .AddTo(gameObject);
             Accessor.Tooltips[i].HexImage.OnPointerExitAsObservable()
                 .Subscribe(_ =>
                 {
-                    _canvasGroup.DOKill();
-                    _canvasGroup.DOFade(0f, .2f);
+                    canvasGroup.DOKill();
+                    canvasGroup.DOFade(0f, .2f);
                 })
                 .AddTo(gameObject);
         }
@@ -199,118 +199,118 @@ public class StudentInfoScreenUI : MonoBehaviour
 
         // 기본 정보 탭의 내용을 표시합니다.
         Accessor.BasicTab_StatInfo_SDFullShot.sprite =
-            GameResource.Load<Sprite>($"Student/{_data.Id}", $"Student_SD_Fullshot_{_data.Id}");
+            GameResource.Load<Sprite>($"Student/{data.Id}", $"Student_SD_Fullshot_{data.Id}");
 
         Accessor.BasicTab_StatInfo_StatPage1Value.text =
-            $"{_data.DefaultShooting}\n{_data.DefaultMelee}\n{_data.DefaultConstruction}\n{_data.DefaultMining}\n{_data.DefaultCooking}\n{_data.DefaultPlants}";
+            $"{data.DefaultShooting}\n{data.DefaultMelee}\n{data.DefaultConstruction}\n{data.DefaultMining}\n{data.DefaultCooking}\n{data.DefaultPlants}";
         Accessor.BasicTab_StatInfo_StatPage2Value.text =
-            $"{_data.DefaultAnimals}\n{_data.DefaultCrafting}\n{_data.DefaultArtistic}\n{_data.DefaultMedical}\n{_data.DefaultSocial}\n{_data.DefaultIntellectual}";
+            $"{data.DefaultAnimals}\n{data.DefaultCrafting}\n{data.DefaultArtistic}\n{data.DefaultMedical}\n{data.DefaultSocial}\n{data.DefaultIntellectual}";
 
-        var _skillData = GameResource.SkillTable[_data.SkillId];
-        var _skillLevelData = GameResource.SkillLevelTable[(_data.SkillId, 1)]; // temp: 임시적으로 스킬 레벨을 1으로 간주합니다.
-        var _skillLevels = new List<SkillLevelData>();
-        int _maxSkillLevel = _data.MaxSkillLevel ?? 5;
-        for (int i = 0; i < _maxSkillLevel; ++i)
-            _skillLevels.Add(GameResource.SkillLevelTable[(_data.SkillId, i + 1)]);
-        var _skillInfoUI = Accessor.BasicTab_SkillButton_ExSkillInfo.GetComponent<ExSkillInfoUI>();
-        _skillInfoUI.UpdateUI(_data, _skillData, _skillLevelData,
-            _skillLevelData.Id.Level == _skillLevels.Count - 1, false);
+        var skillData = GameResource.SkillTable[data.SkillId];
+        var skillLevelData = GameResource.SkillLevelTable[(data.SkillId, 1)]; // temp: 임시적으로 스킬 레벨을 1으로 간주합니다.
+        var skillLevels = new List<SkillLevelData>();
+        int maxSkillLevel = data.MaxSkillLevel ?? 5;
+        for (int i = 0; i < maxSkillLevel; ++i)
+            skillLevels.Add(GameResource.SkillLevelTable[(data.SkillId, i + 1)]);
+        var skillInfoUI = Accessor.BasicTab_SkillButton_ExSkillInfo.GetComponent<ExSkillInfoUI>();
+        skillInfoUI.UpdateUI(data, skillData, skillLevelData,
+            skillLevelData.Id.Level == skillLevels.Count - 1, false);
 
-        var _weaponData = GameResource.WeaponTable[_data.WeaponId];
-        Accessor.BasicTab_WeaponButton_WeaponTypeText.text = _weaponData.Type.ToString();
+        var weaponData = GameResource.WeaponTable[data.WeaponId];
+        Accessor.BasicTab_WeaponButton_WeaponTypeText.text = weaponData.Type.ToString();
         Accessor.BasicTab_WeaponButton_WeaponImage.sprite =
-            GameResource.Load<Sprite>($"Weapon", $"Weapon_Icon_{_weaponData.Id}");
+            GameResource.Load<Sprite>($"Weapon", $"Weapon_Icon_{weaponData.Id}");
 
-        for (int i = 0; i < _weaponData.Star; ++i)
+        for (int i = 0; i < weaponData.Star; ++i)
             Accessor.BasicTab_WeaponButton_Stars[i].gameObject.SetActive(true);
-        for (int i = _weaponData.Star; i < 5; ++i)
+        for (int i = weaponData.Star; i < 5; ++i)
             Accessor.BasicTab_WeaponButton_Stars[i].gameObject.SetActive(false);
 
         // 레벨 업 탭의 내용을 표시합니다.
-        var _exSkillInfoPrefab = GameResource.Load<GameObject>("UI/Prefab", "ExSkillInfo");
+        var exSkillInfoPrefab = GameResource.Load<GameObject>("UI/Prefab", "ExSkillInfo");
         Accessor.LevelUpTab_ExSkillInfo_ExSkillHolder.Children().Destroy();
-        for (int i = 0; i < _skillLevels.Count; i++)
+        for (int i = 0; i < skillLevels.Count; i++)
         {
-            var _go = Instantiate(_exSkillInfoPrefab, Accessor.LevelUpTab_ExSkillInfo_ExSkillHolder.transform);
-            var _accessor = _go.GetComponent<ExSkillInfoUI>();
-            bool _isMaxLevel = i == _skillLevels.Count - 1;
-            bool _isUnlocked = i > _skillLevelData.Id.Level - 1;
-            _accessor.UpdateUI(_data, _skillData, _skillLevels[i], _isMaxLevel, _isUnlocked);
+            var go = Instantiate(exSkillInfoPrefab, Accessor.LevelUpTab_ExSkillInfo_ExSkillHolder.transform);
+            var accessor = go.GetComponent<ExSkillInfoUI>();
+            bool isMaxLevel = i == skillLevels.Count - 1;
+            bool isUnlocked = i > skillLevelData.Id.Level - 1;
+            accessor.UpdateUI(data, skillData, skillLevels[i], isMaxLevel, isUnlocked);
         }
 
         // 신비 탭의 내용을 표시합니다.
-        Sprite _thumbnailSprite =
-            GameResource.Load<Sprite>($"Skill/Icon", $"Skill_Icon_{_skillData.IconName}");
+        Sprite thumbnailSprite =
+            GameResource.Load<Sprite>($"Skill/Icon", $"Skill_Icon_{skillData.IconName}");
 
-        Accessor.ShinbiTab_GrowthInfo_SkillButton_Icon.sprite = _thumbnailSprite;
-        Accessor.ShinbiTab_GrowthInfo_SkillButton_HexImage.color = UIUtilProcedure.GetAttributeColor(_data.Attribute);
-        Accessor.ShinbiTab_GrowthInfo_SkillButton_Name.text = _skillData.Name;
+        Accessor.ShinbiTab_GrowthInfo_SkillButton_Icon.sprite = thumbnailSprite;
+        Accessor.ShinbiTab_GrowthInfo_SkillButton_HexImage.color = UIUtilProcedure.GetAttributeColor(data.Attribute);
+        Accessor.ShinbiTab_GrowthInfo_SkillButton_Name.text = skillData.Name;
 
         SetVisibleTab(0);
     }
 
-    private void SetVisibleTab(int _tabIndex)
+    private void SetVisibleTab(int tabIndex)
     {
-        ColorUtility.TryParseHtmlString("#D7EAF1", out var _enableButtonColor);
-        ColorUtility.TryParseHtmlString("#2F363C", out var _enableTextColor);
-        ColorUtility.TryParseHtmlString("#2D4A75", out var _disableButtonColor);
-        ColorUtility.TryParseHtmlString("#FFFFFF", out var _disableTextColor);
+        ColorUtility.TryParseHtmlString("#D7EAF1", out var enableButtonColor);
+        ColorUtility.TryParseHtmlString("#2F363C", out var enableTextColor);
+        ColorUtility.TryParseHtmlString("#2D4A75", out var disableButtonColor);
+        ColorUtility.TryParseHtmlString("#FFFFFF", out var disableTextColor);
 
         Accessor.BasicTab.gameObject.SetActive(false);
         Accessor.LevelUpTab.gameObject.SetActive(false);
         Accessor.ShinbiTab.gameObject.SetActive(false);
-        Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = _disableButtonColor;
-        Accessor.TabButtonBox_BasicTabButton_Text.color = _disableTextColor;
-        Accessor.TabButtonBox_LevelUpTabButton.GetComponent<Image>().color = _disableButtonColor;
-        Accessor.TabButtonBox_LevelUpTabButton_Text.color = _disableTextColor;
-        Accessor.TabButtonBox_ShinbiTabButton.GetComponent<Image>().color = _disableButtonColor;
-        Accessor.TabButtonBox_ShinbiTabButton_Text.color = _disableTextColor;
+        Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = disableButtonColor;
+        Accessor.TabButtonBox_BasicTabButton_Text.color = disableTextColor;
+        Accessor.TabButtonBox_LevelUpTabButton.GetComponent<Image>().color = disableButtonColor;
+        Accessor.TabButtonBox_LevelUpTabButton_Text.color = disableTextColor;
+        Accessor.TabButtonBox_ShinbiTabButton.GetComponent<Image>().color = disableButtonColor;
+        Accessor.TabButtonBox_ShinbiTabButton_Text.color = disableTextColor;
 
-        switch (_tabIndex)
+        switch (tabIndex)
         {
             case 0:
                 Accessor.BasicTab.gameObject.SetActive(true);
-                Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = _enableButtonColor;
-                Accessor.TabButtonBox_BasicTabButton_Text.color = _enableTextColor;
+                Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = enableButtonColor;
+                Accessor.TabButtonBox_BasicTabButton_Text.color = enableTextColor;
                 break;
             case 1:
                 Accessor.LevelUpTab.gameObject.SetActive(true);
-                Accessor.TabButtonBox_LevelUpTabButton.GetComponent<Image>().color = _enableButtonColor;
-                Accessor.TabButtonBox_LevelUpTabButton_Text.color = _enableTextColor;
+                Accessor.TabButtonBox_LevelUpTabButton.GetComponent<Image>().color = enableButtonColor;
+                Accessor.TabButtonBox_LevelUpTabButton_Text.color = enableTextColor;
                 break;
             case 2:
                 Accessor.ShinbiTab.gameObject.SetActive(true);
-                Accessor.TabButtonBox_ShinbiTabButton.GetComponent<Image>().color = _enableButtonColor;
-                Accessor.TabButtonBox_ShinbiTabButton_Text.color = _enableTextColor;
+                Accessor.TabButtonBox_ShinbiTabButton.GetComponent<Image>().color = enableButtonColor;
+                Accessor.TabButtonBox_ShinbiTabButton_Text.color = enableTextColor;
                 break;
         }
     }
 
     private void TryStartScroll()
     {
-        if (checkScroll)
+        if (_checkScroll)
             return;
-        checkScroll = true;
+        _checkScroll = true;
 
         Accessor.Tooltips[1].TextMask_Text.rectTransform.anchoredPosition = Vector2.zero;
-        var _color = Accessor.Tooltips[1].TextMask_Text.color;
-        _color.a = 1f;
-        Accessor.Tooltips[1].TextMask_Text.color = _color;
+        var color = Accessor.Tooltips[1].TextMask_Text.color;
+        color.a = 1f;
+        Accessor.Tooltips[1].TextMask_Text.color = color;
 
         // Description이 Description Mask의 범위를 벗어나는 경우,
         // 세로로 텍스트를 내리는 애니메이션을 재생합니다.
         DOTween.Kill(Accessor.Tooltips[1].gameObject);
-        float _heightDelta =
+        float heightDelta =
             Accessor.Tooltips[1].TextMask_Text.preferredHeight -
             Accessor.Tooltips[1].TextMask.rectTransform.rect.height;
-        if (_heightDelta > 0)
+        if (heightDelta > 0)
         {
             // 대략 한 줄마다 스크롤 시간 3초 증가 (font size가 대략 한 줄 크기)
-            float _scrollDuration =
-                (_heightDelta / Accessor.Tooltips[1].TextMask_Text.fontSize) * 3f;
+            float scrollDuration =
+                (heightDelta / Accessor.Tooltips[1].TextMask_Text.fontSize) * 3f;
             DOTween.Sequence()
                 .AppendInterval(1f)
-                .Append(Accessor.Tooltips[1].TextMask_Text.rectTransform.DOAnchorPosY(_heightDelta, _scrollDuration))
+                .Append(Accessor.Tooltips[1].TextMask_Text.rectTransform.DOAnchorPosY(heightDelta, scrollDuration))
                 .Append(Accessor.Tooltips[1].TextMask_Text.DOFade(0f, 1f))
                 .AppendCallback(() => Accessor.Tooltips[1].TextMask_Text.rectTransform.anchoredPosition = Vector2.zero)
                 .Append(Accessor.Tooltips[1].TextMask_Text.DOFade(1f, 1f))

@@ -30,19 +30,19 @@ public static class GameResource
     public static RenderTexture FullshotRT;
     public static RenderTexture TransitionRT;
 
-    public static T Load<T>(string _resourcesDirectoryAddress, string _bundleAssetName) where T : Object
+    public static T Load<T>(string resourcesDirectoryAddress, string bundleAssetName) where T : Object
     {
         if (Bundle != null)
         {
             if (typeof(Component).IsAssignableFrom(typeof(T)))
             {
-                var _prefab = Bundle.LoadAsset<GameObject>(_bundleAssetName);
-                return _prefab.GetComponent<T>();
+                var prefab = Bundle.LoadAsset<GameObject>(bundleAssetName);
+                return prefab.GetComponent<T>();
             }
 
-            return Bundle.LoadAsset<T>(_bundleAssetName);
+            return Bundle.LoadAsset<T>(bundleAssetName);
         }
 
-        return Resources.Load<T>(_resourcesDirectoryAddress + "/" + _bundleAssetName);
+        return Resources.Load<T>(resourcesDirectoryAddress + "/" + bundleAssetName);
     }
 }

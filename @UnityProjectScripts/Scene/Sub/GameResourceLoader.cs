@@ -47,50 +47,50 @@ public class GameResourceLoader : MonoBehaviour
 
     private void LoadDataTable()
     {
-        var _studentTableJson = GameResource.Load<TextAsset>("Data", "DataTable_1000_Student").text;
-        var _clubTableJson = GameResource.Load<TextAsset>("Data", "DataTable_2000_Club").text;
-        var _schoolTableJson = GameResource.Load<TextAsset>("Data", "DataTable_3000_School").text;
-        var _skillTableJson = GameResource.Load<TextAsset>("Data", "DataTable_4000_Skill").text;
-        var _skillLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_5000_SkillLevel").text;
-        var _weaponTableJson = GameResource.Load<TextAsset>("Data", "DataTable_6000_Weapon").text;
-        var _passiveSkillTableJson = GameResource.Load<TextAsset>("Data", "DataTable_7000_PassiveSkill").text;
-        var _studentAttributeTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttribute").text;
-        var _studentAttributeLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttributeLevel").text;
-        var _studentLevelRequiredExpTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentLevelRequiredExp").text;
-        GameResource.StudentTable = LoadTemplateTable<int, StudentData>(_studentTableJson);
-        GameResource.ClubTable = LoadTemplateTable<int, ClubData>(_clubTableJson);
-        GameResource.SchoolTable = LoadTemplateTable<int, SchoolData>(_schoolTableJson);
-        GameResource.SkillTable = LoadTemplateTable<int, SkillData>(_skillTableJson);
-        GameResource.SkillLevelTable = LoadTemplateTable<(int, int), SkillLevelData>(_skillLevelTableJson);
-        GameResource.WeaponTable = LoadTemplateTable<int, WeaponData>(_weaponTableJson);
-        GameResource.PassiveSkillTable = LoadTemplateTable<int, PassiveSkillData>(_passiveSkillTableJson);
+        var studentTableJson = GameResource.Load<TextAsset>("Data", "DataTable_1000_Student").text;
+        var clubTableJson = GameResource.Load<TextAsset>("Data", "DataTable_2000_Club").text;
+        var schoolTableJson = GameResource.Load<TextAsset>("Data", "DataTable_3000_School").text;
+        var skillTableJson = GameResource.Load<TextAsset>("Data", "DataTable_4000_Skill").text;
+        var skillLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_5000_SkillLevel").text;
+        var weaponTableJson = GameResource.Load<TextAsset>("Data", "DataTable_6000_Weapon").text;
+        var passiveSkillTableJson = GameResource.Load<TextAsset>("Data", "DataTable_7000_PassiveSkill").text;
+        var studentAttributeTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttribute").text;
+        var studentAttributeLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttributeLevel").text;
+        var studentLevelRequiredExpTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentLevelRequiredExp").text;
+        GameResource.StudentTable = LoadTemplateTable<int, StudentData>(studentTableJson);
+        GameResource.ClubTable = LoadTemplateTable<int, ClubData>(clubTableJson);
+        GameResource.SchoolTable = LoadTemplateTable<int, SchoolData>(schoolTableJson);
+        GameResource.SkillTable = LoadTemplateTable<int, SkillData>(skillTableJson);
+        GameResource.SkillLevelTable = LoadTemplateTable<(int, int), SkillLevelData>(skillLevelTableJson);
+        GameResource.WeaponTable = LoadTemplateTable<int, WeaponData>(weaponTableJson);
+        GameResource.PassiveSkillTable = LoadTemplateTable<int, PassiveSkillData>(passiveSkillTableJson);
         GameResource.StudentAttributeTable =
-            LoadTemplateTable<StudentAttribute, StudentAttributeData>(_studentAttributeTableJson);
+            LoadTemplateTable<StudentAttribute, StudentAttributeData>(studentAttributeTableJson);
         GameResource.StudentAttributeLevelTable =
-            LoadTemplateTable<(StudentAttribute, int), StudentAttributeLevelData>(_studentAttributeLevelTableJson);
+            LoadTemplateTable<(StudentAttribute, int), StudentAttributeLevelData>(studentAttributeLevelTableJson);
         GameResource.StudentLevelRequiredExpTable =
-            LoadTemplateTable<int, StudentLevelRequiredExpData>(_studentLevelRequiredExpTableJson);
+            LoadTemplateTable<int, StudentLevelRequiredExpData>(studentLevelRequiredExpTableJson);
     }
 
-    private TemplateTable<TKey, TValue> LoadTemplateTable<TKey, TValue>(string _json)
+    private TemplateTable<TKey, TValue> LoadTemplateTable<TKey, TValue>(string json)
         where TKey : IComparable
         where TValue : class, new()
     {
-        var _loader = new TemplateTableJsonLoader<TKey, TValue>(
-            new JsonTextReader(new StringReader(_json)),
+        var loader = new TemplateTableJsonLoader<TKey, TValue>(
+            new JsonTextReader(new StringReader(json)),
             JsonSerializer.Create(JsonUnityHelper.DeserializerSettings), false);
-        var _table = new TemplateTable<TKey, TValue>();
-        _table.Load(_loader);
-        return _table;
+        var table = new TemplateTable<TKey, TValue>();
+        table.Load(loader);
+        return table;
     }
 
     private void TryInitializeSaveData()
     {
         if (GameResource.Save == null)
         {
-            var _save = new SaveData();
-            _save.Pyroxenes = 0;
-            _save.StudentSaveData =
+            var save = new SaveData();
+            save.Pyroxenes = 0;
+            save.StudentSaveData =
                 GameResource.StudentTable.Values.ToDictionary(
                     x => x.Id,
                     x => new StudentSaveData()
@@ -101,17 +101,17 @@ public class GameResourceLoader : MonoBehaviour
                         Exp = 0,
                     });
 
-            GameResource.Save = _save;
+            GameResource.Save = save;
             return;
         }
 
-        foreach (var _data in GameResource.StudentTable.Values)
+        foreach (var data in GameResource.StudentTable.Values)
         {
-            if (GameResource.Save.StudentSaveData.ContainsKey(_data.Id))
+            if (GameResource.Save.StudentSaveData.ContainsKey(data.Id))
                 continue;
-            GameResource.Save.StudentSaveData.Add(_data.Id, new StudentSaveData()
+            GameResource.Save.StudentSaveData.Add(data.Id, new StudentSaveData()
             {
-                Id = _data.Id,
+                Id = data.Id,
                 Unlock = true,
                 Level = 1,
                 Exp = 0,

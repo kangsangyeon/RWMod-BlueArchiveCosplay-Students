@@ -13,23 +13,23 @@ namespace BA
         [HarmonyPostfix]
         public static void Postfix(Pawn pawn, PawnGenerationRequest request)
         {
-            if (!(pawn.kindDef is PawnKindDef _kindDef))
+            if (!(pawn.kindDef is PawnKindDef kindDef))
                 return;
 
             switch (pawn.gender)
             {
                 case Gender.Male:
-                    if (_kindDef.forcedBodyType != null)
-                        pawn.story.bodyType = _kindDef.forcedBodyType;
-                    if (_kindDef.forcedHeadType != null)
-                        pawn.story.headType = _kindDef.forcedHeadType;
+                    if (kindDef.forcedBodyType != null)
+                        pawn.story.bodyType = kindDef.forcedBodyType;
+                    if (kindDef.forcedHeadType != null)
+                        pawn.story.headType = kindDef.forcedHeadType;
                     break;
 
                 case Gender.Female:
-                    if (_kindDef.forcedBodyTypeFemale != null)
-                        pawn.story.bodyType = _kindDef.forcedBodyTypeFemale;
-                    if (_kindDef.forcedHeadTypeFemale != null)
-                        pawn.story.headType = _kindDef.forcedHeadTypeFemale;
+                    if (kindDef.forcedBodyTypeFemale != null)
+                        pawn.story.bodyType = kindDef.forcedBodyTypeFemale;
+                    if (kindDef.forcedHeadTypeFemale != null)
+                        pawn.story.headType = kindDef.forcedHeadTypeFemale;
                     break;
             }
         }

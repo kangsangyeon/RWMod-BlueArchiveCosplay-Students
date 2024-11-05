@@ -10,8 +10,8 @@ namespace BA
             0, false)]
         public static void TestGetRandomItem()
         {
-            var _item = WeightTables.GetRandomItem("table_character-gacha") as CharacterTableItem;
-            Log.Message($"random item: {_item.pawnKindTemplateDef.defName} (weight: {_item.weight})");
+            var item = WeightTables.GetRandomItem("table_character-gacha") as CharacterTableItem;
+            Log.Message($"random item: {item.pawnKindTemplateDef.defName} (weight: {item.weight})");
         }
     }
 }

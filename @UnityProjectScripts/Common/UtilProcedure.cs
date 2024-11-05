@@ -2,15 +2,15 @@
 
 public static class UtilProcedure
 {
-    public static int ChildIndexOfSelf(this Transform _self)
+    public static int ChildIndexOfSelf(this Transform self)
     {
-        if (_self.parent == null)
+        if (self.parent == null)
             return 0;
 
-        int _childCount = _self.parent.childCount;
-        for (int i = 0; i < _childCount; ++i)
+        int childCount = self.parent.childCount;
+        for (int i = 0; i < childCount; ++i)
         {
-            if (_self.parent.GetChild(i) == _self)
+            if (self.parent.GetChild(i) == self)
                 return i;
         }
 

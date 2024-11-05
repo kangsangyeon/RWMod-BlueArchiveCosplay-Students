@@ -7,7 +7,7 @@ public class WeaponPopupUI : MonoBehaviour
 {
     public WeaponPopupAccessor Accessor;
     public bool ViewMaxLevelInfo;
-    private bool checkScroll;
+    private bool _checkScroll;
 
     private void Start()
     {
@@ -34,75 +34,75 @@ public class WeaponPopupUI : MonoBehaviour
         SetVisibleTab(0);
     }
 
-    public void UpdateUI(WeaponData _data, int _level, int _exp)
+    public void UpdateUI(WeaponData data, int level, int exp)
     {
-        Accessor.WeaponNameMask_Text.text = _data.Name;
+        Accessor.WeaponNameMask_Text.text = data.Name;
         Accessor.TabContents_DetailTab_DescriptionMask_Text.text =
-            UIUtilProcedure.FormatWeaponPopupDescription(_data.Description);
-        Accessor.Type.text = _data.Type.ToString();
-        Accessor.Level.text = $"<i>Lv.{_level}</i>";
+            UIUtilProcedure.FormatWeaponPopupDescription(data.Description);
+        Accessor.Type.text = data.Type.ToString();
+        Accessor.Level.text = $"<i>Lv.{level}</i>";
         Accessor.WeaponIcon.sprite =
-            GameResource.Load<Sprite>($"Weapon", $"Weapon_Icon_{_data.Id}");
-        for (int i = 0; i < _data.Star; ++i)
+            GameResource.Load<Sprite>($"Weapon", $"Weapon_Icon_{data.Id}");
+        for (int i = 0; i < data.Star; ++i)
             Accessor.Stars[i].gameObject.SetActive(true);
-        for (int i = _data.Star; i < 5; ++i)
+        for (int i = data.Star; i < 5; ++i)
             Accessor.Stars[i].gameObject.SetActive(false);
     }
 
-    private void SetVisibleTab(int _tabIdx)
+    private void SetVisibleTab(int tabIdx)
     {
-        ColorUtility.TryParseHtmlString("#F1FBFD", out var _enableButtonColor);
-        ColorUtility.TryParseHtmlString("#636293", out var _enableTextColor);
-        ColorUtility.TryParseHtmlString("#A9E0F4", out var _disableButtonColor);
-        ColorUtility.TryParseHtmlString("#636293", out var _disableTextColor);
+        ColorUtility.TryParseHtmlString("#F1FBFD", out var enableButtonColor);
+        ColorUtility.TryParseHtmlString("#636293", out var enableTextColor);
+        ColorUtility.TryParseHtmlString("#A9E0F4", out var disableButtonColor);
+        ColorUtility.TryParseHtmlString("#636293", out var disableTextColor);
 
         Accessor.TabContents_BasicTab.gameObject.SetActive(false);
         Accessor.TabContents_DetailTab.gameObject.SetActive(false);
-        Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = _disableButtonColor;
-        Accessor.TabButtonBox_BasicTabButton_Text.color = _disableTextColor;
-        Accessor.TabButtonBox_DetailTabButton.GetComponent<Image>().color = _disableButtonColor;
-        Accessor.TabButtonBox_DetailTabButton_Text.color = _disableTextColor;
+        Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = disableButtonColor;
+        Accessor.TabButtonBox_BasicTabButton_Text.color = disableTextColor;
+        Accessor.TabButtonBox_DetailTabButton.GetComponent<Image>().color = disableButtonColor;
+        Accessor.TabButtonBox_DetailTabButton_Text.color = disableTextColor;
 
-        switch (_tabIdx)
+        switch (tabIdx)
         {
             case 0:
                 Accessor.TabContents_BasicTab.gameObject.SetActive(true);
-                Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = _enableButtonColor;
-                Accessor.TabButtonBox_BasicTabButton_Text.color = _enableTextColor;
+                Accessor.TabButtonBox_BasicTabButton.GetComponent<Image>().color = enableButtonColor;
+                Accessor.TabButtonBox_BasicTabButton_Text.color = enableTextColor;
                 break;
             case 1:
                 Accessor.TabContents_DetailTab.gameObject.SetActive(true);
-                Accessor.TabButtonBox_DetailTabButton.GetComponent<Image>().color = _enableButtonColor;
-                Accessor.TabButtonBox_DetailTabButton_Text.color = _enableTextColor;
+                Accessor.TabButtonBox_DetailTabButton.GetComponent<Image>().color = enableButtonColor;
+                Accessor.TabButtonBox_DetailTabButton_Text.color = enableTextColor;
                 break;
         }
     }
 
     private void TryStartScroll()
     {
-        if (checkScroll)
+        if (_checkScroll)
             return;
-        checkScroll = true;
+        _checkScroll = true;
 
         Accessor.WeaponNameMask_Text.rectTransform.anchoredPosition = Vector2.zero;
-        var _color = Accessor.WeaponNameMask_Text.color;
-        _color.a = 1f;
-        Accessor.WeaponNameMask_Text.color = _color;
+        var color = Accessor.WeaponNameMask_Text.color;
+        color.a = 1f;
+        Accessor.WeaponNameMask_Text.color = color;
 
         // Name이 Name Mask의 범위를 벗어나는 경우,
         // 세로로 텍스트를 내리는 애니메이션을 재생합니다.
         DOTween.Kill(Accessor.WeaponNameMask_Text);
-        float _widthDelta =
+        float widthDelta =
             Accessor.WeaponNameMask_Text.preferredWidth -
             Accessor.WeaponNameMask.rectTransform.sizeDelta.x;
-        if (_widthDelta > 0)
+        if (widthDelta > 0)
         {
             // 대략 한 글자마다 스크롤 시간 1초 증가 (font size가 대략 한 글자 크기)
-            float _scrollDuration =
-                (_widthDelta / Accessor.WeaponNameMask_Text.fontSize) * 1;
+            float scrollDuration =
+                (widthDelta / Accessor.WeaponNameMask_Text.fontSize) * 1;
             DOTween.Sequence()
                 .AppendInterval(1f)
-                .Append(Accessor.WeaponNameMask_Text.rectTransform.DOAnchorPosX(_widthDelta * -1, _scrollDuration))
+                .Append(Accessor.WeaponNameMask_Text.rectTransform.DOAnchorPosX(widthDelta * -1, scrollDuration))
                 .Append(Accessor.WeaponNameMask_Text.DOFade(0f, 1f))
                 .AppendCallback(() => Accessor.WeaponNameMask_Text.rectTransform.anchoredPosition = Vector2.zero)
                 .Append(Accessor.WeaponNameMask_Text.DOFade(1f, 1f))

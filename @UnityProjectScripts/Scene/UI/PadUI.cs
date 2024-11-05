@@ -5,32 +5,32 @@ using UnityEngine;
 
 public class PadUI : MonoBehaviour
 {
-    [SerializeField] private PadAccessor accessor;
-    private Tweener homeButtonTweener;
+    public PadAccessor Accessor;
+    private Tweener _homeButtonTweener;
 
     private void Start()
     {
-        accessor.MainScreen.gameObject.SetActive(true);
-        accessor.StudentListScreen.gameObject.SetActive(false);
-        accessor.ScreenOverlay_Transition.gameObject.SetActive(false);
+        Accessor.MainScreen.gameObject.SetActive(true);
+        Accessor.StudentListScreen.gameObject.SetActive(false);
+        Accessor.ScreenOverlay_Transition.gameObject.SetActive(false);
 
         StartRotateHomeButton(30f);
-        accessor.HomeButton.OnPointerEnterAsObservable()
+        Accessor.HomeButton.OnPointerEnterAsObservable()
             .Subscribe(_ => StartRotateHomeButton(120f))
             .AddTo(gameObject);
-        accessor.HomeButton.OnPointerExitAsObservable()
+        Accessor.HomeButton.OnPointerExitAsObservable()
             .Subscribe(_ => StartRotateHomeButton(30f))
             .AddTo(gameObject);
     }
 
-    private void StartRotateHomeButton(float _rotationPerSec)
+    private void StartRotateHomeButton(float rotationPerSec)
     {
-        homeButtonTweener?.Kill();
+        _homeButtonTweener?.Kill();
 
-        homeButtonTweener = accessor.HomeButton_Border.transform
+        _homeButtonTweener = Accessor.HomeButton_Border.transform
             .DOLocalRotate(
                 new Vector3(0f, 0f, 360),
-                360 / _rotationPerSec)
+                360 / rotationPerSec)
             .SetRelative()
             .SetLoops(-1)
             .SetEase(Ease.Linear);

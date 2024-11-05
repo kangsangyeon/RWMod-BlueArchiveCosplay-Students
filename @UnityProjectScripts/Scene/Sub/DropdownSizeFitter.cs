@@ -8,20 +8,20 @@ public class DropdownSizeFitter : MonoBehaviour
 
     void Update()
     {
-        float _height = source.sizeDelta.y;
+        float height = source.sizeDelta.y;
 
-        var _transform = source.parent;
-        while (_transform != null && _transform != target.transform)
+        var tf = source.parent;
+        while (tf != null && tf != target.transform)
         {
-            var _rect = _transform.GetComponent<RectTransform>();
-            _height += _rect.offsetMax.y * -1;
-            _height += _rect.offsetMin.y;
+            var rect = tf.GetComponent<RectTransform>();
+            height += rect.offsetMax.y * -1;
+            height += rect.offsetMin.y;
 
-            _transform = _transform.parent;
+            tf = tf.parent;
         }
 
-        var _sizeDelta = target.sizeDelta;
-        _sizeDelta.y = Mathf.Min(_height, maxHeight);
-        target.sizeDelta = _sizeDelta;
+        var sizeDelta = target.sizeDelta;
+        sizeDelta.y = Mathf.Min(height, maxHeight);
+        target.sizeDelta = sizeDelta;
     }
 }

@@ -7,6 +7,6 @@ namespace BA
     public static class PatchDisableCameraDriverOnGUI
     {
         [HarmonyPrefix]
-        public static bool prefix() => !BAStudents.DisableCamera;
+        public static bool Prefix() => !BAStudents.DisableCamera;
     }
 }

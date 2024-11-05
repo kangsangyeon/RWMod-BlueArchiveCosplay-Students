@@ -4,70 +4,70 @@ using UnityEngine;
 public class ExSkillInfoUI : MonoBehaviour
 {
     public ExSkillInfoAccessor Accessor;
-    private bool checkScroll;
-    private Sequence descriptionTextSequence;
+    private bool _checkScroll;
+    private Sequence _descriptionTextSequence;
 
-    public void UpdateUI(StudentData _studentData, SkillData _skillData, SkillLevelData _skillLevelData,
-        bool _isMaxLevel, bool _isUnlocked)
+    public void UpdateUI(StudentData studentData, SkillData skillData, SkillLevelData skillLevelData,
+        bool isMaxLevel, bool isUnlocked)
     {
-        Accessor.SkillNameText.text = _skillData.Name;
-        Accessor.SkillDescriptionText.text = _skillLevelData.Description;
-        Accessor.Badge.gameObject.SetActive(_isMaxLevel);
-        Accessor.MaxLevelImage.gameObject.SetActive(_isMaxLevel);
-        Accessor.LevelText.gameObject.SetActive(!_isMaxLevel);
-        Accessor.LevelText.text = $"Lv. {_skillLevelData.Id.Level}";
+        Accessor.SkillNameText.text = skillData.Name;
+        Accessor.SkillDescriptionText.text = skillLevelData.Description;
+        Accessor.Badge.gameObject.SetActive(isMaxLevel);
+        Accessor.MaxLevelImage.gameObject.SetActive(isMaxLevel);
+        Accessor.LevelText.gameObject.SetActive(!isMaxLevel);
+        Accessor.LevelText.text = $"Lv. {skillLevelData.Id.Level}";
 
-        Sprite _thumbnailSprite =
-            GameResource.Load<Sprite>($"Skill/Icon", $"Skill_Icon_{_skillData.IconName}");
-        Color _thumbnailBgColor = UIUtilProcedure.GetAttributeColor(_studentData.Attribute);
+        Sprite thumbnailSprite =
+            GameResource.Load<Sprite>($"Skill/Icon", $"Skill_Icon_{skillData.IconName}");
+        Color thumbnailBgColor = UIUtilProcedure.GetAttributeColor(studentData.Attribute);
 
-        Accessor.Thumbnail.sprite = _thumbnailSprite;
-        Accessor.ThumbnailBackground.color = _thumbnailBgColor;
+        Accessor.Thumbnail.sprite = thumbnailSprite;
+        Accessor.ThumbnailBackground.color = thumbnailBgColor;
 
         // 스킬 레벨의 별만큼 별을 보여줍니다.
         // 단, 기본 정보탭의 스킬 UI에는 별을 보여주지 않습니다.
         if (Accessor.Stars != null && Accessor.Stars.Length > 0)
         {
-            for (int i = 0; i < _skillLevelData.Star; ++i)
+            for (int i = 0; i < skillLevelData.Star; ++i)
                 Accessor.Stars[i].gameObject.SetActive(true);
-            for (int i = _skillLevelData.Star; i < 5; ++i)
+            for (int i = skillLevelData.Star; i < 5; ++i)
                 Accessor.Stars[i].gameObject.SetActive(false);
         }
 
         if (Accessor.LockOverlay != null)
-            Accessor.LockOverlay.gameObject.SetActive(_isUnlocked);
+            Accessor.LockOverlay.gameObject.SetActive(isUnlocked);
         if (Accessor.LockOverlayText != null)
-            Accessor.LockOverlayText.text = $"Lv. {_skillLevelData.Id.Level}";
+            Accessor.LockOverlayText.text = $"Lv. {skillLevelData.Id.Level}";
 
-        checkScroll = false;
+        _checkScroll = false;
     }
 
     private void TryStartScroll()
     {
-        if (checkScroll)
+        if (_checkScroll)
             return;
-        checkScroll = true;
+        _checkScroll = true;
 
         Accessor.SkillDescriptionText.rectTransform.anchoredPosition = Vector2.zero;
-        var _color = Accessor.SkillDescriptionText.color;
-        _color.a = 1f;
-        Accessor.SkillDescriptionText.color = _color;
+        var color = Accessor.SkillDescriptionText.color;
+        color.a = 1f;
+        Accessor.SkillDescriptionText.color = color;
 
         // Description이 Description Mask의 범위를 벗어나는 경우,
         // 세로로 텍스트를 내리는 애니메이션을 재생합니다.
-        descriptionTextSequence?.Kill();
-        float _heightDelta =
+        _descriptionTextSequence?.Kill();
+        float heightDelta =
             Accessor.SkillDescriptionText.preferredHeight -
             Accessor.SkillDescriptionMask.rectTransform.sizeDelta.y;
-        if (_heightDelta > 0)
+        if (heightDelta > 0)
         {
             // 대략 한 줄마다 스크롤 시간 3초 증가 (font size가 대략 한 줄 크기)
-            float _scrollDuration =
-                (_heightDelta / Accessor.SkillDescriptionText.fontSize) * 3f;
-            descriptionTextSequence = DOTween.Sequence();
-            descriptionTextSequence
+            float scrollDuration =
+                (heightDelta / Accessor.SkillDescriptionText.fontSize) * 3f;
+            _descriptionTextSequence = DOTween.Sequence();
+            _descriptionTextSequence
                 .AppendInterval(1f)
-                .Append(Accessor.SkillDescriptionText.rectTransform.DOAnchorPosY(_heightDelta, _scrollDuration))
+                .Append(Accessor.SkillDescriptionText.rectTransform.DOAnchorPosY(heightDelta, scrollDuration))
                 .Append(Accessor.SkillDescriptionText.DOFade(0f, 1f))
                 .AppendCallback(() => Accessor.SkillDescriptionText.rectTransform.anchoredPosition = Vector2.zero)
                 .Append(Accessor.SkillDescriptionText.DOFade(1f, 1f))
