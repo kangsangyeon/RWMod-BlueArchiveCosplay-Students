@@ -10,6 +10,9 @@ namespace BA
     [StaticConstructorOnStartup]
     public static class BAStudents
     {
+        private static readonly FieldInfo FieldInfo_PawnSkillTracker_Pawn =
+            typeof(Pawn_SkillTracker).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
+
         public static bool DisableIMGUI = false;
         public static bool DisableCamera = false;
         public static bool DisableAudio = false;
@@ -30,6 +33,9 @@ namespace BA
 
             Harmony_Pawn_SpawnSetup.OnPostfix
                 .Subscribe(x => OnPawnSetup(x.instance, x.map, x.respawningAfterLoad));
+
+            Harmony_Pawn_SkillTracker_Learn.OnPostfix
+                .Subscribe(x => OnPawnSkillTrackerLearn(x.instance, x.sDef, x.xp, x.direct, x.ignoreLearnRate));
 
             TrySetup();
         }
@@ -71,6 +77,17 @@ namespace BA
                 return;
             instance.style.BodyTattoo = TattooDefOf.NoTattoo_Body;
             instance.style.FaceTattoo = TattooDefOf.NoTattoo_Face;
+        }
+
+        private static void OnPawnSkillTrackerLearn(Pawn_SkillTracker instance, SkillDef sDef, float xp, bool direct, bool ignoreLearnRate)
+        {
+            var pawn = FieldInfo_PawnSkillTracker_Pawn.GetValue(instance) as Pawn;
+            if (pawn == null)
+                return;
+            if (pawn.kindDef.defName.StartsWith("BA") == false) // 우리 프로젝트에서 정의한 pawnkind 아니면 건너뜀
+                return;
+            var pawnComp = pawn.GetComp<Comp_BAPawn>();
+            pawnComp.Exp += Mathf.RoundToInt(xp);
         }
     }
 }

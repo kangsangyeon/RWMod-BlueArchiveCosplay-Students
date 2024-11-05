@@ -57,4 +57,16 @@ namespace BA
             OnPostfix.OnNext((__instance, map, respawningAfterLoad));
         }
     }
+
+    [HarmonyPatch(typeof(Pawn_SkillTracker), "Learn")]
+    public static class Harmony_Pawn_SkillTracker_Learn
+    {
+        public static Subject<(Pawn_SkillTracker instance, SkillDef sDef, float xp, bool direct, bool ignoreLearnRate)> OnPostfix = new();
+
+        [HarmonyPostfix]
+        public static void Postfix(Pawn_SkillTracker __instance, SkillDef sDef, float xp, bool direct, bool ignoreLearnRate)
+        {
+            OnPostfix.OnNext((__instance, sDef, xp, direct, ignoreLearnRate));
+        }
+    }
 }
