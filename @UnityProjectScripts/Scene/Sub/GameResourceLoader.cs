@@ -4,6 +4,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using TemplateTable;
 using UnityEngine;
+using Object = System.Object;
 
 public class GameResourceLoader : MonoBehaviour
 {
@@ -57,6 +58,7 @@ public class GameResourceLoader : MonoBehaviour
         var studentAttributeTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttribute").text;
         var studentAttributeLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttributeLevel").text;
         var studentLevelRequiredExpTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentLevelRequiredExp").text;
+        var constValueTableJson = GameResource.Load<TextAsset>("Data", "DataTable_Const").text;
         GameResource.StudentTable = LoadTemplateTable<int, StudentData>(studentTableJson);
         GameResource.ClubTable = LoadTemplateTable<int, ClubData>(clubTableJson);
         GameResource.SchoolTable = LoadTemplateTable<int, SchoolData>(schoolTableJson);
@@ -70,6 +72,12 @@ public class GameResourceLoader : MonoBehaviour
             LoadTemplateTable<(StudentAttribute, int), StudentAttributeLevelData>(studentAttributeLevelTableJson);
         GameResource.StudentLevelRequiredExpTable =
             LoadTemplateTable<int, StudentLevelRequiredExpData>(studentLevelRequiredExpTableJson);
+
+        var constValueTable = LoadTemplateTable<string, ConstValue>(constValueTableJson);
+        GameResource.Const = new Const()
+        {
+            PawnCompSettings = constValueTable.TryGet("PawnCompSettings").Value as PawnCompSettings,
+        };
     }
 
     private TemplateTable<TKey, TValue> LoadTemplateTable<TKey, TValue>(string json)

@@ -82,7 +82,7 @@ namespace BA
         {
             if (!parent.Spawned)
                 return;
-            if (!parent.IsHashIntervalTick(Const.TickPerSecond)) // 1초마다 tick 실행
+            if (!parent.IsHashIntervalTick(GameResource.Const.PawnCompSettings.Tick)) // 1초마다 tick 실행
                 return;
             // Log.Message(
             //     $"BAPawnComp::CompTick() : id: {StudentId}, ageTracker.CurLifeStage.factor: {Owner.ageTracker.CurLifeStage.meleeDamageFactor}, GetStatValue({Owner.GetStatValue(StatDefOf.MeleeDamageFactor)})");
@@ -110,7 +110,8 @@ namespace BA
 
         private void GainExpTick()
         {
-            Exp += 1000; // temp: 임시적으로 틱당 1000 경험치 획득
+            Exp += GameResource.Const.PawnCompSettings.GainExpPerTick;
+            Log.Message($"gain exp, ({Exp})");
         }
 
         private void UpdateRequiredExp()

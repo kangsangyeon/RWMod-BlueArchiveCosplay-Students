@@ -6,6 +6,7 @@ public static class GameResource
 {
     public static SaveData Save;
 
+    public static Const Const;
     public static TemplateTable<int, SchoolData> SchoolTable;
     public static TemplateTable<int, ClubData> ClubTable;
     public static TemplateTable<int, StudentData> StudentTable;
@@ -16,6 +17,7 @@ public static class GameResource
     public static TemplateTable<StudentAttribute, StudentAttributeData> StudentAttributeTable;
     public static TemplateTable<(StudentAttribute, int), StudentAttributeLevelData> StudentAttributeLevelTable;
     public static TemplateTable<int, StudentLevelRequiredExpData> StudentLevelRequiredExpTable;
+    public static TemplateTable<string, object> ConstValueTable;
 
     public static AssetBundle Bundle;
     public static GameObject ClubPrefab;
