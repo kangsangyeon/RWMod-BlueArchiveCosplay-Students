@@ -58,7 +58,7 @@ public class GameResourceLoader : MonoBehaviour
         var studentAttributeTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttribute").text;
         var studentAttributeLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttributeLevel").text;
         var studentLevelRequiredExpTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentLevelRequiredExp").text;
-        var constValueTableJson = GameResource.Load<TextAsset>("Data", "DataTable_Const").text;
+        var constValueTableJson = GameResource.Load<TextAsset>("Data", "DataTable_ConstValue").text;
         GameResource.StudentTable = LoadTemplateTable<int, StudentData>(studentTableJson);
         GameResource.ClubTable = LoadTemplateTable<int, ClubData>(clubTableJson);
         GameResource.SchoolTable = LoadTemplateTable<int, SchoolData>(schoolTableJson);
