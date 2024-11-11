@@ -11,7 +11,7 @@ namespace BA
         public static void TestGetRandomItem()
         {
             var item = WeightTables.GetRandomItem("table_character-gacha") as CharacterTableItem;
-            Log.Message($"random item: {item.pawnKindTemplateDef.defName} (weight: {item.weight})");
+            Log.Message($"random item: {item.PawnKindTemplateDef.defName} (weight: {item.Weight})");
         }
     }
 }

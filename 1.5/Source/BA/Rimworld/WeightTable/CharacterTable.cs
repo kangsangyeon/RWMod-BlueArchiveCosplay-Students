@@ -7,16 +7,16 @@ namespace BA
     public class CharacterTableDef : Def, IWeightTable
     {
         List<IWeightTableItem> IWeightTable.Items =>
-            items.Select(x => x as IWeightTableItem).ToList();
+            Items.Select(x => x as IWeightTableItem).ToList();
 
-        public List<CharacterTableItem> items;
+        public List<CharacterTableItem> Items;
     }
 
     public class CharacterTableItem : IWeightTableItem
     {
-        public float Weight => weight;
+        float IWeightTableItem.Weight => Weight;
 
-        public PawnKindTemplateDef pawnKindTemplateDef;
-        public int weight;
+        public PawnKindTemplateDef PawnKindTemplateDef;
+        public int Weight;
     }
 }
