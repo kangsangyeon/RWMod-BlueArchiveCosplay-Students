@@ -492,9 +492,7 @@
     <Compile Include="Plugins\TemplateTable\TemplateTableJsonSaver.cs" />
     <Compile Include="Resource\DataHelper.cs" />
     <Compile Include="Resource\Data\ClubData.cs" />
-    <Compile Include="Resource\Data\Const\Const.cs" />
-    <Compile Include="Resource\Data\Const\ConstValue.cs" />
-    <Compile Include="Resource\Data\Const\PawnCompSettings.cs" />
+    <Compile Include="Resource\Data\Const.cs" />
     <Compile Include="Resource\Data\DataFile.cs" />
     <Compile Include="Resource\Data\PassiveSkillData.cs" />
     <Compile Include="Resource\Data\SchoolData.cs" />

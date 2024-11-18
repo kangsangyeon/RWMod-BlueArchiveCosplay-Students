@@ -76,7 +76,7 @@ public class GameResourceLoader : MonoBehaviour
         var constValueTable = LoadTemplateTable<string, ConstValue>(constValueTableJson);
         GameResource.Const = new Const()
         {
-            PawnCompSettings = constValueTable.TryGet("PawnCompSettings").Value as PawnCompSettings,
+            PawnCompSettings = constValueTable.TryGet(nameof(PawnCompSettings)).Value as PawnCompSettings,
         };
     }
 
