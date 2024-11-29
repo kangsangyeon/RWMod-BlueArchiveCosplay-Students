@@ -125,10 +125,19 @@ public class StudentInfoScreenUI : MonoBehaviour
         // 따라서 레이아웃을 강제로 새로고침합니다.
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)Accessor.AttributeBox.transform);
 
-        // todo: level text 설정
-        // Accessor.LevelText.text = 
-        // todo: exp fill 설정
-        // Accessor.ExpBar.fillAmount
+
+        // level text, exp fill 설정
+        var saveData = GameResource.Save.StudentSaveData[CharId.Value];
+        UpdateStudentSave(saveData);
+        GameResource.Save.StudentSaveData[CharId.Value]
+            .ObserveEveryValueChanged(x => x.Level)
+            .Subscribe(_ => UpdateStudentSave(saveData))
+            .AddTo(gameObject);
+        GameResource.Save.StudentSaveData[CharId.Value]
+            .ObserveEveryValueChanged(x => x.Exp)
+            .Subscribe(_ => UpdateStudentSave(saveData))
+            .AddTo(gameObject);
+
 
         // 캐릭터와 헤일로 애니메이션을 재생합니다.
         var fullshotRect = (RectTransform)Accessor.FullshotImage.transform;
@@ -284,6 +293,19 @@ public class StudentInfoScreenUI : MonoBehaviour
                 Accessor.TabButtonBox_ShinbiTabButton_Text.color = enableTextColor;
                 break;
         }
+    }
+
+    private void UpdateStudentSave(StudentSaveData data)
+    {
+        // var gainExpFromCurrLevelStart = data.Exp;
+        // for (int i = 1; i < data.Level - 1; ++i)
+        //     gainExpFromCurrLevelStart -= GameResource.StudentLevelRequiredExpTable[i].Value;
+
+        var requiredExp =
+            GameResource.StudentLevelRequiredExpTable[data.Level].Value;
+        Accessor.LevelText.text = $"Lv.{data.Level}";
+        Accessor.ExpBar.FillAmount = (float)data.Exp / requiredExp;
+        Accessor.ExpText.text = $"{data.Exp} / {requiredExp}";
     }
 
     private void TryStartScroll()

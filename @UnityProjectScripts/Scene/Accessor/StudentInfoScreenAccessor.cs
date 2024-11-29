@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class StudentInfoScreenAccessor : MonoBehaviour
 {
-    public Image ExpBar;
+    public SlicedProgressBar ExpBar;
+    public Text ExpText;
     public Text LevelText;
     public Image AttributeBox;
     public Image AttributeIcon;

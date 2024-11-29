@@ -94,36 +94,21 @@ public class GameResourceLoader : MonoBehaviour
 
     private void TryInitializeSaveData()
     {
-        if (GameResource.Save == null)
-        {
-            var save = new SaveData();
-            save.Pyroxenes = 0;
-            save.StudentSaveData =
-                GameResource.StudentTable.Values.ToDictionary(
-                    x => x.Id,
-                    x => new StudentSaveData()
-                    {
-                        Id = x.Id,
-                        Unlock = true,
-                        Level = 1,
-                        Exp = 0,
-                    });
-
-            GameResource.Save = save;
+        if (GameResource.Save != null)
             return;
-        }
+        var save = new SaveData();
+        save.Pyroxenes = 0;
+        save.StudentSaveData =
+            GameResource.StudentTable.Values.ToDictionary(
+                x => x.Id,
+                x => new StudentSaveData()
+                {
+                    Id = x.Id,
+                    Unlock = true,
+                    Level = 1,
+                    Exp = 0,
+                });
 
-        foreach (var data in GameResource.StudentTable.Values)
-        {
-            if (GameResource.Save.StudentSaveData.ContainsKey(data.Id))
-                continue;
-            GameResource.Save.StudentSaveData.Add(data.Id, new StudentSaveData()
-            {
-                Id = data.Id,
-                Unlock = true,
-                Level = 1,
-                Exp = 0,
-            });
-        }
+        GameResource.Save = save;
     }
 }

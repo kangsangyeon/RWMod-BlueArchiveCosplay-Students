@@ -8,6 +8,7 @@ namespace BA
 {
     public class Comp_BAPawn : ThingComp
     {
+        public static int MaxLevel => GameResource.Const.PawnCompSettings.MaxLevel;
         public static int Tick => GameResource.Const.PawnCompSettings.Tick;
         public static int GainExpPerTick => GameResource.Const.PawnCompSettings.GainExpPerTick;
         public static float GainExpBonusThreshold => GameResource.Const.PawnCompSettings.GainExpBonusThreshold;
@@ -16,12 +17,25 @@ namespace BA
         public static float GainExpDayLimitMultiplier => GameResource.Const.PawnCompSettings.GainExpDayLimitMultiplier;
 
         public int StudentId;
-        public int Level = -1;
         public int RequiredExp = int.MaxValue;
 
+        private int _level;
         private int _exp;
         private Dictionary<SkillDef, int> _gainExpDayCount = new();
         private int _lastDayLimitResetTimestamp = -1;
+
+        public int Level
+        {
+            get => _level;
+            set
+            {
+                if (_level == value)
+                    return;
+                _level = value;
+                TryLevelUpTick();
+                ModifySaveData();
+            }
+        }
 
         public int Exp
         {
@@ -32,6 +46,7 @@ namespace BA
                     return;
                 _exp = value;
                 TryLevelUpTick();
+                ModifySaveData();
             }
         }
 
@@ -56,8 +71,6 @@ namespace BA
                 _gainExpDayCount[sDef] = 0;
             _gainExpDayCount[sDef] = ++dayCount;
 
-            Log.Message($"{GainExpBonusThreshold}, {GainExpBonusMultiplier}, {GainExpDayLimitCount}, {GainExpDayLimitMultiplier}");
-
             // 예: threshold가 0.5로 설정된 상태에서 mood가 0.75이면 delta는 0.5가 됨.
             // 예2: threshold가 0.4로 설정된 상태에서 mood가 0.4이면 delta는 0이 됨.
             float bonusDelta =
@@ -74,7 +87,7 @@ namespace BA
         public override void PostExposeData()
         {
             Scribe_Values.Look(ref StudentId, $"BA_{nameof(StudentId)}", forceSave: true);
-            Scribe_Values.Look(ref Level, $"BA_{nameof(Level)}", forceSave: true);
+            Scribe_Values.Look(ref _level, $"BA_{nameof(_level)}", forceSave: true);
             Scribe_Values.Look(ref _exp, $"BA_{nameof(_exp)}", forceSave: true);
             Scribe_Values.Look(ref RequiredExp, $"BA_{nameof(RequiredExp)}", forceSave: true);
             Scribe_Values.Look(ref _lastDayLimitResetTimestamp, $"BA_{nameof(_lastDayLimitResetTimestamp)}");
@@ -92,6 +105,8 @@ namespace BA
                 Level = 1;
                 Exp = 0;
                 UpdateRequiredExp();
+                _lastDayLimitResetTimestamp = Find.TickManager.TicksGame;
+                ModifySaveData();
 
                 // 스킬 레벨 초기화
                 ShootingSkillRecord.Level = StudentData.DefaultShooting;
@@ -152,7 +167,7 @@ namespace BA
         {
             UpdateRequiredExp();
 
-            while (Exp > RequiredExp && Level < Const.PawnMaxLevel)
+            while (Exp > RequiredExp && Level < MaxLevel)
             {
                 Exp -= RequiredExp;
                 ++Level;
@@ -160,7 +175,7 @@ namespace BA
                 UpdateRequiredExp();
             }
 
-            if (Level >= Const.PawnMaxLevel)
+            if (Level >= MaxLevel)
             {
                 Exp = 0;
             }
@@ -169,14 +184,12 @@ namespace BA
         private void GainExpTick()
         {
             Exp += GameResource.Const.PawnCompSettings.GainExpPerTick;
+            ModifySaveData();
         }
 
         private void UpdateRequiredExp()
         {
-            if (Level < 0 || Level >= Const.PawnMaxLevel)
-                RequiredExp = 0;
-            else
-                RequiredExp = GameResource.StudentLevelRequiredExpTable[Level + 1].Value;
+            RequiredExp = GetRequiredExpAt(Level);
         }
 
         private void TryLevelUpSkills()
@@ -194,6 +207,20 @@ namespace BA
             MedicalSkillRecord.Level += attributeLevelData.Medical;
             SocialSkillRecord.Level += attributeLevelData.Social;
             IntellectualSkillRecord.Level += attributeLevelData.Intellectual;
+        }
+
+        private void ModifySaveData()
+        {
+            GameResource.Save.StudentSaveData[StudentId].Unlock = true;
+            GameResource.Save.StudentSaveData[StudentId].Level = Level;
+            GameResource.Save.StudentSaveData[StudentId].Exp = Exp;
+        }
+
+        private int GetRequiredExpAt(int level)
+        {
+            if (level < 0 || level >= MaxLevel)
+                return 0;
+            return GameResource.StudentLevelRequiredExpTable[Level + 1].Value;
         }
     }
 }

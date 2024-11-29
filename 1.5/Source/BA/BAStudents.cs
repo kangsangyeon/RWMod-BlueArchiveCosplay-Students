@@ -1,9 +1,11 @@
+using System;
 using System.Linq;
 using System.Reflection;
 using RimWorld;
 using UniRx;
 using UnityEngine;
 using Verse;
+using Object = UnityEngine.Object;
 
 namespace BA
 {
@@ -62,9 +64,24 @@ namespace BA
 
         private static void OnUnityLogMessageReceived(string log, string stackTrace, LogType type)
         {
-            // BAU: blue archive unity
-            if (log.StartsWith("BAU"))
-                Log.Message($"{type.ToString()}::{log}\n{stackTrace}");
+            bool isBALog = stackTrace.Split('\n').Any(x => x.StartsWith("BA."));
+            if (isBALog == false)
+                return;
+            var message = $"{type}::{log}\n{stackTrace}";
+            switch (type)
+            {
+                case LogType.Error:
+                case LogType.Assert:
+                case LogType.Exception:
+                    Log.Error(message);
+                    break;
+                case LogType.Warning:
+                    Log.Warning(message);
+                    break;
+                case LogType.Log:
+                    Log.Message(message);
+                    break;
+            }
         }
 
         private static void OnPawnSetup(Pawn instance, Map map, bool respawningAfterLoad)
