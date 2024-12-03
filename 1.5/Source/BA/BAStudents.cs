@@ -86,11 +86,7 @@ namespace BA
 
         private static void OnPawnSetup(Pawn instance, Map map, bool respawningAfterLoad)
         {
-            if (instance.kindDef.race.race.Humanlike == false) // 사람이 아니면 건너뜀
-                return;
-            if (instance.kindDef.race.race.Animal) // 동물이면 건너뜀
-                return;
-            if (instance.kindDef.defName.StartsWith("BA") == false) // 우리 프로젝트에서 정의한 pawnkind 아니면 건너뜀
+            if (BAUtil.IsBAPawn(instance, out _) == false)
                 return;
             instance.style.BodyTattoo = TattooDefOf.NoTattoo_Body;
             instance.style.FaceTattoo = TattooDefOf.NoTattoo_Face;
@@ -99,12 +95,9 @@ namespace BA
         private static void OnPawnSkillTrackerLearn(Pawn_SkillTracker instance, SkillDef sDef, float xp, bool direct, bool ignoreLearnRate)
         {
             var pawn = FieldInfo_PawnSkillTracker_Pawn.GetValue(instance) as Pawn;
-            if (pawn == null)
+            if (BAUtil.IsBAPawn(pawn, out var comp) == false)
                 return;
-            if (pawn.kindDef.defName.StartsWith("BA") == false) // 우리 프로젝트에서 정의한 pawnkind 아니면 건너뜀
-                return;
-            var pawnComp = pawn.GetComp<Comp_BAPawn>();
-            pawnComp.OnSkillTrackerLearn(sDef, xp);
+            comp.OnSkillTrackerLearn(sDef, xp);
         }
     }
 }

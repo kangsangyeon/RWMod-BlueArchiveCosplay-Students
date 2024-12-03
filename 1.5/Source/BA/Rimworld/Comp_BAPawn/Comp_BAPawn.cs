@@ -167,7 +167,7 @@ namespace BA
         {
             UpdateRequiredExp();
 
-            while (Exp > RequiredExp && Level < MaxLevel)
+            while (Exp >= RequiredExp && Level < MaxLevel)
             {
                 Exp -= RequiredExp;
                 ++Level;

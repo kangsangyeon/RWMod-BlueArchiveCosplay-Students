@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingCategoryDef>
+    <defName>BA_Item_Resource</defName>
+    <label>BA Resources</label>
+    <parent>AnimalProductRaw</parent>
+    <!-- <iconPath>UI/Icons/ThingCategories/BA_Item_Resource</iconPath> -->
+  </ThingCategoryDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>BA_Item_Report_N</defName>
+    <label>BA Report Normal</label>
+    <description>BA Report Normal</description>
+    <graphicData>
+      <texPath>Things/Item/Consumable/Item_Icon_Report_N</texPath>
+    </graphicData>
+    <thingCategories>
+      <li>BA_Item_Resource</li>
+    </thingCategories>
+
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <Mass>0.03</Mass>
+      <MaxHitPoints>30</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <MarketValue>1.1</MarketValue>
+      <DeteriorationRate>3</DeteriorationRate>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <stackLimit>100</stackLimit>
+
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useLabel>Use {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <useDuration>0</useDuration>
+      </li>
+      <li Class="BA.CompProperties_UseEffectBAPawnGainExp">
+        <exp>500</exp>
+      </li>
+    </comps>
+
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <foodType>AnimalProduct, Fluid</foodType>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_UseThing" />
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+
+</Defs>
