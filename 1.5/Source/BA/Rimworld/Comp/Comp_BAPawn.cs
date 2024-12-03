@@ -6,6 +6,11 @@ using Verse;
 
 namespace BA
 {
+    public class CompProperties_BAPawn : CompProperties
+    {
+        public CompProperties_BAPawn() => this.compClass = typeof(Comp_BAPawn);
+    }
+
     public class Comp_BAPawn : ThingComp
     {
         public static int MaxLevel => GameResource.Const.PawnCompSettings.MaxLevel;
@@ -81,7 +86,6 @@ namespace BA
             float dayLimitMultiplier = dayCount > GainExpDayLimitCount ? GainExpDayLimitMultiplier : 1f; // 하루 경험치 제한 횟수보다 카운팅이 높아지면 곱 적용
             float exp = xp * bonusMultiplier * dayLimitMultiplier;
             Exp += Mathf.RoundToInt(exp);
-            Log.Message($"{bonusDelta}, {dayCount}, {xp}*{bonusMultiplier}*{dayLimitMultiplier}={exp}");
         }
 
         public override void PostExposeData()
@@ -220,7 +224,7 @@ namespace BA
         {
             if (level < 0 || level >= MaxLevel)
                 return 0;
-            return GameResource.StudentLevelRequiredExpTable[Level + 1].Value;
+            return GameResource.StudentLevelRequiredExpTable[Level].Value;
         }
     }
 }
