@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+
+
   <ThingCategoryDef>
     <defName>BA_Item_Resource</defName>
     <label>BA Resources</label>
     <parent>AnimalProductRaw</parent>
     <!-- <iconPath>UI/Icons/ThingCategories/BA_Item_Resource</iconPath> -->
   </ThingCategoryDef>
+
+  <!--Normal-->
 
   <ThingDef ParentName="OrganicProductBase">
     <defName>BA_Item_Report_N</defName>
@@ -37,7 +41,139 @@
         <useDuration>0</useDuration>
       </li>
       <li Class="BA.CompProperties_UseEffectBAPawnGainExp">
+        <exp>50</exp>
+      </li>
+    </comps>
+
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <foodType>AnimalProduct, Fluid</foodType>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_UseThing" />
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+
+   <!--Rare-->
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>BA_Item_Report_R</defName>
+    <label>BA Report Rare</label>
+    <description>BA Report Rare</description>
+    <graphicData>
+      <texPath>Things/Item/Consumable/Item_Icon_Report_R</texPath>
+    </graphicData>
+    <thingCategories>
+      <li>BA_Item_Resource</li>
+    </thingCategories>
+
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <Mass>0.03</Mass>
+      <MaxHitPoints>30</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <MarketValue>1.1</MarketValue>
+      <DeteriorationRate>3</DeteriorationRate>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <stackLimit>100</stackLimit>
+
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useLabel>Use {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <useDuration>0</useDuration>
+      </li>
+      <li Class="BA.CompProperties_UseEffectBAPawnGainExp">
         <exp>500</exp>
+      </li>
+    </comps>
+
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <foodType>AnimalProduct, Fluid</foodType>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_UseThing" />
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+
+  <!--SuperRare-->
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>BA_Item_Report_SR</defName>
+    <label>BA Report SuperRare</label>
+    <description>BA Report SuperRare</description>
+    <graphicData>
+      <texPath>Things/Item/Consumable/Item_Icon_Report_SR</texPath>
+    </graphicData>
+    <thingCategories>
+      <li>BA_Item_Resource</li>
+    </thingCategories>
+
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <Mass>0.03</Mass>
+      <MaxHitPoints>30</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <MarketValue>1.1</MarketValue>
+      <DeteriorationRate>3</DeteriorationRate>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <stackLimit>100</stackLimit>
+
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useLabel>Use {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <useDuration>0</useDuration>
+      </li>
+      <li Class="BA.CompProperties_UseEffectBAPawnGainExp">
+        <exp>2000</exp>
+      </li>
+    </comps>
+
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <foodType>AnimalProduct, Fluid</foodType>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_UseThing" />
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+
+  <!--UltraRare-->
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>BA_Item_Report_UR</defName>
+    <label>BA Report UltraRare</label>
+    <description>BA Report UltraRare</description>
+    <graphicData>
+      <texPath>Things/Item/Consumable/Item_Icon_Report_UR</texPath>
+    </graphicData>
+    <thingCategories>
+      <li>BA_Item_Resource</li>
+    </thingCategories>
+
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <Mass>0.03</Mass>
+      <MaxHitPoints>30</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <MarketValue>1.1</MarketValue>
+      <DeteriorationRate>3</DeteriorationRate>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <stackLimit>100</stackLimit>
+
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useLabel>Use {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+        <useDuration>0</useDuration>
+      </li>
+      <li Class="BA.CompProperties_UseEffectBAPawnGainExp">
+        <exp>10000</exp>
       </li>
     </comps>
 
