@@ -11,7 +11,6 @@ public class Const
 
 public class PawnCompSettings
 {
-    public int MaxLevel;
     public int Tick;
     public int GainExpPerTick;
     public float GainExpBonusThreshold;

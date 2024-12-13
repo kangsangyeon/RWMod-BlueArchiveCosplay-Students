@@ -12,4 +12,5 @@ public class StudentSaveData
     public bool Unlock;
     public int Level;
     public int Exp;
+    public int Shinbi;
 }

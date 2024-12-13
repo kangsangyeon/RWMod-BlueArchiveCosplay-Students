@@ -297,12 +297,14 @@ public class StudentInfoScreenUI : MonoBehaviour
 
     private void UpdateStudentSave(StudentSaveData data)
     {
-        // var gainExpFromCurrLevelStart = data.Exp;
-        // for (int i = 1; i < data.Level - 1; ++i)
-        //     gainExpFromCurrLevelStart -= GameResource.StudentLevelRequiredExpTable[i].Value;
-
         var requiredExp =
             GameResource.StudentLevelRequiredExpTable[data.Level].Value;
+        var star =
+            GameResource.StudentTable[data.Id].DefaultStar + data.Shinbi;
+        var levelLimit =
+            GameResource.StudentLevelLimitTable[star];
+        if (data.Level >= levelLimit.Value)
+            requiredExp = 0; // 레벨 상한에 도달했으면 0/0으로 표기
         Accessor.LevelText.text = $"Lv.{data.Level}";
         Accessor.ExpBar.FillAmount = (float)data.Exp / requiredExp;
         Accessor.ExpText.text = $"{data.Exp} / {requiredExp}";

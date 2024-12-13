@@ -502,6 +502,7 @@
     <Compile Include="Resource\Data\StudentAttributeLevelData.cs" />
     <Compile Include="Resource\Data\StudentData.cs" />
     <Compile Include="Resource\Data\StudentLevelRequiredExpData.cs" />
+    <Compile Include="Resource\Data\StudentLevelLimitData.cs" />
     <Compile Include="Resource\Data\WeaponData.cs" />
     <Compile Include="Resource\GameResource.cs" />
     <Compile Include="Resource\SaveData.cs" />

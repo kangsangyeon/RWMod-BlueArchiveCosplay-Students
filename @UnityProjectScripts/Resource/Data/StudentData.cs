@@ -17,6 +17,7 @@ public class StudentData
     public int SkillId;
     public int PassiveSkillId;
     public int WeaponId;
+    public int DefaultStar;
     public int? MaxSkillLevel;
 
     public int DefaultShooting;

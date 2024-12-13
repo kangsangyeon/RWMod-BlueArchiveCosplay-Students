@@ -13,7 +13,6 @@ namespace BA
 
     public class Comp_BAPawn : ThingComp
     {
-        public static int MaxLevel => GameResource.Const.PawnCompSettings.MaxLevel;
         public static int Tick => GameResource.Const.PawnCompSettings.Tick;
         public static int GainExpPerTick => GameResource.Const.PawnCompSettings.GainExpPerTick;
         public static float GainExpBonusThreshold => GameResource.Const.PawnCompSettings.GainExpBonusThreshold;
@@ -22,6 +21,7 @@ namespace BA
         public static float GainExpDayLimitMultiplier => GameResource.Const.PawnCompSettings.GainExpDayLimitMultiplier;
 
         public int StudentId;
+        public int Shinbi;
         public int RequiredExp = int.MaxValue;
 
         private int _level;
@@ -54,6 +54,12 @@ namespace BA
                 ModifySaveData();
             }
         }
+
+        public int Star =>
+            StudentData.DefaultStar + Shinbi;
+
+        public int LevelLimit =>
+            GameResource.StudentLevelLimitTable[Star].Value;
 
         public StudentData StudentData => GameResource.StudentTable[StudentId];
         public Pawn Owner => parent as Pawn;
@@ -91,9 +97,10 @@ namespace BA
         public override void PostExposeData()
         {
             Scribe_Values.Look(ref StudentId, $"BA_{nameof(StudentId)}", forceSave: true);
+            Scribe_Values.Look(ref Shinbi, $"BA_{nameof(Shinbi)}", forceSave: true);
+            Scribe_Values.Look(ref RequiredExp, $"BA_{nameof(RequiredExp)}", forceSave: true);
             Scribe_Values.Look(ref _level, $"BA_{nameof(_level)}", forceSave: true);
             Scribe_Values.Look(ref _exp, $"BA_{nameof(_exp)}", forceSave: true);
-            Scribe_Values.Look(ref RequiredExp, $"BA_{nameof(RequiredExp)}", forceSave: true);
             Scribe_Values.Look(ref _lastDayLimitResetTimestamp, $"BA_{nameof(_lastDayLimitResetTimestamp)}");
         }
 
@@ -171,17 +178,17 @@ namespace BA
         {
             UpdateRequiredExp();
 
-            while (Exp >= RequiredExp && Level < MaxLevel)
+            while (_exp >= RequiredExp && Level < LevelLimit)
             {
-                Exp -= RequiredExp;
+                _exp -= RequiredExp;
                 ++Level;
                 TryLevelUpSkills();
                 UpdateRequiredExp();
             }
 
-            if (Level >= MaxLevel)
+            if (Level >= LevelLimit)
             {
-                Exp = 0;
+                _exp = 0;
             }
         }
 
@@ -218,11 +225,12 @@ namespace BA
             GameResource.Save.StudentSaveData[StudentId].Unlock = true;
             GameResource.Save.StudentSaveData[StudentId].Level = Level;
             GameResource.Save.StudentSaveData[StudentId].Exp = Exp;
+            GameResource.Save.StudentSaveData[StudentId].Shinbi = Shinbi;
         }
 
         private int GetRequiredExpAt(int level)
         {
-            if (level < 0 || level >= MaxLevel)
+            if (level < 0 || level >= LevelLimit)
                 return 0;
             return GameResource.StudentLevelRequiredExpTable[Level].Value;
         }

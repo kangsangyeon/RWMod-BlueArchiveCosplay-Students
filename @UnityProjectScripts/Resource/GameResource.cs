@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Resource.Data;
 using UnityEngine;
 using TemplateTable;
 
@@ -17,6 +18,7 @@ public static class GameResource
     public static TemplateTable<StudentAttribute, StudentAttributeData> StudentAttributeTable;
     public static TemplateTable<(StudentAttribute, int), StudentAttributeLevelData> StudentAttributeLevelTable;
     public static TemplateTable<int, StudentLevelRequiredExpData> StudentLevelRequiredExpTable;
+    public static TemplateTable<int, StudentLevelLimitData> StudentLevelLimitTable;
     public static TemplateTable<string, object> ConstValueTable;
 
     public static AssetBundle Bundle;
