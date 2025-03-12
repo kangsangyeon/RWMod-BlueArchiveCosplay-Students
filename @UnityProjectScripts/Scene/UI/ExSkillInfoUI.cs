@@ -25,17 +25,27 @@ public class ExSkillInfoUI : MonoBehaviour
 
         // 스킬 레벨의 별만큼 별을 보여줍니다.
         // 단, 기본 정보탭의 스킬 UI에는 별을 보여주지 않습니다.
-        if (Accessor.Stars != null && Accessor.Stars.Length > 0)
+        if (Accessor.Stars != null && Accessor.Stars.Length > 0 && Accessor.BigStar != null)
         {
-            for (int i = 0; i < skillLevelData.Star; ++i)
-                Accessor.Stars[i].gameObject.SetActive(true);
-            for (int i = skillLevelData.Star; i < 5; ++i)
-                Accessor.Stars[i].gameObject.SetActive(false);
+            if (skillLevelData.Star < 6)
+            {
+                for (int i = 0; i < skillLevelData.Star; ++i)
+                    Accessor.Stars[i].gameObject.SetActive(true);
+                for (int i = skillLevelData.Star; i < 5; ++i)
+                    Accessor.Stars[i].gameObject.SetActive(false);
+                Accessor.BigStar.gameObject.SetActive(false);
+            }
+            else
+            {
+                for (int i = 0; i < 5; ++i)
+                    Accessor.Stars[i].gameObject.SetActive(false);
+                Accessor.BigStar.gameObject.SetActive(true);
+            }
         }
 
         if (Accessor.LockOverlay != null)
             Accessor.LockOverlay.gameObject.SetActive(isUnlocked);
-        if (Accessor.LockOverlayText != null)
+        if (Accessor.LockOverlay != null)
             Accessor.LockOverlayText.text = $"Lv. {skillLevelData.Id.Level}";
 
         _checkScroll = false;
