@@ -12,7 +12,7 @@ public class ExSkillInfoUI : MonoBehaviour
     private bool _checkScroll;
     private Coroutine _shinyCoroutine;
 
-    private void OnEnable()
+    private void Start()
     {
         // big star의 shiny 애니메이션을 재생.
         if (Accessor.Stars != null && Accessor.Stars.Length > 0 && Accessor.BigStar != null)
@@ -25,16 +25,6 @@ public class ExSkillInfoUI : MonoBehaviour
 
             if (_skillLevelData.Star > 5)
                 _shinyCoroutine = StartCoroutine(CoBigStarShiny());
-        }
-    }
-
-    private void OnDisable()
-    {
-        // big star의 shiny 애니메이션을 중단.
-        if (_shinyCoroutine != null)
-        {
-            StopCoroutine(_shinyCoroutine);
-            _shinyCoroutine = null;
         }
     }
 
