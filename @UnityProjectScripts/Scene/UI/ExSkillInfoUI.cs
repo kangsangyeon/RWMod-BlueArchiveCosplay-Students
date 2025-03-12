@@ -1,14 +1,49 @@
+using System;
+using System.Collections;
+using Coffee.UIExtensions;
 using DG.Tweening;
 using UnityEngine;
 
 public class ExSkillInfoUI : MonoBehaviour
 {
     public ExSkillInfoAccessor Accessor;
+    private SkillData _skillData;
+    private SkillLevelData _skillLevelData;
     private bool _checkScroll;
+    private Coroutine _shinyCoroutine;
+
+    private void OnEnable()
+    {
+        // big star의 shiny 애니메이션을 재생.
+        if (Accessor.Stars != null && Accessor.Stars.Length > 0 && Accessor.BigStar != null)
+        {
+            if (_shinyCoroutine != null)
+            {
+                StopCoroutine(_shinyCoroutine);
+                _shinyCoroutine = null;
+            }
+
+            if (_skillLevelData.Star > 5)
+                _shinyCoroutine = StartCoroutine(CoBigStarShiny());
+        }
+    }
+
+    private void OnDisable()
+    {
+        // big star의 shiny 애니메이션을 중단.
+        if (_shinyCoroutine != null)
+        {
+            StopCoroutine(_shinyCoroutine);
+            _shinyCoroutine = null;
+        }
+    }
 
     public void UpdateUI(StudentData studentData, SkillData skillData, SkillLevelData skillLevelData,
         bool isMaxLevel, bool isUnlocked)
     {
+        _skillData = skillData;
+        _skillLevelData = skillLevelData;
+
         Accessor.SkillNameText.text = skillData.Name;
         Accessor.SkillDescriptionText.text = skillLevelData.Description;
         Accessor.Badge.gameObject.SetActive(isMaxLevel);
@@ -91,5 +126,22 @@ public class ExSkillInfoUI : MonoBehaviour
         //   height를 정확히 얻을 수 없기 때문에 한 프레임 이상 기다려야 합니다.
         //   따라서 OnRenderObject 이벤트에 이를 추가합니다.
         TryStartScroll();
+    }
+
+    private void StartCoBigStarShiny()
+    {
+        if (_shinyCoroutine != null)
+            StopCoroutine(_shinyCoroutine);
+        _shinyCoroutine = StartCoroutine(CoBigStarShiny());
+    }
+
+    private IEnumerator CoBigStarShiny()
+    {
+        var shiny = Accessor.BigStar.GetComponent<ShinyEffectForUGUI>();
+        while (true)
+        {
+            yield return new WaitForSeconds(3);
+            shiny.Play(.5f);
+        }
     }
 }
