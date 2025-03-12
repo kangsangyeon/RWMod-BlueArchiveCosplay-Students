@@ -38,7 +38,7 @@
       <li Class="CompProperties_Usable">
         <useLabel>Use {0_label}</useLabel>
         <showUseGizmo>true</showUseGizmo>
-        <useDuration>0</useDuration>
+        <useDuration>60</useDuration>
       </li>
       <li Class="BA.CompProperties_UseEffectBAPawnGainExp">
         <exp>50</exp>
@@ -46,6 +46,7 @@
     </comps>
 
     <ingestible>
+      <baseIngestTicks>60</baseIngestTicks>
       <preferability>NeverForNutrition</preferability>
       <foodType>AnimalProduct, Fluid</foodType>
       <outcomeDoers>
@@ -82,7 +83,7 @@
       <li Class="CompProperties_Usable">
         <useLabel>Use {0_label}</useLabel>
         <showUseGizmo>true</showUseGizmo>
-        <useDuration>0</useDuration>
+        <useDuration>60</useDuration>
       </li>
       <li Class="BA.CompProperties_UseEffectBAPawnGainExp">
         <exp>500</exp>
@@ -90,6 +91,7 @@
     </comps>
 
     <ingestible>
+      <baseIngestTicks>60</baseIngestTicks>
       <preferability>NeverForNutrition</preferability>
       <foodType>AnimalProduct, Fluid</foodType>
       <outcomeDoers>
@@ -126,7 +128,7 @@
       <li Class="CompProperties_Usable">
         <useLabel>Use {0_label}</useLabel>
         <showUseGizmo>true</showUseGizmo>
-        <useDuration>0</useDuration>
+        <useDuration>60</useDuration>
       </li>
       <li Class="BA.CompProperties_UseEffectBAPawnGainExp">
         <exp>2000</exp>
@@ -134,6 +136,7 @@
     </comps>
 
     <ingestible>
+      <baseIngestTicks>60</baseIngestTicks>
       <preferability>NeverForNutrition</preferability>
       <foodType>AnimalProduct, Fluid</foodType>
       <outcomeDoers>
@@ -170,7 +173,7 @@
       <li Class="CompProperties_Usable">
         <useLabel>Use {0_label}</useLabel>
         <showUseGizmo>true</showUseGizmo>
-        <useDuration>0</useDuration>
+        <useDuration>60</useDuration>
       </li>
       <li Class="BA.CompProperties_UseEffectBAPawnGainExp">
         <exp>10000</exp>
@@ -178,6 +181,7 @@
     </comps>
 
     <ingestible>
+      <baseIngestTicks>60</baseIngestTicks>
       <preferability>NeverForNutrition</preferability>
       <foodType>AnimalProduct, Fluid</foodType>
       <outcomeDoers>
