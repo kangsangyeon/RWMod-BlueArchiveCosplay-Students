@@ -5,7 +5,6 @@ public class ExSkillInfoUI : MonoBehaviour
 {
     public ExSkillInfoAccessor Accessor;
     private bool _checkScroll;
-    private Sequence _descriptionTextSequence;
 
     public void UpdateUI(StudentData studentData, SkillData skillData, SkillLevelData skillLevelData,
         bool isMaxLevel, bool isUnlocked)
@@ -55,7 +54,7 @@ public class ExSkillInfoUI : MonoBehaviour
 
         // Description이 Description Mask의 범위를 벗어나는 경우,
         // 세로로 텍스트를 내리는 애니메이션을 재생합니다.
-        _descriptionTextSequence?.Kill();
+        DOTween.Kill(Accessor.SkillDescriptionText);
         float heightDelta =
             Accessor.SkillDescriptionText.preferredHeight -
             Accessor.SkillDescriptionMask.rectTransform.sizeDelta.y;
@@ -64,14 +63,14 @@ public class ExSkillInfoUI : MonoBehaviour
             // 대략 한 줄마다 스크롤 시간 3초 증가 (font size가 대략 한 줄 크기)
             float scrollDuration =
                 (heightDelta / Accessor.SkillDescriptionText.fontSize) * 3f;
-            _descriptionTextSequence = DOTween.Sequence();
-            _descriptionTextSequence
+            DOTween.Sequence()
                 .AppendInterval(1f)
                 .Append(Accessor.SkillDescriptionText.rectTransform.DOAnchorPosY(heightDelta, scrollDuration))
                 .Append(Accessor.SkillDescriptionText.DOFade(0f, 1f))
                 .AppendCallback(() => Accessor.SkillDescriptionText.rectTransform.anchoredPosition = Vector2.zero)
                 .Append(Accessor.SkillDescriptionText.DOFade(1f, 1f))
-                .SetLoops(-1);
+                .SetLoops(-1)
+                .SetId(Accessor.SkillDescriptionText);
         }
     }
 

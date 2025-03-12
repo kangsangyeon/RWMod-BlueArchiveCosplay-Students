@@ -47,6 +47,9 @@ public class WeaponPopupUI : MonoBehaviour
             Accessor.Stars[i].gameObject.SetActive(true);
         for (int i = data.Star; i < 5; ++i)
             Accessor.Stars[i].gameObject.SetActive(false);
+
+        // 텍스트 스크롤 여부를 다시 확인하고, 그 크기에 맞게 다시 스크롤해야 함.
+        _checkScroll = false;
     }
 
     private void SetVisibleTab(int tabIdx)
@@ -106,7 +109,8 @@ public class WeaponPopupUI : MonoBehaviour
                 .Append(Accessor.WeaponNameMask_Text.DOFade(0f, 1f))
                 .AppendCallback(() => Accessor.WeaponNameMask_Text.rectTransform.anchoredPosition = Vector2.zero)
                 .Append(Accessor.WeaponNameMask_Text.DOFade(1f, 1f))
-                .SetLoops(-1);
+                .SetLoops(-1)
+                .SetId(Accessor.WeaponNameMask_Text);
         }
     }
 

@@ -256,6 +256,9 @@ public class StudentInfoScreenUI : MonoBehaviour
         Accessor.ShinbiTab_GrowthInfo_SkillButton_Name.text = skillData.Name;
 
         SetVisibleTab(0);
+
+        // 텍스트 스크롤 여부를 다시 확인하고, 그 크기에 맞게 다시 스크롤해야 함.
+        _checkScroll = false;
     }
 
     private void SetVisibleTab(int tabIndex)
@@ -323,7 +326,7 @@ public class StudentInfoScreenUI : MonoBehaviour
 
         // Description이 Description Mask의 범위를 벗어나는 경우,
         // 세로로 텍스트를 내리는 애니메이션을 재생합니다.
-        DOTween.Kill(Accessor.Tooltips[1].gameObject);
+        DOTween.Kill(Accessor.Tooltips[1].TextMask_Text);
         float heightDelta =
             Accessor.Tooltips[1].TextMask_Text.preferredHeight -
             Accessor.Tooltips[1].TextMask.rectTransform.rect.height;
@@ -339,7 +342,7 @@ public class StudentInfoScreenUI : MonoBehaviour
                 .AppendCallback(() => Accessor.Tooltips[1].TextMask_Text.rectTransform.anchoredPosition = Vector2.zero)
                 .Append(Accessor.Tooltips[1].TextMask_Text.DOFade(1f, 1f))
                 .SetLoops(-1)
-                .SetId(Accessor.Tooltips[1].gameObject);
+                .SetId(Accessor.Tooltips[1].TextMask_Text);
         }
     }
 }
