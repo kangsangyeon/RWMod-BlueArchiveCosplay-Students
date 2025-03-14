@@ -1,5 +1,8 @@
-﻿public enum EVideoType
+﻿namespace BA
 {
-    None,
-    Transition,
+    public enum EVideoType
+    {
+        None,
+        Transition,
+    }
 }

@@ -1,4 +1,4 @@
-﻿namespace Resource.Data
+﻿namespace BA
 {
     public class StudentLevelLimitData
     {

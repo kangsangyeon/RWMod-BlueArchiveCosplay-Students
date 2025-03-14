@@ -64,7 +64,12 @@ namespace BA
 
         private static void OnUnityLogMessageReceived(string log, string stackTrace, LogType type)
         {
-            bool isBALog = stackTrace.Split('\n').Any(x => x.StartsWith("BA."));
+            // BA 네임스페이스에 포함된 로그 코드이거나, "BA."으로 시작하는 로그 메세지를 출력함.
+            bool isBALog = stackTrace
+                .Split('\n')
+                .Any(x => x.StartsWith("BA."));
+            if (!isBALog)
+                isBALog = log.StartsWith("BA.");
             if (isBALog == false)
                 return;
             var message = $"{type}::{log}\n{stackTrace}";

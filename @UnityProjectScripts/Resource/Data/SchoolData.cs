@@ -1,9 +1,12 @@
 using System.Collections.Generic;
 
-public class SchoolData
+namespace BA
 {
-    public int Id;
-    public string Name;
-    public List<int> ClubList;
-    public string BgPath;
+    public class SchoolData
+    {
+        public int Id;
+        public string Name;
+        public List<int> ClubList;
+        public string BgPath;
+    }
 }

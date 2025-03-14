@@ -230,8 +230,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\MonoSingleton.cs" />
-    <Compile Include="Common\UtilProcedure.cs" />
     <Compile Include="Enum\EVideoType.cs" />
     <Compile Include="Plugins\com.neuecc.unirx@284d5c50d3\Asynchronous\WebRequestExtensions.cs" />
     <Compile Include="Plugins\com.neuecc.unirx@284d5c50d3\Disposables\BooleanDisposable.cs" />
@@ -520,9 +518,7 @@
     <Compile Include="Scene\Accessor\StudentInfoScreenAccessor.cs" />
     <Compile Include="Scene\Accessor\StudentListScreenAccessor.cs" />
     <Compile Include="Scene\Accessor\WeaponPopupAccessor.cs" />
-    <Compile Include="Scene\Sub\SlicedProgressBar.cs" />
     <Compile Include="Scene\UIUtilProcedure.cs" />
-    <Compile Include="Scene\Sub\DropdownSizeFitter.cs" />
     <Compile Include="Scene\Sub\GameResourceLoader.cs" />
     <Compile Include="Scene\UI\Contents.cs" />
     <Compile Include="Scene\UI\ExSkillInfoUI.cs" />
@@ -531,6 +527,10 @@
     <Compile Include="Scene\UI\StudentInfoScreenUI.cs" />
     <Compile Include="Scene\UI\StudentListScreenUI.cs" />
     <Compile Include="Scene\UI\WeaponPopupUI.cs" />
+    <Compile Include="Shared\DropdownSizeFitter.cs" />
+    <Compile Include="Shared\MonoSingleton.cs" />
+    <Compile Include="Shared\SlicedProgressBar.cs" />
+    <Compile Include="Shared\UtilProcedure.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Plugins\com.neuecc.unirx@284d5c50d3\Asynchronous.meta" />

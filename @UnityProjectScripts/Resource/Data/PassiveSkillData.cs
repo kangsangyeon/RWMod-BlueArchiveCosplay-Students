@@ -1,7 +1,10 @@
-﻿public class PassiveSkillData
+﻿namespace BA
 {
-    public int Id;
-    public string Name;
-    public string Description;
-    public string IconName;
+    public class PassiveSkillData
+    {
+        public int Id;
+        public string Name;
+        public string Description;
+        public string IconName;
+    }
 }

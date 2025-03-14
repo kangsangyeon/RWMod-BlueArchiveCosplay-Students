@@ -1,8 +1,11 @@
 using System.Collections.Generic;
 
-public class ClubData
+namespace BA
 {
-    public int Id;
-    public string Name;
-    public List<int> StudentList;
+    public class ClubData
+    {
+        public int Id;
+        public string Name;
+        public List<int> StudentList;
+    }
 }

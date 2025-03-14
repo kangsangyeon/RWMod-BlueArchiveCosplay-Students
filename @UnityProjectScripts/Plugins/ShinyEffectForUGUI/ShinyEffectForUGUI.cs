@@ -194,7 +194,7 @@ namespace Coffee.UIExtensions
 
 		public static Material GetMaterial(string shaderName)
 		{
-			string name = Path.GetFileName (shaderName);
+			string name = $"M_{Path.GetFileName (shaderName)}";
 			return AssetDatabase.FindAssets("t:Material " + name)
 				.Select(x => AssetDatabase.GUIDToAssetPath(x))
 				.SelectMany(x => AssetDatabase.LoadAllAssetsAtPath(x))
@@ -203,10 +203,13 @@ namespace Coffee.UIExtensions
 		}
 #else
         [RuntimeInitializeOnLoadMethod]
-        private static void RuntimeInitializeOnLoad()
+        public static void RuntimeInitializeOnLoad()
         {
-            var mat = Resources.Load<Material>("UI-Effect-Shiny");
-            effectMaterial = mat;
+            if (!effectMaterial)
+            {
+                effectMaterial =
+                    BA.GameResource.Load<Material>(string.Empty, "M_UI-Effect-Shiny");
+            }
         }
 
 #endif

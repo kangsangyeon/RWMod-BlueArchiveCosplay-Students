@@ -1,6 +1,9 @@
-﻿public class StudentAttributeData
+﻿namespace BA
 {
-    public StudentAttribute Id;
-    public string Name;
-    public string Description;
+    public class StudentAttributeData
+    {
+        public StudentAttribute Id;
+        public string Name;
+        public string Description;
+    }
 }

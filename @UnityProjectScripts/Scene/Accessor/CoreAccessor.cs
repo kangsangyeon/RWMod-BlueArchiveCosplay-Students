@@ -7,5 +7,5 @@ public class CoreAccessor : MonoBehaviour
 {
     public Camera Camera;
     public EventSystem EventSystem;
-    public GameResourceLoader GameResourceLoader;
+    public BA.GameResourceLoader GameResourceLoader;
 }

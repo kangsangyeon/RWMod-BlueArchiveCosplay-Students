@@ -1,5 +1,8 @@
-﻿public class StudentLevelRequiredExpData
+﻿namespace BA
 {
-    public int Id;
-    public int Value;
+    public class StudentLevelRequiredExpData
+    {
+        public int Id;
+        public int Value;
+    }
 }

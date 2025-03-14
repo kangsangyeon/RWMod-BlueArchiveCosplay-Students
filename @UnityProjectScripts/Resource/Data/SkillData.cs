@@ -1,14 +1,17 @@
-public class SkillLevelData
+namespace BA
 {
-    public (int SkillId, int Level) Id;
-    public string Description;
-    public int Star;
-    public SkillActionData[] ActionSequence;
-}
+    public class SkillLevelData
+    {
+        public (int SkillId, int Level) Id;
+        public string Description;
+        public int Star;
+        public SkillActionData[] ActionSequence;
+    }
 
-public class SkillData
-{
-    public int Id;
-    public string Name;
-    public string IconName;
+    public class SkillData
+    {
+        public int Id;
+        public string Name;
+        public string IconName;
+    }
 }

@@ -429,7 +429,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1895020746357490822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1943518339, guid: 477597f24b209a1418aa54c1dbbdf476, type: 3}
+  m_Script: {fileID: 1453956453, guid: 477597f24b209a1418aa54c1dbbdf476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Accessor: {fileID: 8358481687085220670}
@@ -1400,7 +1400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d37c4afca8784ce9ab899810e29aa9c, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
