@@ -99,7 +99,7 @@ namespace BA
 
             Accessor.NameText.text = data.Name;
 
-            var starCount = 5;
+            var starCount = data.DefaultStar;
             for (int i = 0; i < starCount; ++i)
                 Accessor.Stars[i].gameObject.SetActive(true);
             for (int i = starCount; i < 5; ++i)
