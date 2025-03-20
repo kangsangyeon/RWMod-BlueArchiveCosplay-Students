@@ -154,6 +154,7 @@ namespace BA
             if (!parent.Spawned)
                 return;
             TryClearDayLimitTick();
+            ApplySkillLevelCap();
             if (!parent.IsHashIntervalTick(GameResource.Const.PawnCompSettings.Tick)) // 1초마다 tick 실행
                 return;
             // Log.Message(
@@ -172,6 +173,35 @@ namespace BA
                     _gainExpDayCount[k] = 0;
                 _lastDayLimitResetTimestamp = Find.TickManager.TicksGame;
             }
+        }
+
+        private void ApplySkillLevelCap()
+        {
+            // 3성 15
+            // 4성 17
+            // 5성 20 
+            // 이하로는 3성의 제한을 따라 갈 것
+
+            var cap = 0;
+            if (StudentData.DefaultStar == 5)
+                cap = 20;
+            else if (StudentData.DefaultStar == 4)
+                cap = 17;
+            else
+                cap = 15;
+
+            ShootingSkillRecord.Level = Mathf.Clamp(ShootingSkillRecord.Level, 0, cap);
+            MeleeSkillRecord.Level = Mathf.Clamp(MeleeSkillRecord.Level, 0, cap);
+            ConstructionSkillRecord.Level = Mathf.Clamp(ConstructionSkillRecord.Level, 0, cap);
+            MiningSkillRecord.Level = Mathf.Clamp(MiningSkillRecord.Level, 0, cap);
+            CookingSkillRecord.Level = Mathf.Clamp(CookingSkillRecord.Level, 0, cap);
+            PlantsSkillRecord.Level = Mathf.Clamp(PlantsSkillRecord.Level, 0, cap);
+            AnimalsSkillRecord.Level = Mathf.Clamp(AnimalsSkillRecord.Level, 0, cap);
+            CraftingSkillRecord.Level = Mathf.Clamp(CraftingSkillRecord.Level, 0, cap);
+            ArtisticSkillRecord.Level = Mathf.Clamp(ArtisticSkillRecord.Level, 0, cap);
+            MedicalSkillRecord.Level = Mathf.Clamp(MedicalSkillRecord.Level, 0, cap);
+            SocialSkillRecord.Level = Mathf.Clamp(SocialSkillRecord.Level, 0, cap);
+            IntellectualSkillRecord.Level = Mathf.Clamp(IntellectualSkillRecord.Level, 0, cap);
         }
 
         private void TryLevelUpTick()
@@ -218,6 +248,7 @@ namespace BA
             MedicalSkillRecord.Level += attributeLevelData.Medical;
             SocialSkillRecord.Level += attributeLevelData.Social;
             IntellectualSkillRecord.Level += attributeLevelData.Intellectual;
+            ApplySkillLevelCap();
         }
 
         private void ModifySaveData()
