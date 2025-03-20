@@ -307,11 +307,23 @@ namespace BA
                 GameResource.StudentTable[data.Id].DefaultStar + data.Shinbi;
             var levelLimit =
                 GameResource.StudentLevelLimitTable[star];
-            if (data.Level >= levelLimit.Value)
-                requiredExp = 0; // 레벨 상한에 도달했으면 0/0으로 표기
+
             Accessor.LevelText.text = $"Lv.{data.Level}";
             Accessor.ExpBar.FillAmount = (float)data.Exp / requiredExp;
-            Accessor.ExpText.text = $"{data.Exp} / {requiredExp}";
+
+            if (data.Level >= levelLimit.Value)
+            {
+                requiredExp = 0;
+                Accessor.ExpText.gameObject.SetActive(false);
+                Accessor.ExpMaxText.gameObject.SetActive(true);
+                Accessor.ExpText.text = $"{data.Exp} / {requiredExp}"; // 레벨 상한에 도달했으면 0/0으로 표기. 사실 "Max" 텍스트에 가려질 것임.
+            }
+            else
+            {
+                Accessor.ExpText.gameObject.SetActive(true);
+                Accessor.ExpMaxText.gameObject.SetActive(false);
+                Accessor.ExpText.text = $"{data.Exp} / {requiredExp}";
+            }
         }
 
         private void TryStartScroll()
