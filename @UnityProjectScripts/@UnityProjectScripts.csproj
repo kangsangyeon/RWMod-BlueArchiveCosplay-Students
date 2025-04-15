@@ -230,6 +230,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animation\ShinbiLiberationAnimation.cs" />
     <Compile Include="Enum\EVideoType.cs" />
     <Compile Include="Plugins\com.neuecc.unirx@284d5c50d3\Asynchronous\WebRequestExtensions.cs" />
     <Compile Include="Plugins\com.neuecc.unirx@284d5c50d3\Disposables\BooleanDisposable.cs" />
@@ -477,6 +478,27 @@
     <Compile Include="Plugins\NewtonsoftJsonUnity\Vector2JsonConverter.cs" />
     <Compile Include="Plugins\NewtonsoftJsonUnity\Vector3JsonConverter.cs" />
     <Compile Include="Plugins\NewtonsoftJsonUnity\Vector4JsonConverter.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\AnimatableProperty.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Extensions\CanvasExtensions.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Extensions\Color32Extensions.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Extensions\ComponentExtensions.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Extensions\SpriteExtensions.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Extensions\Vector3Extensions.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\ProjectSettings\PreloadedProjectSettings.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\FastAction.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\FrameCache.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\Logging.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\MaterialRepository.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\Misc.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\ObjectPool.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\ObjectRepository.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\UIExtraCallbacks.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\UIParticle.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\UIParticleAttractor.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\UIParticleProjectSettings.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\UIParticleRenderer.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\UIParticleUpdater.cs" />
+    <Compile Include="Plugins\ParticleEffectForUGUI\Runtime\Utilities\ParticleSystemExtensions.cs" />
     <Compile Include="Plugins\ShinyEffectForUGUI\ShinyEffectForUGUI.cs" />
     <Compile Include="Plugins\TemplateTable\ITemplateTable.cs" />
     <Compile Include="Plugins\TemplateTable\ITemplateTableLoader.cs" />
@@ -794,6 +816,37 @@
     <Content Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Enumerable.cs.meta" />
     <Content Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Operate.cs.meta" />
     <Content Include="Plugins\LINQtoGameObject\Scripts\GameObjectExtensions.Traverse.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\AnimatableProperty.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Coffee.UIParticle.asmdef" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Coffee.UIParticle.asmdef.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Coffee.UIParticle.R.dll" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Coffee.UIParticle.R.dll.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Extensions.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Extensions\CanvasExtensions.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Extensions\Color32Extensions.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Extensions\ComponentExtensions.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Extensions\SpriteExtensions.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Extensions\Vector3Extensions.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\ProjectSettings.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\ProjectSettings\PreloadedProjectSettings.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\FastAction.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\FrameCache.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\Logging.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\MaterialRepository.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\Misc.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\ObjectPool.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\ObjectRepository.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Internal\Utilities\UIExtraCallbacks.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\UIParticle.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\UIParticleAttractor.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\UIParticleProjectSettings.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\UIParticleRenderer.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\UIParticleUpdater.cs.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Utilities.meta" />
+    <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Utilities\ParticleSystemExtensions.cs.meta" />
     <Content Include="Plugins\ShinyEffectForUGUI\ShinyEffectForUGUI.cs.meta" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

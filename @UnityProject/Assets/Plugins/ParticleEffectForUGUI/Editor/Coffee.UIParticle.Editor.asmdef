@@ -1,0 +1,19 @@
+{
+    "name": "Coffee.UIParticle.Editor",
+    "references": [
+        "Coffee.UIParticle"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "UnityProjectScripts.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
