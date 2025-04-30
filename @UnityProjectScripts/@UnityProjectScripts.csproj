@@ -511,6 +511,12 @@
     <Compile Include="Plugins\TemplateTable\TemplateTableJsonLoader.cs" />
     <Compile Include="Plugins\TemplateTable\TemplateTableJsonPatchLoader.cs" />
     <Compile Include="Plugins\TemplateTable\TemplateTableJsonSaver.cs" />
+    <Compile Include="Plugins\Unity-UIGradient\SetDirty.cs" />
+    <Compile Include="Plugins\Unity-UIGradient\UICornersGradient.cs" />
+    <Compile Include="Plugins\Unity-UIGradient\UIGradient.cs" />
+    <Compile Include="Plugins\Unity-UIGradient\UIGradientUtils.cs" />
+    <Compile Include="Plugins\Unity-UIGradient\UITextCornersGradient.cs" />
+    <Compile Include="Plugins\Unity-UIGradient\UITextGradient.cs" />
     <Compile Include="Resource\DataHelper.cs" />
     <Compile Include="Resource\Data\ClubData.cs" />
     <Compile Include="Resource\Data\Const.cs" />
@@ -848,6 +854,12 @@
     <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Utilities.meta" />
     <Content Include="Plugins\ParticleEffectForUGUI\Runtime\Utilities\ParticleSystemExtensions.cs.meta" />
     <Content Include="Plugins\ShinyEffectForUGUI\ShinyEffectForUGUI.cs.meta" />
+    <Content Include="Plugins\Unity-UIGradient\SetDirty.cs.meta" />
+    <Content Include="Plugins\Unity-UIGradient\UICornersGradient.cs.meta" />
+    <Content Include="Plugins\Unity-UIGradient\UIGradient.cs.meta" />
+    <Content Include="Plugins\Unity-UIGradient\UIGradientUtils.cs.meta" />
+    <Content Include="Plugins\Unity-UIGradient\UITextCornersGradient.cs.meta" />
+    <Content Include="Plugins\Unity-UIGradient\UITextGradient.cs.meta" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
