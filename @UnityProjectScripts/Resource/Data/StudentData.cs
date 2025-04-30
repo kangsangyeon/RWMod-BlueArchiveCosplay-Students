@@ -41,5 +41,8 @@ namespace BA
         public float CamOrthoSize;
         public bool FrontHalo;
         public string OverrideBgPath;
+
+        public Vector2 ShinbiCamPos;
+        public float ShinbiCamOrthoSize;
     }
 }
