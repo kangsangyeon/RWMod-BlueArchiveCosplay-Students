@@ -21,11 +21,13 @@ namespace Animation
         [SerializeField] private Button _fullscreenButton;
         private RectTransform _canvasRect;
         private Sequence _sequence;
-        private StudentData _studentData;
         private bool _initialized;
 
         private FullshotRenderAccessor _fullshotRenderAccessor;
         private Canvas _canvas;
+        private StudentData _studentData;
+        private Vector2 _fullshotCamPos = Vector2.zero;
+        private float _fullshotCamOrthoSize = 5;
 
         public void Initialize(
             FullshotRenderAccessor fullshotRenderAccessor,
@@ -57,8 +59,8 @@ namespace Animation
 
                     // fullshot camera 설정
                     _fullshotRenderAccessor.Camera.transform.localPosition =
-                        new Vector3(_studentData.ShinbiCamPos.x, _studentData.ShinbiCamPos.y, _fullshotRenderAccessor.Camera.transform.localPosition.z);
-                    _fullshotRenderAccessor.Camera.orthographicSize = _studentData.ShinbiCamOrthoSize;
+                        new Vector3(_fullshotCamPos.x, _fullshotCamPos.y, _fullshotRenderAccessor.Camera.transform.localPosition.z);
+                    _fullshotRenderAccessor.Camera.orthographicSize = _fullshotCamOrthoSize;
                 })
                 .Join(_whiteCircleTransition.material.DOFloat(0.25f, ShaderProp_Radius, 2f))
                 .Join(DOTween.Sequence()
@@ -80,6 +82,8 @@ namespace Animation
         public void Setup(int studentId)
         {
             _studentData = GameResource.StudentTable[studentId];
+            _fullshotCamPos = _studentData.ShinbiCamPos;
+            _fullshotCamOrthoSize = _studentData.ShinbiCamOrthoSize;
         }
 
         public void Play()
