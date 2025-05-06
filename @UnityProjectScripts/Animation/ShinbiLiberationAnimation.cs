@@ -11,8 +11,6 @@ namespace Animation
         private static readonly int ShaderProp_Color = Shader.PropertyToID("_Color");
         private static readonly int ShaderProp_Feather = Shader.PropertyToID("_Feather");
 
-        [SerializeField] private FullshotRenderAccessor _fullshotRenderAccessor;
-        [SerializeField] private Canvas _canvas;
         [SerializeField] private Image _bg1;
         [SerializeField] private Image _bg2;
         [SerializeField] private Image _bgWhite;
@@ -20,28 +18,31 @@ namespace Animation
         [SerializeField] private RawImage _fullshot;
         [SerializeField] private RectTransform _maskLine;
         [SerializeField] private ParticleSystem _starParticles;
+        [SerializeField] private Button _fullscreenButton;
         private RectTransform _canvasRect;
+        private Sequence _sequence;
+        private StudentData _studentData;
+        private bool _initialized;
 
-        private void Start()
+        private FullshotRenderAccessor _fullshotRenderAccessor;
+        private Canvas _canvas;
+
+        public void Initialize(
+            FullshotRenderAccessor fullshotRenderAccessor,
+            Canvas canvas)
         {
+            if (_initialized)
+                return;
+            _initialized = true;
+
+            _fullshotRenderAccessor = fullshotRenderAccessor;
+            _canvas = canvas;
+
             _whiteCircleTransition.material = new Material(_whiteCircleTransition.material);
             _bgWhite.material = new Material(_bgWhite.material);
             _canvasRect = (RectTransform)_canvas.transform;
-            Play(1001); // test
-        }
 
-        public void Play(int studentId)
-        {
-            var studentData = GameResource.StudentTable[studentId];
-
-            _fullshotRenderAccessor.Camera.transform.localPosition =
-                new Vector3(studentData.ShinbiCamPos.x, studentData.ShinbiCamPos.y, _fullshotRenderAccessor.Camera.transform.localPosition.z);
-            // _fullshotRenderAccessor.Camera.orthographicSize = studentData.ShinbiCamOrthoSize;
-            _fullshotRenderAccessor.Camera.orthographicSize = 5; // test
-
-            DOTween.Kill(gameObject);
-            DOTween.Sequence()
-                .SetId(gameObject)
+            _sequence = DOTween.Sequence()
                 .AppendCallback(OnStart)
                 .Append(_bg1.DOFade(1f, 2f))
                 .Join(DOTween.Sequence()
@@ -53,13 +54,44 @@ namespace Animation
                     _bgWhite.enabled = true;
                     _fullshot.enabled = true;
                     _bg2.color = Color.white;
+
+                    // fullshot camera 설정
+                    _fullshotRenderAccessor.Camera.transform.localPosition =
+                        new Vector3(_studentData.ShinbiCamPos.x, _studentData.ShinbiCamPos.y, _fullshotRenderAccessor.Camera.transform.localPosition.z);
+                    _fullshotRenderAccessor.Camera.orthographicSize = _studentData.ShinbiCamOrthoSize;
                 })
                 .Join(_whiteCircleTransition.material.DOFloat(0.25f, ShaderProp_Radius, 2f))
                 .Join(DOTween.Sequence()
                     .AppendInterval(1f)
                     .Append(_whiteCircleTransition.DOColor(new Color(1, 1, 1, 0f), 2f)))
                 .Append(_maskLine.DOAnchorPosX(0f, .25f).SetEase(Ease.OutQuad))
-                .Play();
+                .SetAutoKill(false)
+                .SetLink(gameObject);
+
+            _fullscreenButton.onClick.AddListener(() =>
+            {
+                if (_sequence.IsComplete())
+                    End();
+            });
+
+            OnStart();
+        }
+
+        public void Setup(int studentId)
+        {
+            _studentData = GameResource.StudentTable[studentId];
+        }
+
+        public void Play()
+        {
+            gameObject.SetActive(true);
+            _sequence.Restart();
+        }
+
+        public void End()
+        {
+            _sequence?.Complete(true);
+            gameObject.SetActive(false);
         }
 
         private void OnStart()

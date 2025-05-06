@@ -231,6 +231,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation\ShinbiLiberationAnimation.cs" />
+    <Compile Include="Development\MainScreenDevelopment.cs" />
+    <Compile Include="Development\ShinbiLiberationAnimationDevelopment.cs" />
+    <Compile Include="Development\StudentInfoScreenDevelopment.cs" />
+    <Compile Include="Development\StudentListScreenDevelopment.cs" />
     <Compile Include="Enum\EVideoType.cs" />
     <Compile Include="Plugins\com.neuecc.unirx@284d5c50d3\Asynchronous\WebRequestExtensions.cs" />
     <Compile Include="Plugins\com.neuecc.unirx@284d5c50d3\Disposables\BooleanDisposable.cs" />
@@ -546,6 +550,7 @@
     <Compile Include="Scene\Accessor\StudentInfoScreenAccessor.cs" />
     <Compile Include="Scene\Accessor\StudentListScreenAccessor.cs" />
     <Compile Include="Scene\Accessor\WeaponPopupAccessor.cs" />
+    <Compile Include="Scene\ApplicationComposition.cs" />
     <Compile Include="Scene\UIUtilProcedure.cs" />
     <Compile Include="Scene\Sub\GameResourceLoader.cs" />
     <Compile Include="Scene\UI\Contents.cs" />
