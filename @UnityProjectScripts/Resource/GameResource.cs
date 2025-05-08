@@ -20,6 +20,7 @@ namespace BA
         public static TemplateTable<(StudentAttribute, int), StudentAttributeLevelData> StudentAttributeLevelTable;
         public static TemplateTable<int, StudentLevelRequiredExpData> StudentLevelRequiredExpTable;
         public static TemplateTable<int, StudentLevelLimitData> StudentLevelLimitTable;
+        public static TemplateTable<int, ShinbiLiberationCostData> ShinbiLiberationCostTable;
         public static TemplateTable<string, object> ConstValueTable;
 
         public static AssetBundle Bundle;

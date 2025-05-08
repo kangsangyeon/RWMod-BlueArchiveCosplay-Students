@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using DG.Tweening;
+using Rimworld;
 using UniRx;
 using UniRx.Triggers;
 using Unity.Linq;
@@ -15,6 +17,7 @@ namespace BA
         public StudentInfoScreenAccessor Accessor;
         public ReactiveProperty<int> CharId = new ReactiveProperty<int>(0);
         private bool _checkScroll;
+        private CompositeDisposable _charDisposables;
 
         private void Start()
         {
@@ -76,16 +79,20 @@ namespace BA
             }
         }
 
+        private void OnDestroy()
+        {
+            _charDisposables?.Dispose();
+        }
+
         private void UpdateChar(int id)
         {
             var data = GameResource.StudentTable[id];
             var fullshotRenderAccessor = FindObjectOfType<FullshotRenderAccessor>();
+            var saveData = GameResource.Save.StudentSaveData[CharId.Value];
 
-            if (data.FrontHalo)
-                fullshotRenderAccessor.FullshotHalo.sortingOrder = 10; // fullshot과 fullshot face의 order는 5~6
-            else
-                fullshotRenderAccessor.FullshotHalo.sortingOrder = 4;
-
+            // 이전 내용을 정리합니다.
+            _charDisposables?.Dispose();
+            _charDisposables = new CompositeDisposable();
 
             // 왼쪽에 위치한 캐릭터 정보와 레벨, 경험치를 표시합니다.
             fullshotRenderAccessor.Fullshot.sprite =
@@ -128,25 +135,17 @@ namespace BA
             LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)Accessor.AttributeBox.transform);
 
 
-            // level text, exp fill 설정
-            var saveData = GameResource.Save.StudentSaveData[CharId.Value];
-            UpdateStudentSave(saveData);
-            GameResource.Save.StudentSaveData[CharId.Value]
-                .ObserveEveryValueChanged(x => x.Level)
-                .Subscribe(_ => UpdateStudentSave(saveData))
-                .AddTo(gameObject);
-            GameResource.Save.StudentSaveData[CharId.Value]
-                .ObserveEveryValueChanged(x => x.Exp)
-                .Subscribe(_ => UpdateStudentSave(saveData))
-                .AddTo(gameObject);
-
-
             // 캐릭터와 헤일로 애니메이션을 재생합니다.
             var fullshotRect = (RectTransform)Accessor.FullshotImage.transform;
             var fullshotGroup = Accessor.FullshotImage.GetComponent<CanvasGroup>();
             var fullshotTf = fullshotRenderAccessor.Fullshot.transform;
             var fullshotHaloTf = fullshotRenderAccessor.FullshotHalo.transform;
             var fullshotBgTf = fullshotRenderAccessor.FullshotBg.transform;
+
+            if (data.FrontHalo)
+                fullshotRenderAccessor.FullshotHalo.sortingOrder = 10; // fullshot과 fullshot face의 order는 5~6
+            else
+                fullshotRenderAccessor.FullshotHalo.sortingOrder = 4;
 
             DOTween.Kill(Accessor.FullshotImage);
             fullshotRenderAccessor.Fullshot.DOKill();
@@ -255,11 +254,24 @@ namespace BA
             Accessor.ShinbiTab_GrowthInfo_SkillButton_Icon.sprite = thumbnailSprite;
             Accessor.ShinbiTab_GrowthInfo_SkillButton_HexImage.color = UIUtilProcedure.GetAttributeColor(data.Attribute);
             Accessor.ShinbiTab_GrowthInfo_SkillButton_Name.text = skillData.Name;
+            Accessor.ShinbiTab_ShinbiUpBox_Button.onClick.AddListener(() => OnShinbiLevelUpButtonClicked(saveData.Shinbi));
 
             SetVisibleTab(0);
 
             // 텍스트 스크롤 여부를 다시 확인하고, 그 크기에 맞게 다시 스크롤해야 함.
             _checkScroll = false;
+
+            // save data 변경에 구독
+            // (level text, exp fill 설정)
+            UpdateStudentSave(saveData);
+            GameResource.Save.StudentSaveData[CharId.Value]
+                .ObserveEveryValueChanged(x => x.Level)
+                .Subscribe(_ => UpdateStudentSave(saveData))
+                .AddTo(_charDisposables);
+            GameResource.Save.StudentSaveData[CharId.Value]
+                .ObserveEveryValueChanged(x => x.Exp)
+                .Subscribe(_ => UpdateStudentSave(saveData))
+                .AddTo(_charDisposables);
         }
 
         private void SetVisibleTab(int tabIndex)
@@ -356,6 +368,24 @@ namespace BA
                     .Append(Accessor.Tooltips[1].TextMask_Text.DOFade(1f, 1f))
                     .SetLoops(-1)
                     .SetId(Accessor.Tooltips[1].TextMask_Text);
+            }
+        }
+
+        private void OnShinbiLevelUpButtonClicked(int currentShinbi)
+        {
+            if (BridgeProcedure.CanShinbiLiberationFunc == null)
+            {
+                Debug.LogWarning("CanShinbiLiberationFunc is null.");
+                return;
+            }
+
+            var data = GameResource.ShinbiLiberationCostTable.TryGet(currentShinbi);
+            var result = BridgeProcedure.CanShinbiLiberationFunc.Invoke(data.Value);
+            if (result)
+            {
+                BridgeProcedure.OnShinbiLiberation.Invoke(data.Value);
+                Contents.Instance.Accessor.ShinbiLiberationAnimation.Play(
+                    onComplete: () => UpdateChar(CharId.Value));
             }
         }
     }

@@ -1,5 +1,7 @@
-﻿using BA;
+﻿using System;
+using BA;
 using DG.Tweening;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -86,15 +88,21 @@ namespace Animation
             _fullshotCamOrthoSize = _studentData.ShinbiCamOrthoSize;
         }
 
-        public void Play()
+        public void Play([CanBeNull] Action onComplete = null)
         {
             gameObject.SetActive(true);
             _sequence.Restart();
+            _sequence.onComplete = () => onComplete?.Invoke();
         }
 
         public void End()
         {
-            _sequence?.Complete(true);
+            if (_sequence != null)
+            {
+                _sequence.Complete(true);
+                _sequence.onComplete = null;
+            }
+
             gameObject.SetActive(false);
         }
 

@@ -64,6 +64,7 @@ namespace BA
             var studentAttributeLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttributeLevel").text;
             var studentLevelRequiredExpTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentLevelRequiredExp").text;
             var studentLevelLimitTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentLevelLimit").text;
+            var shinbiLiberationCostTableJson = GameResource.Load<TextAsset>("Data", "DataTable_ShinbiLiberationCost").text;
             var constValueTableJson = GameResource.Load<TextAsset>("Data", "DataTable_ConstValue").text;
             GameResource.StudentTable = LoadTemplateTable<int, StudentData>(studentTableJson);
             GameResource.ClubTable = LoadTemplateTable<int, ClubData>(clubTableJson);
@@ -80,6 +81,8 @@ namespace BA
                 LoadTemplateTable<int, StudentLevelRequiredExpData>(studentLevelRequiredExpTableJson);
             GameResource.StudentLevelLimitTable =
                 LoadTemplateTable<int, StudentLevelLimitData>(studentLevelLimitTableJson);
+            GameResource.ShinbiLiberationCostTable =
+                LoadTemplateTable<int, ShinbiLiberationCostData>(shinbiLiberationCostTableJson);
 
             var constValueTable = LoadTemplateTable<string, ConstValue>(constValueTableJson);
             GameResource.Const = new Const()
