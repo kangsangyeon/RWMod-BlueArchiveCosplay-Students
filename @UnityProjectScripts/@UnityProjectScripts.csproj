@@ -527,14 +527,13 @@
     <Compile Include="Resource\Data\DataFile.cs" />
     <Compile Include="Resource\Data\PassiveSkillData.cs" />
     <Compile Include="Resource\Data\SchoolData.cs" />
-    <Compile Include="Resource\Data\ShinbiLiberationCostData.cs" />
+    <Compile Include="Resource\Data\ShinbiData.cs" />
     <Compile Include="Resource\Data\SkillActionData.cs" />
     <Compile Include="Resource\Data\SkillData.cs" />
     <Compile Include="Resource\Data\StudentAttributeData.cs" />
     <Compile Include="Resource\Data\StudentAttributeLevelData.cs" />
     <Compile Include="Resource\Data\StudentData.cs" />
     <Compile Include="Resource\Data\StudentLevelRequiredExpData.cs" />
-    <Compile Include="Resource\Data\StudentLevelLimitData.cs" />
     <Compile Include="Resource\Data\WeaponData.cs" />
     <Compile Include="Resource\GameResource.cs" />
     <Compile Include="Resource\SaveData.cs" />
@@ -542,6 +541,7 @@
     <Compile Include="Scene\Accessor\ContentsAccessor.cs" />
     <Compile Include="Scene\Accessor\CoreAccessor.cs" />
     <Compile Include="Scene\Accessor\FullshotRenderAccessor.cs" />
+    <Compile Include="Scene\Accessor\ShinbiUpConfirmPopupAccessor.cs" />
     <Compile Include="Scene\Accessor\StudentTooltipAccessor.cs" />
     <Compile Include="Scene\Accessor\ExSkillInfoAccessor.cs" />
     <Compile Include="Scene\Accessor\ScreenTopBarAccessor.cs" />
@@ -559,6 +559,7 @@
     <Compile Include="Scene\UI\ExSkillInfoUI.cs" />
     <Compile Include="Scene\UI\MainScreenUI.cs" />
     <Compile Include="Scene\UI\PadUI.cs" />
+    <Compile Include="Scene\UI\ShinbiUpConfirmPopupUI.cs" />
     <Compile Include="Scene\UI\StudentInfoScreenUI.cs" />
     <Compile Include="Scene\UI\StudentListScreenUI.cs" />
     <Compile Include="Scene\UI\WeaponPopupUI.cs" />

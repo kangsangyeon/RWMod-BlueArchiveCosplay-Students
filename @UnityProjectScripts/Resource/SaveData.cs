@@ -5,6 +5,8 @@ namespace BA
     public class SaveData
     {
         public int Pyroxenes;
+        public int Silvers;
+        public int Eligma;
         public Dictionary<int, StudentSaveData> StudentSaveData;
     }
 

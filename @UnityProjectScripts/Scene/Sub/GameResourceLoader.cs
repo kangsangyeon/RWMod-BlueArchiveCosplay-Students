@@ -63,8 +63,7 @@ namespace BA
             var studentAttributeTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttribute").text;
             var studentAttributeLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttributeLevel").text;
             var studentLevelRequiredExpTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentLevelRequiredExp").text;
-            var studentLevelLimitTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentLevelLimit").text;
-            var shinbiLiberationCostTableJson = GameResource.Load<TextAsset>("Data", "DataTable_ShinbiLiberationCost").text;
+            var shinbiTableJson = GameResource.Load<TextAsset>("Data", "DataTable_Shinbi").text;
             var constValueTableJson = GameResource.Load<TextAsset>("Data", "DataTable_ConstValue").text;
             GameResource.StudentTable = LoadTemplateTable<int, StudentData>(studentTableJson);
             GameResource.ClubTable = LoadTemplateTable<int, ClubData>(clubTableJson);
@@ -79,10 +78,8 @@ namespace BA
                 LoadTemplateTable<(StudentAttribute, int), StudentAttributeLevelData>(studentAttributeLevelTableJson);
             GameResource.StudentLevelRequiredExpTable =
                 LoadTemplateTable<int, StudentLevelRequiredExpData>(studentLevelRequiredExpTableJson);
-            GameResource.StudentLevelLimitTable =
-                LoadTemplateTable<int, StudentLevelLimitData>(studentLevelLimitTableJson);
-            GameResource.ShinbiLiberationCostTable =
-                LoadTemplateTable<int, ShinbiLiberationCostData>(shinbiLiberationCostTableJson);
+            GameResource.ShinbiTable =
+                LoadTemplateTable<int, ShinbiData>(shinbiTableJson);
 
             var constValueTable = LoadTemplateTable<string, ConstValue>(constValueTableJson);
             GameResource.Const = new Const()
@@ -118,6 +115,7 @@ namespace BA
                         Unlock = true,
                         Level = 1,
                         Exp = 0,
+                        Shinbi = GameResource.StudentTable[x.Id].DefaultStar,
                     });
 
             GameResource.Save = save;

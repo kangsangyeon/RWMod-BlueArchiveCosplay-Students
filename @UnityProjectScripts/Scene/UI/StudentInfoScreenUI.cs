@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -39,14 +38,15 @@ namespace BA
                 .AddTo(gameObject);
 
             Accessor.BasicTab_WeaponButton.OnClickAsObservable()
-                .Subscribe(_ =>
-                {
-                    var ui = Accessor.WeaponPopup.GetComponent<WeaponPopupUI>();
-                    var charData = GameResource.StudentTable[CharId.Value];
-                    var weaponData = GameResource.WeaponTable[charData.WeaponId];
-                    ui.UpdateUI(weaponData, 1, 0);
-                    Accessor.WeaponPopup.gameObject.SetActive(true);
-                })
+                .Subscribe(_ => OnBasicTabWeaponClicked())
+                .AddTo(gameObject);
+
+            Accessor.LevelUpTab_LevelUpBox_LevelUpButton.OnClickAsObservable()
+                .Subscribe(_ => OnLevelUpButtonClicked())
+                .AddTo(gameObject);
+
+            Accessor.ShinbiTab_ShinbiUpBox_Button.OnClickAsObservable()
+                .Subscribe(_ => OnShinbiLevelUpButtonClicked())
                 .AddTo(gameObject);
 
             // 탭 전환 버튼 이벤트 액션을 설정합니다.
@@ -62,6 +62,18 @@ namespace BA
             Accessor.ShinbiTab_GrowthInfo_SkillButton.OnClickAsObservable()
                 .Subscribe(_ => SetVisibleTab(1));
 
+            // 세이브 데이터 이벤트 설정.
+            if (GameResource.Save != null)
+            {
+                GameResource.Save.ObserveEveryValueChanged(x => x.Silvers)
+                    .Subscribe(x =>
+                    {
+                        Accessor.LevelUpTab_LevelUpBox_CostText.text = x.ToString();
+                        Accessor.ShinbiTab_ShinbiUpBox_CostText.text = x.ToString();
+                    })
+                    .AddTo(gameObject);
+            }
+
             // 탭의 기본 활성 상태를 설정합니다.
             SetVisibleTab(0);
 
@@ -70,6 +82,7 @@ namespace BA
                 .Subscribe(UpdateChar);
 
             Accessor.WeaponPopup.gameObject.SetActive(false);
+            Accessor.ShinbiUpConfirmPopup.gameObject.SetActive(false);
 
             if (CharId.Value == 0)
             {
@@ -254,7 +267,6 @@ namespace BA
             Accessor.ShinbiTab_GrowthInfo_SkillButton_Icon.sprite = thumbnailSprite;
             Accessor.ShinbiTab_GrowthInfo_SkillButton_HexImage.color = UIUtilProcedure.GetAttributeColor(data.Attribute);
             Accessor.ShinbiTab_GrowthInfo_SkillButton_Name.text = skillData.Name;
-            Accessor.ShinbiTab_ShinbiUpBox_Button.onClick.AddListener(() => OnShinbiLevelUpButtonClicked(saveData.Shinbi));
 
             SetVisibleTab(0);
 
@@ -313,17 +325,19 @@ namespace BA
 
         private void UpdateStudentSave(StudentSaveData data)
         {
+            // Debug.Log($"level: {data.Level}, id: {data.Id}, shinbi: {data.Shinbi}");
+
             var requiredExp =
                 GameResource.StudentLevelRequiredExpTable[data.Level].Value;
             var star =
                 GameResource.StudentTable[data.Id].DefaultStar + data.Shinbi;
             var levelLimit =
-                GameResource.StudentLevelLimitTable[star];
+                GameResource.ShinbiTable[data.Shinbi].StudentLevelLimit;
 
             Accessor.LevelText.text = $"Lv.{data.Level}";
             Accessor.ExpBar.FillAmount = (float)data.Exp / requiredExp;
 
-            if (data.Level >= levelLimit.Value)
+            if (data.Level >= levelLimit)
             {
                 requiredExp = 0;
                 Accessor.ExpText.gameObject.SetActive(false);
@@ -371,21 +385,54 @@ namespace BA
             }
         }
 
-        private void OnShinbiLevelUpButtonClicked(int currentShinbi)
+        private void OnBasicTabWeaponClicked()
         {
-            if (BridgeProcedure.CanShinbiLiberationFunc == null)
-            {
-                Debug.LogWarning("CanShinbiLiberationFunc is null.");
-                return;
-            }
+            var ui = Accessor.WeaponPopup.GetComponent<WeaponPopupUI>();
+            var charData = GameResource.StudentTable[CharId.Value];
+            var weaponData = GameResource.WeaponTable[charData.WeaponId];
+            ui.UpdateUI(weaponData, 1, 0);
+            Accessor.WeaponPopup.gameObject.SetActive(true);
+        }
 
-            var data = GameResource.ShinbiLiberationCostTable.TryGet(currentShinbi);
-            var result = BridgeProcedure.CanShinbiLiberationFunc.Invoke(data.Value);
-            if (result)
+        private void OnLevelUpButtonClicked()
+        {
+        }
+
+        private void OnShinbiLevelUpButtonClicked()
+        {
+            // Debug.Log($"charId: {CharId.Value}, studentSave.ContainsKey: {GameResource.Save.StudentSaveData.ContainsKey(CharId.Value)}");
+            // if (GameResource.Save.StudentSaveData.ContainsKey(CharId.Value))
+            //     Debug.Log($"charShinbi: {GameResource.Save.StudentSaveData[CharId.Value].Shinbi}");
+            var ui = Accessor.ShinbiUpConfirmPopup.GetComponent<ShinbiUpConfirmPopupUI>();
+            var eligmaBudget = GameResource.Save.Eligma;
+            var silverBudget = GameResource.Save.Silvers;
+            var charShinbi = GameResource.Save.StudentSaveData[CharId.Value].Shinbi;
+            var data = GameResource.ShinbiTable.TryGet(charShinbi);
+            ui.UpdateUI(data.EligmaCost, eligmaBudget, data.SilverCost, silverBudget, OnConfirmClicked);
+            ui.gameObject.SetActive(true);
+
+            void OnConfirmClicked()
             {
-                BridgeProcedure.OnShinbiLiberation.Invoke(data.Value);
-                Contents.Instance.Accessor.ShinbiLiberationAnimation.Play(
-                    onComplete: () => UpdateChar(CharId.Value));
+                if (Application.isEditor)
+                {
+                    Contents.Instance.Accessor.ShinbiLiberationAnimation.Play(
+                        onEnd: () => UpdateChar(CharId.Value));
+                    return;
+                }
+
+                if (BridgeProcedure.CanShinbiLiberationFunc == null)
+                {
+                    Debug.LogWarning("CanShinbiLiberationFunc is null.");
+                    return;
+                }
+
+                var result = BridgeProcedure.CanShinbiLiberationFunc.Invoke(data.EligmaCost, data.SilverCost);
+                if (result)
+                {
+                    BridgeProcedure.OnShinbiLiberation.Invoke(data.EligmaCost, data.SilverCost);
+                    Contents.Instance.Accessor.ShinbiLiberationAnimation.Play(
+                        onEnd: () => UpdateChar(CharId.Value));
+                }
             }
         }
     }

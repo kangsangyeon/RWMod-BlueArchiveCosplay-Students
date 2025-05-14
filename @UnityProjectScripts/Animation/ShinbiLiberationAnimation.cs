@@ -30,6 +30,7 @@ namespace Animation
         private StudentData _studentData;
         private Vector2 _fullshotCamPos = Vector2.zero;
         private float _fullshotCamOrthoSize = 5;
+        private Action _onEnd;
 
         public void Initialize(
             FullshotRenderAccessor fullshotRenderAccessor,
@@ -47,6 +48,7 @@ namespace Animation
             _canvasRect = (RectTransform)_canvas.transform;
 
             _sequence = DOTween.Sequence()
+                .Pause()
                 .AppendCallback(OnStart)
                 .Append(_bg1.DOFade(1f, 2f))
                 .Join(DOTween.Sequence()
@@ -88,11 +90,13 @@ namespace Animation
             _fullshotCamOrthoSize = _studentData.ShinbiCamOrthoSize;
         }
 
-        public void Play([CanBeNull] Action onComplete = null)
+        public void Play([CanBeNull] Action onComplete = null, [CanBeNull] Action onEnd = null)
         {
             gameObject.SetActive(true);
             _sequence.Restart();
-            _sequence.onComplete = () => onComplete?.Invoke();
+            if (onComplete != null)
+                _sequence.onComplete = onComplete.Invoke;
+            _onEnd = onEnd;
         }
 
         public void End()
@@ -103,6 +107,7 @@ namespace Animation
                 _sequence.onComplete = null;
             }
 
+            _onEnd?.Invoke();
             gameObject.SetActive(false);
         }
 
