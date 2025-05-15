@@ -42,7 +42,7 @@ namespace BA
                 PawnKindTemplateGenerator.Generate(template, Verse.Current.Game.CurrentMap);
         }
 
-        [DebugAction("BlueArchiveStudents", "Spawn BA Pawn",
+        [DebugAction(Const.DebugActionCategory, nameof(PawnKindTemplateDebug) + "::" + nameof(SpawnBaPawn),
             false, false, false, false,
             0, false, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void SpawnBaPawn()
@@ -61,7 +61,7 @@ namespace BA
             Find.WindowStack.Add(new Dialog_DebugOptionListLister(options));
         }
 
-        [DebugAction("BlueArchiveStudents", "Try Spawn BA Pawn",
+        [DebugAction(Const.DebugActionCategory, nameof(PawnKindTemplateDebug) + "::" + nameof(TrySpawnBaPawn),
             false, false, false, false,
             0, false, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static void TrySpawnBaPawn()

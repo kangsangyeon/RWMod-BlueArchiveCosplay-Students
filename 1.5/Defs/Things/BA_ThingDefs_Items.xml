@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--Eligma-->
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>BA_Item_Eligma</defName>
+    <label>BA Eligma</label>
+    <description>BA Eligma</description>
+    <graphicData>
+      <texPath>Things/Item/Item_Icon_Eligma</texPath>
+    </graphicData>
+    <thingCategories>
+      <li>BA_Item_Resource</li>
+    </thingCategories>
+
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <Mass>0.03</Mass>
+      <MaxHitPoints>30</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <MarketValue>1.1</MarketValue>
+      <DeteriorationRate>3</DeteriorationRate>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <stackLimit>1000</stackLimit>
+
+  </ThingDef>
+
+</Defs>

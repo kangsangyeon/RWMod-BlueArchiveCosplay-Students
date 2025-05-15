@@ -59,7 +59,7 @@ namespace BA
             StudentData.DefaultStar + Shinbi;
 
         public int LevelLimit =>
-            GameResource.StudentLevelLimitTable[Star].Value;
+            GameResource.ShinbiTable[Star].StudentLevelLimit;
 
         public StudentData StudentData => GameResource.StudentTable[StudentId];
         public Pawn Owner => parent as Pawn;

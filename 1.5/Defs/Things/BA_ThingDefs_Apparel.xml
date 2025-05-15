@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingCategoryDef>
-    <defName>BA_ThingCategory_Apparel</defName>
-    <label>BA Apparel</label>
-    <parent>Apparel</parent>
-  </ThingCategoryDef>
-
-  <ThingCategoryDef>
-    <defName>BA_ThingCategory_Headgear</defName>
-    <label>BA Headgear</label>
-    <parent>Apparel</parent>
-  </ThingCategoryDef>
-
   <ThingDef Abstract="True" Name="BA_Apparel_Base" ParentName="ApparelMakeableBase">
     <thingCategories Inherit="False">
       <li>BA_ThingCategory_Apparel</li>

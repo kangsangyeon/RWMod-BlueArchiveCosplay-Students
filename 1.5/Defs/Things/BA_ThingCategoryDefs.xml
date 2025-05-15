@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingCategoryDef>
+    <defName>BA_ThingCategory_Apparel</defName>
+    <label>BA Apparel</label>
+    <parent>Apparel</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>BA_ThingCategory_Headgear</defName>
+    <label>BA Headgear</label>
+    <parent>Apparel</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>BA_Item_Resource</defName>
+    <label>BA Resources</label>
+    <parent>AnimalProductRaw</parent>
+    <!-- <iconPath>UI/Icons/ThingCategories/BA_Item_Resource</iconPath> -->
+  </ThingCategoryDef>
+
+</Defs>

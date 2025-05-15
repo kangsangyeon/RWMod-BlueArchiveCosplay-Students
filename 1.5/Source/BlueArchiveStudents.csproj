@@ -96,10 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BA\BAStudents.cs" />
+    <Compile Include="BA\BADefOf.cs" />
     <Compile Include="BA\BAUtil.cs" />
     <Compile Include="BA\Const.cs" />
-    <Compile Include="BA\Dev\TestWeightTable.cs" />
-    <Compile Include="BA\Dev\PawnTemplateDebug.cs" />
+    <Compile Include="BA\Development\BAUtilDevelopment.cs" />
+    <Compile Include="BA\Development\WeightTableDevelopment.cs" />
+    <Compile Include="BA\Development\PawnTemplateDevelopment.cs" />
     <Compile Include="BA\Rimworld\Comp\CompUseEffect_UseEffectBAPawnGainExp.cs" />
     <Compile Include="BA\Rimworld\Comp\Comp_BAPawn.cs" />
     <Compile Include="BA\Rimworld\Harmony\PatchDisableCamera.cs" />

@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-
-
-  <ThingCategoryDef>
-    <defName>BA_Item_Resource</defName>
-    <label>BA Resources</label>
-    <parent>AnimalProductRaw</parent>
-    <!-- <iconPath>UI/Icons/ThingCategories/BA_Item_Resource</iconPath> -->
-  </ThingCategoryDef>
-
-  <!--Normal-->
+  <!--Report Normal-->
 
   <ThingDef ParentName="OrganicProductBase">
     <defName>BA_Item_Report_N</defName>
@@ -55,7 +46,7 @@
     </ingestible>
   </ThingDef>
 
-   <!--Rare-->
+  <!--Report Rare-->
 
   <ThingDef ParentName="OrganicProductBase">
     <defName>BA_Item_Report_R</defName>
@@ -100,7 +91,7 @@
     </ingestible>
   </ThingDef>
 
-  <!--SuperRare-->
+  <!--Report SuperRare-->
 
   <ThingDef ParentName="OrganicProductBase">
     <defName>BA_Item_Report_SR</defName>
@@ -145,7 +136,7 @@
     </ingestible>
   </ThingDef>
 
-  <!--UltraRare-->
+  <!--Report UltraRare-->
 
   <ThingDef ParentName="OrganicProductBase">
     <defName>BA_Item_Report_UR</defName>
