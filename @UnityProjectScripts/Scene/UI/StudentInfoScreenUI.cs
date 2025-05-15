@@ -415,7 +415,7 @@ namespace BA
             {
                 if (Application.isEditor)
                 {
-                    Contents.Instance.Accessor.ShinbiLiberationAnimation.Play(
+                    Contents.Instance.Accessor.PadCanvas.ShinbiLiberationAnimation.Play(
                         onEnd: () => UpdateChar(CharId.Value));
                     return;
                 }
@@ -430,7 +430,7 @@ namespace BA
                 if (result)
                 {
                     BridgeProcedure.OnShinbiLiberation.Invoke(data.EligmaCost, data.SilverCost);
-                    Contents.Instance.Accessor.ShinbiLiberationAnimation.Play(
+                    Contents.Instance.Accessor.PadCanvas.ShinbiLiberationAnimation.Play(
                         onEnd: () => UpdateChar(CharId.Value));
                 }
             }

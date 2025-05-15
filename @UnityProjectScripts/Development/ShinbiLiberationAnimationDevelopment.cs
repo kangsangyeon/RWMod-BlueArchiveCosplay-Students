@@ -11,7 +11,7 @@ namespace Development
 
         private void Start()
         {
-            _shinbiLiberationAnimation.Initialize(_fullshotRenderAccessor, _canvas);
+            _shinbiLiberationAnimation.Initialize(_fullshotRenderAccessor, (RectTransform)_canvas.transform);
             _shinbiLiberationAnimation.Play();
         }
     }

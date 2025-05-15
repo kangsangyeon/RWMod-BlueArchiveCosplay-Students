@@ -8,10 +8,10 @@ namespace BA
 
         private void Start()
         {
-            _contentsAccessor.ShinbiLiberationAnimation.Initialize(
+            _contentsAccessor.PadCanvas.ShinbiLiberationAnimation.Initialize(
                 _contentsAccessor.FullshotRender,
-                _contentsAccessor.OverlayCanvas);
-            _contentsAccessor.ShinbiLiberationAnimation.gameObject.SetActive(false);
+                (RectTransform)_contentsAccessor.PadCanvas.ScreenContainer.transform);
+            _contentsAccessor.PadCanvas.ShinbiLiberationAnimation.gameObject.SetActive(false);
         }
     }
 }

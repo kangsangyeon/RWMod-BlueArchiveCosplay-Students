@@ -21,12 +21,12 @@ namespace Animation
         [SerializeField] private RectTransform _maskLine;
         [SerializeField] private ParticleSystem _starParticles;
         [SerializeField] private Button _fullscreenButton;
-        private RectTransform _canvasRect;
+        private RectTransform _maskLineRectTransform;
         private Sequence _sequence;
         private bool _initialized;
 
         private FullshotRenderAccessor _fullshotRenderAccessor;
-        private Canvas _canvas;
+        private RectTransform _parentRectTransform;
         private StudentData _studentData;
         private Vector2 _fullshotCamPos = Vector2.zero;
         private float _fullshotCamOrthoSize = 5;
@@ -34,18 +34,18 @@ namespace Animation
 
         public void Initialize(
             FullshotRenderAccessor fullshotRenderAccessor,
-            Canvas canvas)
+            RectTransform parentRectTransform)
         {
             if (_initialized)
                 return;
             _initialized = true;
 
+            _maskLineRectTransform = (RectTransform)_maskLine.transform;
             _fullshotRenderAccessor = fullshotRenderAccessor;
-            _canvas = canvas;
+            _parentRectTransform = parentRectTransform;
 
             _whiteCircleTransition.material = new Material(_whiteCircleTransition.material);
             _bgWhite.material = new Material(_bgWhite.material);
-            _canvasRect = (RectTransform)_canvas.transform;
 
             _sequence = DOTween.Sequence()
                 .Pause()
@@ -118,7 +118,8 @@ namespace Animation
             _bgWhite.enabled = false;
             _whiteCircleTransition.material.SetFloat(ShaderProp_Radius, 0.6f);
             _whiteCircleTransition.color = new Color(1, 1, 1, 0f);
-            _maskLine.anchoredPosition = new Vector2(-_canvasRect.sizeDelta.x, _maskLine.anchoredPosition.y);
+            float offsetX = _parentRectTransform.rect.width * 0.5f + _maskLineRectTransform.rect.width * 0.5f;
+            _maskLine.anchoredPosition = new Vector2(-offsetX, _maskLine.anchoredPosition.y);
             _fullshot.enabled = false;
             _starParticles.Stop();
         }

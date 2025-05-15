@@ -1,7 +1,6 @@
 ﻿// AUTO GENERATED SOURCE. DO NOT MODIFY.
 
 using UnityEngine;
-using Animation;
 using BA;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,7 +14,6 @@ public class ContentsAccessor : MonoBehaviour
     public Canvas OverlayCanvas;
     public PadAccessor PadCanvas;
     public ContentsAccessor Root;
-    public ShinbiLiberationAnimation ShinbiLiberationAnimation;
     public Camera UICamera;
     public GameObject UIParticleHolder;
 }
