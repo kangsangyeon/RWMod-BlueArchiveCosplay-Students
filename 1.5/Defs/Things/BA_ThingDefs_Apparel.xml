@@ -216,4 +216,42 @@
     </apparel>
   </ThingDef>
 
+  <!-- test -->
+
+  <ThingDef Name="BA_Apparel_Aru_Apparel" ParentName="BA_Apparel_Base">
+    <defName>BA_Apparel_Aru_Apparel</defName>
+    <label>BA Aru Apparel</label>
+    <description>this is a Aru apparel.</description>
+    <graphicData>
+      <texPath>BA/Aru/Apparel/Aru_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalD</li>
+      </tags>
+      <wornGraphicPath>BA/Aru/Apparel/Aru_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Aru_OuterApparel" ParentName="BA_Apparel_Base">
+    <defName>BA_Apparel_Aru_OuterApparel</defName>
+    <label>BA Aru Outer Apparel</label>
+    <description>this is a Aru apparel.</description>
+    <graphicData>
+      <texPath>BA/Aru/Apparel/Aru_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalD</li>
+      </tags>
+      <wornGraphicPath>BA/Aru/Apparel/Aru_Outer</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
 </Defs>

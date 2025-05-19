@@ -14,4 +14,11 @@
     <graphicPath>BA/Makoto/Makoto_Head</graphicPath>
   </HeadTypeDef>
 
+  <!-- test -->
+
+  <HeadTypeDef Name="BA_HeadType_Aru" ParentName="BA_HeadType_Base">
+    <defName>BA_HeadType_Aru</defName>
+    <graphicPath>BA/Aru/Aru_Head</graphicPath>
+  </HeadTypeDef>
+
 </Defs>

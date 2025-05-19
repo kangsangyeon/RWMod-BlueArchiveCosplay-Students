@@ -19,4 +19,16 @@
     <headOffset>(0, 0)</headOffset>
   </BodyTypeDef>
 
+  <BodyTypeDef Name="BA_BodyType_Female_Normal_D" ParentName="Core_Female">
+    <defName>BA_BodyType_Female_Normal_D</defName>
+    <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_D</bodyNakedGraphicPath>
+    <headOffset>(0, 0)</headOffset>
+  </BodyTypeDef>
+
+  <BodyTypeDef Name="BA_BodyType_Female_Normal_F" ParentName="Core_Female">
+    <defName>BA_BodyType_Female_Normal_F</defName>
+    <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_F</bodyNakedGraphicPath>
+    <headOffset>(0, 0)</headOffset>
+  </BodyTypeDef>
+
 </Defs>

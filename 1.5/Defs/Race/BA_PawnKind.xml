@@ -31,4 +31,19 @@
     </apparelRequired>
   </PawnKindDef>
 
+  <!-- test -->
+
+  <PawnKindDef Name="BA_PawnKind_Aru" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Aru</defName>
+    <label>Aru(1046)</label>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Aru</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Aru</forcedHair>
+
+    <apparelRequired>
+      <li>BA_Apparel_Aru_Headgear</li>
+      <li>BA_Apparel_Aru_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
 </Defs>
