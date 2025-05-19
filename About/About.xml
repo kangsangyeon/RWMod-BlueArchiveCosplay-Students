@@ -24,10 +24,14 @@
 
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>Ludeon.RimWorld.Ideology</li>
 		<li>brrainz.harmony</li>
 	</loadAfter>
 	<forceLoadAfter>
 		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>Ludeon.RimWorld.Ideology</li>
 		<li>brrainz.harmony</li>
 	</forceLoadAfter>
 

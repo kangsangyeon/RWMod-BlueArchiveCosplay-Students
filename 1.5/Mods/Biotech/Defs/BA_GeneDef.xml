@@ -7,7 +7,7 @@
     <skinColorOverride>(255,255,255)</skinColorOverride>
   </GeneDef>
 
-  <GeneDef>
+  <GeneDef ParentName="GeneHairColorBase">
     <defName>BA_Gene_HairColor</defName>
     <label>BA HairColor</label>
     <hairColorOverride>(255,255,255)</hairColorOverride>
