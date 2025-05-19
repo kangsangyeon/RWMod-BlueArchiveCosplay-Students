@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Reflection;
+using Rimworld;
 using RimWorld;
 using UniRx;
 using UnityEngine;
@@ -47,6 +48,9 @@ namespace BA
             if (_setup)
                 return;
             _setup = true;
+
+            BridgeProcedure.CanShinbiLiberationFunc = CanShinbiLiberation;
+            BridgeProcedure.OnShinbiLiberation = OnShinbiLiberation;
 
             var currentMod =
                 LoadedModManager.RunningMods.FirstOrDefault(x => x.PackageId == "bluearchive.students");
@@ -103,6 +107,28 @@ namespace BA
             if (BAUtil.IsBAPawn(pawn, out var comp) == false)
                 return;
             comp.OnSkillTrackerLearn(sDef, xp);
+        }
+
+        private static bool CanShinbiLiberation(int eligmaCost, int silverCost)
+        {
+            return BAUtil.GetTotalEligma() >= eligmaCost
+                   && BAUtil.GetTotalSilver() >= silverCost;
+        }
+
+        private static void OnShinbiLiberation(int studentId, int eligmaCost, int silverCost)
+        {
+            var result = BAUtil.TryConsumeEligma(eligmaCost);
+            result &= BAUtil.TryConsumeSilver(silverCost);
+            if (!result)
+            {
+                Log.Error("뭔가 잘못됐다... 신비 해방 비용 없어서 실패해야 함.");
+                return;
+            }
+
+            var pawn = BAUtil.GetFirstPawnOf(studentId);
+            var comp = pawn.GetComp<BA.Comp_BAPawn>();
+            ++comp.Shinbi;
+            Log.Message($"신비 해방 성공. shinbi: {comp.Shinbi}");
         }
     }
 }

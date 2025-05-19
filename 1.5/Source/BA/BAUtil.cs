@@ -89,9 +89,20 @@ namespace BA
             return GetTotalOf(ThingDefOf.Silver);
         }
 
-        public static bool ConsumeSilver(int value)
+        public static bool TryConsumeSilver(int value)
         {
             return TryConsumeOf(ThingDefOf.Silver, value);
+        }
+
+        public static Pawn GetFirstPawnOf(PawnKindDef def)
+        {
+            return Current.Game.World.worldPawns.AllPawnsAliveOrDead
+                .First(p => p.kindDef == def);
+        }
+
+        public static Pawn GetFirstPawnOf(int studentId)
+        {
+            return GetFirstPawnOf(BADefOfCollections.PawnKindDefs[studentId]);
         }
     }
 }

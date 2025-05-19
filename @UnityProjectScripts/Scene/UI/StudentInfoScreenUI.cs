@@ -413,23 +413,10 @@ namespace BA
 
             void OnConfirmClicked()
             {
-                if (Application.isEditor)
-                {
-                    Contents.Instance.Accessor.PadCanvas.ShinbiLiberationAnimation.Play(
-                        onEnd: () => UpdateChar(CharId.Value));
-                    return;
-                }
-
-                if (BridgeProcedure.CanShinbiLiberationFunc == null)
-                {
-                    Debug.LogWarning("CanShinbiLiberationFunc is null.");
-                    return;
-                }
-
                 var result = BridgeProcedure.CanShinbiLiberationFunc.Invoke(data.EligmaCost, data.SilverCost);
                 if (result)
                 {
-                    BridgeProcedure.OnShinbiLiberation.Invoke(data.EligmaCost, data.SilverCost);
+                    BridgeProcedure.OnShinbiLiberation.Invoke(CharId.Value, data.EligmaCost, data.SilverCost);
                     Contents.Instance.Accessor.PadCanvas.ShinbiLiberationAnimation.Play(
                         onEnd: () => UpdateChar(CharId.Value));
                 }

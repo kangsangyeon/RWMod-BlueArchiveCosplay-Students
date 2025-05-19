@@ -1,34 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <BodyTypeDef Name="BA_BodyType_Female_Normal_A" ParentName="Core_Female">
+  <BodyTypeDef Abstract="True" Name="BA_BodyType_Base" ParentName="Core_Female">
+    <defName>BA_BodyType_Base</defName>
+    <headOffset>(0, 0)</headOffset>
+
+    <!-- woundAnchors에서 주석을 작성한 요소 외의 요소들은 전부 Core_Female에서 복사한 기본값임. -->
+    <woundAnchors>
+      <li>
+        <rotation>South</rotation>
+        <group>Torso</group>
+        <offset>(0,0,-0.06)</offset>
+        <range>0.2</range>
+        <debugColor>(1,0,0,1)</debugColor>
+      </li>
+      <li>
+        <rotation>South</rotation>
+        <tag>LeftLeg</tag>
+        <offset>(0.12,0,-0.34)</offset>
+        <range>0.125</range>
+        <debugColor>(0,1,0,1)</debugColor>
+      </li>
+      <li>
+        <rotation>South</rotation>
+        <tag>RightLeg</tag>
+        <offset>(-0.12,0,-0.34)</offset>
+        <range>0.125</range>
+        <debugColor>(0,0,1,1)</debugColor>
+      </li>
+      <li>
+        <rotation>South</rotation>
+        <tag>LeftShoulder</tag>
+        <offset>(0.12,0,0.01)</offset>
+        <range>0.125</range>
+        <debugColor>(1,1,0,1)</debugColor>
+      </li>
+      <li>
+        <rotation>South</rotation>
+        <tag>RightShoulder</tag>
+        <offset>(-0.12,0,0.01)</offset>
+        <range>0.125</range>
+        <debugColor>(1,0,1,1)</debugColor>
+      </li>
+      <li>
+        <rotation>South</rotation>
+        <group>FullHead</group>
+        <offset>(0, 0, 0)</offset>
+        <range>0.18</range>
+        <layer>Head</layer>
+        <debugColor>(0,1,1,1)</debugColor>
+      </li>
+
+      <!-- South/RightEye -->
+      <li>
+        <rotation>South</rotation>
+        <tag>RightEye</tag>
+        <canMirror>false</canMirror>
+        <offset>(-0.095, 0, 0.18)</offset>
+        <range>0</range>
+        <layer>Head</layer>
+        <debugColor>(1,1,1,1)</debugColor>
+      </li>
+
+      <!-- South/LeftEye -->
+      <li>
+        <rotation>South</rotation>
+        <tag>LeftEye</tag>
+        <canMirror>false</canMirror>
+        <offset>(0.095, 0, 0.18)</offset>
+        <range>0</range>
+        <layer>Head</layer>
+        <debugColor>(0,0,0,1)</debugColor>
+      </li>
+
+      <li>
+        <rotation>West</rotation>
+        <group>FullHead</group>
+        <offset>(0, 0, 0)</offset>
+        <range>0.2</range>
+        <layer>Head</layer>
+        <debugColor>(0,1,1,1)</debugColor>
+      </li>
+      <li>
+        <rotation>West</rotation>
+        <group>Torso</group>
+        <offset>(0,0,-0.13)</offset>
+        <range>0.2</range>
+        <debugColor>(1,0,0,1)</debugColor>
+      </li>
+      <li>
+        <rotation>West</rotation>
+        <tag>LeftShoulder</tag>
+        <offset>(-0.05,0,0.1)</offset>
+        <range>0.15</range>
+        <canMirror>false</canMirror>
+        <debugColor>(1,1,0,1)</debugColor>
+      </li>
+      <li>
+        <rotation>East</rotation>
+        <tag>LeftLeg</tag>
+        <offset>(-0.05,0,-0.35)</offset>
+        <range>0.15</range>
+        <canMirror>false</canMirror>
+        <debugColor>(0,1,0,1)</debugColor>
+      </li>
+      <li>
+        <rotation>East</rotation>
+        <tag>RightShoulder</tag>
+        <offset>(0.05,0,0.1)</offset>
+        <range>0.15</range>
+        <canMirror>false</canMirror>
+        <debugColor>(1,0,1,1)</debugColor>
+      </li>
+      <li>
+        <rotation>West</rotation>
+        <tag>RightLeg</tag>
+        <offset>(0.05,0,-0.35)</offset>
+        <range>0.15</range>
+        <canMirror>false</canMirror>
+        <debugColor>(0,0,1,1)</debugColor>
+      </li>
+
+      <!-- East/RightEye -->
+      <li>
+        <rotation>East</rotation>
+        <tag>RightEye</tag>
+        <canMirror>false</canMirror>
+        <offset>(0.135, 0, 0.18)</offset>
+        <range>0</range>
+        <layer>Head</layer>
+        <debugColor>(1,1,1,1)</debugColor>
+      </li>
+
+      <!-- East/LeftEye -->
+      <li>
+        <rotation>West</rotation>
+        <tag>LeftEye</tag>
+        <canMirror>false</canMirror>
+        <offset>(-0.135, 0, 0.18)</offset>
+        <range>0</range>
+        <layer>Head</layer>
+        <debugColor>(0,0,0,1)</debugColor>
+      </li>
+
+      <!-- West/RightEye -->
+      <!-- 기본값은 East/RightEye인데, 아마 기본 xml에서 틀린 것 같아 정정함. -->
+      <li>
+        <rotation>West</rotation>
+        <tag>RightEye</tag>
+        <canMirror>false</canMirror>
+        <narrowCrown>true</narrowCrown>
+        <offset>(0.1, 0, 0.18)</offset>
+        <range>0</range>
+        <layer>Head</layer>
+        <debugColor>(1,1,1,1)</debugColor>
+      </li>
+
+      <!-- West/LeftEye -->
+      <li>
+        <rotation>West</rotation>
+        <tag>LeftEye</tag>
+        <canMirror>false</canMirror>
+        <narrowCrown>true</narrowCrown>
+        <offset>(-0.1, 0, 0.18)</offset>
+        <range>0</range>
+        <layer>Head</layer>
+        <debugColor>(0,0,0,1)</debugColor>
+      </li>
+    </woundAnchors>
+
+  </BodyTypeDef>
+
+  <BodyTypeDef Name="BA_BodyType_Female_Normal_A" ParentName="BA_BodyType_Base">
     <defName>BA_BodyType_Female_Normal_A</defName>
     <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_A</bodyNakedGraphicPath>
-    <headOffset>(0, 0)</headOffset>
   </BodyTypeDef>
 
-  <BodyTypeDef Name="BA_BodyType_Female_Normal_B" ParentName="Core_Female">
+  <BodyTypeDef Name="BA_BodyType_Female_Normal_B" ParentName="BA_BodyType_Base">
     <defName>BA_BodyType_Female_Normal_B</defName>
     <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_B</bodyNakedGraphicPath>
-    <headOffset>(0, 0)</headOffset>
   </BodyTypeDef>
 
-  <BodyTypeDef Name="BA_BodyType_Female_Normal_C" ParentName="Core_Female">
+  <BodyTypeDef Name="BA_BodyType_Female_Normal_C" ParentName="BA_BodyType_Base">
     <defName>BA_BodyType_Female_Normal_C</defName>
     <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_C</bodyNakedGraphicPath>
-    <headOffset>(0, 0)</headOffset>
   </BodyTypeDef>
 
-  <BodyTypeDef Name="BA_BodyType_Female_Normal_D" ParentName="Core_Female">
+  <BodyTypeDef Name="BA_BodyType_Female_Normal_D" ParentName="BA_BodyType_Base">
     <defName>BA_BodyType_Female_Normal_D</defName>
     <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_D</bodyNakedGraphicPath>
-    <headOffset>(0, 0)</headOffset>
   </BodyTypeDef>
 
-  <BodyTypeDef Name="BA_BodyType_Female_Normal_F" ParentName="Core_Female">
+  <BodyTypeDef Name="BA_BodyType_Female_Normal_F" ParentName="BA_BodyType_Base">
     <defName>BA_BodyType_Female_Normal_F</defName>
     <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_F</bodyNakedGraphicPath>
-    <headOffset>(0, 0)</headOffset>
   </BodyTypeDef>
 
 </Defs>

@@ -55,14 +55,12 @@ namespace BA
             }
         }
 
-        public int Star =>
-            StudentData.DefaultStar + Shinbi;
-
         public int LevelLimit =>
-            GameResource.ShinbiTable[Star].StudentLevelLimit;
+            GameResource.ShinbiTable[Shinbi].StudentLevelLimit;
 
         public StudentData StudentData => GameResource.StudentTable[StudentId];
         public Pawn Owner => parent as Pawn;
+        public BA.PawnKindDef OwnerPawnKindDef => Owner.kindDef as BA.PawnKindDef;
         public SkillRecord ShootingSkillRecord => Owner.skills.GetSkill(SkillDefOf.Shooting);
         public SkillRecord MeleeSkillRecord => Owner.skills.GetSkill(SkillDefOf.Melee);
         public SkillRecord ConstructionSkillRecord => Owner.skills.GetSkill(SkillDefOf.Construction);
@@ -111,8 +109,8 @@ namespace BA
             }
             else
             {
-                Match match = Regex.Match(Owner.kindDef.label, @"\((\d+)\)$");
-                StudentId = int.Parse(match.Groups[1].Value);
+                StudentId = OwnerPawnKindDef.studentId;
+                Shinbi = StudentData.DefaultStar;
                 Level = 1;
                 Exp = 0;
                 UpdateRequiredExp();

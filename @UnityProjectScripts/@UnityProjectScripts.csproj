@@ -231,6 +231,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation\ShinbiLiberationAnimation.cs" />
+    <Compile Include="Development\MainSceneDevelopment.cs" />
     <Compile Include="Development\MainScreenDevelopment.cs" />
     <Compile Include="Development\ShinbiLiberationAnimationDevelopment.cs" />
     <Compile Include="Development\StudentInfoScreenDevelopment.cs" />
