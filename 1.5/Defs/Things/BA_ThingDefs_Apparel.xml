@@ -53,6 +53,58 @@
     <colorGenerator Class="ColorGenerator_White" />
   </ThingDef>
 
+  <ThingDef Abstract="True" Name="BA_OuterApparel_Base" ParentName="ApparelMakeableBase">
+    <thingCategories Inherit="False">
+      <li>BA_ThingCategory_Apparel</li>
+    </thingCategories>
+
+    <apparel Inherit="False">
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <tags>
+        <li>BA_ApparelTag</li>
+      </tags>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+    </apparel>
+
+    <smeltable>false</smeltable>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>1600</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.08</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.2</SocialImpact>
+      <TradePriceImprovement>0.2</TradePriceImprovement>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.1</ToxicEnvironmentResistance>
+    </equippedStatOffsets>
+
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <displayPriority>265</displayPriority>
+    </recipeMaker>
+
+    <colorGenerator Class="ColorGenerator_White" />
+  </ThingDef>
+
   <ThingDef Abstract="True" Name="BA_Headgear_Base" ParentName="HatMakeableBase">
     <thingCategories Inherit="False">
       <li>BA_ThingCategory_Headgear</li>
@@ -144,7 +196,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Makoto_Apparel" ParentName="BA_Apparel_Base">
+  <ThingDef Name="BA_Apparel_Makoto_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Makoto_Apparel</defName>
     <label>BA Makoto Apparel</label>
     <description>this is a makoto apparel.</description>
@@ -162,7 +214,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Satsuki_Apparel" ParentName="BA_Apparel_Base">
+  <ThingDef Name="BA_Apparel_Satsuki_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Satsuki_Apparel</defName>
     <label>BA Satsuki Apparel</label>
     <description>this is a satsuki apparel.</description>
@@ -180,7 +232,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Iroha_Apparel" ParentName="BA_Apparel_Base">
+  <ThingDef Name="BA_Apparel_Iroha_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Iroha_Apparel</defName>
     <label>BA Iroha Apparel</label>
     <description>this is a iroha apparel.</description>
@@ -198,7 +250,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Iroha_OuterApparel" ParentName="BA_Apparel_Base">
+  <ThingDef Name="BA_Apparel_Iroha_OuterApparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Iroha_OuterApparel</defName>
     <label>BA Iroha Outer Apparel</label>
     <description>this is a iroha apparel.</description>
@@ -216,9 +268,7 @@
     </apparel>
   </ThingDef>
 
-  <!-- test -->
-
-  <ThingDef Name="BA_Apparel_Aru_Apparel" ParentName="BA_Apparel_Base">
+  <ThingDef Name="BA_Apparel_Aru_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Aru_Apparel</defName>
     <label>BA Aru Apparel</label>
     <description>this is a Aru apparel.</description>
@@ -236,7 +286,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Aru_OuterApparel" ParentName="BA_Apparel_Base">
+  <ThingDef Name="BA_Apparel_Aru_OuterApparel" ParentName="BA_OuterApparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Aru_OuterApparel</defName>
     <label>BA Aru Outer Apparel</label>
     <description>this is a Aru apparel.</description>
@@ -252,6 +302,7 @@
       </tags>
       <wornGraphicPath>BA/Aru/Apparel/Aru_Outer</wornGraphicPath>
     </apparel>
+    <texPathOuterLining>BA/Aru/Apparel/Aru_OuterLining</texPathOuterLining>
   </ThingDef>
 
 </Defs>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <StyleItemCategoryDef>
+    <defName>BA_StyleItemCategory_Ear</defName>
+    <label>BA Ear</label>
+  </StyleItemCategoryDef>
+
+</Defs>

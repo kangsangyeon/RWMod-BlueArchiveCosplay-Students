@@ -17,6 +17,34 @@
           <colorType>Hair</colorType>
           <baseLayer>-1</baseLayer>
         </li>
+
+        <!-- 꼬리 레이어 -->
+        <li>
+          <debugLabel>BA_Tail</debugLabel>
+          <nodeClass>BA.PawnRenderNode_Tail</nodeClass>
+          <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+          <rotDrawMode>Fresh, Rotting</rotDrawMode>
+          <baseLayer>2</baseLayer>
+        </li>
+
+        <!-- 외투 안감 레이어-->
+        <li>
+          <debugLabel>BA_OuterLining</debugLabel>
+          <nodeClass>BA.PawnRenderNode_OuterLining</nodeClass>
+          <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+          <rotDrawMode>Fresh, Rotting</rotDrawMode>
+          <baseLayer>3</baseLayer>
+        </li>
+
+        <!-- 날개 레이어 -->
+        <!-- <li>
+          <debugLabel>BA_Wing</debugLabel>
+          <nodeClass>BA.PawnRenderNode_Wing</nodeClass>
+          <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+          <rotDrawMode>Fresh, Rotting</rotDrawMode>
+          <baseLayer>-1</baseLayer>
+        </li> -->
+
         <li>
           <debugLabel>Body</debugLabel>
           <nodeClass>PawnRenderNode_Body</nodeClass>
@@ -26,6 +54,7 @@
           <colorType>Skin</colorType>
           <useRottenColor>true</useRottenColor>
           <useSkinShader>true</useSkinShader>
+          <baseLayer>5</baseLayer> <!-- 기본값: 없음 (0) -->
 
           <children>
             <li Class="PawnRenderNodeProperties_Tattoo" MayRequire="Ludeon.RimWorld.Ideology">
@@ -34,7 +63,7 @@
               <workerClass>PawnRenderNodeWorker_Body_Tattoo</workerClass>
               <colorType>Skin</colorType>
               <useRottenColor>true</useRottenColor>
-              <baseLayer>2</baseLayer>
+              <baseLayer>7</baseLayer> <!-- 기본값: 2 -->
               <rotDrawMode>Fresh, Rotting</rotDrawMode>
             </li>
             <li Class="PawnRenderNodeProperties_Overlay">
@@ -123,18 +152,27 @@
               <baseLayer>62</baseLayer>
             </li>
 
-            <!-- 머리 앞에 위치한 장식 -->
-            <!-- 대표적으로 마코토의 뿔 등이 있음. -->
+            <!-- 뿔 레이어 -->
             <li>
-              <debugLabel>BA_HeadDeco_Front</debugLabel>
+              <debugLabel>BA_FrontHorn</debugLabel>
+              <nodeClass>BA.PawnRenderNode_FrontHorn</nodeClass>
+              <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
               <baseLayer>63</baseLayer>
+            </li>
+
+            <!-- 앞머리 레이어 -->
+            <li>
+              <debugLabel>BA_FrontHair</debugLabel>
+              <nodeClass>BA.PawnRenderNode_FrontHorn</nodeClass>
+              <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+              <baseLayer>64</baseLayer>
             </li>
 
             <li Class="PawnRenderNodeProperties_Overlay">
               <debugLabel>Head wounds</debugLabel>
               <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
               <overlayLayer>Head</overlayLayer>
-              <baseLayer>65</baseLayer>
+              <baseLayer>69</baseLayer> <!-- 기본값: 65 -->
             </li>
             <li Class="PawnRenderNodeProperties_Parent">
               <debugLabel>Apparel root</debugLabel>
