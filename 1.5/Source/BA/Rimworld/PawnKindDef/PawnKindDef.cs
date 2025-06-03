@@ -7,6 +7,8 @@
         public RimWorld.BodyTypeDef forcedBodyTypeFemale;
         public Verse.HeadTypeDef forcedHeadType;
         public Verse.HeadTypeDef forcedHeadTypeFemale;
+        public FaceDef faceDef;
+        public EyebrowDef eyebrowDef;
         public WingDef wingDef;
         public TailDef tailDef;
         public EarDef earDef;

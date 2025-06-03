@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <StyleItemCategoryDef>
+    <defName>BA_StyleItemCategory_Face</defName>
+    <label>BA Face</label>
+  </StyleItemCategoryDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Makoto</defName>
+    <label>Makoto Face</label>
+    <texPath>BA/Makoto/Makoto_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Aru</defName>
+    <label>Aru Face</label>
+    <texPath>BA/Aru/Aru_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Mika</defName>
+    <label>Mika Face</label>
+    <texPath>BA/Mika/Mika_Face</texPath>
+  </BA.FaceDef>
+
+</Defs>

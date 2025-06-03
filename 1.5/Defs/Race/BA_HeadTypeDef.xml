@@ -9,6 +9,10 @@
     <eyeOffsetEastWest>(0.1, 0, 0.17)</eyeOffsetEastWest>
   </HeadTypeDef>
 
+  <HeadTypeDef Name="BA_HeadType_Normal" ParentName="BA_HeadType_Base" Class="BA.HeadTypeDef">
+    <defName>BA_HeadType_Normal</defName>
+  </HeadTypeDef>
+
   <HeadTypeDef Name="BA_HeadType_Makoto" ParentName="BA_HeadType_Base" Class="BA.HeadTypeDef">
     <defName>BA_HeadType_Makoto</defName>
     <graphicPath>BA/Makoto/Makoto_Head</graphicPath>

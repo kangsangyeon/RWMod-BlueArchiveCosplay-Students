@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <StyleItemCategoryDef>
+    <defName>BA_StyleItemCategory_Eyebrow</defName>
+    <label>BA Eyebrow</label>
+  </StyleItemCategoryDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Aru</defName>
+    <label>Aru Eyebrow</label>
+    <texPath>BA/Aru/Aru_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Mika</defName>
+    <label>Mika Eyebrow</label>
+    <texPath>BA/Mika/Mika_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+</Defs>

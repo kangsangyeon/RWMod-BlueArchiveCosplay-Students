@@ -305,4 +305,22 @@
     <texPathOuterLining>BA/Aru/Apparel/Aru_OuterLining</texPathOuterLining>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Mika_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Mika_Apparel</defName>
+    <label>BA Mika Apparel</label>
+    <description>this is a Mika apparel.</description>
+    <graphicData>
+      <texPath>BA/Mika/Apparel/Mika_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalD</li>
+      </tags>
+      <wornGraphicPath>BA/Mika/Apparel/Mika_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
 </Defs>

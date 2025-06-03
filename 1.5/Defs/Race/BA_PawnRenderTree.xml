@@ -125,6 +125,15 @@
           <useRottenColor>true</useRottenColor>
           <useSkinShader>true</useSkinShader>
           <children>
+            <!-- 얼굴 레이어 -->
+            <li>
+              <debugLabel>BA_Face</debugLabel>
+              <nodeClass>BA.PawnRenderNode_Face</nodeClass>
+              <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+              <rotDrawMode>Fresh, Rotting</rotDrawMode>
+              <baseLayer>51</baseLayer>
+            </li>
+
             <li Class="PawnRenderNodeProperties_Tattoo" MayRequire="Ludeon.RimWorld.Ideology">
               <debugLabel>Head tattoo</debugLabel>
               <nodeClass>PawnRenderNode_Tattoo_Head</nodeClass>
@@ -164,6 +173,14 @@
             <li>
               <debugLabel>BA_FrontHair</debugLabel>
               <nodeClass>BA.PawnRenderNode_FrontHorn</nodeClass>
+              <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+              <baseLayer>64</baseLayer>
+            </li>
+
+            <!-- 눈썹 레이어 -->
+            <li>
+              <debugLabel>BA_Eyebrow</debugLabel>
+              <nodeClass>BA.PawnRenderNode_Eyebrow</nodeClass>
               <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
               <baseLayer>64</baseLayer>
             </li>

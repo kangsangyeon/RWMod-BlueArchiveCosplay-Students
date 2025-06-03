@@ -51,6 +51,8 @@ namespace BA
                 return;
             var shader = kindDef.wingDef.overrideShaderTypeDef?.Shader ?? ShaderDatabase.CutoutHair;
             this.graphic = GraphicDatabase.Get<Graphic_Multi>(kindDef.wingDef.texPath, shader, Vector2.one, ColorFor(_pawn));
+            // this.graphic.data.drawOffsetSouth = new Vector3(-512.0f * 0.8f, 0f, 0f);
+            // this.graphic.data.drawOffsetEast = new Vector3(-512.0f * 0.8f, 0f, 0f);
         }
     }
 }

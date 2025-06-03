@@ -28,4 +28,12 @@
     <texPathBackHair>BA/Aru/Aru_BackHair</texPathBackHair>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Mika" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Mika</defName>
+    <label>Mika Hair</label>
+    <texPath>BA/Mika/Mika_Hair</texPath>
+    <texPathBackHair>BA/Mika/Mika_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Mika/Mika_FrontHair</texPathFrontHair>
+  </HairDef>
+
 </Defs>
