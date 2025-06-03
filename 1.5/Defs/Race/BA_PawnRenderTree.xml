@@ -182,7 +182,7 @@
               <debugLabel>BA_Eyebrow</debugLabel>
               <nodeClass>BA.PawnRenderNode_Eyebrow</nodeClass>
               <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-              <baseLayer>64</baseLayer>
+              <baseLayer>65</baseLayer>
             </li>
 
             <li Class="PawnRenderNodeProperties_Overlay">

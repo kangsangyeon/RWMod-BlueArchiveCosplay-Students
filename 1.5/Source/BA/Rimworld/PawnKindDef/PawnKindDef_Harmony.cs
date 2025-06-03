@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System;
+using HarmonyLib;
 using Verse;
 
 namespace BA
@@ -13,7 +14,7 @@ namespace BA
         [HarmonyPostfix]
         public static void Postfix(Pawn pawn, PawnGenerationRequest request)
         {
-            if (!(pawn.kindDef is PawnKindDef kindDef))
+            if (!(pawn.kindDef is BA.PawnKindDef kindDef))
                 return;
 
             switch (pawn.gender)
@@ -32,6 +33,21 @@ namespace BA
                         pawn.story.headType = kindDef.forcedHeadTypeFemale;
                     break;
             }
+        }
+    }
+
+    [HarmonyPatch(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), [typeof(PawnGenerationRequest)])]
+    public static class Harmony_PawnGenerator_GeneratePawn
+    {
+        [HarmonyPostfix]
+        public static void Postfix(ref Pawn __result, PawnGenerationRequest request)
+        {
+            if (__result.kindDef is not BA.PawnKindDef kindDef)
+                return;
+
+            // biotech가 없을 때, PawnKindDef의 skinColorOverride를 실제 pawn에 강제로 적용함.
+            if (!ModsConfig.BiotechActive && kindDef.skinColorOverride.HasValue)
+                __result.story.skinColorOverride = kindDef.skinColorOverride.Value;
         }
     }
 }

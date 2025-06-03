@@ -17,7 +17,7 @@
     </backstoryFilters>
     <xenotypeSet Inherit="False">
       <xenotypeChances>
-        <BA_Xenotype>999</BA_Xenotype>
+        <BA_Xenotype MayRequire="Ludeon.RimWorld.Biotech">999</BA_Xenotype>
       </xenotypeChances>
     </xenotypeSet>
 

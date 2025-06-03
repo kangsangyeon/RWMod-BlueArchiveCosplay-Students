@@ -4,6 +4,15 @@
   <PawnKindDef Abstract="True" Name="BA_PawnKind_Base" ParentName="Core_Colonist">
     <race>BA_Thing_Race</race>
     <fixedGender>Female</fixedGender>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelIgnorePollution>true</apparelIgnorePollution>
+    <ignoreFactionApparelStuffRequirements>true</ignoreFactionApparelStuffRequirements>
+    <ignoreIdeoApparelColors>true</ignoreIdeoApparelColors>
+
+    <!-- biotech가 없을 때 color를 고정하기 위한 속성 추가 -->
+    <!-- skin color는 xml 속성만으로 고정할 수 없음. 대신 코드에서 harmony를 사용해 skinColorOverride로 고정함. -->
+    <forcedHairColor>(255,255,255)</forcedHairColor>
+    <skinColorOverride>(0,0,0)</skinColorOverride> <!-- 각 캐릭터 PawnKindDef에서 덮어쓰기 해야 함. -->
 
     <apparelTags Inherit="False">
       <li>BA_ApparelTag</li>
@@ -11,7 +20,7 @@
 
     <xenotypeSet Inherit="False">
       <xenotypeChances>
-        <BA_Xenotype>999</BA_Xenotype>
+        <BA_Xenotype MayRequire="Ludeon.RimWorld.Biotech">999</BA_Xenotype>
       </xenotypeChances>
     </xenotypeSet>
 
@@ -36,6 +45,7 @@
     <defName>BA_PawnKind_Aru</defName>
     <label>Aru</label>
     <studentId>1046</studentId>
+    <skinColorOverride>(253,224,221)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Aru</forcedHair>
@@ -52,11 +62,13 @@
     <defName>BA_PawnKind_Mika</defName>
     <label>Mika</label>
     <studentId>1046</studentId>
+    <skinColorOverride>(253,224,221)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Mika</forcedHair>
     <faceDef>BA_Face_Mika</faceDef>
     <eyebrowDef>BA_Eyebrow_Mika</eyebrowDef>
+    <wingDef>BA_Wing_Mika</wingDef>
 
     <apparelRequired>
       <li>BA_Apparel_Mika_Apparel</li>
