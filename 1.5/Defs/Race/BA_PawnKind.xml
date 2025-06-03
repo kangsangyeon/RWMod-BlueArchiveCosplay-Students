@@ -14,6 +14,9 @@
     <forcedHairColor>(255,255,255)</forcedHairColor>
     <skinColorOverride>(0,0,0)</skinColorOverride> <!-- 각 캐릭터 PawnKindDef에서 덮어쓰기 해야 함. -->
 
+    <!-- apparelRequired로 지정한 옷 이외의 옷을 착용하고 스폰되는 문제를 수정. -->
+    <apparelMoney>0~0</apparelMoney>
+
     <apparelTags Inherit="False">
       <li>BA_ApparelTag</li>
     </apparelTags>
