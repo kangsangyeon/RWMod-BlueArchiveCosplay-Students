@@ -49,10 +49,14 @@ namespace BA
                 return;
             if (kindDef.wingDef == null || kindDef.wingDef.noGraphic)
                 return;
+            if (props is not BA.PawnRenderNodeProperties_Wing wingNodeProps)
+                return;
             var shader = kindDef.wingDef.overrideShaderTypeDef?.Shader ?? ShaderDatabase.CutoutHair;
-            this.graphic = GraphicDatabase.Get<Graphic_Multi>(kindDef.wingDef.texPath, shader, Vector2.one, ColorFor(_pawn));
-            // this.graphic.data.drawOffsetSouth = new Vector3(-512.0f * 0.8f, 0f, 0f);
-            // this.graphic.data.drawOffsetEast = new Vector3(-512.0f * 0.8f, 0f, 0f);
+            // 왼쪽 날개이며 왼쪽 날개 텍스쳐를 별도로 지정했을 때, 왼쪽 날개 텍스쳐 사용함.
+            if (wingNodeProps.isLeft && !string.IsNullOrEmpty(kindDef.wingDef.texPathLeft))
+                this.graphic = GraphicDatabase.Get<Graphic_Multi>(kindDef.wingDef.texPathLeft, shader, Vector2.one, ColorFor(_pawn));
+            else
+                this.graphic = GraphicDatabase.Get<Graphic_Multi>(kindDef.wingDef.texPath, shader, Vector2.one, ColorFor(_pawn));
         }
     }
 }

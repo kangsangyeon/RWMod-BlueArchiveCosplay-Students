@@ -6,4 +6,15 @@
     <label>BA Wing</label>
   </StyleItemCategoryDef>
 
+  <BA.WingDef Abstract="True" Name="BA_Wing_Base">
+    <defName>BA_Wing_Base</defName>
+  </BA.WingDef>
+
+  <BA.WingDef>
+    <defName>BA_Wing_Mika</defName>
+    <label>Mika Wing</label>
+    <texPath>BA/Mika/Mika_Wing</texPath>
+    <texPathLeft>BA/Mika/Mika_LeftWing</texPathLeft>
+  </BA.WingDef>
+
 </Defs>

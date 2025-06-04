@@ -36,14 +36,24 @@
           <baseLayer>3</baseLayer>
         </li>
 
-        <!-- 날개 레이어 -->
-        <!-- <li>
+        <!-- 날개 레이어 - 오른쪽 -->
+        <li Class="BA.PawnRenderNodeProperties_Wing">
           <debugLabel>BA_Wing</debugLabel>
           <nodeClass>BA.PawnRenderNode_Wing</nodeClass>
-          <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+          <workerClass>BA.PawnRenderNodeWorker_Wing</workerClass>
           <rotDrawMode>Fresh, Rotting</rotDrawMode>
-          <baseLayer>-1</baseLayer>
-        </li> -->
+          <baseLayer>4</baseLayer>
+        </li>
+
+        <!-- 날개 레이어 - 왼쪽 -->
+        <li Class="BA.PawnRenderNodeProperties_Wing">
+          <debugLabel>BA_Wing_Left</debugLabel>
+          <nodeClass>BA.PawnRenderNode_Wing</nodeClass>
+          <workerClass>BA.PawnRenderNodeWorker_Wing</workerClass>
+          <rotDrawMode>Fresh, Rotting</rotDrawMode>
+          <baseLayer>4</baseLayer>
+          <isLeft>true</isLeft>
+        </li>
 
         <li>
           <debugLabel>Body</debugLabel>
