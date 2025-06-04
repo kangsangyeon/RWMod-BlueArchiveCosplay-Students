@@ -48,7 +48,7 @@
     <defName>BA_PawnKind_Aru</defName>
     <label>Aru</label>
     <studentId>1046</studentId>
-    <skinColorOverride>(253,224,221)</skinColorOverride>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Aru</forcedHair>
@@ -65,7 +65,7 @@
     <defName>BA_PawnKind_Mika</defName>
     <label>Mika</label>
     <studentId>1046</studentId>
-    <skinColorOverride>(253,224,221)</skinColorOverride>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Mika</forcedHair>

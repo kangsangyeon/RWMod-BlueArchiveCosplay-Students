@@ -10,6 +10,7 @@
       <useWornGraphicMask>true</useWornGraphicMask>
       <tags>
         <li>BA_ApparelTag</li>
+        <li>BA_ApparelTag_Apparel</li>
       </tags>
       <bodyPartGroups>
         <li>Torso</li>
@@ -62,6 +63,7 @@
       <useWornGraphicMask>true</useWornGraphicMask>
       <tags>
         <li>BA_ApparelTag</li>
+        <li>BA_ApparelTag_OuterApparel</li>
       </tags>
       <bodyPartGroups>
         <li>Torso</li>
@@ -114,6 +116,7 @@
       <useWornGraphicMask>true</useWornGraphicMask>
       <tags>
         <li>BA_ApparelTag</li>
+        <li>BA_ApparelTag_Headgear</li>
       </tags>
       <parentTagDef>ApparelHead</parentTagDef>
       <bodyPartGroups>
@@ -154,48 +157,6 @@
     <colorGenerator Class="ColorGenerator_White" />
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Makoto_Headgear" ParentName="BA_Headgear_Base">
-    <defName>BA_Apparel_Makoto_Headgear</defName>
-    <label>BA Makoto Headgear</label>
-    <description>Makoto Headgear</description>
-    <graphicData>
-      <texPath>BA/Makoto/Apparel/Makoto_Headgear_1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-
-    <apparel>
-      <wornGraphicPath>BA/Makoto/Apparel/Makoto_Headgear</wornGraphicPath>
-    </apparel>
-  </ThingDef>
-
-  <ThingDef Name="BA_Apparel_Satsuki_Headgear" ParentName="BA_Headgear_Base">
-    <defName>BA_Apparel_Satsuki_Headgear</defName>
-    <label>BA Satsuki Headgear</label>
-    <description>Satsuki Headgear</description>
-    <graphicData>
-      <texPath>BA/Satsuki/Apparel/Satsuki_Headgear_1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-
-    <apparel>
-      <wornGraphicPath>BA/Satsuki/Apparel/Satsuki_Headgear</wornGraphicPath>
-    </apparel>
-  </ThingDef>
-
-  <ThingDef Name="BA_Apparel_Iroha_Headgear" ParentName="BA_Headgear_Base">
-    <defName>BA_Apparel_Iroha_Headgear</defName>
-    <label>BA Iroha Headgear</label>
-    <description>Iroha Headgear</description>
-    <graphicData>
-      <texPath>BA/Iroha/Apparel/Iroha_Headgear_1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-
-    <apparel>
-      <wornGraphicPath>BA/Iroha/Apparel/Iroha_Headgear</wornGraphicPath>
-    </apparel>
-  </ThingDef>
-
   <ThingDef Name="BA_Apparel_Makoto_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Makoto_Apparel</defName>
     <label>BA Makoto Apparel</label>
@@ -214,6 +175,20 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Makoto_Headgear" ParentName="BA_Headgear_Base">
+    <defName>BA_Apparel_Makoto_Headgear</defName>
+    <label>BA Makoto Headgear</label>
+    <description>Makoto Headgear</description>
+    <graphicData>
+      <texPath>BA/Makoto/Apparel/Makoto_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Makoto/Apparel/Makoto_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Satsuki_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Satsuki_Apparel</defName>
     <label>BA Satsuki Apparel</label>
@@ -229,6 +204,20 @@
         <li>BA_ApparelTag_FemaleNormalF</li>
       </tags>
       <wornGraphicPath>BA/Satsuki/Apparel/Satsuki_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Satsuki_Headgear" ParentName="BA_Headgear_Base">
+    <defName>BA_Apparel_Satsuki_Headgear</defName>
+    <label>BA Satsuki Headgear</label>
+    <description>Satsuki Headgear</description>
+    <graphicData>
+      <texPath>BA/Satsuki/Apparel/Satsuki_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Satsuki/Apparel/Satsuki_Headgear</wornGraphicPath>
     </apparel>
   </ThingDef>
 
@@ -265,6 +254,20 @@
         <li>BA_ApparelTag_FemaleThinAA</li>
       </tags>
       <wornGraphicPath>BA/Iroha/Apparel/Iroha_Outer</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Iroha_Headgear" ParentName="BA_Headgear_Base">
+    <defName>BA_Apparel_Iroha_Headgear</defName>
+    <label>BA Iroha Headgear</label>
+    <description>Iroha Headgear</description>
+    <graphicData>
+      <texPath>BA/Iroha/Apparel/Iroha_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Iroha/Apparel/Iroha_Headgear</wornGraphicPath>
     </apparel>
   </ThingDef>
 
