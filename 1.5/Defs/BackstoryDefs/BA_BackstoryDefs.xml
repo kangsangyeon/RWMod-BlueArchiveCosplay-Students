@@ -4,7 +4,7 @@
 
   <BackstoryDef Abstract="True" Name="BA_Backstory_Base">
     <spawnCategories>
-      <li>BA_SpawnCategory</li>
+      <li>BA_BackstoryCategory</li>
     </spawnCategories>
     <shuffleable>False</shuffleable>
     <skillGains>
@@ -13,11 +13,11 @@
     </possessions>
   </BackstoryDef>
 
-  <BackstoryDef Abstract="True" Name="BA_Backstory_Childhood_Base">
+  <BackstoryDef Abstract="True" Name="BA_Backstory_Childhood_Base" ParentName="BA_Backstory_Base">
     <slot>Childhood</slot>
   </BackstoryDef>
 
-  <BackstoryDef Abstract="True" Name="BA_Backstory_Adulthood_Base">
+  <BackstoryDef Abstract="True" Name="BA_Backstory_Adulthood_Base" ParentName="BA_Backstory_Base">
     <slot>Adulthood</slot>
   </BackstoryDef>
 
@@ -25,7 +25,7 @@
 
   <!--게헨나 학원-->
 
-  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
     <defName>BA_Backstory_Childhood_Gehenna</defName> <!--def 이름-->
     <identifier>BA_Backstory_Childhood_Gehenna</identifier><!-- 식별자(없어도 무관)-->
     <title>게헨나 학원 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
@@ -35,10 +35,9 @@
 
   <!--아비도스-->
 
-  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
     <defName>BA_Backstory_Childhood_Abydos</defName>
     <identifier>BA_Backstory_Childhood_Abydos</identifier>
-    <slot>Childhood</slot>
     <title>아비도스 고등학교 학생</title>
     <titleShort>아비도스 학생</titleShort>
     <description>아비도스 고등학교의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
@@ -46,10 +45,9 @@
 
   <!--밀레니엄-->
 
-  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
     <defName>BA_Backstory_Childhood_Millennium</defName>
     <identifier>BA_Backstory_Childhood_Millennium</identifier>
-    <slot>Childhood</slot>
     <title>밀레니엄 사이언스 스쿨 학생</title>
     <titleShort>밀레니엄 학생</titleShort>
     <description>밀레니엄 사이언스 스쿨의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
@@ -57,10 +55,9 @@
 
   <!--트리니티-->
 
-  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
     <defName>BA_Backstory_Childhood_Trinity</defName>
     <identifier>BA_Backstory_Childhood_Trinity</identifier>
-    <slot>Childhood</slot>
     <title>트리니티 종합학원 학생</title>
     <titleShort>트리니티 학생</titleShort>
     <description>트리니티 종합학원의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
@@ -68,10 +65,9 @@
 
   <!--백귀야행-->
 
-  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
     <defName>BA_Backstory_Childhood_Hyakkiyako</defName>
     <identifier>BA_Backstory_Childhood_Hyakkiyako</identifier>
-    <slot>Childhood</slot>
     <title>백귀야행 연합학원 학생</title>
     <titleShort>백귀야행 학생</titleShort>
     <description>백귀야행 연합학원의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
@@ -79,7 +75,7 @@
 
   <!--산해경-->
 
-  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
     <defName>BA_Backstory_Childhood_Shanhaijing</defName>
     <identifier>BA_Backstory_Childhood_Shanhaijing</identifier>
     <title>산해경 고급중학교 학생</title>
@@ -89,10 +85,9 @@
 
   <!--아리우스-->
 
-  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
     <defName>BA_Backstory_Childhood_Arius</defName>
     <identifier>BA_Backstory_Childhood_Arius</identifier>
-    <slot>Childhood</slot>
     <title>아리우스 분교 학생</title>
     <titleShort>아리우스 학생</titleShort>
     <description>공회의에서 추방된 아리우스 분교의 학생들입니다. 암울한 미래에 대해 절망하고 있습니다.</description>
@@ -100,10 +95,9 @@
 
   <!--붉은겨울-->
 
-  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
     <defName>BA_Backstory_Childhood_Red</defName>
     <identifier>BA_Backstory_Childhood_Red</identifier>
-    <slot>Childhood</slot>
     <title>붉은겨울 연방학원 학생</title>
     <titleShort>붉은겨울 학생</titleShort>
     <description>붉은겨울 연방학원의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
@@ -111,10 +105,9 @@
 
   <!--발키리-->
 
-  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
     <defName>BA_Backstory_Childhood_Valkyrie</defName>
     <identifier>BA_Backstory_Childhood_Valkyrie</identifier>
-    <slot>Childhood</slot>
     <title>발키리 경찰학교 학생</title>
     <titleShort>발키리 학생</titleShort>
     <description>발키리 경찰학교의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
@@ -122,10 +115,9 @@
 
   <!--SRT-->
 
-  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
     <defName>BA_Backstory_Childhood_SRT</defName>
     <identifier>BA_Backstory_Childhood_SRT</identifier>
-    <slot>Childhood</slot>
     <title>SRT 특수학원 학생</title>
     <titleShort>SRT 학생</titleShort>
     <description>총학생회 산하의 초법적조직입니다. 특별한 훈련으로 단련된 엘리트들입니다.</description>
@@ -133,10 +125,9 @@
 
   <!--하이랜더-->
 
-  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
     <defName>BA_Backstory_Childhood_Highlander</defName>
     <identifier>BA_Backstory_Childhood_Highlander</identifier>
-    <slot>Childhood</slot>
     <title>하이랜더 철도학원 학생</title>
     <titleShort>하이랜더 학생</titleShort>
     <description>.</description>
@@ -148,7 +139,7 @@
 
   <!--마코토-->
 
-  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Makoto</defName>
     <identifier>BA_Backstory_Adulthood_Makoto</identifier>
     <title>게헨나 학원 학생회장</title>
@@ -158,7 +149,7 @@
 
   <!--사츠키-->
 
-  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Satsuki</defName>
     <identifier>BA_Backstory_Adulthood_Satsuki</identifier>
     <title>게헨나 만마전 정보부장</title>
@@ -168,7 +159,7 @@
 
   <!--이로하-->
 
-  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Iroha</defName>
     <identifier>BA_Backstory_Adulthood_Iroha</identifier>
     <title>게헨나 만마전 의원</title>
@@ -178,7 +169,7 @@
 
   <!--이부키-->
 
-  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Ibuki</defName>
     <identifier>BA_Backstory_Adulthood_Ibuki</identifier>
     <title>게헨나 만마전 의원</title>
@@ -188,20 +179,19 @@
 
   <!--치아키-->
 
-  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Chiaki</defName>
     <identifier>BA_Backstory_Adulthood_Chiaki</identifier>
     <title>게헨나 만마전 서기</title>
     <titleShort>만마전 서기</titleShort>
-    <description>게헨나의 학생회 '만마전' 소속 의원 겸 서기, 취미 생활을 겸해 촬영한 사진을 기반으로 작성한 기사들을 엮어 '주간 만마전' 이라는 주간 신문을
-      발행하고 있습니다.</description>
+    <description>게헨나의 학생회 '만마전' 소속 의원 겸 서기, 취미 생활을 겸해 촬영한 사진을 기반으로 작성한 기사들을 엮어 '주간 만마전' 이라는 주간 신문을 발행하고 있습니다.</description>
   </BackstoryDef>
 
   <!--선도부-->
 
   <!--히나-->
 
-  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Hina</defName>
     <identifier>BA_Backstory_Adulthood_Hina</identifier>
     <title>게헨나 선도부 풍기위원장</title>
@@ -211,7 +201,7 @@
 
   <!--아코-->
 
-  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Ako</defName>
     <identifier>BA_Backstory_Adulthood_Ako</identifier>
     <title>게헨나 선도부 선임행정관</title>
@@ -222,7 +212,7 @@
 
   <!--이오리-->
 
-  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Iori</defName>
     <identifier>BA_Backstory_Adulthood_Iori</identifier>
     <title>게헨나 선도부 실행부원</title>
@@ -232,7 +222,7 @@
 
   <!--치나츠-->
 
-  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Chinatsu</defName>
     <identifier>BA_Backstory_Adulthood_Chinatsu</identifier>
     <title>게헨나 선도부 의료부원</title>
@@ -242,7 +232,7 @@
 
   <!--아루 테스트-->
 
-  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+  <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Aru</defName>
     <identifier>BA_Backstory_Adulthood_Aru</identifier>
     <title>흥신소 68</title>

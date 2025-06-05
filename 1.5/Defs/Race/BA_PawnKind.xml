@@ -61,6 +61,13 @@
       <li>BA_Apparel_Aru_Apparel</li>
       <li>BA_Apparel_Aru_OuterApparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Gehenna</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Aru</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Mika" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
