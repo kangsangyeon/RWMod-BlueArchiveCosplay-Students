@@ -36,11 +36,16 @@ namespace BA
         }
     }
 
-    [HarmonyPatch(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), [typeof(PawnGenerationRequest)])]
+    [HarmonyPatch(
+        typeof(PawnGenerator),
+        nameof(PawnGenerator.GeneratePawn),
+        new Type[] { typeof(PawnGenerationRequest) })]
     public static class Harmony_PawnGenerator_GeneratePawn
     {
         [HarmonyPostfix]
-        public static void Postfix(ref Pawn __result, PawnGenerationRequest request)
+        public static void Postfix(
+            ref Pawn __result,
+            PawnGenerationRequest request)
         {
             if (__result.kindDef is not BA.PawnKindDef kindDef)
                 return;
