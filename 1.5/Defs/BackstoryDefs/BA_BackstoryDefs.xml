@@ -2,490 +2,252 @@
 
 <Defs>
 
+  <BackstoryDef Abstract="True" Name="BA_Backstory_Base">
+    <spawnCategories>
+      <li>BA_SpawnCategory</li>
+    </spawnCategories>
+    <shuffleable>False</shuffleable>
+    <skillGains>
+    </skillGains>
+    <possessions>
+    </possessions>
+  </BackstoryDef>
+
+  <BackstoryDef Abstract="True" Name="BA_Backstory_Childhood_Base">
+    <slot>Childhood</slot>
+  </BackstoryDef>
+
+  <BackstoryDef Abstract="True" Name="BA_Backstory_Adulthood_Base">
+    <slot>Adulthood</slot>
+  </BackstoryDef>
+
   <!--공통 유년기-->
 
   <!--게헨나 학원-->
 
-  <BackstoryDef>
-    <defName>BA_ChildBG_Gehenna</defName> <!--def
-    이름-->
-    <identifier>BAChildBG_Gehenna</identifier><!-- 식별자(없어도 무관)-->
-    <slot>Childhood</slot><!--유년기
-    백스토리-->
+  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+    <defName>BA_Backstory_Childhood_Gehenna</defName> <!--def 이름-->
+    <identifier>BA_Backstory_Childhood_Gehenna</identifier><!-- 식별자(없어도 무관)-->
     <title>게헨나 학원 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
     <titleShort>게헨나 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
     <description>게헨나 학원의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description><!-- 마우스on시에 보이는 설명-->
-    <skillGains><!--스킬
-      가감-->
-    </skillGains>
-    <spawnCategories><!--태그
-      카테고리(자연적으로 스폰될 떄 폰카인드에서 지정한 백그라운드 태그에 들어있는지)-->
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
   </BackstoryDef>
 
   <!--아비도스-->
 
-  <BackstoryDef>
-    <defName>BA_ChildBG_Abydos</defName> <!--def
-    이름-->
-    <identifier>BAChildBG_Abydos</identifier><!-- 식별자(없어도 무관)-->
-    <slot>Childhood</slot><!--유년기
-    백스토리-->
-    <title>아비도스 고등학교 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
-    <titleShort>아비도스 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
-    <description>아비도스 고등학교의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description><!-- 마우스on시에 보이는 설명-->
-    <skillGains><!--스킬
-      가감-->
-    </skillGains>
-    <spawnCategories><!--태그
-      카테고리(자연적으로 스폰될 떄 폰카인드에서 지정한 백그라운드 태그에 들어있는지)-->
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
+  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+    <defName>BA_Backstory_Childhood_Abydos</defName>
+    <identifier>BA_Backstory_Childhood_Abydos</identifier>
+    <slot>Childhood</slot>
+    <title>아비도스 고등학교 학생</title>
+    <titleShort>아비도스 학생</titleShort>
+    <description>아비도스 고등학교의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
   </BackstoryDef>
 
   <!--밀레니엄-->
 
-  <BackstoryDef>
-    <defName>BA_ChildBG_Millennium</defName> <!--def
-    이름-->
-    <identifier>BAChildBG_Millennium</identifier><!-- 식별자(없어도 무관)-->
-    <slot>Childhood</slot><!--유년기
-    백스토리-->
-    <title>밀레니엄 사이언스 스쿨 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
-    <titleShort>밀레니엄 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
-    <description>밀레니엄 사이언스 스쿨의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description><!-- 마우스on시에 보이는 설명-->
-    <skillGains><!--스킬
-      가감-->
-    </skillGains>
-    <spawnCategories><!--태그
-      카테고리(자연적으로 스폰될 떄 폰카인드에서 지정한 백그라운드 태그에 들어있는지)-->
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
+  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+    <defName>BA_Backstory_Childhood_Millennium</defName>
+    <identifier>BA_Backstory_Childhood_Millennium</identifier>
+    <slot>Childhood</slot>
+    <title>밀레니엄 사이언스 스쿨 학생</title>
+    <titleShort>밀레니엄 학생</titleShort>
+    <description>밀레니엄 사이언스 스쿨의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
   </BackstoryDef>
 
   <!--트리니티-->
 
-  <BackstoryDef>
-    <defName>BA_ChildBG_Trinity</defName> <!--def
-    이름-->
-    <identifier>BAChildBG_Trinity</identifier><!-- 식별자(없어도 무관)-->
-    <slot>Childhood</slot><!--유년기
-    백스토리-->
-    <title>트리니티 종합학원 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
-    <titleShort>트리니티 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
-    <description>트리니티 종합학원의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description><!-- 마우스on시에 보이는 설명-->
-    <skillGains><!--스킬
-      가감-->
-    </skillGains>
-    <spawnCategories><!--태그
-      카테고리(자연적으로 스폰될 떄 폰카인드에서 지정한 백그라운드 태그에 들어있는지)-->
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
+  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+    <defName>BA_Backstory_Childhood_Trinity</defName>
+    <identifier>BA_Backstory_Childhood_Trinity</identifier>
+    <slot>Childhood</slot>
+    <title>트리니티 종합학원 학생</title>
+    <titleShort>트리니티 학생</titleShort>
+    <description>트리니티 종합학원의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
   </BackstoryDef>
 
   <!--백귀야행-->
 
-  <BackstoryDef>
-    <defName>BA_ChildBG_Hyakkiyako</defName> <!--def
-    이름-->
-    <identifier>BAChildBG_Hyakkiyako</identifier><!-- 식별자(없어도 무관)-->
-    <slot>Childhood</slot><!--유년기
-    백스토리-->
-    <title>백귀야행 연합학원 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
-    <titleShort>백귀야행 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
-    <description>백귀야행 연합학원의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description><!-- 마우스on시에 보이는 설명-->
-    <skillGains><!--스킬
-      가감-->
-    </skillGains>
-    <spawnCategories><!--태그
-      카테고리(자연적으로 스폰될 떄 폰카인드에서 지정한 백그라운드 태그에 들어있는지)-->
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
+  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+    <defName>BA_Backstory_Childhood_Hyakkiyako</defName>
+    <identifier>BA_Backstory_Childhood_Hyakkiyako</identifier>
+    <slot>Childhood</slot>
+    <title>백귀야행 연합학원 학생</title>
+    <titleShort>백귀야행 학생</titleShort>
+    <description>백귀야행 연합학원의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
   </BackstoryDef>
 
   <!--산해경-->
 
-  <BackstoryDef>
-    <defName>BA_ChildBG_Shanhaijing</defName> <!--def
-    이름-->
-    <identifier>BAChildBG_Shanhaijing</identifier><!-- 식별자(없어도 무관)-->
-    <slot>Childhood</slot><!--유년기
-    백스토리-->
-    <title>산해경 고급중학교 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
-    <titleShort>산해경 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
-    <description>산해경 고급중학교의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description><!-- 마우스on시에 보이는 설명-->
-    <skillGains><!--스킬
-      가감-->
-    </skillGains>
-    <spawnCategories><!--태그
-      카테고리(자연적으로 스폰될 떄 폰카인드에서 지정한 백그라운드 태그에 들어있는지)-->
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
+  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+    <defName>BA_Backstory_Childhood_Shanhaijing</defName>
+    <identifier>BA_Backstory_Childhood_Shanhaijing</identifier>
+    <title>산해경 고급중학교 학생</title>
+    <titleShort>산해경 학생</titleShort>
+    <description>산해경 고급중학교의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
   </BackstoryDef>
 
   <!--아리우스-->
 
-  <BackstoryDef>
-    <defName>BA_ChildBG_Arius</defName> <!--def
-    이름-->
-    <identifier>BAChildBG_Arius</identifier><!-- 식별자(없어도 무관)-->
-    <slot>Childhood</slot><!--유년기
-    백스토리-->
-    <title>아리우스 분교 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
-    <titleShort>아리우스 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
-    <description>공회의에서 추방된 아리우스 분교의 학생들입니다. 암울한 미래에 대해 절망하고 있습니다.</description><!-- 마우스on시에 보이는
-    설명-->
-    <skillGains><!--스킬
-      가감-->
-    </skillGains>
-    <spawnCategories><!--태그
-      카테고리(자연적으로 스폰될 떄 폰카인드에서 지정한 백그라운드 태그에 들어있는지)-->
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
+  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+    <defName>BA_Backstory_Childhood_Arius</defName>
+    <identifier>BA_Backstory_Childhood_Arius</identifier>
+    <slot>Childhood</slot>
+    <title>아리우스 분교 학생</title>
+    <titleShort>아리우스 학생</titleShort>
+    <description>공회의에서 추방된 아리우스 분교의 학생들입니다. 암울한 미래에 대해 절망하고 있습니다.</description>
   </BackstoryDef>
 
   <!--붉은겨울-->
 
-  <BackstoryDef>
-    <defName>BA_ChildBG_Red</defName> <!--def
-    이름-->
-    <identifier>BAChildBG_Red</identifier><!-- 식별자(없어도 무관)-->
-    <slot>Childhood</slot><!--유년기
-    백스토리-->
-    <title>붉은겨울 연방학원 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
-    <titleShort>붉은겨울 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
-    <description>붉은겨울 연방학원의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description><!-- 마우스on시에 보이는 설명-->
-    <skillGains><!--스킬
-      가감-->
-    </skillGains>
-    <spawnCategories><!--태그
-      카테고리(자연적으로 스폰될 떄 폰카인드에서 지정한 백그라운드 태그에 들어있는지)-->
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
+  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+    <defName>BA_Backstory_Childhood_Red</defName>
+    <identifier>BA_Backstory_Childhood_Red</identifier>
+    <slot>Childhood</slot>
+    <title>붉은겨울 연방학원 학생</title>
+    <titleShort>붉은겨울 학생</titleShort>
+    <description>붉은겨울 연방학원의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
   </BackstoryDef>
 
   <!--발키리-->
 
-  <BackstoryDef>
-    <defName>BA_ChildBG_Valkyrie</defName> <!--def
-    이름-->
-    <identifier>BAChildBG_Valkyrie</identifier><!-- 식별자(없어도 무관)-->
-    <slot>Childhood</slot><!--유년기
-    백스토리-->
-    <title>발키리 경찰학교 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
-    <titleShort>발키리 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
-    <description>발키리 경찰학교의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description><!-- 마우스on시에 보이는 설명-->
-    <skillGains><!--스킬
-      가감-->
-    </skillGains>
-    <spawnCategories><!--태그
-      카테고리(자연적으로 스폰될 떄 폰카인드에서 지정한 백그라운드 태그에 들어있는지)-->
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
+  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+    <defName>BA_Backstory_Childhood_Valkyrie</defName>
+    <identifier>BA_Backstory_Childhood_Valkyrie</identifier>
+    <slot>Childhood</slot>
+    <title>발키리 경찰학교 학생</title>
+    <titleShort>발키리 학생</titleShort>
+    <description>발키리 경찰학교의 학생으로서 다양한 미래의 가능성을 가지고 성장합니다.</description>
   </BackstoryDef>
 
   <!--SRT-->
 
-  <BackstoryDef>
-    <defName>BA_ChildBG_SRT</defName> <!--def
-    이름-->
-    <identifier>BAChildBG_SRT</identifier><!-- 식별자(없어도 무관)-->
-    <slot>Childhood</slot><!--유년기
-    백스토리-->
-    <title>SRT 특수학원 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
-    <titleShort>SRT 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
-    <description>총학생회 산하의 초법적조직입니다. 특별한 훈련으로 단련된 엘리트들입니다.</description><!-- 마우스on시에 보이는 설명-->
-    <skillGains><!--스킬
-      가감-->
-    </skillGains>
-    <spawnCategories><!--태그
-      카테고리(자연적으로 스폰될 떄 폰카인드에서 지정한 백그라운드 태그에 들어있는지)-->
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
+  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+    <defName>BA_Backstory_Childhood_SRT</defName>
+    <identifier>BA_Backstory_Childhood_SRT</identifier>
+    <slot>Childhood</slot>
+    <title>SRT 특수학원 학생</title>
+    <titleShort>SRT 학생</titleShort>
+    <description>총학생회 산하의 초법적조직입니다. 특별한 훈련으로 단련된 엘리트들입니다.</description>
   </BackstoryDef>
 
   <!--하이랜더-->
 
-  <BackstoryDef>
-    <defName>BA_ChildBG_Highlander</defName> <!--def
-    이름-->
-    <identifier>BAChildBG_Highlander</identifier><!-- 식별자(없어도 무관)-->
-    <slot>Childhood</slot><!--유년기
-    백스토리-->
-    <title>하이랜더 철도학원 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
-    <titleShort>하이랜더 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
-    <description>.</description><!-- 마우스on시에 보이는 설명-->
-    <skillGains><!--스킬
-      가감-->
-    </skillGains>
-    <spawnCategories><!--태그
-      카테고리(자연적으로 스폰될 떄 폰카인드에서 지정한 백그라운드 태그에 들어있는지)-->
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
+  <BackstoryDef Parent="BA_Backstory_Childhood_Base">
+    <defName>BA_Backstory_Childhood_Highlander</defName>
+    <identifier>BA_Backstory_Childhood_Highlander</identifier>
+    <slot>Childhood</slot>
+    <title>하이랜더 철도학원 학생</title>
+    <titleShort>하이랜더 학생</titleShort>
+    <description>.</description>
   </BackstoryDef>
 
   <!--성년기-->
 
-  <!--게헨나
-  만마전-->
+  <!--게헨나 만마전-->
 
   <!--마코토-->
 
-  <BackstoryDef>
-    <defName>BA_AdultBG_Makoto</defName>
-    <identifier>BAAdultBG_Makoto</identifier>
-    <slot>Adulthood</slot>
+  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+    <defName>BA_Backstory_Adulthood_Makoto</defName>
+    <identifier>BA_Backstory_Adulthood_Makoto</identifier>
     <title>게헨나 학원 학생회장</title>
     <titleShort>만마전 의장</titleShort>
     <description>게헨나 학원의 대외적인 외교, 예산 그리고 행정 관련 업무를 처리하는 학생회의 수장입니다.</description>
-    <skillGains>
-    </skillGains>
-    <spawnCategories>
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <bodyTypeGlobal>BA_BodyType_Female_Normal_A</bodyTypeGlobal>
-    <bodyTypeFemale>BA_BodyType_Female_Normal_A</bodyTypeFemale>
-    <bodyTypeMale>BA_BodyType_Female_Normal_A</bodyTypeMale>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
   </BackstoryDef>
 
   <!--사츠키-->
 
-  <BackstoryDef>
-    <defName>BA_AdultBG_Satsuki</defName>
-    <identifier>BAAdultBG_Satsuki</identifier>
-    <slot>Adulthood</slot>
+  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+    <defName>BA_Backstory_Adulthood_Satsuki</defName>
+    <identifier>BA_Backstory_Adulthood_Satsuki</identifier>
     <title>게헨나 만마전 정보부장</title>
     <titleShort>만마전 정보부장</titleShort>
     <description>게헨나의 학생회 '만마전' 소속 의원 겸 정보부장. 대외적 또는 내부적으로 위협이 되는 정보들을 관리합니다.</description>
-    <skillGains>
-    </skillGains>
-    <spawnCategories>
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <bodyTypeGlobal>BA_BodyType_Female_Normal_A</bodyTypeGlobal>
-    <bodyTypeFemale>BA_BodyType_Female_Normal_A</bodyTypeFemale>
-    <bodyTypeMale>BA_BodyType_Female_Normal_A</bodyTypeMale>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
   </BackstoryDef>
 
   <!--이로하-->
 
-  <BackstoryDef>
-    <defName>BA_AdultBG_Iroha</defName>
-    <identifier>BAAdultBG_Iroha</identifier>
-    <slot>Adulthood</slot>
+  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+    <defName>BA_Backstory_Adulthood_Iroha</defName>
+    <identifier>BA_Backstory_Adulthood_Iroha</identifier>
     <title>게헨나 만마전 의원</title>
     <titleShort>만마전 의원</titleShort>
     <description>게헨나의 학생회 '만마전' 소속 의원 중 한 명. 이로하 본인은 전차장을 겸임하고 있습니다.</description>
-    <skillGains>
-    </skillGains>
-    <spawnCategories>
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <bodyTypeGlobal>BA_BodyType_Female_Normal_A</bodyTypeGlobal>
-    <bodyTypeFemale>BA_BodyType_Female_Normal_A</bodyTypeFemale>
-    <bodyTypeMale>BA_BodyType_Female_Normal_A</bodyTypeMale>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
   </BackstoryDef>
 
   <!--이부키-->
 
-  <BackstoryDef>
-    <defName>BA_AdultBG_Ibuki</defName>
-    <identifier>BAAdultBG_Ibuki</identifier>
-    <slot>Adulthood</slot>
+  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+    <defName>BA_Backstory_Adulthood_Ibuki</defName>
+    <identifier>BA_Backstory_Adulthood_Ibuki</identifier>
     <title>게헨나 만마전 의원</title>
     <titleShort>게헨나 학원 초등부</titleShort>
     <description>게헨나의 학생회 '만마전' 소속 의원 중 한 명.'만마전'의 마스코트 격인 후배로 예쁨 받고 있다.</description>
-    <skillGains>
-    </skillGains>
-    <spawnCategories>
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <bodyTypeGlobal>BA_BodyType_Female_Normal_A</bodyTypeGlobal>
-    <bodyTypeFemale>BA_BodyType_Female_Normal_A</bodyTypeFemale>
-    <bodyTypeMale>BA_BodyType_Female_Normal_A</bodyTypeMale>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
   </BackstoryDef>
 
   <!--치아키-->
 
-  <BackstoryDef>
-    <defName>BA_AdultBG_Chiaki</defName>
-    <identifier>BAAdultBG_Chiaki</identifier>
-    <slot>Adulthood</slot>
+  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+    <defName>BA_Backstory_Adulthood_Chiaki</defName>
+    <identifier>BA_Backstory_Adulthood_Chiaki</identifier>
     <title>게헨나 만마전 서기</title>
     <titleShort>만마전 서기</titleShort>
     <description>게헨나의 학생회 '만마전' 소속 의원 겸 서기, 취미 생활을 겸해 촬영한 사진을 기반으로 작성한 기사들을 엮어 '주간 만마전' 이라는 주간 신문을
       발행하고 있습니다.</description>
-    <skillGains>
-    </skillGains>
-    <spawnCategories>
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <bodyTypeGlobal>BA_BodyType_Female_Normal_A</bodyTypeGlobal>
-    <bodyTypeFemale>BA_BodyType_Female_Normal_A</bodyTypeFemale>
-    <bodyTypeMale>BA_BodyType_Female_Normal_A</bodyTypeMale>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
   </BackstoryDef>
 
   <!--선도부-->
 
   <!--히나-->
 
-  <BackstoryDef>
-    <defName>BA_AdultBG_Hina</defName>
-    <identifier>BAAdultBG_Hina</identifier>
-    <slot>Adulthood</slot>
+  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+    <defName>BA_Backstory_Adulthood_Hina</defName>
+    <identifier>BA_Backstory_Adulthood_Hina</identifier>
     <title>게헨나 선도부 풍기위원장</title>
     <titleShort>선도부 풍기위원장</titleShort>
     <description>게헨나 학원의 치안과 무력의 정점을 담당하는 선도부의 풍기위원장입니다. 직함의 무게는 결코 가볍지 않습니다.</description>
-    <skillGains>
-    </skillGains>
-    <spawnCategories>
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <bodyTypeGlobal>BA_BodyType_Female_Normal_A</bodyTypeGlobal>
-    <bodyTypeFemale>BA_BodyType_Female_Normal_A</bodyTypeFemale>
-    <bodyTypeMale>BA_BodyType_Female_Normal_A</bodyTypeMale>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
   </BackstoryDef>
 
   <!--아코-->
 
-  <BackstoryDef>
-    <defName>BA_AdultBG_Ako</defName>
-    <identifier>BAAdultBG_Ako</identifier>
-    <slot>Adulthood</slot>
+  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+    <defName>BA_Backstory_Adulthood_Ako</defName>
+    <identifier>BA_Backstory_Adulthood_Ako</identifier>
     <title>게헨나 선도부 선임행정관</title>
     <titleShort>선도부 선임행정관</titleShort>
     <description>.</description>
-    <skillGains>
-    </skillGains>
-    <spawnCategories>
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <bodyTypeGlobal>BA_BodyType_Female_Normal_A</bodyTypeGlobal>
-    <bodyTypeFemale>BA_BodyType_Female_Normal_A</bodyTypeFemale>
-    <bodyTypeMale>BA_BodyType_Female_Normal_A</bodyTypeMale>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
   </BackstoryDef>
 
 
   <!--이오리-->
 
-  <BackstoryDef>
-    <defName>BA_AdultBG_Iori</defName>
-    <identifier>BAAdultBG_Iori</identifier>
-    <slot>Adulthood</slot>
+  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+    <defName>BA_Backstory_Adulthood_Iori</defName>
+    <identifier>BA_Backstory_Adulthood_Iori</identifier>
     <title>게헨나 선도부 실행부원</title>
     <titleShort>선도부 부원</titleShort>
     <description>.</description>
-    <skillGains>
-    </skillGains>
-    <spawnCategories>
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <bodyTypeGlobal>BA_BodyType_Female_Normal_A</bodyTypeGlobal>
-    <bodyTypeFemale>BA_BodyType_Female_Normal_A</bodyTypeFemale>
-    <bodyTypeMale>BA_BodyType_Female_Normal_A</bodyTypeMale>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
   </BackstoryDef>
 
   <!--치나츠-->
 
-  <BackstoryDef>
-    <defName>BA_AdultBG_Chinatsu</defName>
-    <identifier>BAAdultBG_Chinatsu</identifier>
-    <slot>Adulthood</slot>
+  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+    <defName>BA_Backstory_Adulthood_Chinatsu</defName>
+    <identifier>BA_Backstory_Adulthood_Chinatsu</identifier>
     <title>게헨나 선도부 의료부원</title>
     <titleShort>선도부 부원</titleShort>
     <description>.</description>
-    <skillGains>
-    </skillGains>
-    <spawnCategories>
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <bodyTypeGlobal>BA_BodyType_Female_Normal_A</bodyTypeGlobal>
-    <bodyTypeFemale>BA_BodyType_Female_Normal_A</bodyTypeFemale>
-    <bodyTypeMale>BA_BodyType_Female_Normal_A</bodyTypeMale>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
   </BackstoryDef>
 
-  <!--아루
-  테스트-->
+  <!--아루 테스트-->
 
-  <BackstoryDef>
-    <defName>BA_AdultBG_Aru</defName>
-    <identifier>BAAdultBG_Aru</identifier>
-    <slot>Adulthood</slot>
+  <BackstoryDef Parent="BA_Backstory_Adulthood_Base">
+    <defName>BA_Backstory_Adulthood_Aru</defName>
+    <identifier>BA_Backstory_Adulthood_Aru</identifier>
     <title>흥신소 68</title>
     <titleShort>사장</titleShort>
     <description>.</description>
-    <skillGains>
-    </skillGains>
-    <spawnCategories>
-      <li>BA_Custom</li>
-    </spawnCategories>
-    <bodyTypeGlobal>BA_BodyType_Female_Normal_D</bodyTypeGlobal>
-    <bodyTypeFemale>BA_BodyType_Female_Normal_D</bodyTypeFemale>
-    <bodyTypeMale>BA_BodyType_Female_Normal_D</bodyTypeMale>
-    <shuffleable>False</shuffleable>
-    <possessions>
-    </possessions>
   </BackstoryDef>
 
 </Defs>

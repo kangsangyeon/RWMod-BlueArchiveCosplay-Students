@@ -15,6 +15,8 @@
     <skinColorOverride>(0,0,0)</skinColorOverride> <!-- 각 캐릭터 PawnKindDef에서 덮어쓰기 해야 함. -->
 
     <!-- apparelRequired로 지정한 옷 이외의 옷을 착용하고 스폰되는 문제를 수정. -->
+    <!-- (250605 추가: apparelRequired로 지정한 옷을 안입고 나오거나, 지정한 옷 이외의 옷을 착용하는 문제가 계속되어서 harmony 코드로 강제함.
+     예: faction의 ideology의 선호 의상 입고 나오는 문제 등.) -->
     <apparelMoney>0~0</apparelMoney>
 
     <apparelTags Inherit="False">
