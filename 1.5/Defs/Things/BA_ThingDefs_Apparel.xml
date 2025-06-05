@@ -289,7 +289,8 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Aru_OuterApparel" ParentName="BA_OuterApparel_Base" Class="BA.ApparelDef">
+  <ThingDef Name="BA_Apparel_Aru_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
     <defName>BA_Apparel_Aru_OuterApparel</defName>
     <label>BA Aru Outer Apparel</label>
     <description>this is a Aru apparel.</description>
@@ -320,7 +321,7 @@
 
     <apparel>
       <tags>
-        <li>BA_ApparelTag_FemaleNormalD</li>
+        <li>BA_ApparelTag_FemaleNormalC</li>
       </tags>
       <wornGraphicPath>BA/Mika/Apparel/Mika_Apparel</wornGraphicPath>
     </apparel>

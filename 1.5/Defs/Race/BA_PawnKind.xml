@@ -66,7 +66,7 @@
     <label>Mika</label>
     <studentId>1046</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
-    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Mika</forcedHair>
     <faceDef>BA_Face_Mika</faceDef>
