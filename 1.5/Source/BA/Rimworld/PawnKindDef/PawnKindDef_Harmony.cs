@@ -54,8 +54,8 @@ namespace BA
             if (__result.kindDef is not BA.PawnKindDef kindDef)
                 return;
 
-            // biotech가 없을 때, PawnKindDef의 skinColorOverride를 실제 pawn에 강제로 적용함.
-            if (!ModsConfig.BiotechActive && kindDef.skinColorOverride.HasValue)
+            // PawnKindDef의 skinColorOverride를 실제 pawn에 강제로 적용함.
+            if (kindDef.skinColorOverride.HasValue)
                 __result.story.skinColorOverride = kindDef.skinColorOverride.Value;
 
             // PawnKindDef에서 apparelRequired로 지정한 옷이 아닌 옷을 입고 나오는 것을 강제로 막음.
