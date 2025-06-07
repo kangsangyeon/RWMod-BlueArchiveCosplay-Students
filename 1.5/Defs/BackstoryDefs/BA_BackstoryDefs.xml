@@ -21,12 +21,15 @@
     <slot>Adulthood</slot>
   </BackstoryDef>
 
-  <!--공통 유년기-->
+  <!--공통
+  유년기-->
 
-  <!--게헨나 학원-->
+  <!--게헨나
+  학원-->
 
   <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
-    <defName>BA_Backstory_Childhood_Gehenna</defName> <!--def 이름-->
+    <defName>BA_Backstory_Childhood_Gehenna</defName> <!--def
+    이름-->
     <identifier>BA_Backstory_Childhood_Gehenna</identifier><!-- 식별자(없어도 무관)-->
     <title>게헨나 학원 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
     <titleShort>게헨나 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
@@ -90,7 +93,7 @@
     <identifier>BA_Backstory_Childhood_Arius</identifier>
     <title>아리우스 분교 학생</title>
     <titleShort>아리우스 학생</titleShort>
-    <description>공회의에서 추방된 아리우스 분교의 학생들입니다. 암울한 미래에 대해 절망하고 있습니다.</description>
+    <description>공회의에서 추방된 아리우스 분교의 학생들입니다.</description>
   </BackstoryDef>
 
   <!--붉은겨울-->
@@ -135,7 +138,8 @@
 
   <!--성년기-->
 
-  <!--게헨나 만마전-->
+  <!--게헨나
+  만마전-->
 
   <!--마코토-->
 
@@ -174,7 +178,7 @@
     <identifier>BA_Backstory_Adulthood_Ibuki</identifier>
     <title>게헨나 만마전 의원</title>
     <titleShort>게헨나 학원 초등부</titleShort>
-    <description>게헨나의 학생회 '만마전' 소속 의원 중 한 명.'만마전'의 마스코트 격인 후배로 예쁨 받고 있다.</description>
+    <description>게헨나의 학생회 '만마전' 소속 의원 중 한 명.'만마전'의 마스코트 격인 후배로 예쁨 받고 있습니다.</description>
   </BackstoryDef>
 
   <!--치아키-->
@@ -184,7 +188,8 @@
     <identifier>BA_Backstory_Adulthood_Chiaki</identifier>
     <title>게헨나 만마전 서기</title>
     <titleShort>만마전 서기</titleShort>
-    <description>게헨나의 학생회 '만마전' 소속 의원 겸 서기, 취미 생활을 겸해 촬영한 사진을 기반으로 작성한 기사들을 엮어 '주간 만마전' 이라는 주간 신문을 발행하고 있습니다.</description>
+    <description>게헨나의 학생회 '만마전' 소속 의원 겸 서기, 취미 생활을 겸해 촬영한 사진을 기반으로 작성한 기사들을 엮어 '주간 만마전' 이라는 주간 신문을
+      발행하고 있습니다.</description>
   </BackstoryDef>
 
   <!--선도부-->
@@ -196,7 +201,8 @@
     <identifier>BA_Backstory_Adulthood_Hina</identifier>
     <title>게헨나 선도부 풍기위원장</title>
     <titleShort>선도부 풍기위원장</titleShort>
-    <description>게헨나 학원의 치안과 무력의 정점을 담당하는 선도부의 풍기위원장입니다. 직함의 무게는 결코 가볍지 않습니다.</description>
+    <description>게헨나 학원의 치안과 무력의 정점을 담당하는 선도부의 풍기위원장입니다. 학원의 말썽꾼들을 처리하며 선도부 전체를 지휘하지만 직함의 무게는 결코 가볍지
+      않습니다.</description>
   </BackstoryDef>
 
   <!--아코-->
@@ -230,14 +236,15 @@
     <description>.</description>
   </BackstoryDef>
 
-  <!--아루 테스트-->
+  <!--아루
+  테스트-->
 
   <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Aru</defName>
     <identifier>BA_Backstory_Adulthood_Aru</identifier>
-    <title>흥신소 68</title>
-    <titleShort>사장</titleShort>
-    <description>.</description>
+    <title>흥신소 68 사장</title>
+    <titleShort>흥신소 사장</titleShort>
+    <description>돈만 주면 무슨 의뢰든 해결해 준다는 게헨나의 심부름센터입니다! 공공연하게 말하기 힘든 무서운 의뢰도 군말 없이 수행한다고 하네요... 부원은 4명뿐이지만, 흥신소 사장 아루씨의 유연한 운영력으로 어떻게든 주어진 의뢰를 수행하고 있는 것 같아요!</description>
   </BackstoryDef>
 
 </Defs>
