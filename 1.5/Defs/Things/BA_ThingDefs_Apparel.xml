@@ -175,7 +175,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Makoto_Headgear" ParentName="BA_Headgear_Base">
+  <ThingDef Name="BA_Apparel_Makoto_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Makoto_Headgear</defName>
     <label>BA Makoto Headgear</label>
     <description>Makoto Headgear</description>
@@ -207,7 +207,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Satsuki_Headgear" ParentName="BA_Headgear_Base">
+  <ThingDef Name="BA_Apparel_Satsuki_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Satsuki_Headgear</defName>
     <label>BA Satsuki Headgear</label>
     <description>Satsuki Headgear</description>
@@ -257,7 +257,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Iroha_Headgear" ParentName="BA_Headgear_Base">
+  <ThingDef Name="BA_Apparel_Iroha_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Iroha_Headgear</defName>
     <label>BA Iroha Headgear</label>
     <description>Iroha Headgear</description>
@@ -289,8 +289,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Aru_OuterApparel" ParentName="BA_OuterApparel_Base"
-    Class="BA.ApparelDef">
+  <ThingDef Name="BA_Apparel_Aru_OuterApparel" ParentName="BA_OuterApparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Aru_OuterApparel</defName>
     <label>BA Aru Outer Apparel</label>
     <description>this is a Aru apparel.</description>
@@ -345,7 +344,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Mari_Headgear" ParentName="BA_Headgear_Base">
+  <ThingDef Name="BA_Apparel_Mari_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Mari_Headgear</defName>
     <label>BA Mari Headgear</label>
     <description>Mari Headgear</description>
@@ -357,6 +356,7 @@
     <apparel>
       <wornGraphicPath>BA/Mari/Apparel/Mari_Headgear</wornGraphicPath>
     </apparel>
+    <texPathHeadgearLining>BA/Mari/Apparel/Mari_HeadgearLining</texPathHeadgearLining>
   </ThingDef>
 
 </Defs>

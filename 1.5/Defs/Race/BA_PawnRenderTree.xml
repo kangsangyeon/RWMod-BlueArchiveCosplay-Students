@@ -8,6 +8,15 @@
       <tagDef>Root</tagDef>
 
       <children>
+        <!-- 모자 안감 레이어 -->
+        <li>
+          <debugLabel>BA_HeadgearLining</debugLabel>
+          <nodeClass>BA.PawnRenderNode_HeadgearLining</nodeClass>
+          <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+          <rotDrawMode>Fresh, Rotting</rotDrawMode>
+          <baseLayer>-2</baseLayer>
+        </li>
+
         <!-- 뒷머리 레이어 -->
         <li>
           <debugLabel>BA_BackHair</debugLabel>

@@ -126,6 +126,7 @@
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_FrontHair.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_FrontHorn.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_OuterLining.cs" />
+    <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_HeadgearLining.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_Tail.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_Wing.cs" />
     <Compile Include="BA\Rimworld\WeightTable\CharacterTable.cs" />
