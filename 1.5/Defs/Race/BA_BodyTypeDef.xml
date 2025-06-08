@@ -196,4 +196,34 @@
     <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Normal_F</bodyNakedGraphicPath>
   </BodyTypeDef>
 
+  <BodyTypeDef Name="BA_BodyType_Female_Thin_AA" ParentName="BA_BodyType_Base">
+    <defName>BA_BodyType_Female_Thin_AA</defName>
+    <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Thin_AA</bodyNakedGraphicPath>
+  </BodyTypeDef>
+
+  <BodyTypeDef Name="BA_BodyType_Female_Thin_A" ParentName="BA_BodyType_Base">
+    <defName>BA_BodyType_Female_Thin_A</defName>
+    <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Thin_A</bodyNakedGraphicPath>
+  </BodyTypeDef>
+
+  <BodyTypeDef Name="BA_BodyType_Female_Thin_B" ParentName="BA_BodyType_Base">
+    <defName>BA_BodyType_Female_Thin_B</defName>
+    <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Thin_B</bodyNakedGraphicPath>
+  </BodyTypeDef>
+
+  <BodyTypeDef Name="BA_BodyType_Female_Thin_C" ParentName="BA_BodyType_Base">
+    <defName>BA_BodyType_Female_Thin_C</defName>
+    <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Thin_C</bodyNakedGraphicPath>
+  </BodyTypeDef>
+
+  <BodyTypeDef Name="BA_BodyType_Female_Thin_D" ParentName="BA_BodyType_Base">
+    <defName>BA_BodyType_Female_Thin_D</defName>
+    <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Thin_D</bodyNakedGraphicPath>
+  </BodyTypeDef>
+
+  <BodyTypeDef Name="BA_BodyType_Female_Thin_F" ParentName="BA_BodyType_Base">
+    <defName>BA_BodyType_Female_Thin_F</defName>
+    <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Thin_F</bodyNakedGraphicPath>
+  </BodyTypeDef>
+
 </Defs>

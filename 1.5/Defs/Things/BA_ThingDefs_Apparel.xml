@@ -327,4 +327,36 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Mari_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Mari_Apparel</defName>
+    <label>BA Mari Apparel</label>
+    <description>this is a Mari apparel.</description>
+    <graphicData>
+      <texPath>BA/Mari/Apparel/Mari_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinAA</li>
+      </tags>
+      <wornGraphicPath>BA/Mari/Apparel/Mari_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Mari_Headgear" ParentName="BA_Headgear_Base">
+    <defName>BA_Apparel_Mari_Headgear</defName>
+    <label>BA Mari Headgear</label>
+    <description>Mari Headgear</description>
+    <graphicData>
+      <texPath>BA/Mari/Apparel/Mari_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Mari/Apparel/Mari_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
 </Defs>

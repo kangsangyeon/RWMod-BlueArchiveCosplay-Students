@@ -37,4 +37,11 @@
     <texPathFrontHair>BA/Mika/Mika_FrontHair</texPathFrontHair>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Mari" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Mari</defName>
+    <label>Mari Hair</label>
+    <texPath>BA/Mari/Mari_Hair</texPath>
+    <texPathBackHair>BA/Mari/Mari_BackHair</texPathBackHair>
+  </HairDef>
+
 </Defs>

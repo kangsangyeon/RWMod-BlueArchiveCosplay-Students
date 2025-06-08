@@ -18,4 +18,10 @@
     <texPath>BA/Mika/Mika_Eyebrow</texPath>
   </BA.EyebrowDef>
 
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Mari</defName>
+    <label>Mari Eyebrow</label>
+    <texPath>BA/Mari/Mari_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
 </Defs>
