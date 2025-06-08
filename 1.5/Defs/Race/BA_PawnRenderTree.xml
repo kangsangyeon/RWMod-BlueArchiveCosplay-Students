@@ -175,7 +175,7 @@
 
             <!-- 귀 레이어 -->
             <li>
-              <debugLabel></debugLabel>
+              <debugLabel>BA_Ear</debugLabel>
               <nodeClass>BA.PawnRenderNode_Ear</nodeClass>
               <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
               <rotDrawMode>Fresh, Rotting</rotDrawMode>
