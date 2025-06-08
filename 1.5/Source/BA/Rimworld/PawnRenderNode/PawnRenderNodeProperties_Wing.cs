@@ -4,6 +4,6 @@ namespace BA
 {
     public class PawnRenderNodeProperties_Wing : PawnRenderNodeProperties
     {
-        public bool isLeft;
+        public bool isRight;
     }
 }

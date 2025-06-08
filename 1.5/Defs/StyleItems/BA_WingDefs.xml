@@ -14,7 +14,7 @@
     <defName>BA_Wing_Mika</defName>
     <label>Mika Wing</label>
     <texPath>BA/Mika/Mika_Wing</texPath>
-    <texPathLeft>BA/Mika/Mika_LeftWing</texPathLeft>
+    <texPathRight>BA/Mika/Mika_RightWing</texPathRight>
   </BA.WingDef>
 
 </Defs>

@@ -52,9 +52,9 @@ namespace BA
             if (props is not BA.PawnRenderNodeProperties_Wing wingNodeProps)
                 return;
             var shader = kindDef.wingDef.overrideShaderTypeDef?.Shader ?? ShaderDatabase.CutoutHair;
-            // 왼쪽 날개이며 왼쪽 날개 텍스쳐를 별도로 지정했을 때, 왼쪽 날개 텍스쳐 사용함.
-            if (wingNodeProps.isLeft && !string.IsNullOrEmpty(kindDef.wingDef.texPathLeft))
-                this.graphic = GraphicDatabase.Get<Graphic_Multi>(kindDef.wingDef.texPathLeft, shader, Vector2.one, ColorFor(_pawn));
+            // 오른쪽 날개이며 오른쪽 날개 텍스쳐를 별도로 지정했을 때, 오른쪽 날개 텍스쳐 사용함.
+            if (wingNodeProps.isRight && !string.IsNullOrEmpty(kindDef.wingDef.texPathRight))
+                this.graphic = GraphicDatabase.Get<Graphic_Multi>(kindDef.wingDef.texPathRight, shader, Vector2.one, ColorFor(_pawn));
             else
                 this.graphic = GraphicDatabase.Get<Graphic_Multi>(kindDef.wingDef.texPath, shader, Vector2.one, ColorFor(_pawn));
         }
