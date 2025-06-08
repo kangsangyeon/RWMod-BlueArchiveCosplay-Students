@@ -42,6 +42,7 @@
     <label>Mari Hair</label>
     <texPath>BA/Mari/Mari_Hair</texPath>
     <texPathBackHair>BA/Mari/Mari_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Mari/Mari_FrontHair</texPathFrontHair>
   </HairDef>
 
 </Defs>

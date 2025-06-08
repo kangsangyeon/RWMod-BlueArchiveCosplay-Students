@@ -97,6 +97,7 @@
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_AA</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Mari</forcedHair>
+    <faceDef>BA_Face_Mari</faceDef>
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Mari</eyebrowDef>
 

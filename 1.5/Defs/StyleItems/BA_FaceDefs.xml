@@ -24,4 +24,11 @@
     <texPath>BA/Mika/Mika_Face</texPath>
   </BA.FaceDef>
 
+  <BA.FaceDef>
+    <defName>BA_Face_Mari</defName>
+    <label>Mari Face</label>
+    <texPath>BA/Mari/Mari_Face</texPath>
+  </BA.FaceDef>
+
+
 </Defs>
