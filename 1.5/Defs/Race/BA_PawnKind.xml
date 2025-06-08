@@ -55,6 +55,7 @@
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Aru</forcedHair>
     <faceDef>BA_Face_Aru</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Aru</eyebrowDef>
 
     <apparelRequired>
@@ -79,6 +80,7 @@
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Mika</forcedHair>
     <faceDef>BA_Face_Mika</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Mika</eyebrowDef>
     <wingDef>BA_Wing_Mika</wingDef>
 

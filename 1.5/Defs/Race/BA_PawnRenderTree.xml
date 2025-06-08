@@ -144,6 +144,16 @@
               <baseLayer>51</baseLayer>
             </li>
 
+            <!-- 귀 레이어 -->
+            <li>
+              <debugLabel></debugLabel>
+              <nodeClass>BA.PawnRenderNode_Ear</nodeClass>
+              <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+              <rotDrawMode>Fresh, Rotting</rotDrawMode>
+              <colorType>Skin</colorType>
+              <baseLayer>51</baseLayer>
+            </li>
+
             <li Class="PawnRenderNodeProperties_Tattoo" MayRequire="Ludeon.RimWorld.Ideology">
               <debugLabel>Head tattoo</debugLabel>
               <nodeClass>PawnRenderNode_Tattoo_Head</nodeClass>

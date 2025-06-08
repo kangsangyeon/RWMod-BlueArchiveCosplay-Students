@@ -6,4 +6,16 @@
     <label>BA Ear</label>
   </StyleItemCategoryDef>
 
+  <BA.EarDef>
+    <defName>BA_Ear_Normal</defName>
+    <label>BA_Ear_Normal</label>
+    <texPath>Things/Pawn/BA/Ears/Ear_Normal</texPath>
+  </BA.EarDef>
+
+  <BA.EarDef>
+    <defName>BA_Ear_Pointy</defName>
+    <label>BA_Ear_Pointy</label>
+    <texPath>Things/Pawn/BA/Ears/Ear_Pointy</texPath>
+  </BA.EarDef>
+
 </Defs>
