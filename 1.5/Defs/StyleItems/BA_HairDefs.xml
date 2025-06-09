@@ -37,6 +37,14 @@
     <texPathFrontHair>BA/Aru/Aru_FrontHair</texPathFrontHair>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Mutsuki" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Mutsuki</defName>
+    <label>Mutsuki Hair</label>
+    <texPath>BA/Mutsuki/Mutsuki_Hair</texPath>
+    <texPathBackHair>BA/Mutsuki/Mutsuki_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Mutsuki/Mutsuki_FrontHair</texPathFrontHair>
+  </HairDef>
+
   <HairDef Name="BA_Hair_Mika" ParentName="BA_Hair_Base" Class="BA.HairDef">
     <defName>BA_Hair_Mika</defName>
     <label>Mika Hair</label>

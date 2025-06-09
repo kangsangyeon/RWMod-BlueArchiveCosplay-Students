@@ -361,6 +361,24 @@
     <texPathOuterLining>BA/Aru/Apparel/Aru_OuterLining</texPathOuterLining>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Mutsuki_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Mutsuki_Apparel</defName>
+    <label>BA Mutsuki Apparel</label>
+    <description>this is a Mutsuki apparel.</description>
+    <graphicData>
+      <texPath>BA/Mutsuki/Apparel/Mutsuki_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleKidA</li>
+      </tags>
+      <wornGraphicPath>BA/Mutsuki/Apparel/Mutsuki_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Mika_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Mika_Apparel</defName>
     <label>BA Mika Apparel</label>

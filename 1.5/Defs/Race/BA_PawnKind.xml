@@ -91,10 +91,28 @@
     </fixedAdultBackstories>
   </PawnKindDef>
 
+  <PawnKindDef Name="BA_PawnKind_Mutsuki" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Mutsuki</defName>
+    <label>Mutsuki</label>
+    <studentId>1047</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Kid</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Mutsuki</forcedHair>
+    <!-- <faceDef>BA_Face_Mutsuki</faceDef> -->
+    <earDef>BA_Ear_Pointy</earDef>
+    <!-- <eyebrowDef>BA_Eyebrow_Mutsuki</eyebrowDef> -->
+
+    <apparelRequired>
+      <!-- <li>BA_Apparel_Mutsuki_Headgear</li>
+      <li>BA_Apparel_Mutsuki_Apparel</li> -->
+    </apparelRequired>
+  </PawnKindDef>
+
   <PawnKindDef Name="BA_PawnKind_Mika" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Mika</defName>
     <label>Mika</label>
-    <studentId>1046</studentId>
+    <studentId>1023</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
