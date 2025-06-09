@@ -243,8 +243,9 @@
     <defName>BA_Backstory_Adulthood_Aru</defName>
     <identifier>BA_Backstory_Adulthood_Aru</identifier>
     <title>흥신소 68 사장</title>
-    <titleShort>흥신소 사장</titleShort>
-    <description>돈만 주면 무슨 의뢰든 해결해 준다는 게헨나의 심부름센터입니다! 공공연하게 말하기 힘든 무서운 의뢰도 군말 없이 수행한다고 하네요... 부원은 4명뿐이지만, 흥신소 사장 아루씨의 유연한 운영력으로 어떻게든 주어진 의뢰를 수행하고 있는 것 같아요!</description>
+    <titleShort>흥신소 68 사장</titleShort>
+    <description>돈만 주면 무슨 의뢰든 해결해 준다는 게헨나의 심부름센터입니다! 공공연하게 말하기 힘든 무서운 의뢰도 군말 없이 수행한다고 하네요... 부원은
+      4명뿐이지만, 흥신소 사장 아루씨의 유연한 운영력으로 어떻게든 주어진 의뢰를 수행하고 있는 것 같아요!</description>
   </BackstoryDef>
 
 </Defs>

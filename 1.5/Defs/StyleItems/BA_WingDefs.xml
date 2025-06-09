@@ -11,6 +11,13 @@
   </BA.WingDef>
 
   <BA.WingDef>
+    <defName>BA_Wing_Ibuki</defName>
+    <label>Ibuki Wing</label>
+    <texPath>BA/Ibuki/Ibuki_Wing</texPath>
+    <texPathRight>BA/Ibuki/Ibuki_RightWing</texPathRight>
+  </BA.WingDef>
+
+  <BA.WingDef>
     <defName>BA_Wing_Mika</defName>
     <label>Mika Wing</label>
     <texPath>BA/Mika/Mika_Wing</texPath>

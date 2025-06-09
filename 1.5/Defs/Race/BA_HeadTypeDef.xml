@@ -13,14 +13,14 @@
     <defName>BA_HeadType_Normal</defName>
   </HeadTypeDef>
 
+  <HeadTypeDef Name="BA_HeadType_Kid" ParentName="BA_HeadType_Base" Class="BA.HeadTypeDef">
+    <defName>BA_HeadType_Kid</defName>
+    <graphicPath>Things/Pawn/BA/Heads/Headkid</graphicPath>
+  </HeadTypeDef>
+
   <HeadTypeDef Name="BA_HeadType_Makoto" ParentName="BA_HeadType_Base" Class="BA.HeadTypeDef">
     <defName>BA_HeadType_Makoto</defName>
     <graphicPath>BA/Makoto/Makoto_Head</graphicPath>
-  </HeadTypeDef>
-
-  <HeadTypeDef Name="BA_HeadType_Aru" ParentName="BA_HeadType_Base" Class="BA.HeadTypeDef">
-    <defName>BA_HeadType_Aru</defName>
-    <graphicPath>BA/Aru/Aru_Head</graphicPath>
   </HeadTypeDef>
 
 </Defs>

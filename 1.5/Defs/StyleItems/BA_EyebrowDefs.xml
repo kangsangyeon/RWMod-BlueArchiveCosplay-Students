@@ -7,6 +7,12 @@
   </StyleItemCategoryDef>
 
   <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Ibuki</defName>
+    <label>Ibuki Eyebrow</label>
+    <texPath>BA/Ibuki/Ibuki_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
     <defName>BA_Eyebrow_Aru</defName>
     <label>Aru Eyebrow</label>
     <texPath>BA/Aru/Aru_Eyebrow</texPath>

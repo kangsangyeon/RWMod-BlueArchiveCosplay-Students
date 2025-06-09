@@ -271,6 +271,58 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Ibuki_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Ibuki_Apparel</defName>
+    <label>BA Ibuki Apparel</label>
+    <description>this is a Ibuki apparel.</description>
+    <graphicData>
+      <texPath>BA/Ibuki/Apparel/Ibuki_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleKidA</li>
+      </tags>
+      <wornGraphicPath>BA/Ibuki/Apparel/Ibuki_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Ibuki_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Ibuki_OuterApparel</defName>
+    <label>BA Ibuki Outer Apparel</label>
+    <description>this is a Ibuki apparel.</description>
+    <graphicData>
+      <texPath>BA/Ibuki/Apparel/Ibuki_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleKidA</li>
+      </tags>
+      <wornGraphicPath>BA/Ibuki/Apparel/Ibuki_Outer</wornGraphicPath>
+    </apparel>
+    <texPathOuterLining>BA/Ibuki/Apparel/Ibuki_OuterLining</texPathOuterLining>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Ibuki_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Ibuki_Headgear</defName>
+    <label>BA Ibuki Headgear</label>
+    <description>Ibuki Headgear</description>
+    <graphicData>
+      <texPath>BA/Ibuki/Apparel/Ibuki_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Ibuki/Apparel/Ibuki_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Aru_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Aru_Apparel</defName>
     <label>BA Aru Apparel</label>
@@ -289,7 +341,8 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Aru_OuterApparel" ParentName="BA_OuterApparel_Base" Class="BA.ApparelDef">
+  <ThingDef Name="BA_Apparel_Aru_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
     <defName>BA_Apparel_Aru_OuterApparel</defName>
     <label>BA Aru Outer Apparel</label>
     <description>this is a Aru apparel.</description>
