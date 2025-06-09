@@ -25,6 +25,12 @@
   </BA.FaceDef>
 
   <BA.FaceDef>
+    <defName>BA_Face_Mutsuki</defName>
+    <label>Mutsuki Face</label>
+    <texPath>BA/Mutsuki/Mutsuki_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
     <defName>BA_Face_Mika</defName>
     <label>Mika Face</label>
     <texPath>BA/Mika/Mika_Face</texPath>

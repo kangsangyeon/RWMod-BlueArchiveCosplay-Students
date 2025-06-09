@@ -19,6 +19,12 @@
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Mutsuki</defName>
+    <label>Mutsuki Eyebrow</label>
+    <texPath>BA/Mutsuki/Mutsuki_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
     <defName>BA_Eyebrow_Mika</defName>
     <label>Mika Eyebrow</label>
     <texPath>BA/Mika/Mika_Eyebrow</texPath>

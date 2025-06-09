@@ -99,13 +99,13 @@
     <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Kid</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Mutsuki</forcedHair>
-    <!-- <faceDef>BA_Face_Mutsuki</faceDef> -->
+    <faceDef>BA_Face_Mutsuki</faceDef>
     <earDef>BA_Ear_Pointy</earDef>
-    <!-- <eyebrowDef>BA_Eyebrow_Mutsuki</eyebrowDef> -->
+    <eyebrowDef>BA_Eyebrow_Mutsuki</eyebrowDef>
 
     <apparelRequired>
-      <!-- <li>BA_Apparel_Mutsuki_Headgear</li>
-      <li>BA_Apparel_Mutsuki_Apparel</li> -->
+      <!-- <li>BA_Apparel_Mutsuki_Headgear</li> -->
+      <li>BA_Apparel_Mutsuki_Apparel</li>
     </apparelRequired>
   </PawnKindDef>
 
