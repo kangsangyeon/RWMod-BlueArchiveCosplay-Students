@@ -6,4 +6,10 @@
     <label>BA Tail</label>
   </StyleItemCategoryDef>
 
+  <BA.TailDef>
+    <defName>BA_Tail_Ibuki</defName>
+    <label>BA Ibuki Tail</label>
+    <texPath>BA/Ibuki/Ibuki_Tail</texPath>
+  </BA.TailDef>
+
 </Defs>

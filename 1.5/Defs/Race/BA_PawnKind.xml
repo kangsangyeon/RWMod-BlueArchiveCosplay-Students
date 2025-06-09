@@ -58,6 +58,7 @@
     <earDef>BA_Ear_Pointy</earDef>
     <eyebrowDef>BA_Eyebrow_Ibuki</eyebrowDef>
     <wingDef>BA_Wing_Ibuki</wingDef>
+    <tailDef>BA_Tail_Ibuki</tailDef>
 
     <apparelRequired>
       <li>BA_Apparel_Ibuki_Headgear</li>

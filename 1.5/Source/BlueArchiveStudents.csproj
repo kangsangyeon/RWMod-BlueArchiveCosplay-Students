@@ -117,7 +117,9 @@
     <Compile Include="BA\Rimworld\PawnRenderNode\Def\HornDef.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\Def\TailDef.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\Def\WingDef.cs" />
+    <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeProperties_Tail.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeProperties_Wing.cs" />
+    <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeWorker_Tail.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeWorker_Wing.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_BackHair.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_Ear.cs" />

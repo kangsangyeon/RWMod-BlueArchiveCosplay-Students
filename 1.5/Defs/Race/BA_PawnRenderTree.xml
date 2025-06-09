@@ -27,11 +27,11 @@
           <baseLayer>-1</baseLayer>
         </li>
 
-        <!-- 꼬리 레이어 -->
-        <li>
+        <!-- 꼬리 레이어 (south, east) -->
+        <li Class="BA.PawnRenderNodeProperties_Tail">
           <debugLabel>BA_Tail</debugLabel>
           <nodeClass>BA.PawnRenderNode_Tail</nodeClass>
-          <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+          <workerClass>BA.PawnRenderNodeWorker_Tail</workerClass>
           <rotDrawMode>Fresh, Rotting</rotDrawMode>
           <baseLayer>2</baseLayer>
         </li>
@@ -105,6 +105,17 @@
               <tagDef>ApparelBody</tagDef>
               <baseLayer>20</baseLayer>
             </li>
+
+            <!-- 꼬리 레이어 (north) -->
+            <li Class="BA.PawnRenderNodeProperties_Tail">
+              <debugLabel>BA_Tail_NorthOnly</debugLabel>
+              <nodeClass>BA.PawnRenderNode_Tail</nodeClass>
+              <workerClass>BA.PawnRenderNodeWorker_Tail</workerClass>
+              <rotDrawMode>Fresh, Rotting</rotDrawMode>
+              <baseLayer>21</baseLayer>
+              <isNorthOnly>true</isNorthOnly>
+            </li>
+
             <li Class="PawnRenderNodeProperties_Overlay">
               <debugLabel>Wounds - post apparel</debugLabel>
               <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
