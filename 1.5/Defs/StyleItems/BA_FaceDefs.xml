@@ -31,6 +31,18 @@
   </BA.FaceDef>
 
   <BA.FaceDef>
+    <defName>BA_Face_Kayoko</defName>
+    <label>Kayoko Face</label>
+    <texPath>BA/Kayoko/Kayoko_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Haruka</defName>
+    <label>Haruka Face</label>
+    <texPath>BA/Haruka/Haruka_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
     <defName>BA_Face_Mika</defName>
     <label>Mika Face</label>
     <texPath>BA/Mika/Mika_Face</texPath>

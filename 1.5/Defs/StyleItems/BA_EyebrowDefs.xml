@@ -25,6 +25,18 @@
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Kayoko</defName>
+    <label>Kayoko Eyebrow</label>
+    <texPath>BA/Kayoko/Kayoko_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Haruka</defName>
+    <label>Haruka Eyebrow</label>
+    <texPath>BA/Haruka/Haruka_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
     <defName>BA_Eyebrow_Mika</defName>
     <label>Mika Eyebrow</label>
     <texPath>BA/Mika/Mika_Eyebrow</texPath>

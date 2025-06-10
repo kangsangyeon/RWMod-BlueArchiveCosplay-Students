@@ -67,6 +67,42 @@
     </apparelRequired>
   </PawnKindDef>
 
+  <PawnKindDef Name="BA_PawnKind_Mika" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Mika</defName>
+    <label>Mika</label>
+    <studentId>1023</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Mika</forcedHair>
+    <faceDef>BA_Face_Mika</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Mika</eyebrowDef>
+    <wingDef>BA_Wing_Mika</wingDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Mika_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Mari" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Mari</defName>
+    <label>Mari</label>
+    <studentId>1038</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Thin_AA</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Mari</forcedHair>
+    <faceDef>BA_Face_Mari</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Mari</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Mari_Headgear</li>
+      <li>BA_Apparel_Mari_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
   <PawnKindDef Name="BA_PawnKind_Aru" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Aru</defName>
     <label>Aru</label>
@@ -105,44 +141,43 @@
     <eyebrowDef>BA_Eyebrow_Mutsuki</eyebrowDef>
 
     <apparelRequired>
-      <!-- <li>BA_Apparel_Mutsuki_Headgear</li> -->
       <li>BA_Apparel_Mutsuki_Apparel</li>
     </apparelRequired>
   </PawnKindDef>
 
-  <PawnKindDef Name="BA_PawnKind_Mika" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
-    <defName>BA_PawnKind_Mika</defName>
-    <label>Mika</label>
-    <studentId>1023</studentId>
+  <PawnKindDef Name="BA_PawnKind_Kayoko" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Kayoko</defName>
+    <label>Kayoko</label>
+    <studentId>1048</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
-    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Type2_A</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
-    <forcedHair>BA_Hair_Mika</forcedHair>
-    <faceDef>BA_Face_Mika</faceDef>
+    <forcedHair>BA_Hair_Kayoko</forcedHair>
+    <faceDef>BA_Face_Kayoko</faceDef>
     <earDef>BA_Ear_Normal</earDef>
-    <eyebrowDef>BA_Eyebrow_Mika</eyebrowDef>
-    <wingDef>BA_Wing_Mika</wingDef>
+    <eyebrowDef>BA_Eyebrow_Kayoko</eyebrowDef>
+    <wingDef>BA_Wing_Kayoko</wingDef>
 
     <apparelRequired>
-      <li>BA_Apparel_Mika_Apparel</li>
+      <li>BA_Apparel_Kayoko_Apparel</li>
     </apparelRequired>
   </PawnKindDef>
 
-  <PawnKindDef Name="BA_PawnKind_Mari" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
-    <defName>BA_PawnKind_Mari</defName>
-    <label>Mari</label>
-    <studentId>1038</studentId>
+  <PawnKindDef Name="BA_PawnKind_Haruka" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Haruka</defName>
+    <label>Haruka</label>
+    <studentId>1049</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
-    <forcedBodyTypeFemale>BA_BodyType_Female_Thin_AA</forcedBodyTypeFemale>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Type2_C</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
-    <forcedHair>BA_Hair_Mari</forcedHair>
-    <faceDef>BA_Face_Mari</faceDef>
+    <forcedHair>BA_Hair_Haruka</forcedHair>
+    <faceDef>BA_Face_Haruka</faceDef>
     <earDef>BA_Ear_Normal</earDef>
-    <eyebrowDef>BA_Eyebrow_Mari</eyebrowDef>
+    <eyebrowDef>BA_Eyebrow_Haruka</eyebrowDef>
 
     <apparelRequired>
-      <li>BA_Apparel_Mari_Headgear</li>
-      <li>BA_Apparel_Mari_Apparel</li>
+      <li>BA_Apparel_Haruka_Headgear</li>
+      <li>BA_Apparel_Haruka_Apparel</li>
     </apparelRequired>
   </PawnKindDef>
 

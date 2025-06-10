@@ -45,6 +45,22 @@
     <texPathFrontHair>BA/Mutsuki/Mutsuki_FrontHair</texPathFrontHair>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Kayoko" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Kayoko</defName>
+    <label>Kayoko Hair</label>
+    <texPath>BA/Kayoko/Kayoko_Hair</texPath>
+    <texPathBackHair>BA/Kayoko/Kayoko_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Kayoko/Kayoko_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Haruka" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Haruka</defName>
+    <label>Haruka Hair</label>
+    <texPath>BA/Haruka/Haruka_Hair</texPath>
+    <texPathBackHair>BA/Haruka/Haruka_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Haruka/Haruka_FrontHair</texPathFrontHair>
+  </HairDef>
+
   <HairDef Name="BA_Hair_Mika" ParentName="BA_Hair_Base" Class="BA.HairDef">
     <defName>BA_Hair_Mika</defName>
     <label>Mika Hair</label>
