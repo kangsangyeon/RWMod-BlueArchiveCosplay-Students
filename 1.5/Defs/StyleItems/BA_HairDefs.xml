@@ -29,6 +29,22 @@
     <texPathFrontHair>BA/Ibuki/Ibuki_FrontHair</texPathFrontHair>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Mika" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Mika</defName>
+    <label>Mika Hair</label>
+    <texPath>BA/Mika/Mika_Hair</texPath>
+    <texPathBackHair>BA/Mika/Mika_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Mika/Mika_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Hasumi" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Hasumi</defName>
+    <label>Hasumi Hair</label>
+    <texPath>BA/Hasumi/Hasumi_Hair</texPath>
+    <texPathBackHair>BA/Hasumi/Hasumi_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Hasumi/Hasumi_FrontHair</texPathFrontHair>
+  </HairDef>
+
   <HairDef Name="BA_Hair_Aru" ParentName="BA_Hair_Base" Class="BA.HairDef">
     <defName>BA_Hair_Aru</defName>
     <label>Aru Hair</label>
@@ -59,14 +75,6 @@
     <texPath>BA/Haruka/Haruka_Hair</texPath>
     <texPathBackHair>BA/Haruka/Haruka_BackHair</texPathBackHair>
     <texPathFrontHair>BA/Haruka/Haruka_FrontHair</texPathFrontHair>
-  </HairDef>
-
-  <HairDef Name="BA_Hair_Mika" ParentName="BA_Hair_Base" Class="BA.HairDef">
-    <defName>BA_Hair_Mika</defName>
-    <label>Mika Hair</label>
-    <texPath>BA/Mika/Mika_Hair</texPath>
-    <texPathBackHair>BA/Mika/Mika_BackHair</texPathBackHair>
-    <texPathFrontHair>BA/Mika/Mika_FrontHair</texPathFrontHair>
   </HairDef>
 
   <HairDef Name="BA_Hair_Mari" ParentName="BA_Hair_Base" Class="BA.HairDef">

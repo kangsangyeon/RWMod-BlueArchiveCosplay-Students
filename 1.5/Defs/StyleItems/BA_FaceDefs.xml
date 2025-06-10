@@ -19,6 +19,12 @@
   </BA.FaceDef>
 
   <BA.FaceDef>
+    <defName>BA_Face_Hasumi</defName>
+    <label>Hasumi Face</label>
+    <texPath>BA/Hasumi/Hasumi_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
     <defName>BA_Face_Aru</defName>
     <label>Aru Face</label>
     <texPath>BA/Aru/Aru_Face</texPath>

@@ -85,6 +85,42 @@
     </apparelRequired>
   </PawnKindDef>
 
+  <!-- <PawnKindDef Name="BA_PawnKind_Tsurugi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+  <defName>BA_PawnKind_Tsurugi</defName>
+  <label>Tsurugi</label>
+  <studentId>1025</studentId>
+  <skinColorOverride>(255,245,242)</skinColorOverride>
+  <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
+  <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+  <forcedHair>BA_Hair_Tsurugi</forcedHair>
+  <faceDef>BA_Face_Tsurugi</faceDef>
+  <earDef>BA_Ear_Normal</earDef>
+  <eyebrowDef>BA_Eyebrow_Tsurugi</eyebrowDef>
+  <wingDef>BA_Wing_Tsurugi</wingDef>
+
+  <apparelRequired>
+    <li>BA_Apparel_Tsurugi_Apparel</li>
+  </apparelRequired>
+</PawnKindDef> -->
+
+  <PawnKindDef Name="BA_PawnKind_Hasumi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Hasumi</defName>
+    <label>Hasumi</label>
+    <studentId>1026</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Tail_F</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Hasumi</forcedHair>
+    <faceDef>BA_Face_Hasumi</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Hasumi</eyebrowDef>
+    <wingDef>BA_Wing_Hasumi</wingDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Hasumi_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
   <PawnKindDef Name="BA_PawnKind_Mari" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Mari</defName>
     <label>Mari</label>

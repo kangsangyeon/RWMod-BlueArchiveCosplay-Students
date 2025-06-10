@@ -323,6 +323,24 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Hasumi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hasumi_Apparel</defName>
+    <label>BA Hasumi Apparel</label>
+    <description>this is a Hasumi apparel.</description>
+    <graphicData>
+      <texPath>BA/Hasumi/Apparel/Hasumi_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleTailF</li>
+      </tags>
+      <wornGraphicPath>BA/Hasumi/Apparel/Hasumi_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Aru_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Aru_Apparel</defName>
     <label>BA Aru Apparel</label>

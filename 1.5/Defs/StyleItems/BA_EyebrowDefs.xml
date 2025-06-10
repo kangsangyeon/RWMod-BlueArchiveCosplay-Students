@@ -13,6 +13,12 @@
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Hasumi</defName>
+    <label>Hasumi Eyebrow</label>
+    <texPath>BA/Hasumi/Hasumi_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
     <defName>BA_Eyebrow_Aru</defName>
     <label>Aru Eyebrow</label>
     <texPath>BA/Aru/Aru_Eyebrow</texPath>

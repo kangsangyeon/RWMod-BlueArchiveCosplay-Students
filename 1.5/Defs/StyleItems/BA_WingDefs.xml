@@ -18,6 +18,13 @@
   </BA.WingDef>
 
   <BA.WingDef>
+    <defName>BA_Wing_Hasumi</defName>
+    <label>Hasumi Wing</label>
+    <texPath>BA/Hasumi/Hasumi_Wing</texPath>
+    <texPathRight>BA/Hasumi/Hasumi_RightWing</texPathRight>
+  </BA.WingDef>
+
+  <BA.WingDef>
     <defName>BA_Wing_Kayoko</defName>
     <label>Kayoko Wing</label>
     <texPath>BA/Kayoko/Kayoko_Wing</texPath>

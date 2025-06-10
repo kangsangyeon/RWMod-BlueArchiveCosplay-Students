@@ -271,9 +271,9 @@
     <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Kid_D</bodyNakedGraphicPath>
   </BodyTypeDef>
 
-  <BodyTypeDef Name="BA_BodyType_Female_Kid_F" ParentName="BA_BodyType_Base">
-    <defName>BA_BodyType_Female_Kid_F</defName>
-    <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Kid_F</bodyNakedGraphicPath>
+  <BodyTypeDef Name="BA_BodyType_Female_Tail_A" ParentName="BA_BodyType_Base">
+    <defName>BA_BodyType_Female_Tail_F</defName>
+    <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Tail_F</bodyNakedGraphicPath>
   </BodyTypeDef>
 
 </Defs>
