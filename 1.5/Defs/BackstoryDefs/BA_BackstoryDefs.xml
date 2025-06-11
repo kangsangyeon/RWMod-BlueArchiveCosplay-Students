@@ -21,15 +21,12 @@
     <slot>Adulthood</slot>
   </BackstoryDef>
 
-  <!--공통
-  유년기-->
+  <!--공통 유년기-->
 
-  <!--게헨나
-  학원-->
+  <!--게헨나 학원-->
 
   <BackstoryDef ParentName="BA_Backstory_Childhood_Base">
-    <defName>BA_Backstory_Childhood_Gehenna</defName> <!--def
-    이름-->
+    <defName>BA_Backstory_Childhood_Gehenna</defName> <!--def이름-->
     <identifier>BA_Backstory_Childhood_Gehenna</identifier><!-- 식별자(없어도 무관)-->
     <title>게헨나 학원 학생</title><!-- 인스펙터 창에서 보이는 배경이름-->
     <titleShort>게헨나 학생</titleShort><!-- itab기즈모 창에서 보이는 배경이름-->
@@ -138,8 +135,7 @@
 
   <!--성년기-->
 
-  <!--게헨나
-  만마전-->
+  <!--게헨나 만마전-->
 
   <!--마코토-->
 
@@ -236,8 +232,7 @@
     <description>.</description>
   </BackstoryDef>
 
-  <!--아루
-  테스트-->
+  <!--아루 테스트-->
 
   <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Aru</defName>
