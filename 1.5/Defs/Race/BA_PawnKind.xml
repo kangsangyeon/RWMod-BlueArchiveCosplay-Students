@@ -108,7 +108,7 @@
     <label>Hasumi</label>
     <studentId>1026</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
-    <forcedBodyTypeFemale>BA_BodyType_Female_Tail_F</forcedBodyTypeFemale>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Tall_F</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Hasumi</forcedHair>
     <faceDef>BA_Face_Hasumi</faceDef>
