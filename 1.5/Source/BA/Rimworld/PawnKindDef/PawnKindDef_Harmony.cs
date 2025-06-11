@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -79,6 +80,36 @@ namespace BA
                 Log.Message($"apparel required but not worn. generate.: {requiredButNotWornDefs[i].defName}.");
                 PawnApparelGenerator.GenerateApparelOfDefFor(pawn, requiredButNotWornDefs[i]);
             }
+
+            // PawnKindDef에서 지정한 나이로 설정함.
+            var ageTick
+                = GameResource.StudentTable[kindDef.studentId].Age * 3600000L;
+            pawn.ageTracker.AgeBiologicalTicks = ageTick;
+            pawn.ageTracker.AgeChronologicalTicks = ageTick;
+        }
+    }
+
+    [HarmonyPatch(
+        typeof(Pawn_AgeTracker),
+        nameof(Pawn_AgeTracker.AgeTick))]
+    public static class Harmony_Pawn_AgeTracker_AgeTick
+    {
+        private static readonly FieldInfo PawnFieldInfo;
+
+        static Harmony_Pawn_AgeTracker_AgeTick()
+        {
+            PawnFieldInfo =
+                typeof(Pawn_AgeTracker).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
+        }
+
+        [HarmonyPrefix]
+        public static bool Prefix(Pawn_AgeTracker __instance)
+        {
+            var pawn = (Pawn)PawnFieldInfo.GetValue(__instance);
+            if (pawn.kindDef is not BA.PawnKindDef kindDef)
+                return true;
+            // BA pawn이면 나이를 먹지 않도록 강제함.
+            return false;
         }
     }
 }
