@@ -81,7 +81,13 @@ namespace BA
                 PawnApparelGenerator.GenerateApparelOfDefFor(pawn, requiredButNotWornDefs[i]);
             }
 
-            // PawnKindDef에서 지정한 나이로 설정함.
+            // PawnKindDef에서 fixedChildBackstories와 fixedAdultBackstories로 지정한 backstory를 강제로 적용함.
+            if (kindDef.fixedChildBackstories.Count > 0)
+                __result.story.Childhood = kindDef.fixedChildBackstories[0];
+            if (kindDef.fixedAdultBackstories.Count > 0)
+                __result.story.Adulthood = kindDef.fixedAdultBackstories[0];
+
+            // 학생 나이로 설정함.
             var ageTick
                 = GameResource.StudentTable[kindDef.studentId].Age * 3600000L;
             pawn.ageTracker.AgeBiologicalTicks = ageTick;

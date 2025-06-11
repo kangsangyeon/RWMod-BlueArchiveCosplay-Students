@@ -8,7 +8,7 @@
     <allowedCultures Inherit="False">
       <li>BA_Culture</li>
     </allowedCultures>
-    <backstoryFilters>
+    <backstoryFilters Inherit="False">
       <li>
         <categories>
           <li>BA_BackstoryCategory</li>
