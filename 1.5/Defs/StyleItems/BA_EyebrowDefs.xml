@@ -13,9 +13,33 @@
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Tsurugi</defName>
+    <label>Tsurugi Eyebrow</label>
+    <texPath>BA/Tsurugi/Tsurugi_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
     <defName>BA_Eyebrow_Hasumi</defName>
     <label>Hasumi Eyebrow</label>
     <texPath>BA/Hasumi/Hasumi_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Ichika</defName>
+    <label>Ichika Eyebrow</label>
+    <texPath>BA/Ichika/Ichika_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Mashiro</defName>
+    <label>Mashiro Eyebrow</label>
+    <texPath>BA/Mashiro/Mashiro_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_JTFMob</defName>
+    <label>JTFMob Eyebrow</label>
+    <texPath>BA/JTFMob/JTFMob_Eyebrow</texPath>
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>

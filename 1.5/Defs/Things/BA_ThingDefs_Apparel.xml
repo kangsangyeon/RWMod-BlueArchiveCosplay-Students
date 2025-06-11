@@ -323,6 +323,24 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Tsurugi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Tsurugi_Apparel</defName>
+    <label>BA Tsurugi Apparel</label>
+    <description>this is a Tsurugi apparel.</description>
+    <graphicData>
+      <texPath>BA/Tsurugi/Apparel/Tsurugi_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleTsurugiD</li>
+      </tags>
+      <wornGraphicPath>BA/Tsurugi/Apparel/Tsurugi_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Hasumi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Hasumi_Apparel</defName>
     <label>BA Hasumi Apparel</label>
@@ -338,6 +356,74 @@
         <li>BA_ApparelTag_FemaleTailF</li>
       </tags>
       <wornGraphicPath>BA/Hasumi/Apparel/Hasumi_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Ichika_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Ichika_Apparel</defName>
+    <label>BA Ichika Apparel</label>
+    <description>this is a Ichika apparel.</description>
+    <graphicData>
+      <texPath>BA/Ichika/Apparel/Ichika_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleType2C</li>
+      </tags>
+      <wornGraphicPath>BA/Ichika/Apparel/Ichika_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Mashiro_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Mashiro_Apparel</defName>
+    <label>BA Mashiro Apparel</label>
+    <description>this is a Mashiro apparel.</description>
+    <graphicData>
+      <texPath>BA/Mashiro/Apparel/Mashiro_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinAA</li>
+      </tags>
+      <wornGraphicPath>BA/Mashiro/Apparel/Mashiro_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_JTFMob_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_JTFMob_Apparel</defName>
+    <label>BA JTFMob Apparel</label>
+    <description>this is a JTFMob apparel.</description>
+    <graphicData>
+      <texPath>BA/JTFMob/Apparel/JTFMob_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinAA</li>
+      </tags>
+      <wornGraphicPath>BA/JTFMob/Apparel/JTFMob_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_JTFMob_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_JTFMob_Headgear</defName>
+    <label>BA JTFMob Headgear</label>
+    <description>JTFMob Headgear</description>
+    <graphicData>
+      <texPath>BA/JTFMob/Apparel/JTFMob_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/JTFMob/Apparel/JTFMob_Headgear</wornGraphicPath>
     </apparel>
   </ThingDef>
 

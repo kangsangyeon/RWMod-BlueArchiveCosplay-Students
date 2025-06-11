@@ -18,10 +18,31 @@
   </BA.WingDef>
 
   <BA.WingDef>
+    <defName>BA_Wing_Tsurugi</defName>
+    <label>Tsurugi Wing</label>
+    <texPath>BA/Tsurugi/Tsurugi_Wing</texPath>
+    <texPathRight>BA/Tsurugi/Tsurugi_RightWing</texPathRight>
+  </BA.WingDef>
+
+  <BA.WingDef>
     <defName>BA_Wing_Hasumi</defName>
     <label>Hasumi Wing</label>
     <texPath>BA/Hasumi/Hasumi_Wing</texPath>
     <texPathRight>BA/Hasumi/Hasumi_RightWing</texPathRight>
+  </BA.WingDef>
+
+  <BA.WingDef>
+    <defName>BA_Wing_Ichika</defName>
+    <label>Ichika Wing</label>
+    <texPath>BA/Ichika/Ichika_Wing</texPath>
+    <texPathRight>BA/Ichika/Ichika_RightWing</texPathRight>
+  </BA.WingDef>
+
+  <BA.WingDef>
+    <defName>BA_Wing_Mashiro</defName>
+    <label>Mashiro Wing</label>
+    <texPath>BA/Mashiro/Mashiro_Wing</texPath>
+    <texPathRight>BA/Mashiro/Mashiro_RightWing</texPathRight>
   </BA.WingDef>
 
   <BA.WingDef>

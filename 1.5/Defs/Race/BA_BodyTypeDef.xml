@@ -276,4 +276,9 @@
     <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Tail_F</bodyNakedGraphicPath>
   </BodyTypeDef>
 
+  <BodyTypeDef Name="BA_BodyType_Female_Tsurugi_D" ParentName="BA_BodyType_Base">
+    <defName>BA_BodyType_Female_Tsurugi_D</defName>
+    <bodyNakedGraphicPath>Things/Pawn/BA/Bodies/Naked_Female_Tsurugi_D</bodyNakedGraphicPath>
+  </BodyTypeDef>
+
 </Defs>

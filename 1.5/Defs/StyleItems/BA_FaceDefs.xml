@@ -19,9 +19,33 @@
   </BA.FaceDef>
 
   <BA.FaceDef>
+    <defName>BA_Face_Tsurugi</defName>
+    <label>Tsurugi Face</label>
+    <texPath>BA/Tsurugi/Tsurugi_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
     <defName>BA_Face_Hasumi</defName>
     <label>Hasumi Face</label>
     <texPath>BA/Hasumi/Hasumi_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Ichika</defName>
+    <label>Ichika Face</label>
+    <texPath>BA/Ichika/Ichika_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Mashiro</defName>
+    <label>Mashiro Face</label>
+    <texPath>BA/Mashiro/Mashiro_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_JTFMob</defName>
+    <label>JTFMob Face</label>
+    <texPath>BA/JTFMob/JTFMob_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef>

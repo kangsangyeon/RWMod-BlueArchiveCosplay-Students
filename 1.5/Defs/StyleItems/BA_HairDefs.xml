@@ -37,12 +37,44 @@
     <texPathFrontHair>BA/Mika/Mika_FrontHair</texPathFrontHair>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Tsurugi" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Tsurugi</defName>
+    <label>Tsurugi Hair</label>
+    <texPath>BA/Tsurugi/Tsurugi_Hair</texPath>
+    <texPathBackHair>BA/Tsurugi/Tsurugi_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Tsurugi/Tsurugi_FrontHair</texPathFrontHair>
+  </HairDef>
+
   <HairDef Name="BA_Hair_Hasumi" ParentName="BA_Hair_Base" Class="BA.HairDef">
     <defName>BA_Hair_Hasumi</defName>
     <label>Hasumi Hair</label>
     <texPath>BA/Hasumi/Hasumi_Hair</texPath>
     <texPathBackHair>BA/Hasumi/Hasumi_BackHair</texPathBackHair>
     <texPathFrontHair>BA/Hasumi/Hasumi_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Ichika" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Ichika</defName>
+    <label>Ichika Hair</label>
+    <texPath>BA/Ichika/Ichika_Hair</texPath>
+    <texPathBackHair>BA/Ichika/Ichika_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Ichika/Ichika_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Mashiro" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Mashiro</defName>
+    <label>Mashiro Hair</label>
+    <texPath>BA/Mashiro/Mashiro_Hair</texPath>
+    <texPathBackHair>BA/Mashiro/Mashiro_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Mashiro/Mashiro_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_JTFMob" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_JTFMob</defName>
+    <label>JTFMob Hair</label>
+    <texPath>BA/JTFMob/JTFMob_Hair</texPath>
+    <texPathBackHair>BA/JTFMob/JTFMob_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/JTFMob/JTFMob_FrontHair</texPathFrontHair>
   </HairDef>
 
   <HairDef Name="BA_Hair_Aru" ParentName="BA_Hair_Base" Class="BA.HairDef">
