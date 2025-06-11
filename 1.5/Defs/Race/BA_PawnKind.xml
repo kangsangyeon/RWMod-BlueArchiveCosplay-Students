@@ -32,6 +32,41 @@
     <defaultFactionType>BA_Faction_Player</defaultFactionType>
   </PawnKindDef>
 
+  <PawnKindDef Name="BA_PawnKind_Yuzu" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Yuzu</defName>
+    <label>Yuzu</label>
+    <studentId>1003</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Yuzu</forcedHair>
+    <faceDef>BA_Face_Yuzu</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Yuzu</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Yuzu_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Aris" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Aris</defName>
+    <label>Aris</label>
+    <studentId>1006</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Thin_AA</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Aris</forcedHair>
+    <faceDef>BA_Face_Aris</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Aris</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Aris_Apparel</li>
+      <li>BA_Apparel_Aris_OuterApparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
   <PawnKindDef Name="BA_PawnKind_Makoto" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Makoto</defName>
     <label>Makoto</label>

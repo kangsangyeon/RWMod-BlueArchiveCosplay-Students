@@ -7,6 +7,18 @@
   </StyleItemCategoryDef>
 
   <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Yuzu</defName>
+    <label>Yuzu Eyebrow</label>
+    <texPath>BA/Yuzu/Yuzu_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Aris</defName>
+    <label>Aris Eyebrow</label>
+    <texPath>BA/Aris/Aris_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
     <defName>BA_Eyebrow_Ibuki</defName>
     <label>Ibuki Eyebrow</label>
     <texPath>BA/Ibuki/Ibuki_Eyebrow</texPath>

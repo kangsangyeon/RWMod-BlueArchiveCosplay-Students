@@ -7,6 +7,18 @@
   </StyleItemCategoryDef>
 
   <BA.FaceDef>
+    <defName>BA_Face_Yuzu</defName>
+    <label>Yuzu Face</label>
+    <texPath>BA/Yuzu/Yuzu_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Aris</defName>
+    <label>Aris Face</label>
+    <texPath>BA/Aris/Aris_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
     <defName>BA_Face_Makoto</defName>
     <label>Makoto Face</label>
     <texPath>BA/Makoto/Makoto_Face</texPath>

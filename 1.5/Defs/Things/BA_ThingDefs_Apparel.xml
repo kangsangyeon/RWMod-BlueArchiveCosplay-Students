@@ -157,6 +157,62 @@
     <colorGenerator Class="ColorGenerator_White" />
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Yuzu_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Yuzu_Apparel</defName>
+    <label>BA Yuzu Apparel</label>
+    <description>this is a Yuzu apparel.</description>
+    <graphicData>
+      <texPath>BA/Yuzu/Apparel/Yuzu_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinA</li>
+      </tags>
+      <wornGraphicPath>BA/Yuzu/Apparel/Yuzu_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Aris_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Aris_Apparel</defName>
+    <label>BA Aris Apparel</label>
+    <description>this is a Aris apparel.</description>
+    <graphicData>
+      <texPath>BA/Aris/Apparel/Aris_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinAA</li>
+      </tags>
+      <wornGraphicPath>BA/Aris/Apparel/Aris_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Aris_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Aris_OuterApparel</defName>
+    <label>BA Aris Outer Apparel</label>
+    <description>this is a Aris apparel.</description>
+    <graphicData>
+      <texPath>BA/Aris/Apparel/Aris_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinAA</li>
+      </tags>
+      <wornGraphicPath>BA/Aris/Apparel/Aris_Outer</wornGraphicPath>
+    </apparel>
+    <texPathOuterLining>BA/Aris/Apparel/Aris_OuterLining</texPathOuterLining>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Makoto_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Makoto_Apparel</defName>
     <label>BA Makoto Apparel</label>
