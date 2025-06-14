@@ -22,6 +22,22 @@
     <texPathFrontHair>BA/Yuzu/Yuzu_FrontHair</texPathFrontHair>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Momoi" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Momoi</defName>
+    <label>Momoi Hair</label>
+    <texPath>BA/Momoi/Momoi_Hair</texPath>
+    <texPathBackHair>BA/Momoi/Momoi_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Momoi/Momoi_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Midori" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Midori</defName>
+    <label>Midori Hair</label>
+    <texPath>BA/Midori/Midori_Hair</texPath>
+    <texPathBackHair>BA/Midori/Midori_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Midori/Midori_FrontHair</texPathFrontHair>
+  </HairDef>
+
   <HairDef Name="BA_Hair_Aris" ParentName="BA_Hair_Base" Class="BA.HairDef">
     <defName>BA_Hair_Aris</defName>
     <label>Aris Hair</label>

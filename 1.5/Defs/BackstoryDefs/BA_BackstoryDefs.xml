@@ -120,7 +120,7 @@
     <identifier>BA_Backstory_Childhood_SRT</identifier>
     <title>SRT 특수학원 학생</title>
     <titleShort>SRT 학생</titleShort>
-    <description>총학생회 산하의 초법적조직입니다. 특별한 훈련으로 단련된 엘리트들입니다.</description>
+    <description>총학생회 산하의 초법적 조직입니다. 특별한 훈련으로 단련된 엘리트들입니다.</description>
   </BackstoryDef>
 
   <!--하이랜더-->
@@ -134,6 +134,16 @@
   </BackstoryDef>
 
   <!--성년기-->
+
+  <!-- 밀레니엄 게임개발부-->
+
+  <!-- 유즈 -->
+
+  <!-- 모모이 -->
+
+  <!-- 미도리 -->
+
+  <!-- 아리스 -->
 
   <!--게헨나 만마전-->
 
@@ -211,7 +221,6 @@
     <description>.</description>
   </BackstoryDef>
 
-
   <!--이오리-->
 
   <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
@@ -232,15 +241,26 @@
     <description>.</description>
   </BackstoryDef>
 
-  <!--아루 테스트-->
+  <!-- 흥신소 68 -->
+
+  <!--아루-->
 
   <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
     <defName>BA_Backstory_Adulthood_Aru</defName>
     <identifier>BA_Backstory_Adulthood_Aru</identifier>
     <title>흥신소 68 사장</title>
     <titleShort>흥신소 68 사장</titleShort>
-    <description>돈만 주면 무슨 의뢰든 해결해 준다는 게헨나의 심부름센터입니다! 공공연하게 말하기 힘든 무서운 의뢰도 군말 없이 수행한다고 하네요... 부원은
-      4명뿐이지만, 흥신소 사장 아루씨의 유연한 운영력으로 어떻게든 주어진 의뢰를 수행하고 있는 것 같아요!</description>
+    <description>돈만 주면 무슨 의뢰든 해결해 준다는 게헨나의 심부름센터의 사장, 아루 본인은 하드보일드함을 추구하지만 잘 풀리지 않는다고 하네요.</description>
+  </BackstoryDef>
+
+  <!-- 무츠키 -->
+
+  <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
+    <defName>BA_Backstory_Adulthood_Mutsuki</defName>
+    <identifier>BA_Backstory_Adulthood_Mutsuki</identifier>
+    <title>흥신소 68 실장</title>
+    <titleShort>흥신소 68 실장</titleShort>
+    <description>.</description>
   </BackstoryDef>
 
 </Defs>

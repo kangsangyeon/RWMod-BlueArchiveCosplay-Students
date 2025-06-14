@@ -13,6 +13,19 @@
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Momoi</defName>
+    <label>Momoi Eyebrow</label>
+    <texPath>BA/Momoi/Momoi_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Midori</defName>
+    <label>Midori Eyebrow</label>
+    <texPath>BA/Midori/Midori_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  
+  <BA.EyebrowDef>
     <defName>BA_Eyebrow_Aris</defName>
     <label>Aris Eyebrow</label>
     <texPath>BA/Aris/Aris_Eyebrow</texPath>

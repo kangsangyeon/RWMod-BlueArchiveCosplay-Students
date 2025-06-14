@@ -49,6 +49,44 @@
     </apparelRequired>
   </PawnKindDef>
 
+  <PawnKindDef Name="BA_PawnKind_Momoi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Momoi</defName>
+    <label>Momoi</label>
+    <studentId>1004</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Kid</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Momoi</forcedHair>
+    <faceDef>BA_Face_Momoi</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Momoi</eyebrowDef>
+    <tailDef>BA_Tail_Momoi</tailDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Momoi_Apparel</li>
+      <li>BA_Apparel_Momoi_OuterApparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Midori" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Midori</defName>
+    <label>Midori</label>
+    <studentId>1004</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Kid</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Midori</forcedHair>
+    <faceDef>BA_Face_Midori</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Midori</eyebrowDef>
+    <tailDef>BA_Tail_Midori</tailDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Midori_Apparel</li>
+      <li>BA_Apparel_Midori_OuterApparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
   <PawnKindDef Name="BA_PawnKind_Aris" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Aris</defName>
     <label>Aris</label>
@@ -195,7 +233,7 @@
   <PawnKindDef Name="BA_PawnKind_JTFMob" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_JTFMob</defName>
     <label>JTFMob</label>
-    <studentId>1049</studentId>
+    <studentId>1028</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_AA</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>

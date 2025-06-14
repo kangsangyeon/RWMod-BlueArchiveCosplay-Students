@@ -7,6 +7,18 @@
   </StyleItemCategoryDef>
 
   <BA.TailDef>
+    <defName>BA_Tail_Momoi</defName>
+    <label>BA Momoi Tail</label>
+    <texPath>BA/Momoi/Momoi_Tail</texPath>
+  </BA.TailDef>
+
+  <BA.TailDef>
+    <defName>BA_Tail_Midori</defName>
+    <label>BA Midori Tail</label>
+    <texPath>BA/Midori/Midori_Tail</texPath>
+  </BA.TailDef>
+
+  <BA.TailDef>
     <defName>BA_Tail_Ibuki</defName>
     <label>BA Ibuki Tail</label>
     <texPath>BA/Ibuki/Ibuki_Tail</texPath>

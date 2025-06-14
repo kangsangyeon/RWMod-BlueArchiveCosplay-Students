@@ -175,6 +175,82 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Momoi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Momoi_Apparel</defName>
+    <label>BA Momoi Apparel</label>
+    <description>this is a Momoi apparel.</description>
+    <graphicData>
+      <texPath>BA/Momoi/Apparel/Momoi_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleKidA</li>
+      </tags>
+      <wornGraphicPath>BA/Momoi/Apparel/Momoi_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Momoi_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Momoi_OuterApparel</defName>
+    <label>BA Momoi Outer Apparel</label>
+    <description>this is a Momoi apparel.</description>
+    <graphicData>
+      <texPath>BA/Momoi/Apparel/Momoi_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleKidA</li>
+      </tags>
+      <wornGraphicPath>BA/Momoi/Apparel/Momoi_Outer</wornGraphicPath>
+    </apparel>
+    <texPathOuterLining>BA/Momoi/Apparel/Momoi_OuterLining</texPathOuterLining>
+  </ThingDef>
+
+    <ThingDef Name="BA_Apparel_Midori_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Midori_Apparel</defName>
+    <label>BA Midori Apparel</label>
+    <description>this is a Midori apparel.</description>
+    <graphicData>
+      <texPath>BA/Midori/Apparel/Midori_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleKidA</li>
+      </tags>
+      <wornGraphicPath>BA/Midori/Apparel/Midori_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Midori_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Midori_OuterApparel</defName>
+    <label>BA Midori Outer Apparel</label>
+    <description>this is a Midori apparel.</description>
+    <graphicData>
+      <texPath>BA/Midori/Apparel/Midori_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleKidA</li>
+      </tags>
+      <wornGraphicPath>BA/Midori/Apparel/Midori_Outer</wornGraphicPath>
+    </apparel>
+    <texPathOuterLining>BA/Midori/Apparel/Midori_OuterLining</texPathOuterLining>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Aris_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Aris_Apparel</defName>
     <label>BA Aris Apparel</label>

@@ -13,6 +13,18 @@
   </BA.FaceDef>
 
   <BA.FaceDef>
+    <defName>BA_Face_Momoi</defName>
+    <label>Momoi Face</label>
+    <texPath>BA/Momoi/Momoi_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Midori</defName>
+    <label>Midori Face</label>
+    <texPath>BA/Midori/Midori_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
     <defName>BA_Face_Aris</defName>
     <label>Aris Face</label>
     <texPath>BA/Aris/Aris_Face</texPath>
