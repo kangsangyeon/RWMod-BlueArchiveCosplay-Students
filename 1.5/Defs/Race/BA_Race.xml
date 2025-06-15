@@ -7,6 +7,29 @@
     <description>A baseline human, mostly unmodified by gene engineering and mostly unchanged by evolutionary pressures on non-Earth planets.</description>
     <race>
       <renderTree>BA_PawnRenderTree</renderTree>
+
+      <lifeStageAges Inherit="False">
+        <li>
+          <def>BA_LifeStage_HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>BA_LifeStage_HumanlikeChild</def>
+          <minAge>3</minAge>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>BA_LifeStage_HumanlikePreTeenager</def>
+          <minAge>9</minAge>
+        </li>
+        <li>
+          <def>BA_LifeStage_HumanlikeTeenager</def>
+          <minAge>13</minAge>
+        </li>
+        <li>
+          <def>BA_LifeStage_HumanlikeAdult</def>
+          <minAge>18</minAge>
+        </li>
+      </lifeStageAges>
     </race>
 
     <comps>

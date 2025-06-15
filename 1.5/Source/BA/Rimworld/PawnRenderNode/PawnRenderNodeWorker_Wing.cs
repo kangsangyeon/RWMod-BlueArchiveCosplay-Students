@@ -17,7 +17,7 @@ namespace BA
                 return offset;
 
             // wing 이미지 파일은 x 0.75를 몸통의 중앙으로 기준하여 제작되었음.
-            // 잘은 모르겠으나, 0.4정도 왼쪽으로 이동하도록 offset을 줘야 의도한 대로 표시됨.
+            // 잘은 모르겠으나, 0.4 (0.25 x 1.6)정도 왼쪽으로 이동하도록 offset을 줘야 의도한 대로 표시됨.
             offset = new Vector3(-0.4f, 0f, 0f);
 
             if (wingNodeProps.isRight)

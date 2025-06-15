@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <LifeStageDef ParentName="Core_LifeStage_HumanlikeBaby">
+    <defName>BA_LifeStage_HumanlikeBaby</defName>
+    <bodySizeFactor>1</bodySizeFactor>
+    <headSizeFactor>1</headSizeFactor>
+  </LifeStageDef>
+
+  <LifeStageDef ParentName="Core_LifeStage_HumanlikeChild">
+    <defName>BA_LifeStage_HumanlikeChild</defName>
+    <bodySizeFactor>1</bodySizeFactor>
+    <headSizeFactor>1</headSizeFactor>
+  </LifeStageDef>
+
+  <!-- default: headSizeFactor 0.75, bodySizeFactor 0.58 -->
+  <LifeStageDef MayRequire="Ludeon.RimWorld.Biotech" ParentName="Biotech_LifeStage_HumanlikePreTeenager">
+    <defName>BA_LifeStage_HumanlikePreTeenager</defName>
+    <bodySizeFactor>1</bodySizeFactor>
+    <headSizeFactor>1</headSizeFactor>
+  </LifeStageDef>
+
+  <LifeStageDef ParentName="Core_LifeStage_HumanlikeTeenager">
+    <defName>BA_LifeStage_HumanlikeTeenager</defName>
+    <bodySizeFactor>1</bodySizeFactor>
+    <headSizeFactor>1</headSizeFactor>
+  </LifeStageDef>
+
+  <!-- default: headSizeFactor null, bodySizeFactor 1 -->
+  <LifeStageDef ParentName="Core_LifeStage_HumanlikeAdult">
+    <defName>BA_LifeStage_HumanlikeAdult</defName>
+    <bodySizeFactor>1</bodySizeFactor>
+    <headSizeFactor>1</headSizeFactor>
+  </LifeStageDef>
+
+</Defs>
