@@ -31,6 +31,36 @@
   </BA.FaceDef>
 
   <BA.FaceDef>
+    <defName>BA_Face_Hoshino</defName>
+    <label>Hoshino Face</label>
+    <texPath>BA/Hoshino/Hoshino_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Shiroko</defName>
+    <label>Shiroko Face</label>
+    <texPath>BA/Shiroko/Shiroko_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Nonomi</defName>
+    <label>Nonomi Face</label>
+    <texPath>BA/Nonomi/Nonomi_Face</texPath>
+  </BA.FaceDef>
+    
+  <BA.FaceDef>
+    <defName>BA_Face_Serika</defName>
+    <label>Serika Face</label>
+    <texPath>BA/Serika/Serika_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Ayane</defName>
+    <label>Ayane Face</label>
+    <texPath>BA/Ayane/Ayane_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
     <defName>BA_Face_Makoto</defName>
     <label>Makoto Face</label>
     <texPath>BA/Makoto/Makoto_Face</texPath>
@@ -108,5 +138,16 @@
     <texPath>BA/Mari/Mari_Face</texPath>
   </BA.FaceDef>
 
+  <BA.FaceDef>
+    <defName>BA_Face_ShirokoTerror</defName>
+    <label>ShirokoTerror Face</label>
+    <texPath>BA/ShirokoTerror/ShirokoTerror_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Hoshino1stGrade</defName>
+    <label>Hoshino1stGrade Face</label>
+    <texPath>BA/Hoshino1stGrade/Hoshino1stGrade_Face</texPath>
+  </BA.FaceDef> 
 
 </Defs>

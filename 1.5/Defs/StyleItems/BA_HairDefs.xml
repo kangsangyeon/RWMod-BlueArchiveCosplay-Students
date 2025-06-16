@@ -46,6 +46,46 @@
     <texPathFrontHair>BA/Aris/Aris_FrontHair</texPathFrontHair>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Hoshino" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Hoshino</defName>
+    <label>Hoshino Hair</label>
+    <texPath>BA/Hoshino/Hoshino_Hair</texPath>
+    <texPathBackHair>BA/Hoshino/Hoshino_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Hoshino/Hoshino_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Shiroko" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Shiroko</defName>
+    <label>Shiroko Hair</label>
+    <texPath>BA/Shiroko/Shiroko_Hair</texPath>
+    <texPathBackHair>BA/Shiroko/Shiroko_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Shiroko/Shiroko_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Nonomi" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Nonomi</defName>
+    <label>Nonomi Hair</label>
+    <texPath>BA/Nonomi/Nonomi_Hair</texPath>
+    <texPathBackHair>BA/Nonomi/Nonomi_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Nonomi/Nonomi_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Serika" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Serika</defName>
+    <label>Serika Hair</label>
+    <texPath>BA/Serika/Serika_Hair</texPath>
+    <texPathBackHair>BA/Serika/Serika_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Serika/Serika_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Ayane" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Ayane</defName>
+    <label>Ayane Hair</label>
+    <texPath>BA/Ayane/Ayane_Hair</texPath>
+    <texPathBackHair>BA/Ayane/Ayane_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Ayane/Ayane_FrontHair</texPathFrontHair>
+  </HairDef>
+
   <HairDef Name="BA_Hair_Makoto" ParentName="BA_Hair_Base" Class="BA.HairDef">
     <defName>BA_Hair_Makoto</defName>
     <label>Makoto Hair</label>
@@ -147,6 +187,22 @@
     <texPath>BA/Mari/Mari_Hair</texPath>
     <texPathBackHair>BA/Mari/Mari_BackHair</texPathBackHair>
     <texPathFrontHair>BA/Mari/Mari_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_ShirokoTerror" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_ShirokoTerror</defName>
+    <label>ShirokoTerror Hair</label>
+    <texPath>BA/ShirokoTerror/ShirokoTerror_Hair</texPath>
+    <texPathBackHair>BA/ShirokoTerror/ShirokoTerror_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/ShirokoTerror/ShirokoTerror_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Hoshino1stGrade" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Hoshino1stGrade</defName>
+    <label>Hoshino1stGrade Hair</label>
+    <texPath>BA/Hoshino1stGrade/Hoshino1stGrade_Hair</texPath>
+    <texPathBackHair>BA/Hoshino1stGrade/Hoshino1stGrade_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Hoshino1stGrade/Hoshino1stGrade_FrontHair</texPathFrontHair>
   </HairDef>
 
 </Defs>

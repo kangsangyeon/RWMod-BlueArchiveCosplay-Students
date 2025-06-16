@@ -213,7 +213,7 @@
     <texPathOuterLining>BA/Momoi/Apparel/Momoi_OuterLining</texPathOuterLining>
   </ThingDef>
 
-    <ThingDef Name="BA_Apparel_Midori_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+  <ThingDef Name="BA_Apparel_Midori_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Midori_Apparel</defName>
     <label>BA Midori Apparel</label>
     <description>this is a Midori apparel.</description>
@@ -287,6 +287,176 @@
       <wornGraphicPath>BA/Aris/Apparel/Aris_Outer</wornGraphicPath>
     </apparel>
     <texPathOuterLining>BA/Aris/Apparel/Aris_OuterLining</texPathOuterLining>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Hoshino_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hoshino_Apparel</defName>
+    <label>BA Hoshino Apparel</label>
+    <description>this is a Hoshino apparel.</description>
+    <graphicData>
+      <texPath>BA/Hoshino/Apparel/Hoshino_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleKidA</li>
+      </tags>
+      <wornGraphicPath>BA/Hoshino/Apparel/Hoshino_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef> 
+
+  <ThingDef Name="BA_Apparel_Shiroko_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Shiroko_Apparel</defName>
+    <label>BA Shiroko Apparel</label>
+    <description>this is a Shiroko apparel.</description>
+    <graphicData>
+      <texPath>BA/Shiroko/Apparel/Shiroko_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalC</li>
+      </tags>
+      <wornGraphicPath>BA/Shiroko/Apparel/Shiroko_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Shiroko_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Shiroko_OuterApparel</defName>
+    <label>BA Shiroko Outer Apparel</label>
+    <description>this is a Shiroko apparel.</description>
+    <graphicData>
+      <texPath>BA/Shiroko/Apparel/Shiroko_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalC</li>
+      </tags>
+      <wornGraphicPath>BA/Shiroko/Apparel/Shiroko_Outer</wornGraphicPath>
+    </apparel>
+    <texPathOuterLining>BA/Shiroko/Apparel/Shiroko_OuterLining</texPathOuterLining>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Nonomi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Nonomi_Apparel</defName>
+    <label>BA Nonomi Apparel</label>
+    <description>this is a Nonomi apparel.</description>
+    <graphicData>
+      <texPath>BA/Nonomi/Apparel/Nonomi_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalD</li>
+      </tags>
+      <wornGraphicPath>BA/Nonomi/Apparel/Nonomi_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Nonomi_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Nonomi_OuterApparel</defName>
+    <label>BA Nonomi Outer Apparel</label>
+    <description>this is a Nonomi apparel.</description>
+    <graphicData>
+      <texPath>BA/Nonomi/Apparel/Nonomi_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalD</li>
+      </tags>
+      <wornGraphicPath>BA/Nonomi/Apparel/Nonomi_Outer</wornGraphicPath>
+    </apparel>
+    <texPathOuterLining>BA/Nonomi/Apparel/Nonomi_OuterLining</texPathOuterLining>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Serika_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Serika_Apparel</defName>
+    <label>BA Serika Apparel</label>
+    <description>this is a Serika apparel.</description>
+    <graphicData>
+      <texPath>BA/Serika/Apparel/Serika_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinA</li>
+      </tags>
+      <wornGraphicPath>BA/Serika/Apparel/Serika_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Serika_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Serika_OuterApparel</defName>
+    <label>BA Serika Outer Apparel</label>
+    <description>this is a Serika apparel.</description>
+    <graphicData>
+      <texPath>BA/Serika/Apparel/Serika_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinA</li>
+      </tags>
+      <wornGraphicPath>BA/Serika/Apparel/Serika_Outer</wornGraphicPath>
+    </apparel>
+    <texPathOuterLining>BA/Serika/Apparel/Serika_OuterLining</texPathOuterLining>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Ayane_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Ayane_Apparel</defName>
+    <label>BA Ayane Apparel</label>
+    <description>this is a Ayane apparel.</description>
+    <graphicData>
+      <texPath>BA/Ayane/Apparel/Ayane_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinA</li>
+      </tags>
+      <wornGraphicPath>BA/Ayane/Apparel/Ayane_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Ayane_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Ayane_OuterApparel</defName>
+    <label>BA Ayane Outer Apparel</label>
+    <description>this is a Ayane apparel.</description>
+    <graphicData>
+      <texPath>BA/Ayane/Apparel/Ayane_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinA</li>
+      </tags>
+      <wornGraphicPath>BA/Ayane/Apparel/Ayane_Outer</wornGraphicPath>
+    </apparel>
+    <texPathOuterLining>BA/Ayane/Apparel/Ayane_OuterLining</texPathOuterLining>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Makoto_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -714,6 +884,44 @@
       <wornGraphicPath>BA/Mari/Apparel/Mari_Headgear</wornGraphicPath>
     </apparel>
     <texPathHeadgearLining>BA/Mari/Apparel/Mari_HeadgearLining</texPathHeadgearLining>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_ShirokoTerror_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_ShirokoTerror_Apparel</defName>
+    <label>BA ShirokoTerror Apparel</label>
+    <description>this is a ShirokoTerror apparel.</description>
+    <graphicData>
+      <texPath>BA/ShirokoTerror/Apparel/ShirokoTerror_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalF</li>
+      </tags>
+      <wornGraphicPath>BA/ShirokoTerror/Apparel/ShirokoTerror_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Hoshino1stGrade_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hoshino1stGrade_OuterApparel</defName>
+    <label>BA Hoshino1stGrade Outer Apparel</label>
+    <description>this is a Hoshino1stGrade apparel.</description>
+    <graphicData>
+      <texPath>BA/Hoshino1stGrade/Apparel/Hoshino1stGrade_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleKidA</li>
+      </tags>
+      <wornGraphicPath>BA/Hoshino1stGrade/Apparel/Hoshino1stGrade_Outer</wornGraphicPath>
+    </apparel>
+    <texPathOuterLining>BA/Hoshino1stGrade/Apparel/Hoshino1stGrade_OuterLining</texPathOuterLining>
   </ThingDef>
 
 </Defs>

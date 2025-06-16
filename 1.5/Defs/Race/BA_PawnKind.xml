@@ -105,6 +105,95 @@
     </apparelRequired>
   </PawnKindDef>
 
+  <PawnKindDef Name="BA_PawnKind_Hoshino" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Hoshino</defName>
+    <label>Hoshino</label>
+    <studentId>1007</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Hoshino</forcedHair>
+    <faceDef>BA_Face_Hoshino</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Hoshino</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Hoshino_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Shiroko" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Shiroko</defName>
+    <label>Shiroko</label>
+    <studentId>1008</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Shiroko</forcedHair>
+    <faceDef>BA_Face_Shiroko</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Shiroko</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Shiroko_Apparel</li>
+      <li>BA_Apparel_Shiroko_OuterApparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Nonomi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Nonomi</defName>
+    <label>Nonomi</label>
+    <studentId>1009</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Nonomi</forcedHair>
+    <faceDef>BA_Face_Nonomi</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Nonomi</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Nonomi_Apparel</li>
+      <li>BA_Apparel_Nonomi_OuterApparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Serika" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Serika</defName>
+    <label>Serika</label>
+    <studentId>1010</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Serika</forcedHair>
+    <faceDef>BA_Face_Serika</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Serika</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Serika_Apparel</li>
+      <li>BA_Apparel_Serika_OuterApparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Ayane" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Ayane</defName>
+    <label>Ayane</label>
+    <studentId>1011</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Ayane</forcedHair>
+    <faceDef>BA_Face_Ayane</faceDef>
+    <earDef>BA_Ear_Pointy</earDef>
+    <eyebrowDef>BA_Eyebrow_Ayane</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Ayane_Apparel</li>
+      <li>BA_Apparel_Ayane_OuterApparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
   <PawnKindDef Name="BA_PawnKind_Makoto" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Makoto</defName>
     <label>Makoto</label>
@@ -341,6 +430,41 @@
     <apparelRequired>
       <li>BA_Apparel_Haruka_Headgear</li>
       <li>BA_Apparel_Haruka_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_ShirokoTerror" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_ShirokoTerror</defName>
+    <label>ShirokoTerror</label>
+    <studentId>1057</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_F</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_ShirokoTerror</forcedHair>
+    <faceDef>BA_Face_ShirokoTerror</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_ShirokoTerror</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_ShirokoTerror_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Hoshino1stGrade" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Hoshino1stGrade</defName>
+    <label>Hoshino1stGrade</label>
+    <studentId>1058</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Hoshino1stGrade</forcedHair>
+    <faceDef>BA_Face_Hoshino1stGrade</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Hoshino1stGrade</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Hoshino_Apparel</li>
+      <li>BA_Apparel_Hoshino1stGrade_OuterApparel</li>
     </apparelRequired>
   </PawnKindDef>
 

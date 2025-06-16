@@ -24,11 +24,40 @@
     <texPath>BA/Midori/Midori_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  
   <BA.EyebrowDef>
     <defName>BA_Eyebrow_Aris</defName>
     <label>Aris Eyebrow</label>
     <texPath>BA/Aris/Aris_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Hoshino</defName>
+    <label>Hoshino Eyebrow</label>
+    <texPath>BA/Hoshino/Hoshino_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Shiroko</defName>
+    <label>Shiroko Eyebrow</label>
+    <texPath>BA/Shiroko/Shiroko_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Nonomi</defName>
+    <label>Nonomi Eyebrow</label>
+    <texPath>BA/Nonomi/Nonomi_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Serika</defName>
+    <label>Serika Eyebrow</label>
+    <texPath>BA/Serika/Serika_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Ayane</defName>
+    <label>Ayane Eyebrow</label>
+    <texPath>BA/Ayane/Ayane_Eyebrow</texPath>
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
@@ -101,6 +130,18 @@
     <defName>BA_Eyebrow_Mari</defName>
     <label>Mari Eyebrow</label>
     <texPath>BA/Mari/Mari_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_ShirokoTerror</defName>
+    <label>ShirokoTerror Eyebrow</label>
+    <texPath>BA/ShirokoTerror/ShirokoTerror_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Hoshino1stGrade</defName>
+    <label>Hoshino1stGrade Eyebrow</label>
+    <texPath>BA/Hoshino1stGrade/Hoshino1stGrade_Eyebrow</texPath>
   </BA.EyebrowDef>
 
 </Defs>
