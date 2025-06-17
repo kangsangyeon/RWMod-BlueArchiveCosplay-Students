@@ -625,6 +625,24 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Mika_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Mika_Apparel</defName>
+    <label>BA Mika Apparel</label>
+    <description>this is a Mika apparel.</description>
+    <graphicData>
+      <texPath>BA/Mika/Apparel/Mika_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalC</li>
+      </tags>
+      <wornGraphicPath>BA/Mika/Apparel/Mika_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Tsurugi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Tsurugi_Apparel</defName>
     <label>BA Tsurugi Apparel</label>
@@ -835,21 +853,39 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Mika_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
-    <defName>BA_Apparel_Mika_Apparel</defName>
-    <label>BA Mika Apparel</label>
-    <description>this is a Mika apparel.</description>
+  <ThingDef Name="BA_Apparel_Hifumi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hifumi_Apparel</defName>
+    <label>BA Hifumi Apparel</label>
+    <description>this is a Hifumi apparel.</description>
     <graphicData>
-      <texPath>BA/Mika/Apparel/Mika_Apparel_1</texPath>
+      <texPath>BA/Hifumi/Apparel/Hifumi_Apparel_1</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1</drawSize>
     </graphicData>
 
     <apparel>
       <tags>
-        <li>BA_ApparelTag_FemaleNormalC</li>
+        <li>BA_ApparelTag_FemaleType2A</li>
       </tags>
-      <wornGraphicPath>BA/Mika/Apparel/Mika_Apparel</wornGraphicPath>
+      <wornGraphicPath>BA/Hifumi/Apparel/Hifumi_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Azusa_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Azusa_Apparel</defName>
+    <label>BA Azusa Apparel</label>
+    <description>this is a Azusa apparel.</description>
+    <graphicData>
+      <texPath>BA/Azusa/Apparel/Azusa_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinA</li>
+      </tags>
+      <wornGraphicPath>BA/Azusa/Apparel/Azusa_Apparel</wornGraphicPath>
     </apparel>
   </ThingDef>
 

@@ -67,6 +67,12 @@
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Mika</defName>
+    <label>Mika Eyebrow</label>
+    <texPath>BA/Mika/Mika_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
     <defName>BA_Eyebrow_Tsurugi</defName>
     <label>Tsurugi Eyebrow</label>
     <texPath>BA/Tsurugi/Tsurugi_Eyebrow</texPath>
@@ -121,9 +127,15 @@
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
-    <defName>BA_Eyebrow_Mika</defName>
-    <label>Mika Eyebrow</label>
-    <texPath>BA/Mika/Mika_Eyebrow</texPath>
+    <defName>BA_Eyebrow_Hifumi</defName>
+    <label>Hifumi Eyebrow</label>
+    <texPath>BA/Hifumi/Hifumi_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Azusa</defName>
+    <label>Azusa Eyebrow</label>
+    <texPath>BA/Azusa/Azusa_Eyebrow</texPath>
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>

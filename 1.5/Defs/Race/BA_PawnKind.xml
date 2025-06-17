@@ -337,6 +337,41 @@
     </apparelRequired>
   </PawnKindDef>
 
+  <PawnKindDef Name="BA_PawnKind_Hifumi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Hifumi</defName>
+    <label>Hifumi</label>
+    <studentId>1032</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Type2_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Hifumi</forcedHair>
+    <faceDef>BA_Face_Hifumi</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Hifumi</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Hifumi_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Azusa" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Azusa</defName>
+    <label>Azusa</label>
+    <studentId>1033</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Azusa</forcedHair>
+    <faceDef>BA_Face_Azusa</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Azusa</eyebrowDef>
+    <wingDef>BA_Wing_Azusa</wingDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Azusa_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
   <PawnKindDef Name="BA_PawnKind_Mari" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Mari</defName>
     <label>Mari</label>

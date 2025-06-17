@@ -73,6 +73,12 @@
   </BA.FaceDef>
 
   <BA.FaceDef>
+    <defName>BA_Face_Mika</defName>
+    <label>Mika Face</label>
+    <texPath>BA/Mika/Mika_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
     <defName>BA_Face_Tsurugi</defName>
     <label>Tsurugi Face</label>
     <texPath>BA/Tsurugi/Tsurugi_Face</texPath>
@@ -127,9 +133,15 @@
   </BA.FaceDef>
 
   <BA.FaceDef>
-    <defName>BA_Face_Mika</defName>
-    <label>Mika Face</label>
-    <texPath>BA/Mika/Mika_Face</texPath>
+    <defName>BA_Face_Hifumi</defName>
+    <label>Hifumi Face</label>
+    <texPath>BA/Hifumi/Hifumi_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Azusa</defName>
+    <label>Azusa Face</label>
+    <texPath>BA/Azusa/Azusa_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef>
