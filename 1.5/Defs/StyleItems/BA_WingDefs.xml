@@ -18,6 +18,13 @@
   </BA.WingDef>
 
   <BA.WingDef>
+    <defName>BA_Wing_Nagisa</defName>
+    <label>Nagisa Wing</label>
+    <texPath>BA/Nagisa/Nagisa_Wing</texPath>
+    <texPathRight>BA/Nagisa/Nagisa_RightWing</texPathRight>
+  </BA.WingDef>
+
+  <BA.WingDef>
     <defName>BA_Wing_Mika</defName>
     <label>Mika Wing</label>
     <texPath>BA/Mika/Mika_Wing</texPath>
@@ -57,6 +64,13 @@
     <label>Azusa Wing</label>
     <texPath>BA/Azusa/Azusa_Wing</texPath>
     <texPathRight>BA/Azusa/Azusa_RightWing</texPathRight>
+  </BA.WingDef>
+
+  <BA.WingDef>
+    <defName>BA_Wing_Koharu</defName>
+    <label>Koharu Wing</label>
+    <texPath>BA/Koharu/Koharu_Wing</texPath>
+    <texPathRight>BA/Koharu/Koharu_RightWing</texPathRight>
   </BA.WingDef>
 
   <BA.WingDef>

@@ -73,9 +73,21 @@
   </BA.FaceDef>
 
   <BA.FaceDef>
+    <defName>BA_Face_Nagisa</defName>
+    <label>Nagisa Face</label>
+    <texPath>BA/Nagisa/Nagisa_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
     <defName>BA_Face_Mika</defName>
     <label>Mika Face</label>
     <texPath>BA/Mika/Mika_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Seia</defName>
+    <label>Seia Face</label>
+    <texPath>BA/Seia/Seia_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef>
@@ -142,6 +154,18 @@
     <defName>BA_Face_Azusa</defName>
     <label>Azusa Face</label>
     <texPath>BA/Azusa/Azusa_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Hanako</defName>
+    <label>Hanako Face</label>
+    <texPath>BA/Hanako/Hanako_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Koharu</defName>
+    <label>Koharu Face</label>
+    <texPath>BA/Koharu/Koharu_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef>

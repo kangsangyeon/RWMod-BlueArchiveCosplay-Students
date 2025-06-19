@@ -625,6 +625,24 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Nagisa_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Nagisa_Apparel</defName>
+    <label>BA Nagisa Apparel</label>
+    <description>this is a Nagisa apparel.</description>
+    <graphicData>
+      <texPath>BA/Nagisa/Apparel/Nagisa_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalC</li>
+      </tags>
+      <wornGraphicPath>BA/Nagisa/Apparel/Nagisa_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Mika_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Mika_Apparel</defName>
     <label>BA Mika Apparel</label>
@@ -640,6 +658,24 @@
         <li>BA_ApparelTag_FemaleNormalC</li>
       </tags>
       <wornGraphicPath>BA/Mika/Apparel/Mika_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Seia_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Seia_Apparel</defName>
+    <label>BA Seia Apparel</label>
+    <description>this is a Seia apparel.</description>
+    <graphicData>
+      <texPath>BA/Seia/Apparel/Seia_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalC</li>
+      </tags>
+      <wornGraphicPath>BA/Seia/Apparel/Seia_Apparel</wornGraphicPath>
     </apparel>
   </ThingDef>
 
@@ -887,6 +923,57 @@
       </tags>
       <wornGraphicPath>BA/Azusa/Apparel/Azusa_Apparel</wornGraphicPath>
     </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Hanako_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hanako_Apparel</defName>
+    <label>BA Hanako Apparel</label>
+    <description>this is a Hanako apparel.</description>
+    <graphicData>
+      <texPath>BA/Hanako/Apparel/Hanako_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalD</li>
+      </tags>
+      <wornGraphicPath>BA/Hanako/Apparel/Hanako_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Koharu_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Koharu_Apparel</defName>
+    <label>BA Koharu Apparel</label>
+    <description>this is a Koharu apparel.</description>
+    <graphicData>
+      <texPath>BA/Koharu/Apparel/Koharu_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinD</li>
+      </tags>
+      <wornGraphicPath>BA/Koharu/Apparel/Koharu_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Koharu_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Koharu_Headgear</defName>
+    <label>BA Koharu Headgear</label>
+    <description>Koharu Headgear</description>
+    <graphicData>
+      <texPath>BA/Koharu/Apparel/Koharu_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Koharu/Apparel/Koharu_Headgear</wornGraphicPath>
+    </apparel>
+    <texPathHeadgearLining>BA/Koharu/Apparel/Koharu_HeadgearLining</texPathHeadgearLining>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Mari_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">

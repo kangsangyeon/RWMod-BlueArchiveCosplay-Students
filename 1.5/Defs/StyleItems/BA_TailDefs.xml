@@ -24,4 +24,10 @@
     <texPath>BA/Ibuki/Ibuki_Tail</texPath>
   </BA.TailDef>
 
+  <BA.TailDef>
+    <defName>BA_Tail_Seia</defName>
+    <label>BA Seia Tail</label>
+    <texPath>BA/Seia/Seia_Tail</texPath>
+  </BA.TailDef>
+
 </Defs>

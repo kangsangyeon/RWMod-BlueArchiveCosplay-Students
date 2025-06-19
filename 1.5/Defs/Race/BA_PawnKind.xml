@@ -229,6 +229,24 @@
     </apparelRequired>
   </PawnKindDef>
 
+  <PawnKindDef Name="BA_PawnKind_Nagisa" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Nagisa</defName>
+    <label>Nagisa</label>
+    <studentId>1022</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Nagisa</forcedHair>
+    <faceDef>BA_Face_Nagisa</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Nagisa</eyebrowDef>
+    <wingDef>BA_Wing_Nagisa</wingDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Nagisa_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
   <PawnKindDef Name="BA_PawnKind_Mika" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Mika</defName>
     <label>Mika</label>
@@ -244,6 +262,24 @@
 
     <apparelRequired>
       <li>BA_Apparel_Mika_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Seia" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Seia</defName>
+    <label>Seia</label>
+    <studentId>1024</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Seia</forcedHair>
+    <faceDef>BA_Face_Seia</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Seia</eyebrowDef>
+    <tailDef>BA_Tail_Seia</tailDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Seia_Apparel</li>
     </apparelRequired>
   </PawnKindDef>
 
@@ -369,6 +405,42 @@
 
     <apparelRequired>
       <li>BA_Apparel_Azusa_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Hanako" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Hanako</defName>
+    <label>Hanako</label>
+    <studentId>1034</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Hanako</forcedHair>
+    <faceDef>BA_Face_Hanako</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Hanako</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Hanako_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+    <PawnKindDef Name="BA_PawnKind_Koharu" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Koharu</defName>
+    <label>Koharu</label>
+    <studentId>1035</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Koharu</forcedHair>
+    <faceDef>BA_Face_Koharu</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Koharu</eyebrowDef>
+    <wingDef>BA_Wing_Koharu</wingDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Koharu_Apparel</li>
+      <li>BA_Apparel_Koharu_Headgear</li>
     </apparelRequired>
   </PawnKindDef>
 

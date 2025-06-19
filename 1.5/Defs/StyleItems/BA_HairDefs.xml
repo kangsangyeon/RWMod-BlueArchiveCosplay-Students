@@ -101,12 +101,28 @@
     <texPathFrontHair>BA/Ibuki/Ibuki_FrontHair</texPathFrontHair>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Nagisa" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Nagisa</defName>
+    <label>Nagisa Hair</label>
+    <texPath>BA/Nagisa/Nagisa_Hair</texPath>
+    <texPathBackHair>BA/Nagisa/Nagisa_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Nagisa/Nagisa_FrontHair</texPathFrontHair>
+  </HairDef>
+
   <HairDef Name="BA_Hair_Mika" ParentName="BA_Hair_Base" Class="BA.HairDef">
     <defName>BA_Hair_Mika</defName>
     <label>Mika Hair</label>
     <texPath>BA/Mika/Mika_Hair</texPath>
     <texPathBackHair>BA/Mika/Mika_BackHair</texPathBackHair>
     <texPathFrontHair>BA/Mika/Mika_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Seia" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Seia</defName>
+    <label>Seia Hair</label>
+    <texPath>BA/Seia/Seia_Hair</texPath>
+    <texPathBackHair>BA/Seia/Seia_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Seia/Seia_FrontHair</texPathFrontHair>
   </HairDef>
 
   <HairDef Name="BA_Hair_Tsurugi" ParentName="BA_Hair_Base" Class="BA.HairDef">
@@ -195,6 +211,22 @@
     <texPath>BA/Azusa/Azusa_Hair</texPath>
     <texPathBackHair>BA/Azusa/Azusa_BackHair</texPathBackHair>
     <texPathFrontHair>BA/Azusa/Azusa_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Hanako" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Hanako</defName>
+    <label>Hanako Hair</label>
+    <texPath>BA/Hanako/Hanako_Hair</texPath>
+    <texPathBackHair>BA/Hanako/Hanako_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Hanako/Hanako_FrontHair</texPathFrontHair>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Koharu" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Koharu</defName>
+    <label>Koharu Hair</label>
+    <texPath>BA/Koharu/Koharu_Hair</texPath>
+    <texPathBackHair>BA/Koharu/Koharu_BackHair</texPathBackHair>
+    <texPathFrontHair>BA/Koharu/Koharu_FrontHair</texPathFrontHair>
   </HairDef>
 
   <HairDef Name="BA_Hair_Mari" ParentName="BA_Hair_Base" Class="BA.HairDef">
