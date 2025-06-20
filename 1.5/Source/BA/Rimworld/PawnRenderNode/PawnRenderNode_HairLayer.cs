@@ -3,17 +3,19 @@ using Verse;
 
 namespace BA
 {
-    public class PawnRenderNode_BackHair : PawnRenderNode
+    public class PawnRenderNode_HairLayer : PawnRenderNode
     {
         private readonly Pawn _pawn;
+        private readonly BA.INodeProperties_ThingLayer _layerProps;
 
-        public PawnRenderNode_BackHair(
+        public PawnRenderNode_HairLayer(
             Pawn pawn,
             PawnRenderNodeProperties props,
             PawnRenderTree tree)
             : base(pawn, props, tree)
         {
             _pawn = pawn;
+            _layerProps = props as BA.INodeProperties_ThingLayer;
         }
 
         // public override GraphicMeshSet MeshSetFor(Pawn pawn)
@@ -23,7 +25,7 @@ namespace BA
         //         return null;
         //     if (pawn.story?.hairDef is not HairDef hairDef)
         //         return null;
-        //     if (string.IsNullOrEmpty(hairDef.texPathBackHair))
+        //     if (string.IsNullOrEmpty(hairDef.texPathBackLayer))
         //         return null;
         //     return HumanlikeMeshPoolUtility.GetHumanlikeHairSetForPawn(pawn);
         // }
@@ -37,10 +39,10 @@ namespace BA
         //         return null;
         //     if (pawn.story?.hairDef is not BA.HairDef hairDef)
         //         return null;
-        //     if (string.IsNullOrEmpty(hairDef.texPathBackHair))
+        //     if (string.IsNullOrEmpty(hairDef.texPathBackLayer))
         //         return null;
         //     var shader = hairDef.overrideShaderTypeDef?.Shader ?? ShaderDatabase.CutoutHair;
-        //     return GraphicDatabase.Get<Graphic_Multi>(hairDef.texPathBackHair, shader, Vector2.one, ColorFor(pawn));
+        //     return GraphicDatabase.Get<Graphic_Multi>(hairDef.texPathBackLayer, shader, Vector2.one, ColorFor(pawn));
         // }
 
         protected override void EnsureMaterialsInitialized()
@@ -51,10 +53,15 @@ namespace BA
                 return;
             if (_pawn.story?.hairDef is not BA.HairDef hairDef)
                 return;
-            if (string.IsNullOrEmpty(hairDef.texPathBackHair))
+            var shader = ShaderDatabase.Cutout;
+            var texPath = string.Empty;
+            if (_layerProps.IsFront)
+                texPath = hairDef.texPathFrontLayer;
+            else if (_layerProps.IsBack)
+                texPath = hairDef.texPathBackLayer;
+            if (string.IsNullOrEmpty(texPath))
                 return;
-            var shader = hairDef.overrideShaderTypeDef?.Shader ?? ShaderDatabase.CutoutHair;
-            this.graphic = GraphicDatabase.Get<Graphic_Multi>(hairDef.texPathBackHair, shader, Vector2.one, ColorFor(_pawn));
+            this.graphic = GraphicDatabase.Get<Graphic_Multi>(texPath, shader, Vector2.one, ColorFor(_pawn));
         }
     }
 }

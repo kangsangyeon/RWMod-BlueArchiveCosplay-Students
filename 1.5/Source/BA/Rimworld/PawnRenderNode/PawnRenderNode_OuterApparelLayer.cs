@@ -4,34 +4,41 @@ using Verse;
 
 namespace BA
 {
-    public class PawnRenderNode_HeadgearLining : PawnRenderNode
+    public class PawnRenderNode_OuterApparelLayer : Verse.PawnRenderNode
     {
         private readonly Pawn _pawn;
+        private readonly BA.INodeProperties_ThingLayer _layerProps;
 
-        public PawnRenderNode_HeadgearLining(
+        public PawnRenderNode_OuterApparelLayer(
             Pawn pawn,
             PawnRenderNodeProperties props,
             PawnRenderTree tree)
             : base(pawn, props, tree)
         {
             _pawn = pawn;
+            _layerProps = props as BA.INodeProperties_ThingLayer;
         }
-        
+
         protected override void EnsureMaterialsInitialized()
         {
             if (_pawn.DevelopmentalStage.Baby() || _pawn.DevelopmentalStage.Newborn())
                 return;
             var apparel = _pawn.apparel.WornApparel.FirstOrDefault(x =>
-                x.def.apparel.layers.Contains(ApparelLayerDefOf.Overhead) &&
+                x.def.apparel.layers.Contains(ApparelLayerDefOf.Shell) &&
                 x.def is BA.ApparelDef);
             if (apparel == null)
                 return;
             if (apparel.def is not BA.ApparelDef apparelDef)
                 return;
-            if (string.IsNullOrEmpty(apparelDef.texPathHeadgearLining))
-                return;
             var shader = ShaderDatabase.Cutout;
-            this.graphic = GraphicDatabase.Get<Graphic_Multi>(apparelDef.texPathHeadgearLining, shader, Vector2.one, ColorFor(_pawn));
+            var texPath = string.Empty;
+            if (_layerProps.IsFront)
+                texPath = apparelDef.texPathFrontLayer;
+            else if (_layerProps.IsBack)
+                texPath = apparelDef.texPathBackLayer;
+            if (string.IsNullOrEmpty(texPath))
+                return;
+            this.graphic = GraphicDatabase.Get<Graphic_Multi>(texPath, shader, Vector2.one, ColorFor(_pawn));
         }
     }
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- https://rimworldwiki.com/wiki/Modding_Tutorials/Localization -->
+
+  <BA_PawnKind_Yuzu.label>유즈</BA_PawnKind_Yuzu.label>
+  <BA_PawnKind_Aris.label>아리스</BA_PawnKind_Aris.label>
+  <BA_PawnKind_Makoto.label>마코토</BA_PawnKind_Makoto.label>
+  <BA_PawnKind_Ibuki.label>이부키</BA_PawnKind_Ibuki.label>
+  <BA_PawnKind_Mika.label>미카</BA_PawnKind_Mika.label>
+  <BA_PawnKind_Tsurugi.label>츠루기</BA_PawnKind_Tsurugi.label>
+  <BA_PawnKind_Hasumi.label>하스미</BA_PawnKind_Hasumi.label>
+  <BA_PawnKind_Ichika.label>이치카</BA_PawnKind_Ichika.label>
+  <BA_PawnKind_Mashiro.label>마시로</BA_PawnKind_Mashiro.label>
+  <BA_PawnKind_JTFMob.label>JTFMob</BA_PawnKind_JTFMob.label>
+  <BA_PawnKind_Mari.label>마리</BA_PawnKind_Mari.label>
+  <BA_PawnKind_Aru.label>아루</BA_PawnKind_Aru.label>
+  <BA_PawnKind_Mutsuki.label>마츠키</BA_PawnKind_Mutsuki.label>
+  <BA_PawnKind_Kayoko.label>카요코</BA_PawnKind_Kayoko.label>
+  <BA_PawnKind_Haruka.label>하루카</BA_PawnKind_Haruka.label>
+
+</LanguageData>

@@ -75,6 +75,7 @@
       <layers>
         <li>Shell</li>
       </layers>
+      <shellRenderedBehindHead>true</shellRenderedBehindHead>
     </apparel>
 
     <smeltable>false</smeltable>
@@ -157,10 +158,10 @@
     <colorGenerator Class="ColorGenerator_White" />
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Yuzu_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
-    <defName>BA_Apparel_Yuzu_Apparel</defName>
-    <label>BA Yuzu Apparel</label>
-    <description>this is a Yuzu apparel.</description>
+  <ThingDef Name="BA_Apparel_Yuzu_OuterApparel" ParentName="BA_OuterApparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Yuzu_OuterApparel</defName>
+    <label>BA Yuzu OuterApparel</label>
+    <description>this is a Yuzu outer apparel.</description>
     <graphicData>
       <texPath>BA/Yuzu/Apparel/Yuzu_Apparel_1</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -173,6 +174,7 @@
       </tags>
       <wornGraphicPath>BA/Yuzu/Apparel/Yuzu_Apparel</wornGraphicPath>
     </apparel>
+    <texPathFrontLayer>BA/Yuzu/Apparel/Yuzu_Apparel_Front</texPathFrontLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Momoi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -210,7 +212,7 @@
       </tags>
       <wornGraphicPath>BA/Momoi/Apparel/Momoi_Outer</wornGraphicPath>
     </apparel>
-    <texPathOuterLining>BA/Momoi/Apparel/Momoi_OuterLining</texPathOuterLining>
+    <texPathBackLayer>BA/Momoi/Apparel/Momoi_OuterLining</texPathBackLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Midori_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -248,7 +250,7 @@
       </tags>
       <wornGraphicPath>BA/Midori/Apparel/Midori_Outer</wornGraphicPath>
     </apparel>
-    <texPathOuterLining>BA/Midori/Apparel/Midori_OuterLining</texPathOuterLining>
+    <texPathBackLayer>BA/Midori/Apparel/Midori_OuterLining</texPathBackLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Aris_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -286,7 +288,7 @@
       </tags>
       <wornGraphicPath>BA/Aris/Apparel/Aris_Outer</wornGraphicPath>
     </apparel>
-    <texPathOuterLining>BA/Aris/Apparel/Aris_OuterLining</texPathOuterLining>
+    <texPathBackLayer>BA/Aris/Apparel/Aris_OuterLining</texPathBackLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Hoshino_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -305,7 +307,7 @@
       </tags>
       <wornGraphicPath>BA/Hoshino/Apparel/Hoshino_Apparel</wornGraphicPath>
     </apparel>
-  </ThingDef> 
+  </ThingDef>
 
   <ThingDef Name="BA_Apparel_Shiroko_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Shiroko_Apparel</defName>
@@ -342,7 +344,7 @@
       </tags>
       <wornGraphicPath>BA/Shiroko/Apparel/Shiroko_Outer</wornGraphicPath>
     </apparel>
-    <texPathOuterLining>BA/Shiroko/Apparel/Shiroko_OuterLining</texPathOuterLining>
+    <texPathBackLayer>BA/Shiroko/Apparel/Shiroko_OuterLining</texPathBackLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Nonomi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -380,7 +382,7 @@
       </tags>
       <wornGraphicPath>BA/Nonomi/Apparel/Nonomi_Outer</wornGraphicPath>
     </apparel>
-    <texPathOuterLining>BA/Nonomi/Apparel/Nonomi_OuterLining</texPathOuterLining>
+    <texPathBackLayer>BA/Nonomi/Apparel/Nonomi_OuterLining</texPathBackLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Serika_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -418,7 +420,7 @@
       </tags>
       <wornGraphicPath>BA/Serika/Apparel/Serika_Outer</wornGraphicPath>
     </apparel>
-    <texPathOuterLining>BA/Serika/Apparel/Serika_OuterLining</texPathOuterLining>
+    <texPathBackLayer>BA/Serika/Apparel/Serika_OuterLining</texPathBackLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Ayane_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -456,7 +458,7 @@
       </tags>
       <wornGraphicPath>BA/Ayane/Apparel/Ayane_Outer</wornGraphicPath>
     </apparel>
-    <texPathOuterLining>BA/Ayane/Apparel/Ayane_OuterLining</texPathOuterLining>
+    <texPathBackLayer>BA/Ayane/Apparel/Ayane_OuterLining</texPathBackLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Makoto_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -608,7 +610,7 @@
       </tags>
       <wornGraphicPath>BA/Ibuki/Apparel/Ibuki_Outer</wornGraphicPath>
     </apparel>
-    <texPathOuterLining>BA/Ibuki/Apparel/Ibuki_OuterLining</texPathOuterLining>
+    <texPathBackLayer>BA/Ibuki/Apparel/Ibuki_OuterLining</texPathBackLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Ibuki_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
@@ -622,24 +624,6 @@
 
     <apparel>
       <wornGraphicPath>BA/Ibuki/Apparel/Ibuki_Headgear</wornGraphicPath>
-    </apparel>
-  </ThingDef>
-
-  <ThingDef Name="BA_Apparel_Nagisa_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
-    <defName>BA_Apparel_Nagisa_Apparel</defName>
-    <label>BA Nagisa Apparel</label>
-    <description>this is a Nagisa apparel.</description>
-    <graphicData>
-      <texPath>BA/Nagisa/Apparel/Nagisa_Apparel_1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1</drawSize>
-    </graphicData>
-
-    <apparel>
-      <tags>
-        <li>BA_ApparelTag_FemaleNormalC</li>
-      </tags>
-      <wornGraphicPath>BA/Nagisa/Apparel/Nagisa_Apparel</wornGraphicPath>
     </apparel>
   </ThingDef>
 
@@ -658,24 +642,6 @@
         <li>BA_ApparelTag_FemaleNormalC</li>
       </tags>
       <wornGraphicPath>BA/Mika/Apparel/Mika_Apparel</wornGraphicPath>
-    </apparel>
-  </ThingDef>
-
-  <ThingDef Name="BA_Apparel_Seia_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
-    <defName>BA_Apparel_Seia_Apparel</defName>
-    <label>BA Seia Apparel</label>
-    <description>this is a Seia apparel.</description>
-    <graphicData>
-      <texPath>BA/Seia/Apparel/Seia_Apparel_1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1</drawSize>
-    </graphicData>
-
-    <apparel>
-      <tags>
-        <li>BA_ApparelTag_FemaleNormalC</li>
-      </tags>
-      <wornGraphicPath>BA/Seia/Apparel/Seia_Apparel</wornGraphicPath>
     </apparel>
   </ThingDef>
 
@@ -818,7 +784,7 @@
       </tags>
       <wornGraphicPath>BA/Aru/Apparel/Aru_Outer</wornGraphicPath>
     </apparel>
-    <texPathOuterLining>BA/Aru/Apparel/Aru_OuterLining</texPathOuterLining>
+    <texPathBackLayer>BA/Aru/Apparel/Aru_OuterLining</texPathBackLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Mutsuki_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -925,57 +891,6 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Hanako_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
-    <defName>BA_Apparel_Hanako_Apparel</defName>
-    <label>BA Hanako Apparel</label>
-    <description>this is a Hanako apparel.</description>
-    <graphicData>
-      <texPath>BA/Hanako/Apparel/Hanako_Apparel_1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1</drawSize>
-    </graphicData>
-
-    <apparel>
-      <tags>
-        <li>BA_ApparelTag_FemaleNormalD</li>
-      </tags>
-      <wornGraphicPath>BA/Hanako/Apparel/Hanako_Apparel</wornGraphicPath>
-    </apparel>
-  </ThingDef>
-
-  <ThingDef Name="BA_Apparel_Koharu_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
-    <defName>BA_Apparel_Koharu_Apparel</defName>
-    <label>BA Koharu Apparel</label>
-    <description>this is a Koharu apparel.</description>
-    <graphicData>
-      <texPath>BA/Koharu/Apparel/Koharu_Apparel_1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1</drawSize>
-    </graphicData>
-
-    <apparel>
-      <tags>
-        <li>BA_ApparelTag_FemaleThinD</li>
-      </tags>
-      <wornGraphicPath>BA/Koharu/Apparel/Koharu_Apparel</wornGraphicPath>
-    </apparel>
-  </ThingDef>
-
-  <ThingDef Name="BA_Apparel_Koharu_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
-    <defName>BA_Apparel_Koharu_Headgear</defName>
-    <label>BA Koharu Headgear</label>
-    <description>Koharu Headgear</description>
-    <graphicData>
-      <texPath>BA/Koharu/Apparel/Koharu_Headgear_1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-
-    <apparel>
-      <wornGraphicPath>BA/Koharu/Apparel/Koharu_Headgear</wornGraphicPath>
-    </apparel>
-    <texPathHeadgearLining>BA/Koharu/Apparel/Koharu_HeadgearLining</texPathHeadgearLining>
-  </ThingDef>
-
   <ThingDef Name="BA_Apparel_Mari_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Mari_Apparel</defName>
     <label>BA Mari Apparel</label>
@@ -1006,7 +921,7 @@
     <apparel>
       <wornGraphicPath>BA/Mari/Apparel/Mari_Headgear</wornGraphicPath>
     </apparel>
-    <texPathHeadgearLining>BA/Mari/Apparel/Mari_HeadgearLining</texPathHeadgearLining>
+    <texPathBackLayer>BA/Mari/Apparel/Mari_HeadgearLining</texPathBackLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_ShirokoTerror_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -1044,7 +959,7 @@
       </tags>
       <wornGraphicPath>BA/Hoshino1stGrade/Apparel/Hoshino1stGrade_Outer</wornGraphicPath>
     </apparel>
-    <texPathOuterLining>BA/Hoshino1stGrade/Apparel/Hoshino1stGrade_OuterLining</texPathOuterLining>
+    <texPathBackLayer>BA/Hoshino1stGrade/Apparel/Hoshino1stGrade_OuterLining</texPathBackLayer>
   </ThingDef>
 
 </Defs>

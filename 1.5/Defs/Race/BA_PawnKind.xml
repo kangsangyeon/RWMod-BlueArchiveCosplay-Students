@@ -45,7 +45,7 @@
     <eyebrowDef>BA_Eyebrow_Yuzu</eyebrowDef>
 
     <apparelRequired>
-      <li>BA_Apparel_Yuzu_Apparel</li>
+      <li>BA_Apparel_Yuzu_OuterApparel</li>
     </apparelRequired>
   </PawnKindDef>
 
@@ -243,7 +243,7 @@
     <wingDef>BA_Wing_Nagisa</wingDef>
 
     <apparelRequired>
-      <li>BA_Apparel_Nagisa_Apparel</li>
+      <!-- <li>BA_Apparel_Nagisa_Apparel</li> -->
     </apparelRequired>
   </PawnKindDef>
 
@@ -279,7 +279,7 @@
     <tailDef>BA_Tail_Seia</tailDef>
 
     <apparelRequired>
-      <li>BA_Apparel_Seia_Apparel</li>
+      <!-- <li>BA_Apparel_Seia_Apparel</li> -->
     </apparelRequired>
   </PawnKindDef>
 
@@ -421,11 +421,11 @@
     <eyebrowDef>BA_Eyebrow_Hanako</eyebrowDef>
 
     <apparelRequired>
-      <li>BA_Apparel_Hanako_Apparel</li>
+      <!-- <li>BA_Apparel_Hanako_Apparel</li> -->
     </apparelRequired>
   </PawnKindDef>
 
-    <PawnKindDef Name="BA_PawnKind_Koharu" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+  <PawnKindDef Name="BA_PawnKind_Koharu" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Koharu</defName>
     <label>Koharu</label>
     <studentId>1035</studentId>
@@ -439,8 +439,8 @@
     <wingDef>BA_Wing_Koharu</wingDef>
 
     <apparelRequired>
-      <li>BA_Apparel_Koharu_Apparel</li>
-      <li>BA_Apparel_Koharu_Headgear</li>
+      <!-- <li>BA_Apparel_Koharu_Apparel</li> -->
+      <!-- <li>BA_Apparel_Koharu_Headgear</li> -->
     </apparelRequired>
   </PawnKindDef>
 

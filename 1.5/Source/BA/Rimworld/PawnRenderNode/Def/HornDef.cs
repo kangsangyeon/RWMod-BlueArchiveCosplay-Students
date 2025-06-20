@@ -6,7 +6,7 @@ namespace BA
 {
     public class HornDef : StyleItemDef
     {
-        public string texPathFront;
+        public string texPathFrontLayer;
 
         public override Graphic GraphicFor(Pawn pawn, Color color)
         {

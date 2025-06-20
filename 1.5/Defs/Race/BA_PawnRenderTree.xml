@@ -8,23 +8,25 @@
       <tagDef>Root</tagDef>
 
       <children>
-        <!-- 모자 안감 레이어 -->
-        <li>
-          <debugLabel>BA_HeadgearLining</debugLabel>
-          <nodeClass>BA.PawnRenderNode_HeadgearLining</nodeClass>
+        <!-- 모자 Back 레이어 -->
+        <li Class="BA.PawnRenderNodeProperties_ThingLayer">
+          <debugLabel>BA_Headgear_Back</debugLabel>
+          <nodeClass>BA.PawnRenderNode_HeadgearLayer</nodeClass>
           <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
           <rotDrawMode>Fresh, Rotting</rotDrawMode>
           <baseLayer>-2</baseLayer>
+          <isBack>true</isBack>
         </li>
 
-        <!-- 뒷머리 레이어 -->
-        <li>
-          <debugLabel>BA_BackHair</debugLabel>
-          <nodeClass>BA.PawnRenderNode_BackHair</nodeClass>
+        <!-- 머리카락 Back 레이어 -->
+        <li Class="BA.PawnRenderNodeProperties_ThingLayer">
+          <debugLabel>BA_Hair_Back</debugLabel>
+          <nodeClass>BA.PawnRenderNode_HairLayer</nodeClass>
           <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
           <rotDrawMode>Fresh, Rotting</rotDrawMode>
           <colorType>Hair</colorType>
           <baseLayer>-1</baseLayer>
+          <isBack>true</isBack>
         </li>
 
         <!-- 꼬리 레이어 (south, east) -->
@@ -36,13 +38,14 @@
           <baseLayer>2</baseLayer>
         </li>
 
-        <!-- 외투 안감 레이어-->
-        <li>
-          <debugLabel>BA_OuterLining</debugLabel>
-          <nodeClass>BA.PawnRenderNode_OuterLining</nodeClass>
+        <!-- 외투 Back 레이어-->
+        <li Class="BA.PawnRenderNodeProperties_ThingLayer">
+          <debugLabel>BA_OuterApparel_Back</debugLabel>
+          <nodeClass>BA.PawnRenderNode_OuterApparelLayer</nodeClass>
           <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
           <rotDrawMode>Fresh, Rotting</rotDrawMode>
           <baseLayer>3</baseLayer>
+          <isBack>true</isBack>
         </li>
 
         <!-- 날개 레이어 - 왼쪽 -->
@@ -144,6 +147,8 @@
           <useRottenColor>true</useRottenColor>
           <rotDrawMode>Fresh, Rotting</rotDrawMode>
         </li>
+
+        <!-- 머리 레이어 -->
         <li>
           <debugLabel>Head</debugLabel>
           <nodeClass>PawnRenderNode_Head</nodeClass>
@@ -204,19 +209,20 @@
             </li>
 
             <!-- 뿔 레이어 -->
-            <li>
-              <debugLabel>BA_FrontHorn</debugLabel>
-              <nodeClass>BA.PawnRenderNode_FrontHorn</nodeClass>
+            <li Class="BA.PawnRenderNodeProperties_ThingLayer">
+              <debugLabel>BA_Horn_Front</debugLabel>
+              <nodeClass>BA.PawnRenderNode_HornLayer</nodeClass>
               <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
               <baseLayer>63</baseLayer>
             </li>
 
             <!-- 앞머리 레이어 -->
-            <li>
-              <debugLabel>BA_FrontHair</debugLabel>
-              <nodeClass>BA.PawnRenderNode_FrontHair</nodeClass>
+            <li Class="BA.PawnRenderNodeProperties_ThingLayer">
+              <debugLabel>BA_Hair_Front</debugLabel>
+              <nodeClass>BA.PawnRenderNode_HairLayer</nodeClass>
               <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
               <baseLayer>64</baseLayer>
+              <isFront>true</isFront>
             </li>
 
             <!-- 눈썹 레이어 -->
@@ -244,6 +250,19 @@
               <overlayLayer>Head</overlayLayer>
               <baseLayer>85</baseLayer>
             </li>
+
+            <!-- Shell Apparel (North 88) (reference: PawnRenderTree::ProcessApparel) -->
+
+            <!-- 외투 Front 레이어 -->
+            <li Class="BA.PawnRenderNodeProperties_ThingLayer">
+              <debugLabel>BA_OuterApparel_Front</debugLabel>
+              <nodeClass>BA.PawnRenderNode_OuterApparelLayer</nodeClass>
+              <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+              <rotDrawMode>Fresh, Rotting</rotDrawMode>
+              <baseLayer>89</baseLayer>
+              <isFront>true</isFront>
+            </li>
+
             <li Class="PawnRenderNodeProperties_Overlay">
               <debugLabel>Status overlay</debugLabel>
               <workerClass>PawnRenderNodeWorker_OverlayStatus</workerClass>

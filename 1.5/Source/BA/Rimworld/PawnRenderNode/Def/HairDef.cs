@@ -2,7 +2,7 @@
 {
     public class HairDef : RimWorld.HairDef
     {
-        public string texPathBackHair;
-        public string texPathFrontHair;
+        public string texPathFrontLayer;
+        public string texPathBackLayer;
     }
 }
