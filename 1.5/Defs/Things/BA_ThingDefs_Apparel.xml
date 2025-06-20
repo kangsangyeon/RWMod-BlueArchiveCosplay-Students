@@ -172,9 +172,9 @@
       <tags>
         <li>BA_ApparelTag_FemaleThinA</li>
       </tags>
-      <wornGraphicPath>BA/Yuzu/Apparel/Yuzu_Apparel</wornGraphicPath>
+      <wornGraphicPath>BA/Yuzu/Apparel/Yuzu_Outer</wornGraphicPath>
     </apparel>
-    <texPathFrontLayer>BA/Yuzu/Apparel/Yuzu_Apparel_Front</texPathFrontLayer>
+    <texPathFrontLayer>BA/Yuzu/Apparel/Yuzu_Outer_Front</texPathFrontLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Momoi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -195,7 +195,7 @@
     </apparel>
   </ThingDef>
 
-  <ThingDef Name="BA_Apparel_Momoi_OuterApparel" ParentName="BA_OuterApparel_Base"
+  <ThingDef Name="BA_Apparel_" ParentName="BA_OuterApparel_Base"
     Class="BA.ApparelDef">
     <defName>BA_Apparel_Momoi_OuterApparel</defName>
     <label>BA Momoi Outer Apparel</label>
@@ -784,6 +784,7 @@
       </tags>
       <wornGraphicPath>BA/Aru/Apparel/Aru_Outer</wornGraphicPath>
     </apparel>
+    <texPathFrontLayer>BA/Aru/Apparel/Aru_Outer_Front</texPathFrontLayer>
     <texPathBackLayer>BA/Aru/Apparel/Aru_OuterLining</texPathBackLayer>
   </ThingDef>
 
