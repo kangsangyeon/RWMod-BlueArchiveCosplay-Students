@@ -645,6 +645,24 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Seia_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Seia_Apparel</defName>
+    <label>BA Seia Apparel</label>
+    <description>this is a Seia apparel.</description>
+    <graphicData>
+      <texPath>BA/Seia/Apparel/Seia_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinA</li>
+      </tags>
+      <wornGraphicPath>BA/Seia/Apparel/Seia_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Tsurugi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Tsurugi_Apparel</defName>
     <label>BA Tsurugi Apparel</label>
@@ -747,6 +765,307 @@
     <apparel>
       <wornGraphicPath>BA/JTFMob/Apparel/JTFMob_Headgear</wornGraphicPath>
     </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Mine_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Mine_Apparel</defName>
+    <label>BA Mine Apparel</label>
+    <description>this is a Mine apparel.</description>
+    <graphicData>
+      <texPath>BA/Mine/Apparel/Mine_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalD</li>
+      </tags>
+      <wornGraphicPath>BA/Mine/Apparel/Mine_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Mine_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Mine_Headgear</defName>
+    <label>BA Mine Headgear</label>
+    <description>Mine Headgear</description>
+    <graphicData>
+      <texPath>BA/Mine/Apparel/Mine_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Mine/Apparel/Mine_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Serina_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Serina_Apparel</defName>
+    <label>BA Serina Apparel</label>
+    <description>this is a Serina apparel.</description>
+    <graphicData>
+      <texPath>BA/Serina/Apparel/Serina_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleType2C</li>
+      </tags>
+      <wornGraphicPath>BA/Serina/Apparel/Serina_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Serina_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Serina_Headgear</defName>
+    <label>BA Serina Headgear</label>
+    <description>Serina Headgear</description>
+    <graphicData>
+      <texPath>BA/Serina/Apparel/Serina_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Serina/Apparel/Serina_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Hanae_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hanae_Apparel</defName>
+    <label>BA Hanae Apparel</label>
+    <description>this is a Hanae apparel.</description>
+    <graphicData>
+      <texPath>BA/Hanae/Apparel/Hanae_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinF</li>
+      </tags>
+      <wornGraphicPath>BA/Hanae/Apparel/Hanae_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Hanae_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hanae_OuterApparel</defName>
+    <label>BA Hanae Outer Apparel</label>
+    <description>this is a Hanae apparel.</description>
+    <graphicData>
+      <texPath>BA/Hanae/Apparel/Hanae_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinF</li>
+      </tags>
+      <wornGraphicPath>BA/Hanae/Apparel/Hanae_Outer</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Hanae_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hanae_Headgear</defName>
+    <label>BA Hanae Headgear</label>
+    <description>Hanae Headgear</description>
+    <graphicData>
+      <texPath>BA/Hanae/Apparel/Hanae_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Hanae/Apparel/Hanae_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Hifumi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hifumi_Apparel</defName>
+    <label>BA Hifumi Apparel</label>
+    <description>this is a Hifumi apparel.</description>
+    <graphicData>
+      <texPath>BA/Hifumi/Apparel/Hifumi_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleType2A</li>
+      </tags>
+      <wornGraphicPath>BA/Hifumi/Apparel/Hifumi_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Azusa_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Azusa_Apparel</defName>
+    <label>BA Azusa Apparel</label>
+    <description>this is a Azusa apparel.</description>
+    <graphicData>
+      <texPath>BA/Azusa/Apparel/Azusa_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinA</li>
+      </tags>
+      <wornGraphicPath>BA/Azusa/Apparel/Azusa_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Hanako_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hanako_Apparel</defName>
+    <label>BA Hanako Apparel</label>
+    <description>this is a Hanako apparel.</description>
+    <graphicData>
+      <texPath>BA/Hanako/Apparel/Hanako_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalD</li>
+      </tags>
+      <wornGraphicPath>BA/Hanako/Apparel/Hanako_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Koharu_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Koharu_Apparel</defName>
+    <label>BA Koharu Apparel</label>
+    <description>this is a Koharu apparel.</description>
+    <graphicData>
+      <texPath>BA/Koharu/Apparel/Koharu_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinA</li>
+      </tags>
+      <wornGraphicPath>BA/Koharu/Apparel/Koharu_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Koharu_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Koharu_Headgear</defName>
+    <label>BA Koharu Headgear</label>
+    <description>Koharu Headgear</description>
+    <graphicData>
+      <texPath>BA/Koharu/Apparel/Koharu_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Koharu/Apparel/Koharu_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Sakurako_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Sakurako_Apparel</defName>
+    <label>BA Sakurako Apparel</label>
+    <description>this is a Sakurako apparel.</description>
+    <graphicData>
+      <texPath>BA/Sakurako/Apparel/Sakurako_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalC</li>
+      </tags>
+      <wornGraphicPath>BA/Sakurako/Apparel/Sakurako_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Sakurako_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Sakurako_Headgear</defName>
+    <label>BA Sakurako Headgear</label>
+    <description>Sakurako Headgear</description>
+    <graphicData>
+      <texPath>BA/Sakurako/Apparel/Sakurako_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Sakurako/Apparel/Sakurako_Headgear</wornGraphicPath>
+    </apparel>
+    <texPathBackLayer>BA/Sakurako/Apparel/Sakurako_HeadgearLining</texPathBackLayer>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Hinata_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hinata_Apparel</defName>
+    <label>BA Hinata Apparel</label>
+    <description>this is a Hinata apparel.</description>
+    <graphicData>
+      <texPath>BA/Hinata/Apparel/Hinata_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalD</li>
+      </tags>
+      <wornGraphicPath>BA/Hinata/Apparel/Hinata_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Hinata_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hinata_Headgear</defName>
+    <label>BA Hinata Headgear</label>
+    <description>Hinata Headgear</description>
+    <graphicData>
+      <texPath>BA/Hinata/Apparel/Hinata_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Hinata/Apparel/Hinata_Headgear</wornGraphicPath>
+    </apparel>
+    <texPathBackLayer>BA/Hinata/Apparel/Hinata_HeadgearLining</texPathBackLayer>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Mari_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Mari_Apparel</defName>
+    <label>BA Mari Apparel</label>
+    <description>this is a Mari apparel.</description>
+    <graphicData>
+      <texPath>BA/Mari/Apparel/Mari_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleThinAA</li>
+      </tags>
+      <wornGraphicPath>BA/Mari/Apparel/Mari_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Mari_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Mari_Headgear</defName>
+    <label>BA Mari Headgear</label>
+    <description>Mari Headgear</description>
+    <graphicData>
+      <texPath>BA/Mari/Apparel/Mari_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Mari/Apparel/Mari_Headgear</wornGraphicPath>
+    </apparel>
+    <texPathBackLayer>BA/Mari/Apparel/Mari_HeadgearLining</texPathBackLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Aru_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
@@ -854,75 +1173,6 @@
     <apparel>
       <wornGraphicPath>BA/Haruka/Apparel/Haruka_Headgear</wornGraphicPath>
     </apparel>
-  </ThingDef>
-
-  <ThingDef Name="BA_Apparel_Hifumi_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
-    <defName>BA_Apparel_Hifumi_Apparel</defName>
-    <label>BA Hifumi Apparel</label>
-    <description>this is a Hifumi apparel.</description>
-    <graphicData>
-      <texPath>BA/Hifumi/Apparel/Hifumi_Apparel_1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1</drawSize>
-    </graphicData>
-
-    <apparel>
-      <tags>
-        <li>BA_ApparelTag_FemaleType2A</li>
-      </tags>
-      <wornGraphicPath>BA/Hifumi/Apparel/Hifumi_Apparel</wornGraphicPath>
-    </apparel>
-  </ThingDef>
-
-  <ThingDef Name="BA_Apparel_Azusa_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
-    <defName>BA_Apparel_Azusa_Apparel</defName>
-    <label>BA Azusa Apparel</label>
-    <description>this is a Azusa apparel.</description>
-    <graphicData>
-      <texPath>BA/Azusa/Apparel/Azusa_Apparel_1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1</drawSize>
-    </graphicData>
-
-    <apparel>
-      <tags>
-        <li>BA_ApparelTag_FemaleThinA</li>
-      </tags>
-      <wornGraphicPath>BA/Azusa/Apparel/Azusa_Apparel</wornGraphicPath>
-    </apparel>
-  </ThingDef>
-
-  <ThingDef Name="BA_Apparel_Mari_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
-    <defName>BA_Apparel_Mari_Apparel</defName>
-    <label>BA Mari Apparel</label>
-    <description>this is a Mari apparel.</description>
-    <graphicData>
-      <texPath>BA/Mari/Apparel/Mari_Apparel_1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1</drawSize>
-    </graphicData>
-
-    <apparel>
-      <tags>
-        <li>BA_ApparelTag_FemaleThinAA</li>
-      </tags>
-      <wornGraphicPath>BA/Mari/Apparel/Mari_Apparel</wornGraphicPath>
-    </apparel>
-  </ThingDef>
-
-  <ThingDef Name="BA_Apparel_Mari_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
-    <defName>BA_Apparel_Mari_Headgear</defName>
-    <label>BA Mari Headgear</label>
-    <description>Mari Headgear</description>
-    <graphicData>
-      <texPath>BA/Mari/Apparel/Mari_Headgear_1</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-
-    <apparel>
-      <wornGraphicPath>BA/Mari/Apparel/Mari_Headgear</wornGraphicPath>
-    </apparel>
-    <texPathBackLayer>BA/Mari/Apparel/Mari_HeadgearLining</texPathBackLayer>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_ShirokoTerror_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">

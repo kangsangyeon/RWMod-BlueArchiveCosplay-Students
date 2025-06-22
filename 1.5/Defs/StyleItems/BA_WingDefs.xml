@@ -60,6 +60,13 @@
   </BA.WingDef>
 
   <BA.WingDef>
+    <defName>BA_Wing_Mine</defName>
+    <label>Mine Wing</label>
+    <texPath>BA/Mine/Mine_Wing</texPath>
+    <texPathRight>BA/Mine/Mine_RightWing</texPathRight>
+  </BA.WingDef>
+
+  <BA.WingDef>
     <defName>BA_Wing_Azusa</defName>
     <label>Azusa Wing</label>
     <texPath>BA/Azusa/Azusa_Wing</texPath>

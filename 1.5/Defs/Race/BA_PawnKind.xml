@@ -279,7 +279,7 @@
     <tailDef>BA_Tail_Seia</tailDef>
 
     <apparelRequired>
-      <!-- <li>BA_Apparel_Seia_Apparel</li> -->
+      <li>BA_Apparel_Seia_Apparel</li>
     </apparelRequired>
   </PawnKindDef>
 
@@ -373,6 +373,62 @@
     </apparelRequired>
   </PawnKindDef>
 
+  <PawnKindDef Name="BA_PawnKind_Mine" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Mine</defName>
+    <label>Mine</label>
+    <studentId>1029</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Mine</forcedHair>
+    <faceDef>BA_Face_Mine</faceDef>
+    <earDef>BA_Ear_Pointy</earDef>
+    <eyebrowDef>BA_Eyebrow_Mine</eyebrowDef>
+    <wingDef>BA_Wing_Mine</wingDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Mine_Headgear</li>
+      <li>BA_Apparel_Mine_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Serina" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Serina</defName>
+    <label>Serina</label>
+    <studentId>1030</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Type2_C</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Serina</forcedHair>
+    <faceDef>BA_Face_Serina</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Serina</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Serina_Headgear</li>
+      <li>BA_Apparel_Serina_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Hanae" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Hanae</defName>
+    <label>Hanae</label>
+    <studentId>1031</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Thin_F</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Hanae</forcedHair>
+    <faceDef>BA_Face_Hanae</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Hanae</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Hanae_Apparel</li>
+      <li>BA_Apparel_Hanae_OuterApparel</li>
+      <li>BA_Apparel_Hanae_Headgear</li>
+    </apparelRequired>
+  </PawnKindDef>
+
   <PawnKindDef Name="BA_PawnKind_Hifumi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Hifumi</defName>
     <label>Hifumi</label>
@@ -421,7 +477,7 @@
     <eyebrowDef>BA_Eyebrow_Hanako</eyebrowDef>
 
     <apparelRequired>
-      <!-- <li>BA_Apparel_Hanako_Apparel</li> -->
+      <li>BA_Apparel_Hanako_Apparel</li>
     </apparelRequired>
   </PawnKindDef>
 
@@ -439,8 +495,44 @@
     <wingDef>BA_Wing_Koharu</wingDef>
 
     <apparelRequired>
-      <!-- <li>BA_Apparel_Koharu_Apparel</li> -->
-      <!-- <li>BA_Apparel_Koharu_Headgear</li> -->
+      <li>BA_Apparel_Koharu_Apparel</li>
+      <li>BA_Apparel_Koharu_Headgear</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Sakurako" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Sakurako</defName>
+    <label>Sakurako</label>
+    <studentId>1036</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Sakurako</forcedHair>
+    <faceDef>BA_Face_Sakurako</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Sakurako</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Sakurako_Headgear</li>
+      <li>BA_Apparel_Sakurako_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Hinata" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Hinata</defName>
+    <label>Hinata</label>
+    <studentId>1037</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Hinata</forcedHair>
+    <faceDef>BA_Face_Hinata</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Hinata</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Hinata_Headgear</li>
+      <li>BA_Apparel_Hinata_Apparel</li>
     </apparelRequired>
   </PawnKindDef>
 

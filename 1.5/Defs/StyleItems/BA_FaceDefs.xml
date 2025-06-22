@@ -121,27 +121,21 @@
   </BA.FaceDef>
 
   <BA.FaceDef>
-    <defName>BA_Face_Aru</defName>
-    <label>Aru Face</label>
-    <texPath>BA/Aru/Aru_Face</texPath>
+    <defName>BA_Face_Mine</defName>
+    <label>Mine Face</label>
+    <texPath>BA/Mine/Mine_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef>
-    <defName>BA_Face_Mutsuki</defName>
-    <label>Mutsuki Face</label>
-    <texPath>BA/Mutsuki/Mutsuki_Face</texPath>
+    <defName>BA_Face_Serina</defName>
+    <label>Serina Face</label>
+    <texPath>BA/Serina/Serina_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef>
-    <defName>BA_Face_Kayoko</defName>
-    <label>Kayoko Face</label>
-    <texPath>BA/Kayoko/Kayoko_Face</texPath>
-  </BA.FaceDef>
-
-  <BA.FaceDef>
-    <defName>BA_Face_Haruka</defName>
-    <label>Haruka Face</label>
-    <texPath>BA/Haruka/Haruka_Face</texPath>
+    <defName>BA_Face_Hanae</defName>
+    <label>Hanae Face</label>
+    <texPath>BA/Hanae/Hanae_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef>
@@ -169,9 +163,45 @@
   </BA.FaceDef>
 
   <BA.FaceDef>
+    <defName>BA_Face_Sakurako</defName>
+    <label>Sakurako Face</label>
+    <texPath>BA/Sakurako/Sakurako_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Hinata</defName>
+    <label>Hinata Face</label>
+    <texPath>BA/Hinata/Hinata_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
     <defName>BA_Face_Mari</defName>
     <label>Mari Face</label>
     <texPath>BA/Mari/Mari_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Aru</defName>
+    <label>Aru Face</label>
+    <texPath>BA/Aru/Aru_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Mutsuki</defName>
+    <label>Mutsuki Face</label>
+    <texPath>BA/Mutsuki/Mutsuki_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Kayoko</defName>
+    <label>Kayoko Face</label>
+    <texPath>BA/Kayoko/Kayoko_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef>
+    <defName>BA_Face_Haruka</defName>
+    <label>Haruka Face</label>
+    <texPath>BA/Haruka/Haruka_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef>

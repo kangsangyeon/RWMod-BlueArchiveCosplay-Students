@@ -115,27 +115,21 @@
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
-    <defName>BA_Eyebrow_Aru</defName>
-    <label>Aru Eyebrow</label>
-    <texPath>BA/Aru/Aru_Eyebrow</texPath>
+    <defName>BA_Eyebrow_Mine</defName>
+    <label>Mine Eyebrow</label>
+    <texPath>BA/Mine/Mine_Eyebrow</texPath>
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
-    <defName>BA_Eyebrow_Mutsuki</defName>
-    <label>Mutsuki Eyebrow</label>
-    <texPath>BA/Mutsuki/Mutsuki_Eyebrow</texPath>
+    <defName>BA_Eyebrow_Serina</defName>
+    <label>Serina Eyebrow</label>
+    <texPath>BA/Serina/Serina_Eyebrow</texPath>
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
-    <defName>BA_Eyebrow_Kayoko</defName>
-    <label>Kayoko Eyebrow</label>
-    <texPath>BA/Kayoko/Kayoko_Eyebrow</texPath>
-  </BA.EyebrowDef>
-
-  <BA.EyebrowDef>
-    <defName>BA_Eyebrow_Haruka</defName>
-    <label>Haruka Eyebrow</label>
-    <texPath>BA/Haruka/Haruka_Eyebrow</texPath>
+    <defName>BA_Eyebrow_Hanae</defName>
+    <label>Hanae Eyebrow</label>
+    <texPath>BA/Hanae/Hanae_Eyebrow</texPath>
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
@@ -163,9 +157,45 @@
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Sakurako</defName>
+    <label>Sakurako Eyebrow</label>
+    <texPath>BA/Sakurako/Sakurako_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Hinata</defName>
+    <label>Hinata Eyebrow</label>
+    <texPath>BA/Hinata/Hinata_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
     <defName>BA_Eyebrow_Mari</defName>
     <label>Mari Eyebrow</label>
     <texPath>BA/Mari/Mari_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Aru</defName>
+    <label>Aru Eyebrow</label>
+    <texPath>BA/Aru/Aru_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Mutsuki</defName>
+    <label>Mutsuki Eyebrow</label>
+    <texPath>BA/Mutsuki/Mutsuki_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Kayoko</defName>
+    <label>Kayoko Eyebrow</label>
+    <texPath>BA/Kayoko/Kayoko_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef>
+    <defName>BA_Eyebrow_Haruka</defName>
+    <label>Haruka Eyebrow</label>
+    <texPath>BA/Haruka/Haruka_Eyebrow</texPath>
   </BA.EyebrowDef>
 
   <BA.EyebrowDef>
