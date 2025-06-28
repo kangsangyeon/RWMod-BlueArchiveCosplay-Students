@@ -6,7 +6,6 @@ namespace BA
     public class PawnRenderNode_HornLayer : PawnRenderNode
     {
         private readonly Pawn _pawn;
-        private readonly BA.INodeProperties_ThingLayer _layerProps;
 
         public PawnRenderNode_HornLayer(
             Pawn pawn,
@@ -15,7 +14,6 @@ namespace BA
             : base(pawn, props, tree)
         {
             _pawn = pawn;
-            _layerProps = props as BA.INodeProperties_ThingLayer;
         }
 
         // public override GraphicMeshSet MeshSetFor(Pawn pawn)
@@ -52,16 +50,10 @@ namespace BA
             if (kindDef.hornDef == null || kindDef.hornDef.noGraphic)
                 return;
             var shader = kindDef.hornDef.overrideShaderTypeDef?.Shader ?? ShaderDatabase.CutoutHair;
-            var texPath = string.Empty;
-            if (_layerProps.IsFront)
-                texPath = kindDef.hornDef.texPathFrontLayer;
-            // else if (_layerProps.isBack)
-            //     texPath = kindDef.hornDef.texPathBackLayer;
-            else
-                texPath = kindDef.hornDef.texPath;
+            var texPath = kindDef.hornDef.texPath;
             if (string.IsNullOrEmpty(texPath))
                 return;
-            this.graphic = GraphicDatabase.Get<Graphic_Multi>(kindDef.hornDef.texPathFrontLayer, shader, Vector2.one, ColorFor(_pawn));
+            this.graphic = GraphicDatabase.Get<Graphic_Multi>(texPath, shader, Vector2.one, ColorFor(_pawn));
         }
     }
 }

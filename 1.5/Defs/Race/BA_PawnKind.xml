@@ -201,6 +201,7 @@
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Makoto</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Makoto</forcedHair>
+    <hornDef>BA_Horn_Makoto</hornDef>
 
     <apparelRequired>
       <li>BA_Apparel_Makoto_Headgear</li>

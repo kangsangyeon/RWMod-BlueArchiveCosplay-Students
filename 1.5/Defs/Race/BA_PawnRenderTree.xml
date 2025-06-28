@@ -210,14 +210,6 @@
               <baseLayer>63</baseLayer>
             </li>
 
-            <!-- 뿔 레이어 -->
-            <li Class="BA.PawnRenderNodeProperties_ThingLayer">
-              <debugLabel>BA_Horn_Front</debugLabel>
-              <nodeClass>BA.PawnRenderNode_HornLayer</nodeClass>
-              <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-              <baseLayer>63</baseLayer>
-            </li>
-
             <!-- 앞머리 레이어 -->
             <li Class="BA.PawnRenderNodeProperties_ThingLayer">
               <debugLabel>BA_Hair_Front</debugLabel>
@@ -263,6 +255,15 @@
               <rotDrawMode>Fresh, Rotting</rotDrawMode>
               <baseLayer>89</baseLayer>
               <isFront>true</isFront>
+            </li>
+
+            <!-- 뿔 레이어 -->
+            <li Class="BA.PawnRenderNodeProperties_LayerByDirection">
+              <debugLabel>BA_Horn_Front</debugLabel>
+              <nodeClass>BA.PawnRenderNode_HornLayer</nodeClass>
+              <workerClass>BA.PawnRenderNodeWorker_LayerByDirection</workerClass>
+              <baseLayer>95</baseLayer>
+              <northLayer>-5</northLayer>
             </li>
 
             <li Class="PawnRenderNodeProperties_Overlay">
