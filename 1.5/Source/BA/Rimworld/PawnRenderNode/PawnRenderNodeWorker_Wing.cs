@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Verse;
 
 namespace BA
@@ -36,6 +35,14 @@ namespace BA
             if (wingNodeProps.isRight && parms.facing.IsHorizontal)
                 return false;
             return canDrawNow;
+        }
+
+        public override float LayerFor(PawnRenderNode node, PawnDrawParms parms)
+        {
+            var layer = base.LayerFor(node, parms);
+            if (node.Props is not BA.PawnRenderNodeProperties_Wing wingNodeProps)
+                return layer;
+            return wingNodeProps.LayerForLayerByDirection(node, parms, layer);
         }
 
         // 오른쪽 날개 텍스쳐를 좌우 반전해서 오른쪽 날개를 표현하려 했음.

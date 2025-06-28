@@ -124,6 +124,7 @@
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeProperties_Tail.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeProperties_ThingLayer.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeProperties_Wing.cs" />
+    <Compile Include="BA\Rimworld\PawnRenderNode\NodePropertiesExtensions.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeWorker_LayerByDirection.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeWorker_Tail.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeWorker_Wing.cs" />

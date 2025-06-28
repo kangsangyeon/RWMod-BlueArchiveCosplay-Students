@@ -55,6 +55,7 @@
           <workerClass>BA.PawnRenderNodeWorker_Wing</workerClass>
           <rotDrawMode>Fresh, Rotting</rotDrawMode>
           <baseLayer>4</baseLayer>
+          <northLayer>64</northLayer>
         </li>
 
         <!-- 날개 레이어 - 오른쪽 -->
@@ -64,6 +65,7 @@
           <workerClass>BA.PawnRenderNodeWorker_Wing</workerClass>
           <rotDrawMode>Fresh, Rotting</rotDrawMode>
           <baseLayer>4</baseLayer>
+          <northLayer>64</northLayer>
           <isRight>true</isRight>
         </li>
 
@@ -221,7 +223,7 @@
               <debugLabel>BA_Hair_Front</debugLabel>
               <nodeClass>BA.PawnRenderNode_HairLayer</nodeClass>
               <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-              <baseLayer>64</baseLayer>
+              <baseLayer>65</baseLayer>
               <isFront>true</isFront>
             </li>
 
@@ -230,7 +232,7 @@
               <debugLabel>BA_Eyebrow</debugLabel>
               <nodeClass>BA.PawnRenderNode_Eyebrow</nodeClass>
               <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-              <baseLayer>65</baseLayer>
+              <baseLayer>67</baseLayer>
             </li>
 
             <li Class="PawnRenderNodeProperties_Overlay">
