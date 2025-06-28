@@ -6,25 +6,29 @@
     <label>BA Tail</label>
   </StyleItemCategoryDef>
 
-  <BA.TailDef>
+  <BA.TailDef Abstract="True" Name="BA_Tail_Base">
+    <category>BA_StyleItemCategory_Tail</category>
+  </BA.TailDef>
+
+  <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Momoi</defName>
     <label>BA Momoi Tail</label>
     <texPath>BA/Momoi/Momoi_Tail</texPath>
   </BA.TailDef>
 
-  <BA.TailDef>
+  <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Midori</defName>
     <label>BA Midori Tail</label>
     <texPath>BA/Midori/Midori_Tail</texPath>
   </BA.TailDef>
 
-  <BA.TailDef>
+  <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Ibuki</defName>
     <label>BA Ibuki Tail</label>
     <texPath>BA/Ibuki/Ibuki_Tail</texPath>
   </BA.TailDef>
 
-  <BA.TailDef>
+  <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Seia</defName>
     <label>BA Seia Tail</label>
     <texPath>BA/Seia/Seia_Tail</texPath>

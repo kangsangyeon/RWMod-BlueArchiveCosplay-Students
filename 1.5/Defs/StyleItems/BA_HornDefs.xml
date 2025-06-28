@@ -6,7 +6,11 @@
     <label>BA Horn</label>
   </StyleItemCategoryDef>
 
-  <BA.HornDef>
+  <BA.HornDef Abstract="True" Name="BA_Horn_Base">
+    <category>BA_StyleItemCategory_Horn</category>
+  </BA.HornDef>
+
+  <BA.HornDef ParentName="BA_Horn_Base">
     <category>BA_StyleItemCategory_Horn</category>
     <defName>BA_Horn_Makoto</defName>
     <label>Makoto Horn</label>

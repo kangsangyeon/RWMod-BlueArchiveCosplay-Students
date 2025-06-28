@@ -7,80 +7,80 @@
   </StyleItemCategoryDef>
 
   <BA.WingDef Abstract="True" Name="BA_Wing_Base">
-    <defName>BA_Wing_Base</defName>
+    <category>BA_StyleItemCategory_Wing</category>
   </BA.WingDef>
 
-  <BA.WingDef>
+  <BA.WingDef ParentName="BA_Wing_Base">
     <defName>BA_Wing_Ibuki</defName>
     <label>Ibuki Wing</label>
     <texPath>BA/Ibuki/Ibuki_Wing</texPath>
     <texPathRight>BA/Ibuki/Ibuki_RightWing</texPathRight>
   </BA.WingDef>
 
-  <BA.WingDef>
+  <BA.WingDef ParentName="BA_Wing_Base">
     <defName>BA_Wing_Nagisa</defName>
     <label>Nagisa Wing</label>
     <texPath>BA/Nagisa/Nagisa_Wing</texPath>
     <texPathRight>BA/Nagisa/Nagisa_RightWing</texPathRight>
   </BA.WingDef>
 
-  <BA.WingDef>
+  <BA.WingDef ParentName="BA_Wing_Base">
     <defName>BA_Wing_Mika</defName>
     <label>Mika Wing</label>
     <texPath>BA/Mika/Mika_Wing</texPath>
     <texPathRight>BA/Mika/Mika_RightWing</texPathRight>
   </BA.WingDef>
 
-  <BA.WingDef>
+  <BA.WingDef ParentName="BA_Wing_Base">
     <defName>BA_Wing_Tsurugi</defName>
     <label>Tsurugi Wing</label>
     <texPath>BA/Tsurugi/Tsurugi_Wing</texPath>
     <texPathRight>BA/Tsurugi/Tsurugi_RightWing</texPathRight>
   </BA.WingDef>
 
-  <BA.WingDef>
+  <BA.WingDef ParentName="BA_Wing_Base">
     <defName>BA_Wing_Hasumi</defName>
     <label>Hasumi Wing</label>
     <texPath>BA/Hasumi/Hasumi_Wing</texPath>
     <texPathRight>BA/Hasumi/Hasumi_RightWing</texPathRight>
   </BA.WingDef>
 
-  <BA.WingDef>
+  <BA.WingDef ParentName="BA_Wing_Base">
     <defName>BA_Wing_Ichika</defName>
     <label>Ichika Wing</label>
     <texPath>BA/Ichika/Ichika_Wing</texPath>
     <texPathRight>BA/Ichika/Ichika_RightWing</texPathRight>
   </BA.WingDef>
 
-  <BA.WingDef>
+  <BA.WingDef ParentName="BA_Wing_Base">
     <defName>BA_Wing_Mashiro</defName>
     <label>Mashiro Wing</label>
     <texPath>BA/Mashiro/Mashiro_Wing</texPath>
     <texPathRight>BA/Mashiro/Mashiro_RightWing</texPathRight>
   </BA.WingDef>
 
-  <BA.WingDef>
+  <BA.WingDef ParentName="BA_Wing_Base">
     <defName>BA_Wing_Mine</defName>
     <label>Mine Wing</label>
     <texPath>BA/Mine/Mine_Wing</texPath>
     <texPathRight>BA/Mine/Mine_RightWing</texPathRight>
   </BA.WingDef>
 
-  <BA.WingDef>
+  <BA.WingDef ParentName="BA_Wing_Base">
     <defName>BA_Wing_Azusa</defName>
     <label>Azusa Wing</label>
     <texPath>BA/Azusa/Azusa_Wing</texPath>
     <texPathRight>BA/Azusa/Azusa_RightWing</texPathRight>
   </BA.WingDef>
 
-  <BA.WingDef>
+  <BA.WingDef ParentName="BA_Wing_Base">
     <defName>BA_Wing_Koharu</defName>
     <label>Koharu Wing</label>
     <texPath>BA/Koharu/Koharu_Wing</texPath>
     <texPathRight>BA/Koharu/Koharu_RightWing</texPathRight>
   </BA.WingDef>
 
-  <BA.WingDef>
+  <BA.WingDef ParentName="BA_Wing_Base">
     <defName>BA_Wing_Kayoko</defName>
     <label>Kayoko Wing</label>
     <texPath>BA/Kayoko/Kayoko_Wing</texPath>

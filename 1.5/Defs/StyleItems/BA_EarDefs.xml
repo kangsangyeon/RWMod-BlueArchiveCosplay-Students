@@ -6,13 +6,17 @@
     <label>BA Ear</label>
   </StyleItemCategoryDef>
 
-  <BA.EarDef>
+  <BA.EarDef Abstract="True" Name="BA_Ear_Base">
+    <category>BA_StyleItemCategory_Eyebrow</category>
+  </BA.EarDef>
+
+  <BA.EarDef ParentName="BA_Ear_Base">
     <defName>BA_Ear_Normal</defName>
     <label>BA_Ear_Normal</label>
     <texPath>Things/Pawn/BA/Ears/Ear_Normal</texPath>
   </BA.EarDef>
 
-  <BA.EarDef>
+  <BA.EarDef ParentName="BA_Ear_Base">
     <defName>BA_Ear_Pointy</defName>
     <label>BA_Ear_Pointy</label>
     <texPath>Things/Pawn/BA/Ears/Ear_Pointy</texPath>

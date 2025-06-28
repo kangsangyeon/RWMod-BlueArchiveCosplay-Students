@@ -6,205 +6,209 @@
     <label>BA Eyebrow</label>
   </StyleItemCategoryDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef Abstract="True" Name="BA_Eyebrow_Base">
+    <category>BA_StyleItemCategory_Eyebrow</category>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Yuzu</defName>
     <label>Yuzu Eyebrow</label>
     <texPath>BA/Yuzu/Yuzu_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Momoi</defName>
     <label>Momoi Eyebrow</label>
     <texPath>BA/Momoi/Momoi_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Midori</defName>
     <label>Midori Eyebrow</label>
     <texPath>BA/Midori/Midori_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Aris</defName>
     <label>Aris Eyebrow</label>
     <texPath>BA/Aris/Aris_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Hoshino</defName>
     <label>Hoshino Eyebrow</label>
     <texPath>BA/Hoshino/Hoshino_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Shiroko</defName>
     <label>Shiroko Eyebrow</label>
     <texPath>BA/Shiroko/Shiroko_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Nonomi</defName>
     <label>Nonomi Eyebrow</label>
     <texPath>BA/Nonomi/Nonomi_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Serika</defName>
     <label>Serika Eyebrow</label>
     <texPath>BA/Serika/Serika_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Ayane</defName>
     <label>Ayane Eyebrow</label>
     <texPath>BA/Ayane/Ayane_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Ibuki</defName>
     <label>Ibuki Eyebrow</label>
     <texPath>BA/Ibuki/Ibuki_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Nagisa</defName>
     <label>Nagisa Eyebrow</label>
     <texPath>BA/Nagisa/Nagisa_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Mika</defName>
     <label>Mika Eyebrow</label>
     <texPath>BA/Mika/Mika_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Seia</defName>
     <label>Seia Eyebrow</label>
     <texPath>BA/Seia/Seia_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Tsurugi</defName>
     <label>Tsurugi Eyebrow</label>
     <texPath>BA/Tsurugi/Tsurugi_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Hasumi</defName>
     <label>Hasumi Eyebrow</label>
     <texPath>BA/Hasumi/Hasumi_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Ichika</defName>
     <label>Ichika Eyebrow</label>
     <texPath>BA/Ichika/Ichika_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Mashiro</defName>
     <label>Mashiro Eyebrow</label>
     <texPath>BA/Mashiro/Mashiro_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_JTFMob</defName>
     <label>JTFMob Eyebrow</label>
     <texPath>BA/JTFMob/JTFMob_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Mine</defName>
     <label>Mine Eyebrow</label>
     <texPath>BA/Mine/Mine_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Serina</defName>
     <label>Serina Eyebrow</label>
     <texPath>BA/Serina/Serina_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Hanae</defName>
     <label>Hanae Eyebrow</label>
     <texPath>BA/Hanae/Hanae_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Hifumi</defName>
     <label>Hifumi Eyebrow</label>
     <texPath>BA/Hifumi/Hifumi_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Azusa</defName>
     <label>Azusa Eyebrow</label>
     <texPath>BA/Azusa/Azusa_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Hanako</defName>
     <label>Hanako Eyebrow</label>
     <texPath>BA/Hanako/Hanako_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Koharu</defName>
     <label>Koharu Eyebrow</label>
     <texPath>BA/Koharu/Koharu_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Sakurako</defName>
     <label>Sakurako Eyebrow</label>
     <texPath>BA/Sakurako/Sakurako_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Hinata</defName>
     <label>Hinata Eyebrow</label>
     <texPath>BA/Hinata/Hinata_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Mari</defName>
     <label>Mari Eyebrow</label>
     <texPath>BA/Mari/Mari_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Aru</defName>
     <label>Aru Eyebrow</label>
     <texPath>BA/Aru/Aru_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Mutsuki</defName>
     <label>Mutsuki Eyebrow</label>
     <texPath>BA/Mutsuki/Mutsuki_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Kayoko</defName>
     <label>Kayoko Eyebrow</label>
     <texPath>BA/Kayoko/Kayoko_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Haruka</defName>
     <label>Haruka Eyebrow</label>
     <texPath>BA/Haruka/Haruka_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_ShirokoTerror</defName>
     <label>ShirokoTerror Eyebrow</label>
     <texPath>BA/ShirokoTerror/ShirokoTerror_Eyebrow</texPath>
   </BA.EyebrowDef>
 
-  <BA.EyebrowDef>
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Hoshino1stGrade</defName>
     <label>Hoshino1stGrade Eyebrow</label>
     <texPath>BA/Hoshino1stGrade/Hoshino1stGrade_Eyebrow</texPath>
