@@ -525,7 +525,13 @@
     <Compile Include="Resource\DataHelper.cs" />
     <Compile Include="Resource\Data\ClubData.cs" />
     <Compile Include="Resource\Data\Const.cs" />
-    <Compile Include="Resource\Data\DataFile.cs" />
+    <Compile Include="Resource\Data\Interface\IClubLocalizationData.cs" />
+    <Compile Include="Resource\Data\Interface\IPassiveSkillLocalizationData.cs" />
+    <Compile Include="Resource\Data\Interface\ISchoolLocalizationData.cs" />
+    <Compile Include="Resource\Data\Interface\ISkillLocalizationData.cs" />
+    <Compile Include="Resource\Data\Interface\IStudentAttributeLocalizationData.cs" />
+    <Compile Include="Resource\Data\Interface\IStudentLocalizationData.cs" />
+    <Compile Include="Resource\Data\Interface\IWeaponLocalizationData.cs" />
     <Compile Include="Resource\Data\PassiveSkillData.cs" />
     <Compile Include="Resource\Data\SchoolData.cs" />
     <Compile Include="Resource\Data\ShinbiData.cs" />

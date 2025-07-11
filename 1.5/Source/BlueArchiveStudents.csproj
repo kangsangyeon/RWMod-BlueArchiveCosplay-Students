@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BA\BALocalizeKey.cs" />
     <Compile Include="BA\BAStudents.cs" />
     <Compile Include="BA\BADefOf.cs" />
     <Compile Include="BA\BAUtil.cs" />

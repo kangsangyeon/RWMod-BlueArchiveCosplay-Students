@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Last name이 성, First name이 이름임. -->
+<!-- 블루아카이브에서는 성은 한자, 이름은 가타카나로 표기하고 있음. -->
+<LanguageData>
+
+  <BA_Keyed_Student_LastName_Makoto>하누마</BA_Keyed_Student_LastName_Makoto>
+  <BA_Keyed_Student_FirstName_Makoto>마코토</BA_Keyed_Student_FirstName_Makoto>
+
+</LanguageData>

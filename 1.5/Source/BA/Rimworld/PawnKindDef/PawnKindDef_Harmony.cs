@@ -92,6 +92,12 @@ namespace BA
                 = GameResource.StudentTable[kindDef.studentId].Age * 3600000L;
             pawn.ageTracker.AgeBiologicalTicks = ageTick;
             pawn.ageTracker.AgeChronologicalTicks = ageTick;
+
+            // 학생 이름으로 설정함.
+            var name = GameResource.StudentTable[kindDef.studentId].Name;
+            var firstName = BALocalizeKey.StudentFirstName(name).Translate();
+            var lastName = BALocalizeKey.StudentLastName(name).Translate();
+            __result.Name = new NameTriple(firstName, firstName, lastName);
         }
     }
 

@@ -7,7 +7,9 @@ namespace BA
 {
     // https://harmony.pardeike.net/articles/patching-prefix.html
 
-    [HarmonyPatch(typeof(Pawn_HealthTracker), "MakeDowned")]
+    [HarmonyPatch(
+        typeof(Pawn_HealthTracker),
+        "MakeDowned")]
     public static class Harmony_Pawn_HealthTracker_MakeDowned
     {
         public static Subject<(Pawn_HealthTracker instance, DamageInfo? dinfo, Hediff hediff)> OnPrefix = new();
@@ -20,7 +22,9 @@ namespace BA
         }
     }
 
-    [HarmonyPatch(typeof(Pawn), "DoKillSideEffects")]
+    [HarmonyPatch(
+        typeof(Pawn),
+        "DoKillSideEffects")]
     public static class Harmony_Pawn_DoKillSideEffects
     {
         public static Subject<(Pawn instance, DamageInfo? dinfo, Hediff exactCulprit, bool spawned)> OnPostfix = new();
@@ -32,7 +36,9 @@ namespace BA
         }
     }
 
-    [HarmonyPatch(typeof(Bullet), "Impact")]
+    [HarmonyPatch(
+        typeof(Bullet),
+        "Impact")]
     public static class Harmony_Bullet_Impact
     {
         public static Subject<(Bullet instance, Thing hitThing, bool blockedByShield)> OnPostfix = new();
@@ -44,7 +50,9 @@ namespace BA
         }
     }
 
-    [HarmonyPatch(typeof(Pawn), "SpawnSetup")]
+    [HarmonyPatch(
+        typeof(Pawn),
+        nameof(Pawn.SpawnSetup))]
     public static class Harmony_Pawn_SpawnSetup
     {
         public static Subject<(Pawn instance, Map map, bool respawningAfterLoad)> OnPostfix = new();
@@ -58,7 +66,9 @@ namespace BA
         }
     }
 
-    [HarmonyPatch(typeof(Pawn_SkillTracker), "Learn")]
+    [HarmonyPatch(
+        typeof(Pawn_SkillTracker),
+        nameof(Pawn_SkillTracker.Learn))]
     public static class Harmony_Pawn_SkillTracker_Learn
     {
         public static Subject<(Pawn_SkillTracker instance, SkillDef sDef, float xp, bool direct, bool ignoreLearnRate)> OnPostfix = new();

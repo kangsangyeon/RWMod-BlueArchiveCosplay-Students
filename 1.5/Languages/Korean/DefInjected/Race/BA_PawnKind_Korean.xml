@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LanguageData>
 
-  <!-- https://rimworldwiki.com/wiki/Modding_Tutorials/Localization -->
+<!-- https://rimworldwiki.com/wiki/Modding_Tutorials/Localization -->
+<LanguageData>
 
   <BA_PawnKind_Yuzu.label>유즈</BA_PawnKind_Yuzu.label>
   <BA_PawnKind_Aris.label>아리스</BA_PawnKind_Aris.label>
