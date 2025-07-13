@@ -97,7 +97,8 @@ namespace BA
             var name = GameResource.StudentTable[kindDef.studentId].Name;
             var firstName = BALocalizeKey.StudentFirstName(name).Translate();
             var lastName = BALocalizeKey.StudentLastName(name).Translate();
-            __result.Name = new NameTriple(firstName, firstName, lastName);
+            // 일본식 이름으로 표기할것이기 때문에 이름과 성의 순서를 바꿈.
+            __result.Name = new NameTriple(lastName, firstName, firstName);
         }
     }
 
