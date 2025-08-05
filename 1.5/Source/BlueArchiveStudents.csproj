@@ -105,6 +105,7 @@
     <Compile Include="BA\Development\PawnTemplateDevelopment.cs" />
     <Compile Include="BA\Rimworld\Comp\CompUseEffect_UseEffectBAPawnGainExp.cs" />
     <Compile Include="BA\Rimworld\Comp\Comp_BAPawn.cs" />
+    <Compile Include="BA\Rimworld\Comp\GameComponent_DelayedPawnDestroy.cs" />
     <Compile Include="BA\Rimworld\Harmony\PatchDisableCamera.cs" />
     <Compile Include="BA\Rimworld\Harmony\PatchDisableIMGUI.cs" />
     <Compile Include="BA\Rimworld\Harmony\Harmony_PawnRenderNode_Apparel_Constructor.cs" />

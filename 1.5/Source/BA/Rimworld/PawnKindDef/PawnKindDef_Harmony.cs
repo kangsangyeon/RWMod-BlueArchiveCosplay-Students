@@ -125,4 +125,105 @@ namespace BA
             return false;
         }
     }
+
+    [HarmonyPatch(
+        typeof(Thing),
+        nameof(Thing.SetFactionDirect))]
+    public static class Harmony_Thing_SetFactionDirect
+    {
+        [HarmonyPostfix]
+        public static void Postfix(
+            Thing __instance,
+            Faction newFaction)
+        {
+            if (__instance is not Pawn pawn)
+                return;
+            if (!__instance.Spawned)
+                return;
+            if (pawn.kindDef is not BA.PawnKindDef kindDef)
+                return;
+            if (newFaction != null && newFaction.IsPlayer)
+                return;
+            // 플레이어 faction이 아니면 despawn 대상임.
+            Current.Game.GetComponent<GameComponent_DelayedPawnDestroy>().TryAdd(pawn);
+        }
+    }
+
+    [HarmonyPatch(
+        typeof(Pawn),
+        nameof(Pawn.SetFaction))]
+    public static class Harmony_Pawn_SetFaction
+    {
+        [HarmonyPostfix]
+        public static void Postfix(
+            Pawn __instance,
+            Faction newFaction)
+        {
+            if (!__instance.Spawned)
+                return;
+            if (__instance.kindDef is not BA.PawnKindDef kindDef)
+                return;
+            // CharacterEditor에서 faction 변경하면 임시 faction으로 잠시 변경되는데, 이 때 null exception 안나도록 확인함.
+            if (newFaction != null && newFaction.IsPlayer)
+                return;
+            // 플레이어 faction이 아니면 despawn 대상임.
+            // CharacterEditor에서 faction 변경하면 SetFaction이 2번 호출됌. 한 번만 추가해야 함.
+            Current.Game.GetComponent<GameComponent_DelayedPawnDestroy>().TryAdd(__instance);
+        }
+    }
+
+    // [HarmonyPatch(
+    //     typeof(Pawn),
+    //     nameof(Pawn.PostApplyDamage))]
+    // public static class Harmony_Pawn_PostApplyDamage
+    // {
+    //     [HarmonyPostfix]
+    //     public static void Postfix(
+    //         Pawn __instance,
+    //         DamageInfo dinfo,
+    //         float totalDamageDealt)
+    //     {
+    //         if (!__instance.Spawned)
+    //             return;
+    //         if (__instance.kindDef is not BA.PawnKindDef kindDef)
+    //             return;
+    //         if (__instance.health.summaryHealth.SummaryHealthPercent >= 0.1f)
+    //             return;
+    //         // health 10% 이하면 despawn 대상임.
+    //         __instance.DeSpawn();
+    //     }
+    // }
+    //
+    // [HarmonyPatch(
+    //     typeof(PawnCapacitiesHandler),
+    //     nameof(PawnCapacitiesHandler.GetLevel))]
+    // public static class Harmony_PawnCapacitiesHandler_GetLevel
+    // {
+    //     private static readonly FieldInfo PawnFieldInfo;
+    //
+    //     static Harmony_PawnCapacitiesHandler_GetLevel()
+    //     {
+    //         PawnFieldInfo =
+    //             typeof(PawnCapacitiesHandler).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
+    //     }
+    //
+    //     [HarmonyPrefix]
+    //     public static void Postfix(
+    //         PawnCapacitiesHandler __instance,
+    //         PawnCapacityDef capacity,
+    //         ref float __result)
+    //     {
+    //         var pawn = (Pawn)PawnFieldInfo.GetValue(__instance);
+    //         if (!pawn.Spawned)
+    //             return;
+    //         if (pawn.kindDef is not BA.PawnKindDef kindDef)
+    //             return;
+    //         if (capacity != PawnCapacityDefOf.Consciousness)
+    //             return;
+    //         if (__result > 0.1f)
+    //             return;
+    //         // 의식(consciousness)이 10% 이하면 despawn 대상임.
+    //         pawn.DeSpawn();
+    //     }
+    // }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using RimWorld.Planet;
@@ -96,6 +97,8 @@ namespace BA
 
         public static Pawn GetFirstPawnOf(PawnKindDef def)
         {
+            if(def == null)
+                throw new ArgumentNullException(nameof(def));
             return Current.Game.World.worldPawns.AllPawnsAliveOrDead
                 .First(p => p.kindDef == def);
         }

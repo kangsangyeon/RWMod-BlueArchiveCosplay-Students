@@ -26,6 +26,7 @@ namespace BA
         public static GameObject ContentsPrefab;
 
         private static bool _setup;
+        private static GameComponent_DelayedPawnDestroy _delayedPawnDestroy;
 
         static BAStudents()
         {
