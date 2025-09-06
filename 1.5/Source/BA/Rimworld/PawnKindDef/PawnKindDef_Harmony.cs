@@ -78,7 +78,8 @@ namespace BA
             for (int i = 0; i < requiredButNotWornDefs.Length; ++i)
             {
                 Log.Message($"apparel required but not worn. generate.: {requiredButNotWornDefs[i].defName}.");
-                PawnApparelGenerator.GenerateApparelOfDefFor(pawn, requiredButNotWornDefs[i]);
+                var apparel = PawnApparelGenerator.GenerateApparelOfDefFor(pawn, requiredButNotWornDefs[i]);
+                pawn.apparel.WornApparel.Add(apparel);
             }
 
             // PawnKindDef에서 fixedChildBackstories와 fixedAdultBackstories로 지정한 backstory를 강제로 적용함.
