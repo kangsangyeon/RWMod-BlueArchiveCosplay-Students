@@ -4,7 +4,117 @@
 <!-- 블루아카이브에서는 성은 한자, 이름은 가타카나로 표기하고 있음. -->
 <LanguageData>
 
+  <BA_Keyed_Student_LastName_Yuzu>하나오카</BA_Keyed_Student_LastName_Yuzu>
+  <BA_Keyed_Student_FirstName_Yuzu>유즈</BA_Keyed_Student_FirstName_Yuzu>
+  <BA_Keyed_Student_LastName_Momoi>사이바</BA_Keyed_Student_LastName_Momoi>
+  <BA_Keyed_Student_FirstName_Momoi>모모이</BA_Keyed_Student_FirstName_Momoi>
+  <BA_Keyed_Student_LastName_Midori>사이바</BA_Keyed_Student_LastName_Midori>
+  <BA_Keyed_Student_FirstName_Midori>미도리</BA_Keyed_Student_FirstName_Midori>
+  <BA_Keyed_Student_LastName_Aris>텐도</BA_Keyed_Student_LastName_Aris>
+  <BA_Keyed_Student_FirstName_Aris>아리스</BA_Keyed_Student_FirstName_Aris>
+
+  <BA_Keyed_Student_LastName_Hoshino>타카나시</BA_Keyed_Student_LastName_Hoshino>
+  <BA_Keyed_Student_FirstName_Hoshino>호시노</BA_Keyed_Student_FirstName_Hoshino>
+  <BA_Keyed_Student_LastName_Shiroko>스나오오카미</BA_Keyed_Student_LastName_Shiroko>
+  <BA_Keyed_Student_FirstName_Shiroko>시로코</BA_Keyed_Student_FirstName_Shiroko>
+  <BA_Keyed_Student_LastName_Nonomi>이자요이</BA_Keyed_Student_LastName_Nonomi>
+  <BA_Keyed_Student_FirstName_Nonomi>노노미</BA_Keyed_Student_FirstName_Nonomi>
+  <BA_Keyed_Student_LastName_Serika>쿠로미</BA_Keyed_Student_LastName_Serika>
+  <BA_Keyed_Student_FirstName_Serika>세리카</BA_Keyed_Student_FirstName_Serika>
+  <BA_Keyed_Student_LastName_Ayane>오쿠소라</BA_Keyed_Student_LastName_Ayane>
+  <BA_Keyed_Student_FirstName_Ayane>아야네</BA_Keyed_Student_FirstName_Ayane>
+
   <BA_Keyed_Student_LastName_Makoto>하누마</BA_Keyed_Student_LastName_Makoto>
   <BA_Keyed_Student_FirstName_Makoto>마코토</BA_Keyed_Student_FirstName_Makoto>
+  <BA_Keyed_Student_LastName_Satsuki>쿄고쿠</BA_Keyed_Student_LastName_Satsuki>
+  <BA_Keyed_Student_FirstName_Satsuki>사츠키</BA_Keyed_Student_FirstName_Satsuki>
+  <BA_Keyed_Student_LastName_Iroha>나츠메</BA_Keyed_Student_LastName_Iroha>
+  <BA_Keyed_Student_FirstName_Iroha>이로하</BA_Keyed_Student_FirstName_Iroha>
+  <BA_Keyed_Student_LastName_Ibuki>탄가</BA_Keyed_Student_LastName_Ibuki>
+  <BA_Keyed_Student_FirstName_Ibuki>이부키</BA_Keyed_Student_FirstName_Ibuki>
+  <BA_Keyed_Student_LastName_Chiaki>모토미야</BA_Keyed_Student_LastName_Chiaki>
+  <BA_Keyed_Student_FirstName_Chiaki>치아키</BA_Keyed_Student_FirstName_Chiaki>
 
+  <BA_Keyed_Student_LastName_Hina>소라사키</BA_Keyed_Student_LastName_Hina>
+  <BA_Keyed_Student_FirstName_Hina>히나</BA_Keyed_Student_FirstName_Hina>
+  <BA_Keyed_Student_LastName_Ako>아마우</BA_Keyed_Student_LastName_Ako>
+  <BA_Keyed_Student_FirstName_Ako>아코</BA_Keyed_Student_FirstName_Ako>
+  <BA_Keyed_Student_LastName_Iori>시로미</BA_Keyed_Student_LastName_Iori>
+  <BA_Keyed_Student_FirstName_Iori>이오리</BA_Keyed_Student_FirstName_Iori>
+  <BA_Keyed_Student_LastName_Chinatsu>히노미야</BA_Keyed_Student_LastName_Chinatsu>
+  <BA_Keyed_Student_FirstName_Chinatsu>치나츠</BA_Keyed_Student_FirstName_Chinatsu>
+
+  <BA_Keyed_Student_LastName_Sena>히무로</BA_Keyed_Student_LastName_Sena>
+  <BA_Keyed_Student_FirstName_Sena>세나</BA_Keyed_Student_FirstName_Sena>
+
+  <BA_Keyed_Student_LastName_Nagisa>키리후지</BA_Keyed_Student_LastName_Nagisa>
+  <BA_Keyed_Student_FirstName_Nagisa>나기사</BA_Keyed_Student_FirstName_Nagisa>
+  <BA_Keyed_Student_LastName_Mika>미소노</BA_Keyed_Student_LastName_Mika>
+  <BA_Keyed_Student_FirstName_Mika>미카</BA_Keyed_Student_FirstName_Mika>
+  <BA_Keyed_Student_LastName_Seia>유리조노</BA_Keyed_Student_LastName_Seia>
+  <BA_Keyed_Student_FirstName_Seia>세이아</BA_Keyed_Student_FirstName_Seia>
+
+  <BA_Keyed_Student_LastName_Tsurugi>켄자키</BA_Keyed_Student_LastName_Tsurugi>
+  <BA_Keyed_Student_FirstName_Tsurugi>츠루기</BA_Keyed_Student_FirstName_Tsurugi>
+  <BA_Keyed_Student_LastName_Hasumi>하네카와</BA_Keyed_Student_LastName_Hasumi>
+  <BA_Keyed_Student_FirstName_Hasumi>하스미</BA_Keyed_Student_FirstName_Hasumi>
+  <BA_Keyed_Student_LastName_Ichika>나카마사</BA_Keyed_Student_LastName_Ichika>
+  <BA_Keyed_Student_FirstName_Ichika>이치카</BA_Keyed_Student_FirstName_Ichika>
+  <BA_Keyed_Student_LastName_Mashiro>시즈야마</BA_Keyed_Student_LastName_Mashiro>
+  <BA_Keyed_Student_FirstName_Mashiro>마시로</BA_Keyed_Student_FirstName_Mashiro>
+
+  <BA_Keyed_Student_LastName_Mine>아오모리</BA_Keyed_Student_LastName_Mine>
+  <BA_Keyed_Student_FirstName_Mine>미네</BA_Keyed_Student_FirstName_Mine>
+  <BA_Keyed_Student_LastName_Serina>스미</BA_Keyed_Student_LastName_Serina>
+  <BA_Keyed_Student_FirstName_Serina>세리나</BA_Keyed_Student_FirstName_Serina>
+  <BA_Keyed_Student_LastName_Hanae>아사가오</BA_Keyed_Student_LastName_Hanae>
+  <BA_Keyed_Student_FirstName_Hanae>하나에</BA_Keyed_Student_FirstName_Hanae>
+
+  <BA_Keyed_Student_LastName_Hifumi>아지타니</BA_Keyed_Student_LastName_Hifumi>
+  <BA_Keyed_Student_FirstName_Hifumi>히후미</BA_Keyed_Student_FirstName_Hifumi>
+  <BA_Keyed_Student_LastName_Azusa>시라스</BA_Keyed_Student_LastName_Azusa>
+  <BA_Keyed_Student_FirstName_Azusa>아즈사</BA_Keyed_Student_FirstName_Azusa>
+  <BA_Keyed_Student_LastName_Hanako>우라와</BA_Keyed_Student_LastName_Hanako>
+  <BA_Keyed_Student_FirstName_Hanako>하나코</BA_Keyed_Student_FirstName_Hanako>
+  <BA_Keyed_Student_LastName_Koharu>시모에</BA_Keyed_Student_LastName_Koharu>
+  <BA_Keyed_Student_FirstName_Koharu>코하루</BA_Keyed_Student_FirstName_Koharu>
+
+  <BA_Keyed_Student_LastName_Sakurako>우타즈미</BA_Keyed_Student_LastName_Sakurako>
+  <BA_Keyed_Student_FirstName_Sakurako>사쿠라코</BA_Keyed_Student_FirstName_Sakurako>
+  <BA_Keyed_Student_LastName_Hinata>와카바</BA_Keyed_Student_LastName_Hinata>
+  <BA_Keyed_Student_FirstName_Hinata>히나타</BA_Keyed_Student_FirstName_Hinata>
+  <BA_Keyed_Student_LastName_Mari>이오치</BA_Keyed_Student_LastName_Mari>
+  <BA_Keyed_Student_FirstName_Mari>마리</BA_Keyed_Student_FirstName_Mari>
+
+  <BA_Keyed_Student_LastName_Saori>조마에</BA_Keyed_Student_LastName_Saori>
+  <BA_Keyed_Student_FirstName_Saori>사오리</BA_Keyed_Student_FirstName_Saori>
+  <BA_Keyed_Student_LastName_Atsuko>하카리</BA_Keyed_Student_LastName_Atsuko>
+  <BA_Keyed_Student_FirstName_Atsuko>아츠코</BA_Keyed_Student_FirstName_Atsuko>
+  <BA_Keyed_Student_LastName_Misaki>이마시노</BA_Keyed_Student_LastName_Misaki>
+  <BA_Keyed_Student_FirstName_Misaki>미사키</BA_Keyed_Student_FirstName_Misaki>
+  <BA_Keyed_Student_LastName_Hiyori>츠치나가</BA_Keyed_Student_LastName_Hiyori>
+  <BA_Keyed_Student_FirstName_Hiyori>히요리</BA_Keyed_Student_FirstName_Hiyori>
+
+  <BA_Keyed_Student_LastName_Michiru>치도리</BA_Keyed_Student_LastName_Michiru>
+  <BA_Keyed_Student_FirstName_Michiru>미치루</BA_Keyed_Student_FirstName_Michiru>
+  <BA_Keyed_Student_LastName_Izuna>쿠다</BA_Keyed_Student_LastName_Izuna>
+  <BA_Keyed_Student_FirstName_Izuna>이즈나</BA_Keyed_Student_FirstName_Izuna>
+  <BA_Keyed_Student_LastName_Tsukuyo>오노</BA_Keyed_Student_LastName_Tsukuyo>
+  <BA_Keyed_Student_FirstName_Tsukuyo>츠쿠요</BA_Keyed_Student_FirstName_Tsukuyo>
+
+  <BA_Keyed_Student_LastName_Aru>리쿠하치마</BA_Keyed_Student_LastName_Aru>
+  <BA_Keyed_Student_FirstName_Aru>아루</BA_Keyed_Student_FirstName_Aru>
+  <BA_Keyed_Student_LastName_Mutsuki>아사기</BA_Keyed_Student_LastName_Mutsuki>
+  <BA_Keyed_Student_FirstName_Mutsuki>무츠키</BA_Keyed_Student_FirstName_Mutsuki>
+  <BA_Keyed_Student_LastName_Kayoko>오니카타</BA_Keyed_Student_LastName_Kayoko>
+  <BA_Keyed_Student_FirstName_Kayoko>카요코</BA_Keyed_Student_FirstName_Kayoko>
+  <BA_Keyed_Student_LastName_Haruka>이구사</BA_Keyed_Student_LastName_Haruka>
+  <BA_Keyed_Student_FirstName_Haruka>하루카</BA_Keyed_Student_FirstName_Haruka>
+  
+  <BA_Keyed_Student_LastName_Wakamo>코사카</BA_Keyed_Student_LastName_Wakamo>
+  <BA_Keyed_Student_FirstName_Wakamo>와카모</BA_Keyed_Student_FirstName_Wakamo>
+  <BA_Keyed_Student_LastName_Akira>키요스미</BA_Keyed_Student_LastName_Akira>
+  <BA_Keyed_Student_FirstName_Akira>아키라</BA_Keyed_Student_FirstName_Akira>
+  <BA_Keyed_Student_LastName_Kai>신타니</BA_Keyed_Student_LastName_Kai>
+  <BA_Keyed_Student_FirstName_Kai>카이</BA_Keyed_Student_FirstName_Kai>
 </LanguageData>
