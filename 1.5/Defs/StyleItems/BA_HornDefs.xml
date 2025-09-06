@@ -16,4 +16,11 @@
     <texPath>BA/Makoto/Makoto_Horn</texPath>
   </BA.HornDef>
 
+    <BA.HornDef ParentName="BA_Horn_Base">
+    <category>BA_StyleItemCategory_Horn</category>
+    <defName>BA_Horn_Koharu</defName>
+    <label>Koharu Horn</label>
+    <texPath>BA/Koharu/Koharu_Horn</texPath>
+  </BA.HornDef>
+
 </Defs>

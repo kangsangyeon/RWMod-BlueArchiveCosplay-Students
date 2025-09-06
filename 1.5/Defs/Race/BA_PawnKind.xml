@@ -47,6 +47,13 @@
     <apparelRequired>
       <li>BA_Apparel_Yuzu_OuterApparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Millennium</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Yuzu</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Momoi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -66,6 +73,13 @@
       <li>BA_Apparel_Momoi_Apparel</li>
       <li>BA_Apparel_Momoi_OuterApparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Millennium</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Momoi</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Midori" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -85,6 +99,13 @@
       <li>BA_Apparel_Midori_Apparel</li>
       <li>BA_Apparel_Midori_OuterApparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Millennium</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Midori</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Aris" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -103,6 +124,13 @@
       <li>BA_Apparel_Aris_Apparel</li>
       <li>BA_Apparel_Aris_OuterApparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Millennium</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Aris</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Hoshino" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -120,6 +148,13 @@
     <apparelRequired>
       <li>BA_Apparel_Hoshino_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Abydos</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Hoshino</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Shiroko" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -138,6 +173,13 @@
       <li>BA_Apparel_Shiroko_Apparel</li>
       <li>BA_Apparel_Shiroko_OuterApparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Abydos</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Shiroko</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Nonomi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -156,6 +198,13 @@
       <li>BA_Apparel_Nonomi_Apparel</li>
       <li>BA_Apparel_Nonomi_OuterApparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Abydos</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Nonomi</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Serika" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -174,6 +223,13 @@
       <li>BA_Apparel_Serika_Apparel</li>
       <li>BA_Apparel_Serika_OuterApparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Abydos</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Serika</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Ayane" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -192,6 +248,13 @@
       <li>BA_Apparel_Ayane_Apparel</li>
       <li>BA_Apparel_Ayane_OuterApparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Abydos</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Ayane</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Makoto" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -207,6 +270,13 @@
       <li>BA_Apparel_Makoto_Headgear</li>
       <li>BA_Apparel_Makoto_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Gehenna</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Makoto</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Ibuki" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -228,6 +298,13 @@
       <li>BA_Apparel_Ibuki_Apparel</li>
       <li>BA_Apparel_Ibuki_OuterApparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Gehenna</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Ibuki</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Nagisa" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -494,6 +571,7 @@
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Koharu</eyebrowDef>
     <wingDef>BA_Wing_Koharu</wingDef>
+    <hornDef>BA_Horn_Koharu</hornDef>
 
     <apparelRequired>
       <li>BA_Apparel_Koharu_Apparel</li>
@@ -595,6 +673,13 @@
     <apparelRequired>
       <li>BA_Apparel_Mutsuki_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Gehenna</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Mutsuki</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Kayoko" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -613,6 +698,13 @@
     <apparelRequired>
       <li>BA_Apparel_Kayoko_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Gehenna</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Kayoko</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Haruka" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -631,6 +723,13 @@
       <li>BA_Apparel_Haruka_Headgear</li>
       <li>BA_Apparel_Haruka_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Gehenna</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Haruka</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_ShirokoTerror" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
