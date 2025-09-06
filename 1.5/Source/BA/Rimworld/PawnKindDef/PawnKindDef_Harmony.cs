@@ -187,43 +187,45 @@ namespace BA
     //             return;
     //         if (__instance.kindDef is not BA.PawnKindDef kindDef)
     //             return;
-    //         if (__instance.health.summaryHealth.SummaryHealthPercent >= 0.1f)
+    //         if (__instance.health.summaryHealth.SummaryHealthPercent > 0.1f)
     //             return;
     //         // health 10% 이하면 despawn 대상임.
-    //         __instance.DeSpawn();
+    //         // __instance.DeSpawn();
+    //         Current.Game.GetComponent<GameComponent_DelayedPawnDestroy>().TryAdd(__instance);
     //     }
     // }
-    //
-    // [HarmonyPatch(
-    //     typeof(PawnCapacitiesHandler),
-    //     nameof(PawnCapacitiesHandler.GetLevel))]
-    // public static class Harmony_PawnCapacitiesHandler_GetLevel
-    // {
-    //     private static readonly FieldInfo PawnFieldInfo;
-    //
-    //     static Harmony_PawnCapacitiesHandler_GetLevel()
-    //     {
-    //         PawnFieldInfo =
-    //             typeof(PawnCapacitiesHandler).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
-    //     }
-    //
-    //     [HarmonyPrefix]
-    //     public static void Postfix(
-    //         PawnCapacitiesHandler __instance,
-    //         PawnCapacityDef capacity,
-    //         ref float __result)
-    //     {
-    //         var pawn = (Pawn)PawnFieldInfo.GetValue(__instance);
-    //         if (!pawn.Spawned)
-    //             return;
-    //         if (pawn.kindDef is not BA.PawnKindDef kindDef)
-    //             return;
-    //         if (capacity != PawnCapacityDefOf.Consciousness)
-    //             return;
-    //         if (__result > 0.1f)
-    //             return;
-    //         // 의식(consciousness)이 10% 이하면 despawn 대상임.
-    //         pawn.DeSpawn();
-    //     }
-    // }
+
+    [HarmonyPatch(
+        typeof(PawnCapacitiesHandler),
+        nameof(PawnCapacitiesHandler.GetLevel))]
+    public static class Harmony_PawnCapacitiesHandler_GetLevel
+    {
+        private static readonly FieldInfo PawnFieldInfo;
+
+        static Harmony_PawnCapacitiesHandler_GetLevel()
+        {
+            PawnFieldInfo =
+                typeof(PawnCapacitiesHandler).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
+        }
+
+        [HarmonyPostfix]
+        public static void Postfix(
+            PawnCapacitiesHandler __instance,
+            PawnCapacityDef capacity,
+            ref float __result)
+        {
+            var pawn = (Pawn)PawnFieldInfo.GetValue(__instance);
+            if (!pawn.Spawned)
+                return;
+            if (pawn.kindDef is not BA.PawnKindDef kindDef)
+                return;
+            if (capacity != PawnCapacityDefOf.Consciousness)
+                return;
+            if (__result > 0.1f)
+                return;
+            // 의식(consciousness)이 10% 이하면 despawn 대상임.
+            // pawn.DeSpawn();
+            Current.Game.GetComponent<GameComponent_DelayedPawnDestroy>().TryAdd(pawn);
+        }
+    }
 }
