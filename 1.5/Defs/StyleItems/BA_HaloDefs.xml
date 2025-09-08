@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <StyleItemCategoryDef>
+    <defName>BA_StyleItemCategory_Halo</defName>
+    <label>BA Halo</label>
+  </StyleItemCategoryDef>
+
+  <BA.HaloDef Abstract="True" Name="BA_Halo_Base">
+    <category>BA_StyleItemCategory_Halo</category>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Mika</defName>
+    <label>Mika Halo</label>
+    <texPath>BA/Mika/Mika_Halo</texPath>
+  </BA.HaloDef>
+
+</Defs>

@@ -1,4 +1,8 @@
-﻿namespace BA
+﻿using Verse;
+using RimWorld;
+using BA;  // 반드시 BA 네임스페이스 포함
+
+namespace BA
 {
     public class PawnKindDef : Verse.PawnKindDef
     {
@@ -13,5 +17,8 @@
         public TailDef tailDef;
         public EarDef earDef;
         public HornDef hornDef;
+
+        // 주의: HaloDef 클래스를 반드시 별도로 정의해야 하며, 네임스페이스가 같아야 합니다.
+        public HaloDef haloDef;
     }
 }

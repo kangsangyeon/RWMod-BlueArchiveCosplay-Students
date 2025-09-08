@@ -627,6 +627,24 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Nagisa_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Nagisa_Apparel</defName>
+    <label>BA Nagisa Apparel</label>
+    <description>this is a Nagisa apparel.</description>
+    <graphicData>
+      <texPath>BA/Nagisa/Apparel/Nagisa_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalC</li>
+      </tags>
+      <wornGraphicPath>BA/Nagisa/Apparel/Nagisa_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Mika_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Mika_Apparel</defName>
     <label>BA Mika Apparel</label>

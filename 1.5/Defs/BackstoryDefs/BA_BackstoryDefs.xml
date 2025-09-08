@@ -399,7 +399,7 @@
   <identifier>BA_Backstory_Adulthood_Mika</identifier>
   <title>트리니티 종합학원 파테르 분파 수장</title>
   <titleShort>파테르 수장</titleShort>
-  <description>트리니티 종합학원 학생회 티파티 내 3대 파벌 중 하나인 ‘파테르’ 분파의 강력한 수장. 강인한 전투력과 뛰어난 리더십으로 학원 내에서 강경한 입장을 대표한다. 외모와 달리 피지컬이 뛰어나며, 평소에는 장난기 많고 밝은 성격을 지녔으나 정치적 갈등과 분쟁에서는 냉철하고 계산적인 면모를 보인다. 소꿉친구인 나기사와는 오랜 기간 함께 자라왔으나, 정치적 갈등으로 종종 대립한다. 자신의 분파와 학원의 이익을 위해 치밀한 전략과 인맥을 활용하며, 때로는 냉혹한 결단도 서슴지 않는다. 내면에는 과거의 경솔함에 대한 반성과 성장도 담겨 있다.</description>
+  <description>트리니티 종합학원 학생회 티파티 내 3대 파벌 중 하나인 ‘파테르’ 분파의 수장. 강인한 전투력과 뛰어난 리더십으로 학원 내에서 강경한 입장을 대표한다. 외모와 달리 피지컬이 뛰어나며, 평소에는 장난기 많고 밝은 성격을 지녔으나 정치적 갈등과 분쟁에서는 냉철하고 계산적인 면모를 보인다. 소꿉친구인 나기사와는 오랜 기간 함께 자라왔으나, 정치적 갈등으로 종종 대립한다. 자신의 분파와 학원의 이익을 위해 치밀한 전략과 인맥을 활용하며, 때로는 냉혹한 결단도 서슴지 않는다. 내면에는 과거의 경솔함에 대한 반성과 성장도 담겨 있다.</description>
 </BackstoryDef>
 
 <!-- 세이아 -->
@@ -407,9 +407,85 @@
 <BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
   <defName>BA_Backstory_Adulthood_Seia</defName>
   <identifier>BA_Backstory_Adulthood_Seia</identifier>
-  <title>트리니티 종합학원 상투스 분파 수장</title>
-  <titleShort>상투스 수장</titleShort>
-  <description>트리니티 종합학원 학생회 '티파티'의 상투스 분파 수장. 현학적이고 종잡기 어려운 말투와 신비한 예지 능력을 지니며, 미래를 보는 힘 때문에 냉철하고 체념적인 태도를 보인다. 주변과 거리를 두지만 뛰어난 전략가로서, 위기 상황에서도 침착하게 대응하며 동료들을 이끈다. 예지몽을 통해 여러 사건을 간접적으로 관측하며, 본질을 숨긴 채 학교 내 정치와 위험을 관리한다.</description>
+  <title>트리니티 종합학원 티파티 상투스 분파 수장</title>
+  <titleShort>티파티 상투스 수장</titleShort>
+  <description>트리니티 종합학원 티파티의 상투스 분파 수장. 꿈을 매개로 한 예지몽과 초능력으로 미래를 보고, 타인의 꿈에 들어가거나 자신의 꿈으로 끌어올 수 있다. 비록 예지 능력을 잃었으나, 불길한 감각으로 이상 징후를 감지하는 능력을 유지하며, 이를 활용해 위기 상황에서 동료를 구한다. 냉철하고 이성적인 판단력과 깊은 지혜로 티파티 내에서 외교관 역할을 맡았으며, 학교 내 정치적 갈등을 조율하는 침묵의 지도자다. 겉으로는 어려운 어휘와 난해한 화법으로 주변과 거리를 두지만, 내면에는 동료와 학교에 대한 강한 책임감과 애착을 품고 있다. 자신의 예언으로 인한 두려움과 미숙함도 보이지만, 선생과 동료들과의 관계 속에서 점차 성장하고 있다.</description>
 </BackstoryDef>
+
+
+<!-- 정의실현부 -->
+
+<!-- 츠루기 -->
+
+<BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
+  <defName>BA_Backstory_Adulthood_Tsurugi</defName>
+  <identifier>BA_Backstory_Adulthood_Tsurugi</identifier>
+  <title>트리니티 종합학원 정의실현부 부장</title>
+  <titleShort>정의실현부 부장</titleShort>
+  <description>트리니티 종합학원의 정의실현부 부장으로, 통제하기 힘든 광기 어린 전투력을 보유한 전략 병기. 평소에는 호전적이고 폭력적인 모습으로 적을 무자비하게 공격하며, 전투 중에는 삼엄한 살의를 드러낸다. 그러나 의사소통이 어려운 면 때문에 부원들에게 도움을 받으며 집단을 유지하고, 가끔 소녀 같은 부끄러움 많은 모습을 보이기도 한다. 냉철한 판단력과 깊은 사고로 유능한 리더 역할을 수행하며, 때로는 부드럽고 교양 있는 말투로 내면의 순수함을 드러낸다. 폭력성과 광기 뒤에는 깊은 책임감과 팀원들을 향한 애정이 숨겨져 있다.</description>
+</BackstoryDef>
+
+<!-- 하스미 -->
+
+<BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
+  <defName>BA_Backstory_Adulthood_Hasumi</defName>
+  <identifier>BA_Backstory_Adulthood_Hasumi</identifier>
+  <title>트리니티 종합학원 정의실현부 부부장</title>
+  <titleShort>정의실현부 부부장</titleShort>
+  <description>트리니티 종합학원 정의실현부의 부부장으로, 부장 켄자키 츠루기를 보조하며 전술 지휘를 담당한다. 침착하고 지적인 성격으로, 혼란스러운 상황에서도 냉철한 판단력을 유지하며 팀을 이끈다. 상냥하게 주변을 돌보는 모습과 함께 때로는 무모한 츠루기의 행동을 조율하는 든든한 버팀목 역할을 한다. 스트레스나 다이어트 문제로 고민이 많으며, 자신감과 건강 관리에 관심이 깊다. 평소 독서와 사람 관찰을 즐기며, 차분한 태도와 따뜻한 마음으로 동료들에게 신뢰받는 존재다.</description>
+</BackstoryDef>
+
+<!-- 이치카 -->
+
+<BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
+  <defName>BA_Backstory_Adulthood_Ichika</defName>
+  <identifier>BA_Backstory_Adulthood_Ichika</identifier>
+  <title>트리니티 종합학원 정의실현부 간부</title>
+  <titleShort>정의실현부 간부</titleShort>
+  <description>트리니티 종합학원 정의실현부의 간부로, 밝고 털털한 성격을 지니며 언제나 싱글싱글 웃는 실눈이 인상적이다. 상냥하고 능숙한 처신으로 정의실현부 내에서 융통성 있는 중재자 역할을 맡으며, 타 학원과의 교섭에도 원만함을 유지한다. 그러나 싸움이 일어나면 누구보다 강력하고 격렬하게 임하며, 전투 시에는 난동을 부리는 츠루기 못지않은 기세를 보여준다. 대형사고를 치고도 선생과 함께 어려움을 극복하며, 동료들과 신뢰를 쌓아간다. 남 돕기와 도전을 좋아하며, 밝은 태도 속에 책임감 있는 모습을 숨기지 않는다.</description>
+</BackstoryDef>
+
+<!-- 마시로 -->
+
+<BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
+  <defName>BA_Backstory_Adulthood_Mashiro</defName>
+  <identifier>BA_Backstory_Adulthood_Mashiro</identifier>
+  <title>트리니티 종합학원 정의실현부 부원</title>
+  <titleShort>정의실현부 부원</titleShort>
+  <description>트리니티 종합학원 정의실현부의 성실한 1학년 부원으로, 키에 맞지 않는 거대한 저격총을 들고 묵묵히 화력 지원 임무를 수행한다. 말수가 적고 낯을 가리는 편이지만, 정의와 관련된 이야기에는 평소보다 말을 많이 하며 열정을 보인다. 높은 곳을 올라가 관찰하는 것을 좋아하며, 꼼꼼하게 관찰일기를 쓰는 성격이다. 평소에는 조용하지만, 정의를 위해 묵묵히 노력하는 신념이 강한 학생이다.</description>
+</BackstoryDef>
+
+<!-- 구호기사단 -->
+
+<!-- 미네 -->
+
+<BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
+  <defName>BA_Backstory_Adulthood_Mine</defName>
+  <identifier>BA_Backstory_Adulthood_Mine</identifier>
+  <title>트리니티 종합학원 구호기사단 단장</title>
+  <titleShort>구호기사단 단장</titleShort>
+  <description>트리니티 종합학원 3학년 구호기사단 단장. 올곧고 성실하며 자비심 깊은 인물로, 때로는 과격하고 융통성 없는 면모를 보인다. '미네가 부수고 기사단이 치료한다'는 말처럼, 때때로 강력한 공격력으로 적을 제압하고 팀을 보호한다. 구호에 집중하여 상처의 원인을 제거하는 것을 중요시하며, 팀원들에게 엄격하지만 깊은 애정을 지닌 백의의 전사다.</description>
+</BackstoryDef>
+
+<!-- 세리나 -->
+
+<BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
+  <defName>BA_Backstory_Adulthood_Serina</defName>
+  <identifier>BA_Backstory_Adulthood_Serina</identifier>
+  <title>트리니티 종합학원 구호기사단 간호사</title>
+  <titleShort>구호기사단 부원</titleShort>
+  <description>트리니티 종합학원 구호기사단 내 드문 상식인이자 정상인 간호사. 뛰어난 의료 능력을 지녔으며,조심스럽고 꼼꼼한 치료를 선호한다. 신출귀몰하게 나타나 도움을 주는 신비로운 면모가 있으나, 자신은 겁이 많은 편으로 겉모습과 대조되는 인간적인 매력을 지녔다. 봉사활동과 환자 간호를 즐기며, 팀원들에게 따뜻한 위로와 지원을 아끼지 않는다.</description>
+</BackstoryDef>
+
+<!-- 하나에 -->
+
+<BackstoryDef ParentName="BA_Backstory_Adulthood_Base">
+  <defName>BA_Backstory_Adulthood_Hanae</defName>
+  <identifier>BA_Backstory_Adulthood_Hanae</identifier>
+  <title>트리니티 종합학원 구호기사단 간호사</title>
+  <titleShort>구호기사단 부원</titleShort>
+  <description>트리니티 종합학원 구호기사단 소속인 명랑하고 쾌활한 1학년 신입생. 항상 의욕이 넘치고 긍정적이며 활발한 성격으로, 환자를 보면 지나치게 요란하게 굴어 상황을 악화시키기도 한다. 춤추기와 치어리딩을 좋아하며, 엉뚱하면서도 순수한 매력으로 주변에 웃음을 선사한다. 다양한 응원과 격려로 동료들과 선생님에게 힘을 주는 구호기사단의 낙천적인 존재이다.</description>
+</BackstoryDef>
+
 
 </Defs>

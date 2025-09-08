@@ -321,8 +321,15 @@
     <wingDef>BA_Wing_Nagisa</wingDef>
 
     <apparelRequired>
-      <!-- <li>BA_Apparel_Nagisa_Apparel</li> -->
+      <li>BA_Apparel_Nagisa_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Trinity</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Nagisa</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Mika" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -337,10 +344,18 @@
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Mika</eyebrowDef>
     <wingDef>BA_Wing_Mika</wingDef>
+    <haloDef>BA_Halo_Mika</haloDef>
 
     <apparelRequired>
       <li>BA_Apparel_Mika_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Trinity</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Mika</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Seia" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -359,6 +374,13 @@
     <apparelRequired>
       <li>BA_Apparel_Seia_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Trinity</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Seia</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Tsurugi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -377,6 +399,13 @@
     <apparelRequired>
       <li>BA_Apparel_Tsurugi_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Trinity</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Tsurugi</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Hasumi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -395,6 +424,13 @@
     <apparelRequired>
       <li>BA_Apparel_Hasumi_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Trinity</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Hasumi</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Ichika" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -413,6 +449,13 @@
     <apparelRequired>
       <li>BA_Apparel_Ichika_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Trinity</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Ichika</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Mashiro" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -431,6 +474,13 @@
     <apparelRequired>
       <li>BA_Apparel_Mashiro_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Trinity</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Mashiro</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_JTFMob" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -468,6 +518,13 @@
       <li>BA_Apparel_Mine_Headgear</li>
       <li>BA_Apparel_Mine_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Trinity</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Mine</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Serina" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -486,6 +543,13 @@
       <li>BA_Apparel_Serina_Headgear</li>
       <li>BA_Apparel_Serina_Apparel</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Trinity</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Serina</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Hanae" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -505,6 +569,13 @@
       <li>BA_Apparel_Hanae_OuterApparel</li>
       <li>BA_Apparel_Hanae_Headgear</li>
     </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Trinity</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Hanae</li>
+    </fixedAdultBackstories>
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Hifumi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
