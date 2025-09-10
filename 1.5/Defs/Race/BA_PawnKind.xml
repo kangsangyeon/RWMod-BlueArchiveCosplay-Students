@@ -174,6 +174,13 @@
       <li>BA_Apparel_Shiroko_OuterApparel</li>
     </apparelRequired>
 
+    <traits>
+      <li>Psychopath</li>    <!-- 정상 -->
+      <li>BodyPurist</li>    <!-- 정상 -->
+      <li>HalosPassion</li>       
+      <li>Jealous</li>       <!-- 정상 -->
+    </traits>
+
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Abydos</li>
     </fixedChildBackstories>
@@ -345,6 +352,11 @@
     <eyebrowDef>BA_Eyebrow_Mika</eyebrowDef>
     <wingDef>BA_Wing_Mika</wingDef>
     <haloDef>BA_Halo_Mika</haloDef>
+
+    <traits>
+      <li>Tough</li>          <!-- 강인함 -->
+      <li>Brawler</li>        <!-- 난폭함 -->
+    </traits>
 
     <apparelRequired>
       <li>BA_Apparel_Mika_Apparel</li>

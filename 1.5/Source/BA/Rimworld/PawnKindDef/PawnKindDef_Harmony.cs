@@ -4,6 +4,7 @@ using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using Verse;
+using System.Collections.Generic;
 
 namespace BA
 {
@@ -195,6 +196,27 @@ namespace BA
     //         Current.Game.GetComponent<GameComponent_DelayedPawnDestroy>().TryAdd(__instance);
     //     }
     // }
+
+    [HarmonyPatch(typeof(PawnGenerator), "GenerateTraits")]
+    public static class Patch_PawnGenerator_GenerateTraits
+    {
+        public static bool Prefix(Pawn pawn)
+        {
+            if (pawn.kindDef is BA.PawnKindDef kindDef && kindDef.traits != null && kindDef.traits.Count > 0)
+            {
+                foreach (TraitDef traitDef in kindDef.traits)
+                {
+                    // 중복 Trait 방지
+                    if (!pawn.story.traits.HasTrait(traitDef))
+                    {
+                        pawn.story.traits.GainTrait(new Trait(traitDef));
+                    }
+                }
+                return false; // 기존 GenerateTraits 로직 건너뜀
+            }
+            return true; // 기본 로직 실행
+        }
+    }
 
     [HarmonyPatch(
         typeof(PawnCapacitiesHandler),

@@ -1,6 +1,7 @@
 ﻿using Verse;
 using RimWorld;
 using BA;  // 반드시 BA 네임스페이스 포함
+using System.Collections.Generic;
 
 namespace BA
 {
@@ -20,5 +21,8 @@ namespace BA
 
         // 주의: HaloDef 클래스를 반드시 별도로 정의해야 하며, 네임스페이스가 같아야 합니다.
         public HaloDef haloDef;
+
+        // TraitDef 리스트 필드 추가 (XML <traits> 태그 매핑용)
+        public List<TraitDef> traits = new List<TraitDef>();
     }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+
+  <TraitDef>
+    <HalosPassion>
+      <label>헤일로의 열정</label>
+      <description>{0} 안에 깃든 신비한 힘이 그녀의 감정을 강력한 힘으로 바꾸어, 기분에 따라 저항력과 전투 능력을 강화합니다.</description>
+    </HalosPassion>
+  </TraitDef>
+
+</LanguageData>

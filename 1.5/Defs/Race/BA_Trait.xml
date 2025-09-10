@@ -1,0 +1,14 @@
+<Defs>
+  <TraitDef>
+    <defName>HalosPassion</defName>
+    <label>Halo's Passion</label>
+    <description>The mysterious power within the girl transforms her emotions into both a protective shield and formidable strength, enhancing her resilience and combat ability based on her mood.</description>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>Halo's Passion</label>
+        <description>The mysterious power within {0} transforms her emotions into formidable strength, enhancing her resilience and combat ability based on her mood.</description>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>
