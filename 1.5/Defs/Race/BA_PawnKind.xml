@@ -17,6 +17,9 @@
     <!-- apparelRequired로 지정한 옷 이외의 옷을 착용하고 스폰되는 문제를 수정. -->
     <!-- (250605 추가: apparelRequired로 지정한 옷을 안입고 나오거나, 지정한 옷 이외의 옷을 착용하는 문제가 계속되어서 harmony 코드로 강제함.
      예: faction의 ideology의 선호 의상 입고 나오는 문제 등.) -->
+
+    <!-- healthScale 정보 : 작은 체형의 학생은 7.0, 기본으로는 10.0 배수, 최강자 라인은 20.0을 받게 한다. -->
+
     <apparelMoney>0~0</apparelMoney>
 
     <apparelTags Inherit="False">
@@ -35,6 +38,7 @@
   <PawnKindDef Name="BA_PawnKind_Yuzu" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Yuzu</defName>
     <label>Yuzu</label>
+    <healthScale>10.0</healthScale>
     <studentId>1003</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
@@ -59,6 +63,7 @@
   <PawnKindDef Name="BA_PawnKind_Momoi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Momoi</defName>
     <label>Momoi</label>
+    <healthScale>10.0</healthScale>
     <studentId>1004</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
@@ -85,6 +90,7 @@
   <PawnKindDef Name="BA_PawnKind_Midori" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Midori</defName>
     <label>Midori</label>
+    <healthScale>10.0</healthScale>
     <studentId>1004</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
@@ -111,6 +117,7 @@
   <PawnKindDef Name="BA_PawnKind_Aris" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Aris</defName>
     <label>Aris</label>
+    <healthScale>10.0</healthScale>
     <studentId>1006</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_AA</forcedBodyTypeFemale>
@@ -136,6 +143,7 @@
   <PawnKindDef Name="BA_PawnKind_Hoshino" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Hoshino</defName>
     <label>Hoshino</label>
+    <healthScale>20.0</healthScale>
     <studentId>1007</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
@@ -160,7 +168,7 @@
   <PawnKindDef Name="BA_PawnKind_Shiroko" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Shiroko</defName>
     <label>Shiroko</label>
-    <healthScale>3.5</healthScale>
+    <healthScale>15.0</healthScale>
     <studentId>1008</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
@@ -193,6 +201,7 @@
   <PawnKindDef Name="BA_PawnKind_Nonomi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Nonomi</defName>
     <label>Nonomi</label>
+    <healthScale>10.0</healthScale>
     <studentId>1009</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
@@ -218,6 +227,7 @@
   <PawnKindDef Name="BA_PawnKind_Serika" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Serika</defName>
     <label>Serika</label>
+    <healthScale>10.0</healthScale>
     <studentId>1010</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
@@ -243,6 +253,7 @@
   <PawnKindDef Name="BA_PawnKind_Ayane" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Ayane</defName>
     <label>Ayane</label>
+    <healthScale>10.0</healthScale>
     <studentId>1011</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
@@ -268,6 +279,7 @@
   <PawnKindDef Name="BA_PawnKind_Makoto" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Makoto</defName>
     <label>Makoto</label>
+    <healthScale>10.0</healthScale>
     <studentId>1012</studentId>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Makoto</forcedHeadTypeFemale>
@@ -290,6 +302,7 @@
   <PawnKindDef Name="BA_PawnKind_Ibuki" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Ibuki</defName>
     <label>Ibuki</label>
+    <healthScale>7.0</healthScale>
     <studentId>1015</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
@@ -318,6 +331,7 @@
   <PawnKindDef Name="BA_PawnKind_Nagisa" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Nagisa</defName>
     <label>Nagisa</label>
+    <healthScale>10.0</healthScale>
     <studentId>1022</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
@@ -343,6 +357,7 @@
   <PawnKindDef Name="BA_PawnKind_Mika" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Mika</defName>
     <label>Mika</label>
+    <healthScale>20.0</healthScale>
     <studentId>1023</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
@@ -374,6 +389,7 @@
   <PawnKindDef Name="BA_PawnKind_Seia" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Seia</defName>
     <label>Seia</label>
+    <healthScale>7.0</healthScale>
     <studentId>1024</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
@@ -399,6 +415,7 @@
   <PawnKindDef Name="BA_PawnKind_Tsurugi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Tsurugi</defName>
     <label>Tsurugi</label>
+    <healthScale>20.0</healthScale>
     <studentId>1025</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Tsurugi_D</forcedBodyTypeFemale>
@@ -424,6 +441,7 @@
   <PawnKindDef Name="BA_PawnKind_Hasumi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Hasumi</defName>
     <label>Hasumi</label>
+    <healthScale>10.0</healthScale>
     <studentId>1026</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Tall_F</forcedBodyTypeFemale>
@@ -449,6 +467,7 @@
   <PawnKindDef Name="BA_PawnKind_Ichika" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Ichika</defName>
     <label>Ichika</label>
+    <healthScale>10.0</healthScale>
     <studentId>1027</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Type2_C</forcedBodyTypeFemale>
@@ -474,6 +493,7 @@
   <PawnKindDef Name="BA_PawnKind_Mashiro" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Mashiro</defName>
     <label>Mashiro</label>
+    <healthScale>10.0</healthScale>
     <studentId>1028</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_AA</forcedBodyTypeFemale>
@@ -499,6 +519,7 @@
   <PawnKindDef Name="BA_PawnKind_JTFMob" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_JTFMob</defName>
     <label>JTFMob</label>
+    <healthScale>10.0</healthScale>
     <studentId>1028</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_AA</forcedBodyTypeFemale>
@@ -517,6 +538,7 @@
   <PawnKindDef Name="BA_PawnKind_Mine" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Mine</defName>
     <label>Mine</label>
+    <healthScale>15.0</healthScale>
     <studentId>1029</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
@@ -543,6 +565,7 @@
   <PawnKindDef Name="BA_PawnKind_Serina" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Serina</defName>
     <label>Serina</label>
+    <healthScale>10.0</healthScale>
     <studentId>1030</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Type2_C</forcedBodyTypeFemale>
@@ -568,6 +591,7 @@
   <PawnKindDef Name="BA_PawnKind_Hanae" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Hanae</defName>
     <label>Hanae</label>
+    <healthScale>10.0</healthScale>
     <studentId>1031</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_F</forcedBodyTypeFemale>
@@ -594,6 +618,7 @@
   <PawnKindDef Name="BA_PawnKind_Hifumi" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Hifumi</defName>
     <label>Hifumi</label>
+    <healthScale>10.0</healthScale>
     <studentId>1032</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Type2_A</forcedBodyTypeFemale>
@@ -611,6 +636,7 @@
   <PawnKindDef Name="BA_PawnKind_Azusa" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Azusa</defName>
     <label>Azusa</label>
+    <healthScale>10.0</healthScale>
     <studentId>1033</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
@@ -629,6 +655,7 @@
   <PawnKindDef Name="BA_PawnKind_Hanako" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Hanako</defName>
     <label>Hanako</label>
+    <healthScale>10.0</healthScale>
     <studentId>1034</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
@@ -646,6 +673,7 @@
   <PawnKindDef Name="BA_PawnKind_Koharu" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Koharu</defName>
     <label>Koharu</label>
+    <healthScale>10.0</healthScale>
     <studentId>1035</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
@@ -666,6 +694,7 @@
   <PawnKindDef Name="BA_PawnKind_Sakurako" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Sakurako</defName>
     <label>Sakurako</label>
+    <healthScale>10.0</healthScale>
     <studentId>1036</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
@@ -684,6 +713,7 @@
   <PawnKindDef Name="BA_PawnKind_Hinata" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Hinata</defName>
     <label>Hinata</label>
+    <healthScale>10.0</healthScale>
     <studentId>1037</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
@@ -702,6 +732,7 @@
   <PawnKindDef Name="BA_PawnKind_Mari" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Mari</defName>
     <label>Mari</label>
+    <healthScale>10.0</healthScale>
     <studentId>1038</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_AA</forcedBodyTypeFemale>
@@ -720,6 +751,7 @@
   <PawnKindDef Name="BA_PawnKind_Aru" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Aru</defName>
     <label>Aru</label>
+    <healthScale>10.0</healthScale>
     <studentId>1046</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
@@ -745,6 +777,7 @@
   <PawnKindDef Name="BA_PawnKind_Mutsuki" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Mutsuki</defName>
     <label>Mutsuki</label>
+    <healthScale>10.0</healthScale>
     <studentId>1047</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
@@ -769,6 +802,7 @@
   <PawnKindDef Name="BA_PawnKind_Kayoko" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Kayoko</defName>
     <label>Kayoko</label>
+    <healthScale>10.0</healthScale>
     <studentId>1048</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Type2_A</forcedBodyTypeFemale>
@@ -794,6 +828,7 @@
   <PawnKindDef Name="BA_PawnKind_Haruka" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Haruka</defName>
     <label>Haruka</label>
+    <healthScale>15.0</healthScale>
     <studentId>1049</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Type2_C</forcedBodyTypeFemale>
@@ -819,6 +854,7 @@
   <PawnKindDef Name="BA_PawnKind_ShirokoTerror" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_ShirokoTerror</defName>
     <label>ShirokoTerror</label>
+    <healthScale>15.0</healthScale>
     <studentId>1057</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_F</forcedBodyTypeFemale>
@@ -836,6 +872,7 @@
   <PawnKindDef Name="BA_PawnKind_Hoshino1stGrade" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Hoshino1stGrade</defName>
     <label>Hoshino1stGrade</label>
+    <healthScale>15.0</healthScale>
     <studentId>1058</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
