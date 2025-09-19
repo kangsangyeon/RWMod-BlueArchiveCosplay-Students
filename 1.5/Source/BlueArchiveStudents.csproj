@@ -109,6 +109,7 @@
     <Compile Include="BA\Rimworld\Harmony\PatchDisableCamera.cs" />
     <Compile Include="BA\Rimworld\Harmony\PatchDisableIMGUI.cs" />
     <Compile Include="BA\Rimworld\Harmony\Harmony_PawnRenderNode_Apparel_Constructor.cs" />
+    <Compile Include="BA\Rimworld\PawnKindDef\PawnKindDefLoader.cs" />
     <Compile Include="BA\Rimworld\PawnKindDef\PawnKindDef.cs" />
     <Compile Include="BA\Rimworld\PawnKindDef\PawnKindDef_Harmony.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\Def\ApparelDef.cs" />
@@ -142,8 +143,8 @@
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_OuterApparelLayer.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_Tail.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_Wing.cs" />
-    <Compile Include="BA\Rimworld\Trait\Trait_Harmony.cs" />
-    <Compile Include="BA\Rimworld\Trait\Trait.cs" />
+    <Compile Include="BA\Rimworld\TraitDef\Trait_Harmony.cs" />
+    <Compile Include="BA\Rimworld\TraitDef\Trait.cs" />
     <Compile Include="BA\Rimworld\WeightTable\CharacterTable.cs" />
     <Compile Include="BA\UI\ContentsWindow.cs" />
     <Compile Include="Common\RimworldEvent\RimworldEvent_Harmony.cs" />

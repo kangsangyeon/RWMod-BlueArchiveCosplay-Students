@@ -1,28 +1,28 @@
-﻿using Verse;
+﻿using System.Collections.Generic;
 using RimWorld;
-using BA;  // 반드시 BA 네임스페이스 포함
-using System.Collections.Generic;
+using Verse;
 
 namespace BA
 {
+    // Verse.PawnKindDef를 상속하여 확장된 커스텀 PawnKindDef (통합형)
     public class PawnKindDef : Verse.PawnKindDef
     {
         public int studentId;
-        public RimWorld.BodyTypeDef forcedBodyType;
-        public RimWorld.BodyTypeDef forcedBodyTypeFemale;
-        public Verse.HeadTypeDef forcedHeadType;
-        public Verse.HeadTypeDef forcedHeadTypeFemale;
+        public BodyTypeDef forcedBodyType;
+        public BodyTypeDef forcedBodyTypeFemale;
+        public HeadTypeDef forcedHeadType;
+        public HeadTypeDef forcedHeadTypeFemale;
         public FaceDef faceDef;
         public EyebrowDef eyebrowDef;
         public WingDef wingDef;
         public TailDef tailDef;
         public EarDef earDef;
         public HornDef hornDef;
-
-        // 주의: HaloDef 클래스를 반드시 별도로 정의해야 하며, 네임스페이스가 같아야 합니다.
+        // HaloDef는 별도 정의 필요, 같은 네임스페이스 여야 함
         public HaloDef haloDef;
-
-        // TraitDef 리스트 필드 추가 (XML <traits> 태그 매핑용)
+        // XML 내 <traits> 태그와 매핑할 리스트
         public List<TraitDef> traits = new List<TraitDef>();
+        // healthScale 추가 (체력 배수용)
+        public float healthScale = 1f;
     }
 }

@@ -160,6 +160,7 @@
   <PawnKindDef Name="BA_PawnKind_Shiroko" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Shiroko</defName>
     <label>Shiroko</label>
+    <healthScale>3.5</healthScale>
     <studentId>1008</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
@@ -175,9 +176,9 @@
     </apparelRequired>
 
     <traits>
+      <li>EmotionalBond</li> 
       <li>Psychopath</li>    <!-- 정상 -->
-      <li>BodyPurist</li>    <!-- 정상 -->
-      <li>HalosPassion</li>       
+      <li>BodyPurist</li>    <!-- 정상 -->     
       <li>Jealous</li>       <!-- 정상 -->
     </traits>
 

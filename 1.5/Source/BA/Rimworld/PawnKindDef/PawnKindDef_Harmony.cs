@@ -12,6 +12,7 @@ namespace BA
      * harmony 함수의 매개변수의 이름은 실제 RimWorld dll에서 정의한 매개변수의 이름과 일치해야 정상 작동함.
      * 따라서 우리의 컨벤션에 맞추려 함부로 변경해서는 안됌.
      */
+
     [HarmonyPatch(typeof(PawnGenerator), "GenerateBodyType")]
     public static class Harmony_PawnGenerator_GenerateBodyType
     {
@@ -40,69 +41,82 @@ namespace BA
         }
     }
 
-    [HarmonyPatch(
-        typeof(PawnGenerator),
-        nameof(PawnGenerator.GeneratePawn),
-        new Type[] { typeof(PawnGenerationRequest) })]
+
+
+    [HarmonyPatch(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), new Type[] { typeof(PawnGenerationRequest) })]
     public static class Harmony_PawnGenerator_GeneratePawn
     {
         [HarmonyPostfix]
-        public static void Postfix(
-            ref Pawn __result,
-            PawnGenerationRequest request)
+        public static void Postfix(ref Pawn __result, PawnGenerationRequest request)
         {
-            var pawn = __result;
-
-            if (__result.kindDef is not BA.PawnKindDef kindDef)
+            Log.Message("[Mod] Harmony_PawnGenerator_GeneratePawn.Postfix 진입 - Pawn 생성 패치 실행");
+            if (__result == null)
                 return;
 
-            // PawnKindDef의 skinColorOverride를 실제 pawn에 강제로 적용함.
-            if (kindDef.skinColorOverride.HasValue)
-                __result.story.skinColorOverride = kindDef.skinColorOverride.Value;
-
-            // PawnKindDef에서 apparelRequired로 지정한 옷이 아닌 옷을 입고 나오는 것을 강제로 막음.
-            // (예: faction의 ideology의 선호 의상을 입고 나오기 등.)
-            var notRequiredApparels =
-                pawn.apparel.WornApparel.Where(a =>
-                    !pawn.kindDef.apparelRequired.Exists(t => t == a.def)).ToArray();
-
-            for (int i = 0; i < notRequiredApparels.Length; ++i)
+            // 최초에 한번만 PawnKindDef를 안전하게 캐스팅
+            if (__result.kindDef is not BA.PawnKindDef kindDef)
             {
-                Log.Message($"apparel not required. destroy.: {notRequiredApparels[i].def.defName}.");
-                notRequiredApparels[i].Destroy();
+                Log.Message($"[Mod] PawnKindDef 타입 캐스팅 실패: {__result.kindDef.defName}");
+                return;
             }
 
-            // PawnKindDef에서 apparelRequired로 지정한 옷을 입고 나오지 않으면, 옷을 생성해서 강제로 입힘.
-            var requiredButNotWornDefs = pawn.kindDef.apparelRequired.Where(r =>
-                !pawn.apparel.WornApparel.Exists(a => a.def == r)).ToArray();
+            var pawn = __result;
 
-            for (int i = 0; i < requiredButNotWornDefs.Length; ++i)
+            // 1) skinColorOverride 강제 적용
+            if (kindDef.skinColorOverride.HasValue)
+                pawn.story.skinColorOverride = kindDef.skinColorOverride.Value;
+
+            // 2) apparelRequired 아닌 옷 제거
+            var notRequiredApparels = pawn.apparel.WornApparel.Where(a =>
+                !pawn.kindDef.apparelRequired.Exists(t => t == a.def)).ToArray();
+            foreach (var apparel in notRequiredApparels)
             {
-                Log.Message($"apparel required but not worn. generate.: {requiredButNotWornDefs[i].defName}.");
-                var apparel = PawnApparelGenerator.GenerateApparelOfDefFor(pawn, requiredButNotWornDefs[i]);
+                Log.Message($"apparel not required. destroy.: {apparel.def.defName}.");
+                apparel.Destroy();
+            }
+
+            // 3) apparelRequired에 있지만 입지 않은 옷 생성 및 착용 강제
+            var requiredButNotWornDefs = pawn.kindDef.apparelRequired.Where(r =>
+                !pawn.apparel.WornApparel.Any(a => a.def == r)).ToArray();
+            foreach (var def in requiredButNotWornDefs)
+            {
+                Log.Message($"apparel required but not worn. generate.: {def.defName}.");
+                var apparel = PawnApparelGenerator.GenerateApparelOfDefFor(pawn, def);
                 pawn.apparel.WornApparel.Add(apparel);
             }
 
-            // PawnKindDef에서 fixedChildBackstories와 fixedAdultBackstories로 지정한 backstory를 강제로 적용함.
+            // 4) fixedChildBackstories와 fixedAdultBackstories 강제 적용
             if (kindDef.fixedChildBackstories.Count > 0)
-                __result.story.Childhood = kindDef.fixedChildBackstories[0];
+                pawn.story.Childhood = kindDef.fixedChildBackstories[0];
             if (kindDef.fixedAdultBackstories.Count > 0)
-                __result.story.Adulthood = kindDef.fixedAdultBackstories[0];
+                pawn.story.Adulthood = kindDef.fixedAdultBackstories[0];
 
-            // 학생 나이로 설정함.
-            var ageTick
-                = GameResource.StudentTable[kindDef.studentId].Age * 3600000L;
+            // 5) 학생 나이 세팅
+            long ageTick = GameResource.StudentTable[kindDef.studentId].Age * 3600000L;
             pawn.ageTracker.AgeBiologicalTicks = ageTick;
             pawn.ageTracker.AgeChronologicalTicks = ageTick;
 
-            // 학생 이름으로 설정함.
+            // 6) 학생 이름 세팅 (일본식 성, 이름 순서)
             var name = GameResource.StudentTable[kindDef.studentId].Name;
             var firstName = BALocalizeKey.StudentFirstName(name).Translate();
             var lastName = BALocalizeKey.StudentLastName(name).Translate();
-            // 일본식 이름으로 표기할것이기 때문에 이름과 성의 순서를 바꿈.
-            __result.Name = new NameTriple(lastName, firstName, firstName);
+            pawn.Name = new NameTriple(lastName, firstName, firstName);
+
+            // 7) baseHealthScale과 PawnKindDef.healthScale을 곱한 최종 체력 배수 적용
+            float baseScale = pawn.RaceProps.baseHealthScale;
+            float finalScale = baseScale * kindDef.healthScale;
+            pawn.RaceProps.baseHealthScale = finalScale;
+
+
+            Log.Message($"[Mod] PawnKindDef.healthScale: {kindDef.healthScale}");
+            Log.Message($"[Mod] 체력 배수 적용: baseHealthScale set to {finalScale} for PawnKind {kindDef.defName}");
+
+            // 체력 상태 강제 초기화 유도 (옵션)
+            pawn.health.Reset();
         }
     }
+
+
 
     [HarmonyPatch(
         typeof(Pawn_AgeTracker),
@@ -218,6 +232,7 @@ namespace BA
         }
     }
 
+
     [HarmonyPatch(
         typeof(PawnCapacitiesHandler),
         nameof(PawnCapacitiesHandler.GetLevel))]
@@ -249,6 +264,47 @@ namespace BA
             // 의식(consciousness)이 10% 이하면 despawn 대상임.
             // pawn.DeSpawn();
             Current.Game.GetComponent<GameComponent_DelayedPawnDestroy>().TryAdd(pawn);
+        }
+    }
+
+    [HarmonyPatch(typeof(Thing))]
+    [HarmonyPatch("SpawnSetup")]
+    class Patch_Corpse_SpawnSetup
+    {
+        static void Postfix(Thing __instance)
+        {
+            // Thing이 시체이고, InnerPawn이 존재하며
+            if (__instance is Corpse corpse && corpse.InnerPawn != null)
+            {
+                // 해당 시체 폰이 BA.PawnKindDef 인지 체크
+                if (corpse.InnerPawn.kindDef.defName == "BA_PawnKindDefName") // 실제 이름으로 교체
+                {
+                    // 시체가 스폰되자마자 삭제 (Despawn)
+                    corpse.DeSpawn(DestroyMode.Vanish);
+                }
+            }
+        }
+    }
+
+    // 폰 사망시 Despawn 처리 (시체 없이 바로 제거)
+    [HarmonyPatch(typeof(Pawn), nameof(Pawn.Kill))]
+    public static class Patch_Pawn_Kill_Prefix
+    {
+        [HarmonyPrefix]
+        public static bool Prefix(Pawn __instance, Verse.DamageInfo? dinfo, Verse.Hediff exactCulprit)
+        {
+            if (__instance.Dead) return false; // 이미 사망했으면 중복 처리 방지
+
+            if (__instance.kindDef is BA.PawnKindDef)
+            {
+                // 폰이 스폰 되어 있고 월드에 존재하면서 즉시 제거 가능하면 Despawn 실시 후 원본 Kill 실행 차단
+                if (__instance.Spawned && __instance.Map != null)
+                {
+                    __instance.DeSpawn(DestroyMode.Vanish);
+                    return false;
+                }
+            }
+            return true; // BA 외 폰은 원래 로직 실행
         }
     }
 }

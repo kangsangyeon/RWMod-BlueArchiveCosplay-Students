@@ -5,6 +5,7 @@
     <defName>BA_Thing_Race</defName>
     <label>blue archive student</label>
     <description>A baseline human, mostly unmodified by gene engineering and mostly unchanged by evolutionary pressures on non-Earth planets.</description>
+
     <race>
       <renderTree>BA_PawnRenderTree</renderTree>
 
