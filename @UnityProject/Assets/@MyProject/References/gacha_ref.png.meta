@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 5c8a91d1720c12848a1611e2ca5f668a
+guid: 7b0c34a2db2940446abc6c73c1adda72
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3161853007137300800
-    second: Common_Icon_Point_0
+      213: 2247259093954857784
+    second: gacha_ref_0
+  - first:
+      213: 2094290556694217466
+    second: gacha_ref_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -43,13 +46,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 21, y: 24, z: 21, w: 23}
+  spriteBorder: {x: 122, y: 56, z: 174, w: 68}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -90,13 +93,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Common_Icon_Point_0
+      name: gacha_ref_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 23
-        width: 70
-        height: 56
+        x: 0
+        y: 0
+        width: 1785
+        height: 983
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,8 +107,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0416b6ace8821eb20800000000000000
-      internalID: 3161853007137300800
+      spriteID: 83b027d4d3edf2f10800000000000000
+      internalID: 2247259093954857784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gacha_ref_1
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 54
+        width: 1486
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2c6305a2a601d10800000000000000
+      internalID: 2094290556694217466
       vertices: []
       indices: 
       edges: []
