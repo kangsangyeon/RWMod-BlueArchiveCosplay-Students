@@ -9,17 +9,6 @@
 
       <children>
 
-        <!-- 헤일로 레이어 -->
-        <li Class="BA.PawnRenderNodeProperties_LayerByDirection">
-          <debugLabel>BA_Halo</debugLabel>
-          <nodeClass>BA.PawnRenderNode_HaloLayer</nodeClass>
-          <workerClass>BA.PawnRenderNodeWorker_LayerByDirection</workerClass>
-          <rotDrawMode>Fresh, Rotting</rotDrawMode>
-          <baseLayer>10</baseLayer>    <!-- South 방향, 낮은 값으로 설정 -->
-          <northLayer>85</northLayer>  <!-- North 방향, 앞쪽 위치 -->
-        </li>
-
-
         <!-- 모자 Back 레이어 -->
         <li Class="BA.PawnRenderNodeProperties_ThingLayer">
           <debugLabel>BA_Headgear_Back</debugLabel>
@@ -79,6 +68,16 @@
           <baseLayer>4</baseLayer>
           <northLayer>64</northLayer>
           <isRight>true</isRight>
+        </li>
+
+        <!-- 헤일로 레이어 -->
+        <li Class="BA.PawnRenderNodeProperties_Halo">
+          <debugLabel>BA_Halo</debugLabel>
+          <nodeClass>BA.PawnRenderNode_Halo</nodeClass>
+          <workerClass>BA.PawnRenderNodeWorker_Halo</workerClass>
+          <rotDrawMode>Fresh, Rotting</rotDrawMode>
+          <baseLayer>10</baseLayer>    <!-- South 방향, 낮은 값으로 설정 -->
+          <northLayer>85</northLayer>  <!-- North 방향, 앞쪽 위치 -->
         </li>
 
         <li>

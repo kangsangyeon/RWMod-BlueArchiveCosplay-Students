@@ -1,26 +1,13 @@
-﻿using System.Xml;
-using Verse;
-using RimWorld;
+﻿using Verse;
 
 namespace BA
 {
-    public class PawnRenderNodeProperties_Halo : PawnRenderNodeProperties
+    public class PawnRenderNodeProperties_Halo : PawnRenderNodeProperties, INodeProperties_LayerByDirection
     {
-        public int northLayer = 0;
+        public float? southLayer;
+        public float? northLayer;
 
-        // override 제거
-        public PawnRenderNode CreateNode(Pawn pawn, PawnRenderTree tree)
-        {
-            return new PawnRenderNode_HaloLayer(pawn, this, tree);
-        }
-
-        // override, base 호출 제거
-        public void LoadDataFromXmlCustom(XmlNode xmlRoot)
-        {
-            if (xmlRoot.Attributes?["northLayer"] != null)
-            {
-                int.TryParse(xmlRoot.Attributes["northLayer"].Value, out northLayer);
-            }
-        }
+        public float? SouthLayer => southLayer;
+        public float? NorthLayer => northLayer;
     }
 }
