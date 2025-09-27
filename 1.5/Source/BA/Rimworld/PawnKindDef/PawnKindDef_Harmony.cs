@@ -84,6 +84,7 @@ namespace BA
             var lastName = BALocalizeKey.StudentLastName(name).Translate();
             pawn.Name = new NameTriple(lastName, firstName, firstName);
 
+            // 7) 학생 체력 세팅 
             float GetTotalHealth(Pawn p)
             {
                 float total = 0f;

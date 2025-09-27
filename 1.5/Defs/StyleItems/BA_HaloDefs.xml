@@ -11,6 +11,12 @@
   </BA.HaloDef>
 
   <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Shiroko</defName>
+    <label>Shiroko Halo</label>
+    <texPath>BA/Shiroko/Shiroko_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
     <defName>BA_Halo_Mika</defName>
     <label>Mika Halo</label>
     <texPath>BA/Mika/Mika_Halo</texPath>

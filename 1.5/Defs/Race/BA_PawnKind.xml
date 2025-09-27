@@ -18,7 +18,7 @@
     <!-- (250605 추가: apparelRequired로 지정한 옷을 안입고 나오거나, 지정한 옷 이외의 옷을 착용하는 문제가 계속되어서 harmony 코드로 강제함.
      예: faction의 ideology의 선호 의상 입고 나오는 문제 등.) -->
 
-    <!-- healthScale 정보 : 작은 체형의 학생은 7.0, 기본으로는 10.0 배수, 최강자 라인은 20.0을 받게 한다. -->
+    <!-- healthScale 정보 : 지원,힐러 학생은 7.0, 공격군은 10.0 배수, 최강자,탱커 라인은 20.0을 받게 한다. -->
 
     <apparelMoney>0~0</apparelMoney>
 
@@ -170,13 +170,14 @@
     <label>Shiroko</label>
     <healthScale>15.0</healthScale>
     <studentId>1008</studentId>
-    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <skinColorOverride>(255,236,228)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
     <forcedHair>BA_Hair_Shiroko</forcedHair>
     <faceDef>BA_Face_Shiroko</faceDef>
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Shiroko</eyebrowDef>
+    <haloDef>BA_Halo_Shiroko</haloDef>
 
     <apparelRequired>
       <li>BA_Apparel_Shiroko_Apparel</li>
@@ -185,6 +186,7 @@
 
     <traits>
       <li>EmotionalBond</li> 
+      <li>Ignore</li>
       <li>Psychopath</li>    <!-- 정상 -->
       <li>BodyPurist</li>    <!-- 정상 -->     
       <li>Jealous</li>       <!-- 정상 -->

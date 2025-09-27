@@ -610,6 +610,7 @@
       </tags>
       <wornGraphicPath>BA/Ibuki/Apparel/Ibuki_Outer</wornGraphicPath>
     </apparel>
+    <texPathFrontLayer>BA/Ibuki/Apparel/Ibuki_Outer_Front</texPathFrontLayer>
     <texPathBackLayer>BA/Ibuki/Apparel/Ibuki_OuterLining</texPathBackLayer>
   </ThingDef>
 
