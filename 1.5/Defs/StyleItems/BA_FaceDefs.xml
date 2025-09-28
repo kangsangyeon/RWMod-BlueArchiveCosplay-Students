@@ -71,6 +71,12 @@
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
+    <defName>BA_Face_Satsuki</defName>
+    <label>Satsuki Face</label>
+    <texPath>BA/Satsuki/Satsuki_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Ibuki</defName>
     <label>Ibuki Face</label>
     <texPath>BA/Ibuki/Ibuki_Face</texPath>
@@ -182,6 +188,12 @@
     <defName>BA_Face_Mari</defName>
     <label>Mari Face</label>
     <texPath>BA/Mari/Mari_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef ParentName="BA_Face_Base">
+    <defName>BA_Face_Michiru</defName>
+    <label>Michiru Face</label>
+    <texPath>BA/Michiru/Michiru_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">

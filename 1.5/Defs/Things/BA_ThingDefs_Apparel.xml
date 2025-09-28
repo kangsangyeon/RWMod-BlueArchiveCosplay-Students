@@ -525,6 +525,25 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Satsuki_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Satsuki_OuterApparel</defName>
+    <label>BA Satsuki Outer Apparel</label>
+    <description>this is a Satsuki apparel.</description>
+    <graphicData>
+      <texPath>BA/Satsuki/Apparel/Satsuki_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleKidA</li>
+      </tags>
+      <wornGraphicPath>BA/Satsuki/Apparel/Satsuki_Outer</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Iroha_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Iroha_Apparel</defName>
     <label>BA Iroha Apparel</label>
@@ -1085,6 +1104,24 @@
       <wornGraphicPath>BA/Mari/Apparel/Mari_Headgear</wornGraphicPath>
     </apparel>
     <texPathBackLayer>BA/Mari/Apparel/Mari_HeadgearLining</texPathBackLayer>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Michiru_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Michiru_Apparel</defName>
+    <label>BA Michiru Apparel</label>
+    <description>this is a Michiru apparel.</description>
+    <graphicData>
+      <texPath>BA/Michiru/Apparel/Michiru_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleType2A</li>
+      </tags>
+      <wornGraphicPath>BA/Michiru/Apparel/Michiru_Apparel</wornGraphicPath>
+    </apparel>
   </ThingDef>
 
   <ThingDef Name="BA_Apparel_Aru_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">

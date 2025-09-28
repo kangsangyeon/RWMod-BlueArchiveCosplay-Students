@@ -93,6 +93,14 @@
     <texPathBackLayer>BA/Makoto/Makoto_BackHair</texPathBackLayer>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Satsuki" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Satsuki</defName>
+    <label>Satsuki Hair</label>
+    <texPath>BA/Satsuki/Satsuki_Hair</texPath>
+    <texPathBackLayer>BA/Satsuki/Satsuki_BackHair</texPathBackLayer>
+    <texPathFrontLayer>BA/Satsuki/Satsuki_FrontHair</texPathFrontLayer>
+  </HairDef>
+
   <HairDef Name="BA_Hair_Ibuki" ParentName="BA_Hair_Base" Class="BA.HairDef">
     <defName>BA_Hair_Ibuki</defName>
     <label>Ibuki Hair</label>
@@ -243,6 +251,14 @@
     <texPath>BA/Mari/Mari_Hair</texPath>
     <texPathBackLayer>BA/Mari/Mari_BackHair</texPathBackLayer>
     <texPathFrontLayer>BA/Mari/Mari_FrontHair</texPathFrontLayer>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Michiru" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Michiru</defName>
+    <label>Michiru Hair</label>
+    <texPath>BA/Michiru/Michiru_Hair</texPath>
+    <texPathBackLayer>BA/Michiru/Michiru_BackHair</texPathBackLayer>
+    <texPathFrontLayer>BA/Michiru/Michiru_FrontHair</texPathFrontLayer>
   </HairDef>
 
   <HairDef Name="BA_Hair_Aru" ParentName="BA_Hair_Base" Class="BA.HairDef">

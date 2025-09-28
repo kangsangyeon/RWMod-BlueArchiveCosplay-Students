@@ -7,8 +7,8 @@
   <EmotionalBond.degreeDatas.0.description>{0}의 감정을 강력한 힘으로 바꾸고 전투 능력과 저항력을 강화합니다.</EmotionalBond.degreeDatas.0.description>
 
   <Ignore.label>무시</Ignore.label>
-  <Ignore.description>{0}의 초월적인 육체는 대부분의 피해를 무시하거나 크게 감소시킵니다.</Ignore.description>
+  <Ignore.description>{0}의 초월적인 육체는 대부분의 피해를 무시하거나 크게 감소시킵니다.\n\n    피해를 무시할 확률 90%</Ignore.description>
   <Ignore.degreeDatas.0.label>무시</Ignore.degreeDatas.0.label>
-  <Ignore.degreeDatas.0.description>{0}의 초월적인 육체 덕분에 피해를 무시하거나 감소시킵니다.</Ignore.degreeDatas.0.description>
+  <Ignore.degreeDatas.0.description>{0}의 초월적인 육체 덕분에 피해를 무시하거나 감소시킵니다.\n\n    피해를 무시할 확률 90%</Ignore.degreeDatas.0.description>
   
 </LanguageData>

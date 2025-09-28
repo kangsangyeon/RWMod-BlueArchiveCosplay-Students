@@ -34,4 +34,10 @@
     <texPath>BA/Seia/Seia_Tail</texPath>
   </BA.TailDef>
 
+  <BA.TailDef ParentName="BA_Tail_Base">
+    <defName>BA_Tail_Michiru</defName>
+    <label>BA Michiru Tail</label>
+    <texPath>BA/Michiru/Michiru_Tail</texPath>
+  </BA.TailDef>
+
 </Defs>

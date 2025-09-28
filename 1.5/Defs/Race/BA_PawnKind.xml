@@ -41,7 +41,7 @@
   <PawnKindDef Name="BA_PawnKind_Yuzu" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Yuzu</defName>
     <label>Yuzu</label>
-    <healthScale>10.0</healthScale>
+    <healthScale>20.0</healthScale>
     <studentId>1003</studentId>
     <skinColorOverride>(255,245,242)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Thin_A</forcedBodyTypeFemale>
@@ -189,6 +189,7 @@
 
     <traits>
       <li>EmotionalBond</li>
+      <li>Ignore</li>
       <li>Psychopath</li>    <!-- 정상 -->
       <li>BodyPurist</li>    <!-- 정상 -->
       <li>Jealous</li>       <!-- 정상 -->
@@ -300,6 +301,34 @@
     </fixedChildBackstories>
     <fixedAdultBackstories>
       <li>BA_Backstory_Adulthood_Makoto</li>
+    </fixedAdultBackstories>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Satsuki" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Satsuki</defName>
+    <label>Satsuki</label>
+    <healthScale>7.0</healthScale>
+    <studentId>1013</studentId>
+    <skinColorOverride>(255,236,228)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_F</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Satsuki</forcedHair>
+    <hornDef>BA_Horn_Satsuki</hornDef>
+    <faceDef>BA_Face_Satsuki</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Satsuki</eyebrowDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Satsuki_Headgear</li>
+      <li>BA_Apparel_Satsuki_Apparel</li>
+      <li>BA_Apparel_Satsuki_OuterApparel</li>
+    </apparelRequired>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Gehenna</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Satsuki</li>
     </fixedAdultBackstories>
   </PawnKindDef>
 
@@ -749,6 +778,25 @@
     <apparelRequired>
       <li>BA_Apparel_Mari_Headgear</li>
       <li>BA_Apparel_Mari_Apparel</li>
+    </apparelRequired>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Michiru" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Michiru</defName>
+    <label>Michiru</label>
+    <healthScale>15.0</healthScale>
+    <studentId>1043</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Type2_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Michiru</forcedHair>
+    <faceDef>BA_Face_Michiru</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Michiru</eyebrowDef>
+    <tailDef>BA_Tail_Michiru</tailDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Michiru_Apparel</li>
     </apparelRequired>
   </PawnKindDef>
 
