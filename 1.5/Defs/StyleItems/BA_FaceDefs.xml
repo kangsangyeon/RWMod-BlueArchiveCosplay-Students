@@ -197,6 +197,18 @@
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
+    <defName>BA_Face_Izuna</defName>
+    <label>Izuna Face</label>
+    <texPath>BA/Izuna/Izuna_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef ParentName="BA_Face_Base">
+    <defName>BA_Face_Tsukuyo</defName>
+    <label>Tsukuyo Face</label>
+    <texPath>BA/Tsukuyo/Tsukuyo_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Aru</defName>
     <label>Aru Face</label>
     <texPath>BA/Aru/Aru_Face</texPath>

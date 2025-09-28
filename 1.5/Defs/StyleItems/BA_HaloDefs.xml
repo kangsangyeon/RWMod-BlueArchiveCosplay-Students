@@ -17,9 +17,33 @@
   </BA.HaloDef>
 
   <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Satsuki</defName>
+    <label>Satsuki Halo</label>
+    <texPath>BA/Satsuki/Satsuki_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
     <defName>BA_Halo_Mika</defName>
     <label>Mika Halo</label>
     <texPath>BA/Mika/Mika_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Michiru</defName>
+    <label>Michiru Halo</label>
+    <texPath>BA/Michiru/Michiru_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Izuna</defName>
+    <label>Izuna Halo</label>
+    <texPath>BA/Izuna/Izuna_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Tsukuyo</defName>
+    <label>Tsukuyo Halo</label>
+    <texPath>BA/Tsukuyo/Tsukuyo_Halo</texPath>
   </BA.HaloDef>
 
 </Defs>

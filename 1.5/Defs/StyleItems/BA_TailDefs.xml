@@ -40,4 +40,10 @@
     <texPath>BA/Michiru/Michiru_Tail</texPath>
   </BA.TailDef>
 
+  <BA.TailDef ParentName="BA_Tail_Base">
+    <defName>BA_Tail_Izuna</defName>
+    <label>BA Izuna Tail</label>
+    <texPath>BA/Izuna/Izuna_Tail</texPath>
+  </BA.TailDef>
+
 </Defs>

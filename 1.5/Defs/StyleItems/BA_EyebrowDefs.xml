@@ -191,6 +191,18 @@
   </BA.EyebrowDef>
 
   <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
+    <defName>BA_Eyebrow_Izuna</defName>
+    <label>Izuna Eyebrow</label>
+    <texPath>BA/Izuna/Izuna_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
+    <defName>BA_Eyebrow_Tsukuyo</defName>
+    <label>Tsukuyo Eyebrow</label>
+    <texPath>BA/Tsukuyo/Tsukuyo_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Aru</defName>
     <label>Aru Eyebrow</label>
     <texPath>BA/Aru/Aru_Eyebrow</texPath>

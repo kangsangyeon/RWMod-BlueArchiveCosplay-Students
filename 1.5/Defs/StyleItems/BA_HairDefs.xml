@@ -261,6 +261,22 @@
     <texPathFrontLayer>BA/Michiru/Michiru_FrontHair</texPathFrontLayer>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Izuna" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Izuna</defName>
+    <label>Izuna Hair</label>
+    <texPath>BA/Izuna/Izuna_Hair</texPath>
+    <texPathBackLayer>BA/Izuna/Izuna_BackHair</texPathBackLayer>
+    <texPathFrontLayer>BA/Izuna/Izuna_FrontHair</texPathFrontLayer>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Tsukuyo" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Tsukuyo</defName>
+    <label>Tsukuyo Hair</label>
+    <texPath>BA/Tsukuyo/Tsukuyo_Hair</texPath>
+    <texPathBackLayer>BA/Tsukuyo/Tsukuyo_BackHair</texPathBackLayer>
+    <texPathFrontLayer>BA/Tsukuyo/Tsukuyo_FrontHair</texPathFrontLayer>
+  </HairDef>
+
   <HairDef Name="BA_Hair_Aru" ParentName="BA_Hair_Base" Class="BA.HairDef">
     <defName>BA_Hair_Aru</defName>
     <label>Aru Hair</label>

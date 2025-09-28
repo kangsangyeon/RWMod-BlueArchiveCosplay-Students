@@ -1124,6 +1124,42 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Izuna_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Izuna_Apparel</defName>
+    <label>BA Izuna Apparel</label>
+    <description>this is a Izuna apparel.</description>
+    <graphicData>
+      <texPath>BA/Izuna/Apparel/Izuna_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleType2C</li>
+      </tags>
+      <wornGraphicPath>BA/Izuna/Apparel/Izuna_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef> 
+
+  <ThingDef Name="BA_Apparel_Tsukuyo_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Tsukuyo_Apparel</defName>
+    <label>BA Tsukuyo Apparel</label>
+    <description>this is a Tsukuyo apparel.</description>
+    <graphicData>
+      <texPath>BA/Tsukuyo/Apparel/Tsukuyo_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleTallF</li>
+      </tags>
+      <wornGraphicPath>BA/Tsukuyo/Apparel/Tsukuyo_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef> 
+  
   <ThingDef Name="BA_Apparel_Aru_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Aru_Apparel</defName>
     <label>BA Aru Apparel</label>
