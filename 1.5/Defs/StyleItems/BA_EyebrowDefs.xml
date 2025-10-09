@@ -227,6 +227,24 @@
   </BA.EyebrowDef>
 
   <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
+    <defName>BA_Eyebrow_Wakamo</defName>
+    <label>Wakamo Eyebrow</label>
+    <texPath>BA/Wakamo/Wakamo_Eyebrow</texPath>
+  </BA.EyebrowDef>  
+
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
+    <defName>BA_Eyebrow_Akira</defName>
+    <label>Akira Eyebrow</label>
+    <texPath>BA/Akira/Akira_Eyebrow</texPath>
+  </BA.EyebrowDef>  
+
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
+    <defName>BA_Eyebrow_Kai</defName>
+    <label>Kai Eyebrow</label>
+    <texPath>BA/Kai/Kai_Eyebrow</texPath>
+  </BA.EyebrowDef>  
+  
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_ShirokoTerror</defName>
     <label>ShirokoTerror Eyebrow</label>
     <texPath>BA/ShirokoTerror/ShirokoTerror_Eyebrow</texPath>

@@ -11,10 +11,58 @@
   </BA.HaloDef>
 
   <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Yuzu</defName>
+    <label>Yuzu Halo</label>
+    <texPath>BA/Yuzu/Yuzu_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Momoi</defName>
+    <label>Momoi Halo</label>
+    <texPath>BA/Momoi/Momoi_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Midori</defName>
+    <label>Midori Halo</label>
+    <texPath>BA/Midori/Midori_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Aris</defName>
+    <label>Aris Halo</label>
+    <texPath>BA/Aris/Aris_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Hoshino</defName>
+    <label>Hoshino Halo</label>
+    <texPath>BA/Hoshino/Hoshino_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
     <defName>BA_Halo_Shiroko</defName>
     <label>Shiroko Halo</label>
     <texPath>BA/Shiroko/Shiroko_Halo</texPath>
   </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Nonomi</defName>
+    <label>Nonomi Halo</label>
+    <texPath>BA/Nonomi/Nonomi_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Serika</defName>
+    <label>Serika Halo</label>
+    <texPath>BA/Serika/Serika_Halo</texPath>
+  </BA.HaloDef>  
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Ayane</defName>
+    <label>Ayane Halo</label>
+    <texPath>BA/Ayane/Ayane_Halo</texPath>
+  </BA.HaloDef> 
 
   <BA.HaloDef ParentName="BA_Halo_Base">
     <defName>BA_Halo_Satsuki</defName>
@@ -23,9 +71,21 @@
   </BA.HaloDef>
 
   <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Nagisa</defName>
+    <label>Nagisa Halo</label>
+    <texPath>BA/Nagisa/Nagisa_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
     <defName>BA_Halo_Mika</defName>
     <label>Mika Halo</label>
     <texPath>BA/Mika/Mika_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Seia</defName>
+    <label>Seia Halo</label>
+    <texPath>BA/Seia/Seia_Halo</texPath>
   </BA.HaloDef>
 
   <BA.HaloDef ParentName="BA_Halo_Base">
@@ -45,5 +105,23 @@
     <label>Tsukuyo Halo</label>
     <texPath>BA/Tsukuyo/Tsukuyo_Halo</texPath>
   </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Wakamo</defName>
+    <label>Wakamo Halo</label>
+    <texPath>BA/Wakamo/Wakamo_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Akira</defName>
+    <label>Akira Halo</label>
+    <texPath>BA/Akira/Akira_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Kai</defName>
+    <label>Kai Halo</label>
+    <texPath>BA/Kai/Kai_Halo</texPath>
+  </BA.HaloDef>  
 
 </Defs>

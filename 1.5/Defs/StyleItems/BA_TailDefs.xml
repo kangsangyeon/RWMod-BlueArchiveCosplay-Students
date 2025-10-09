@@ -46,4 +46,16 @@
     <texPath>BA/Izuna/Izuna_Tail</texPath>
   </BA.TailDef>
 
+  <BA.TailDef ParentName="BA_Tail_Base">
+    <defName>BA_Tail_Wakamo</defName>
+    <label>BA Wakamo Tail</label>
+    <texPath>BA/Wakamo/Wakamo_Tail</texPath>
+  </BA.TailDef>
+
+  <BA.TailDef ParentName="BA_Tail_Base">
+    <defName>BA_Tail_Akira</defName>
+    <label>BA Akira Tail</label>
+    <texPath>BA/Akira/Akira_Tail</texPath>
+  </BA.TailDef>
+
 </Defs>

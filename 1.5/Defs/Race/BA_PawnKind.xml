@@ -50,10 +50,17 @@
     <faceDef>BA_Face_Yuzu</faceDef>
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Yuzu</eyebrowDef>
+    <haloDef>BA_Halo_Yuzu</haloDef>
 
     <apparelRequired>
       <li>BA_Apparel_Yuzu_OuterApparel</li>
     </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
 
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Millennium</li>
@@ -76,11 +83,18 @@
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Momoi</eyebrowDef>
     <tailDef>BA_Tail_Momoi</tailDef>
+    <haloDef>BA_Halo_Momoi</haloDef>
 
     <apparelRequired>
       <li>BA_Apparel_Momoi_Apparel</li>
       <li>BA_Apparel_Momoi_OuterApparel</li>
     </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
 
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Millennium</li>
@@ -103,11 +117,18 @@
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Midori</eyebrowDef>
     <tailDef>BA_Tail_Midori</tailDef>
+    <haloDef>BA_Halo_Midori</haloDef>
 
     <apparelRequired>
       <li>BA_Apparel_Midori_Apparel</li>
       <li>BA_Apparel_Midori_OuterApparel</li>
     </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
 
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Millennium</li>
@@ -129,11 +150,18 @@
     <faceDef>BA_Face_Aris</faceDef>
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Aris</eyebrowDef>
+    <haloDef>BA_Halo_Aris</haloDef>
 
     <apparelRequired>
       <li>BA_Apparel_Aris_Apparel</li>
       <li>BA_Apparel_Aris_OuterApparel</li>
     </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
 
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Millennium</li>
@@ -155,10 +183,17 @@
     <faceDef>BA_Face_Hoshino</faceDef>
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Hoshino</eyebrowDef>
+    <haloDef>BA_Halo_Hoshino</haloDef>
 
     <apparelRequired>
       <li>BA_Apparel_Hoshino_Apparel</li>
     </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
 
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Abydos</li>
@@ -215,11 +250,18 @@
     <faceDef>BA_Face_Nonomi</faceDef>
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Nonomi</eyebrowDef>
+    <haloDef>BA_Halo_Nonomi</haloDef>
 
     <apparelRequired>
       <li>BA_Apparel_Nonomi_Apparel</li>
       <li>BA_Apparel_Nonomi_OuterApparel</li>
     </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
 
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Abydos</li>
@@ -241,11 +283,18 @@
     <faceDef>BA_Face_Serika</faceDef>
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Serika</eyebrowDef>
+    <haloDef>BA_Halo_Serika</haloDef>
 
     <apparelRequired>
       <li>BA_Apparel_Serika_Apparel</li>
       <li>BA_Apparel_Serika_OuterApparel</li>
     </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
 
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Abydos</li>
@@ -267,11 +316,18 @@
     <faceDef>BA_Face_Ayane</faceDef>
     <earDef>BA_Ear_Pointy</earDef>
     <eyebrowDef>BA_Eyebrow_Ayane</eyebrowDef>
+    <haloDef>BA_Halo_Ayane</haloDef>
 
     <apparelRequired>
       <li>BA_Apparel_Ayane_Apparel</li>
       <li>BA_Apparel_Ayane_OuterApparel</li>
     </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
 
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Abydos</li>
@@ -376,10 +432,17 @@
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Nagisa</eyebrowDef>
     <wingDef>BA_Wing_Nagisa</wingDef>
+    <haloDef>BA_Halo_Nagisa</haloDef>
 
     <apparelRequired>
       <li>BA_Apparel_Nagisa_Apparel</li>
     </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
 
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Trinity</li>
@@ -404,14 +467,15 @@
     <wingDef>BA_Wing_Mika</wingDef>
     <haloDef>BA_Halo_Mika</haloDef>
 
-    <traits>
-      <li>Tough</li>          <!-- 강인함 -->
-      <li>Brawler</li>        <!-- 난폭함 -->
-    </traits>
-
     <apparelRequired>
       <li>BA_Apparel_Mika_Apparel</li>
     </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
 
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Trinity</li>
@@ -434,10 +498,17 @@
     <earDef>BA_Ear_Normal</earDef>
     <eyebrowDef>BA_Eyebrow_Seia</eyebrowDef>
     <tailDef>BA_Tail_Seia</tailDef>
+    <haloDef>BA_Halo_Seia</haloDef>
 
     <apparelRequired>
       <li>BA_Apparel_Seia_Apparel</li>
     </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
 
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Trinity</li>
@@ -666,6 +737,13 @@
     <apparelRequired>
       <li>BA_Apparel_Hifumi_Apparel</li>
     </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
+
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Azusa" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
@@ -826,7 +904,7 @@
   <PawnKindDef Name="BA_PawnKind_Tsukuyo" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Tsukuyo</defName>
     <label>Tsukuyo</label>
-    <healthScale>15.0</healthScale>
+    <healthScale>20.0</healthScale>
     <studentId>1045</studentId>
     <skinColorOverride>(255,236,228)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Tall_F</forcedBodyTypeFemale>
@@ -845,7 +923,7 @@
   <PawnKindDef Name="BA_PawnKind_Aru" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Aru</defName>
     <label>Aru</label>
-    <healthScale>10.0</healthScale>
+    <healthScale>15.0</healthScale>
     <studentId>1046</studentId>
     <skinColorOverride>(255,236,228)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
@@ -871,7 +949,7 @@
   <PawnKindDef Name="BA_PawnKind_Mutsuki" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Mutsuki</defName>
     <label>Mutsuki</label>
-    <healthScale>10.0</healthScale>
+    <healthScale>15.0</healthScale>
     <studentId>1047</studentId>
     <skinColorOverride>(255,236,228)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
@@ -922,7 +1000,7 @@
   <PawnKindDef Name="BA_PawnKind_Haruka" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_Haruka</defName>
     <label>Haruka</label>
-    <healthScale>15.0</healthScale>
+    <healthScale>20.0</healthScale>
     <studentId>1049</studentId>
     <skinColorOverride>(255,236,228)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Type2_C</forcedBodyTypeFemale>
@@ -944,6 +1022,72 @@
       <li>BA_Backstory_Adulthood_Haruka</li>
     </fixedAdultBackstories>
   </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Wakamo" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Wakamo</defName>
+    <label>Wakamo</label>
+    <healthScale>20.0</healthScale>
+    <studentId>1050</studentId>
+    <skinColorOverride>(255,236,228)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Wakamo</forcedHair>
+    <faceDef>BA_Face_Wakamo</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Wakamo</eyebrowDef>
+    <tailDef>BA_Tail_Wakamo</tailDef>
+    <haloDef>BA_Halo_Wakamo</haloDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Wakamo_Headgear</li>
+      <li>BA_Apparel_Wakamo_Apparel</li>
+    </apparelRequired>
+
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Akira" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Akira</defName>
+    <label>Akira</label>
+    <healthScale>7.0</healthScale>
+    <studentId>1051</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_C</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Akira</forcedHair>
+    <faceDef>BA_Face_Akira</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Akira</eyebrowDef>
+    <tailDef>BA_Tail_Akira</tailDef>
+    <haloDef>BA_Halo_Akira</haloDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Akira_Apparel</li>
+      <li>BA_Apparel_Akira_OuterApparel</li>
+    </apparelRequired>
+
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Kai" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Kai</defName>
+    <label>Kai</label>
+    <healthScale>7.0</healthScale>
+    <studentId>1052</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_F</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Kai</forcedHair>
+    <faceDef>BA_Face_Kai</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Kai</eyebrowDef>
+    <haloDef>BA_Halo_Kai</haloDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Kai_Headgear</li>
+      <li>BA_Apparel_Kai_Apparel</li>
+      <li>BA_Apparel_Kai_OuterApparel</li>
+    </apparelRequired>
+
+  </PawnKindDef>  
 
   <PawnKindDef Name="BA_PawnKind_ShirokoTerror" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
     <defName>BA_PawnKind_ShirokoTerror</defName>

@@ -309,6 +309,30 @@
     <texPathFrontLayer>BA/Haruka/Haruka_FrontHair</texPathFrontLayer>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Wakamo" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Wakamo</defName>
+    <label>Wakamo Hair</label>
+    <texPath>BA/Wakamo/Wakamo_Hair</texPath>
+    <texPathBackLayer>BA/Wakamo/Wakamo_BackHair</texPathBackLayer>
+    <texPathFrontLayer>BA/Wakamo/Wakamo_FrontHair</texPathFrontLayer>
+  </HairDef>  
+
+  <HairDef Name="BA_Hair_Akira" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Akira</defName>
+    <label>Akira Hair</label>
+    <texPath>BA/Akira/Akira_Hair</texPath>
+    <texPathBackLayer>BA/Akira/Akira_BackHair</texPathBackLayer>
+    <texPathFrontLayer>BA/Akira/Akira_FrontHair</texPathFrontLayer>
+  </HairDef>  
+
+  <HairDef Name="BA_Hair_Kai" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Kai</defName>
+    <label>Kai Hair</label>
+    <texPath>BA/Kai/Kai_Hair</texPath>
+    <texPathBackLayer>BA/Kai/Kai_BackHair</texPathBackLayer>
+    <texPathFrontLayer>BA/Kai/Kai_FrontHair</texPathFrontLayer>
+  </HairDef>  
+
   <HairDef Name="BA_Hair_ShirokoTerror" ParentName="BA_Hair_Base" Class="BA.HairDef">
     <defName>BA_Hair_ShirokoTerror</defName>
     <label>ShirokoTerror Hair</label>

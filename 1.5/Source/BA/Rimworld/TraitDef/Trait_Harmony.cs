@@ -21,33 +21,55 @@ namespace BA
         }
     }
 
-    [HarmonyPatch(typeof(Pawn_HealthTracker), "PreApplyDamage")]
-    public static class Patch_BlockDamage_PreApplyDamage
+    [HarmonyPatch(typeof(Thing), "TakeDamage")]
+    public static class Patch_BlockDamage_TakeDamage
     {
-        private static readonly FieldInfo PawnFieldInfo =
-            typeof(Pawn_HealthTracker).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
-
+        private static int recursionDepth = 0;
+        private const int MaxRecursionDepth = 10;
         private const float BlockChance = 0.9f;
 
-        static bool Prefix(ref DamageInfo dinfo, Pawn_HealthTracker __instance)
+        static bool Prefix(ref DamageInfo dinfo, Thing __instance)
         {
-            Pawn pawn = (Pawn)PawnFieldInfo.GetValue(__instance);
-            if (pawn == null || pawn.Dead)
-                return true;
-
-            TraitDef ignoreTrait = DefDatabase<TraitDef>.GetNamedSilentFail("Ignore");
-            if (ignoreTrait == null)
-                return true;
-
-            if (pawn.story?.traits?.HasTrait(ignoreTrait) == true)
+            recursionDepth++;
+            if (recursionDepth > MaxRecursionDepth)
             {
-                if (Rand.Value < BlockChance)
-                {
-                    MoteMaker.ThrowText(pawn.Position.ToVector3Shifted(), pawn.Map, "Block!", Color.green);
-                    return false; // 피해 차단 (회피)
-                }
+                Log.Warning("Max recursion depth exceeded in TakeDamage patch. Skipping to prevent stack overflow.");
+                recursionDepth--;
+                return true;
             }
-            return true; // 피해 정상 진행
+
+            try
+            {
+                if (!(__instance is Pawn pawn) || pawn.Dead || !pawn.Spawned || pawn.Map == null)
+                    return true;
+
+                TraitDef ignoreTrait = DefDatabase<TraitDef>.GetNamedSilentFail("Ignore");
+                if (ignoreTrait == null)
+                    return true;
+
+                if (pawn.story?.traits?.HasTrait(ignoreTrait) == true)
+                {
+                    if (dinfo.Def == DamageDefOf.Bullet)
+                    {
+                        if (Rand.Value < BlockChance)
+                        {
+                            MoteMaker.ThrowText(pawn.Position.ToVector3Shifted(), pawn.Map, "Block!", Color.green);
+                            dinfo.SetAmount(0f); // 피해 차단: Amount를 0으로 설정하여 피해 무시, 원본 메서드 실행
+                            return true; // 원본 TakeDamage 진행 (0 damage)
+                        }
+                        else
+                        {
+                            dinfo.Def = DamageDefOf.Blunt;
+                            return true; // 변경된 피해로 원본 TakeDamage 진행
+                        }
+                    }
+                }
+                return true;
+            }
+            finally
+            {
+                recursionDepth--;
+            }
         }
     }
 

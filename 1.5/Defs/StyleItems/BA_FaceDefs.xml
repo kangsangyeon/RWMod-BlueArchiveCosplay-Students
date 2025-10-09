@@ -233,6 +233,24 @@
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
+    <defName>BA_Face_Wakamo</defName>
+    <label>Wakamo Face</label>
+    <texPath>BA/Wakamo/Wakamo_Face</texPath>
+  </BA.FaceDef>  
+
+  <BA.FaceDef ParentName="BA_Face_Base">
+    <defName>BA_Face_Akira</defName>
+    <label>Akira Face</label>
+    <texPath>BA/Akira/Akira_Face</texPath>
+  </BA.FaceDef>  
+
+  <BA.FaceDef ParentName="BA_Face_Base">
+    <defName>BA_Face_Kai</defName>
+    <label>Kai Face</label>
+    <texPath>BA/Kai/Kai_Face</texPath>
+  </BA.FaceDef>  
+  
+  <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_ShirokoTerror</defName>
     <label>ShirokoTerror Face</label>
     <texPath>BA/ShirokoTerror/ShirokoTerror_Face</texPath>

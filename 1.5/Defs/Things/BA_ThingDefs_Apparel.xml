@@ -1267,6 +1267,128 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Wakamo_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Wakamo_Apparel</defName>
+    <label>BA Wakamo Apparel</label>
+    <description>this is a Wakamo apparel.</description>
+    <graphicData>
+      <texPath>BA/Wakamo/Apparel/Wakamo_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalD</li>
+      </tags>
+      <wornGraphicPath>BA/Wakamo/Apparel/Wakamo_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Wakamo_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Wakamo_Headgear</defName>
+    <label>BA Wakamo Headgear</label>
+    <description>Wakamo Headgear</description>
+    <graphicData>
+      <texPath>BA/Wakamo/Apparel/Wakamo_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Wakamo/Apparel/Wakamo_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Akira_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Akira_Apparel</defName>
+    <label>BA Akira Apparel</label>
+    <description>this is a Akira apparel.</description>
+    <graphicData>
+      <texPath>BA/Akira/Apparel/Akira_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalC</li>
+      </tags>
+      <wornGraphicPath>BA/Akira/Apparel/Akira_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Akira_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Akira_OuterApparel</defName>
+    <label>BA Akira Outer Apparel</label>
+    <description>this is a Akira apparel.</description>
+    <graphicData>
+      <texPath>BA/Akira/Apparel/Akira_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalC</li>
+      </tags>
+      <wornGraphicPath>BA/Akira/Apparel/Akira_Outer</wornGraphicPath>
+    </apparel>
+    <texPathBackLayer>BA/Akira/Apparel/Akira_OuterLining</texPathBackLayer>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Kai_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Kai_Headgear</defName>
+    <label>BA Kai Headgear</label>
+    <description>Kai Headgear</description>
+    <graphicData>
+      <texPath>BA/Kai/Apparel/Kai_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Kai/Apparel/Kai_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Kai_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Kai_Apparel</defName>
+    <label>BA Kai Apparel</label>
+    <description>this is a Kai apparel.</description>
+    <graphicData>
+      <texPath>BA/Kai/Apparel/Kai_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalF</li>
+      </tags>
+      <wornGraphicPath>BA/Kai/Apparel/Kai_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Kai_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Kai_OuterApparel</defName>
+    <label>BA Kai Outer Apparel</label>
+    <description>this is a Kai apparel.</description>
+    <graphicData>
+      <texPath>BA/Kai/Apparel/Kai_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalF</li>
+      </tags>
+      <wornGraphicPath>BA/Kai/Apparel/Kai_Outer</wornGraphicPath>
+    </apparel>
+    <texPathBackLayer>BA/Kai/Apparel/Kai_OuterLining</texPathBackLayer>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_ShirokoTerror_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_ShirokoTerror_Apparel</defName>
     <label>BA ShirokoTerror Apparel</label>
