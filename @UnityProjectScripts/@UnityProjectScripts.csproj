@@ -13,7 +13,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <LangVersion>8</LangVersion>
+    <LangVersion>9</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -574,10 +574,18 @@
     <Compile Include="Scene\UI\StudentListScreenUI.cs" />
     <Compile Include="Scene\UI\WeaponPopupUI.cs" />
     <Compile Include="Shared\DropdownSizeFitter.cs" />
+    <Compile Include="Shared\Extensions\UniRxExtensions.cs" />
     <Compile Include="Shared\MonoSingleton.cs" />
     <Compile Include="Shared\SlicedProgressBar.cs" />
     <Compile Include="Shared\UtilProcedure.cs" />
     <Compile Include="UI\UIShape\ButtonAlphaHit.cs" />
+    <Compile Include="UI\Events\TransitionEvents.cs" />
+    <Compile Include="UI\Factories\PresenterFactory.cs" />
+    <Compile Include="UI\Presenters\MainPage\MainPagePresenter.cs" />
+    <Compile Include="UI\Presenters\Pad\PadPresenter.cs" />
+    <Compile Include="UI\Views\MainPage\MainPageView.cs" />
+    <Compile Include="UI\Views\PadPagePresenter.cs" />
+    <Compile Include="UI\Views\Pad\PadView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Plugins\com.neuecc.unirx@284d5c50d3\Asynchronous.meta" />
