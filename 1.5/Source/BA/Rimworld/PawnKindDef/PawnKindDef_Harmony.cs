@@ -3,6 +3,7 @@ using System.Linq;
 using System.Reflection;
 using HarmonyLib;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace BA
@@ -49,6 +50,7 @@ namespace BA
             }
         }
     }
+
     [HarmonyPatch(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), new Type[] { typeof(PawnGenerationRequest) })]
     public static class Harmony_PawnGenerator_GeneratePawn
     {
@@ -75,6 +77,7 @@ namespace BA
             {
                 apparel.Destroy();
             }
+
             // 3) apparelRequired에 있지만 입지 않은 옷 생성 및 착용 강제
             var requiredButNotWornDefs = pawn.kindDef.apparelRequired.Where(r =>
                 !pawn.apparel.WornApparel.Any(a => a.def == r)).ToArray();
@@ -83,6 +86,7 @@ namespace BA
                 var apparel = PawnApparelGenerator.GenerateApparelOfDefFor(pawn, def);
                 pawn.apparel.WornApparel.Add(apparel);
             }
+
             // 4) fixedChildBackstories와 fixedAdultBackstories 강제 적용
             if (kindDef.fixedChildBackstories.Count > 0)
                 pawn.story.Childhood = kindDef.fixedChildBackstories[0];
@@ -108,6 +112,7 @@ namespace BA
                 {
                     total += p.health.hediffSet.GetPartHealth(part);
                 }
+
                 return total;
             }
 
@@ -123,6 +128,7 @@ namespace BA
             {
                 pawn.story.traits.RemoveTrait(existingBeauty);
             }
+
             pawn.story.traits.GainTrait(new Trait(TraitDefOf.Beauty, 2));
         }
     }
@@ -134,11 +140,13 @@ namespace BA
     public static class Harmony_Pawn_AgeTracker_AgeTick
     {
         private static readonly FieldInfo PawnFieldInfo;
+
         static Harmony_Pawn_AgeTracker_AgeTick()
         {
             PawnFieldInfo =
                 typeof(Pawn_AgeTracker).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
         }
+
         [HarmonyPrefix]
         public static bool Prefix(Pawn_AgeTracker __instance)
         {
@@ -149,6 +157,7 @@ namespace BA
             return false;
         }
     }
+
     [HarmonyPatch(typeof(PawnGenerator), "GenerateTraits")]
     public static class Patch_PawnGenerator_GenerateTraits
     {
@@ -164,9 +173,61 @@ namespace BA
                         pawn.story.traits.GainTrait(new Trait(traitDef));
                     }
                 }
+
                 return false; // 기존 GenerateTraits 로직 건너뜀
             }
+
             return true; // 기본 로직 실행
+        }
+    }
+
+    [HarmonyPatch(typeof(PawnOverlayDrawer), nameof(PawnOverlayDrawer.RenderPawnOverlay))]
+    public static class Harmony_PawnOverlayDrawer_RenderPawnOverlay
+    {
+        private static readonly FieldInfo PawnFieldInfo;
+
+        static Harmony_PawnOverlayDrawer_RenderPawnOverlay()
+        {
+            PawnFieldInfo =
+                typeof(PawnOverlayDrawer).GetField("pawn", BindingFlags.NonPublic | BindingFlags.Instance);
+        }
+
+        [HarmonyPrefix]
+        public static bool Prefix(
+            PawnOverlayDrawer __instance,
+            Matrix4x4 matrix,
+            Mesh bodyMesh,
+            PawnOverlayDrawer.OverlayLayer layer,
+            PawnDrawParms parms,
+            bool? overApparel = null)
+        {
+            var pawn = (Pawn)PawnFieldInfo.GetValue(__instance);
+            if (pawn.kindDef is not BA.PawnKindDef kindDef)
+                return true;
+            // 오버레이가 상처인 경우 그리지 않음.
+            if (__instance is PawnWoundDrawer)
+                return false;
+            return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(PawnRenderNodeWorker), nameof(PawnRenderNodeWorker.CanDrawNow))]
+    public static class Harmony_PawnRenderNodeWorker_CanDrawNow
+    {
+        [HarmonyPostfix]
+        public static void Postfix(
+            PawnRenderNodeWorker __instance,
+            PawnRenderNode node,
+            PawnDrawParms parms,
+            ref bool __result)
+        {
+            if (!__result)
+                return;
+            if (parms.pawn.kindDef is not BA.PawnKindDef)
+                return;
+            // hediff eye는 그리지 않음.
+            if (__instance is PawnRenderNodeWorker_HediffEye)
+                __result = false;
         }
     }
 }
