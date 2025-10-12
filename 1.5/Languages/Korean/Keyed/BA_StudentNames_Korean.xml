@@ -119,5 +119,6 @@
   <BA_Keyed_Student_FirstName_Kai>카이</BA_Keyed_Student_FirstName_Kai>
 
   <BA_PawnDespawnAlert>알림: 학생의 강제 송환</BA_PawnDespawnAlert>
+  <BA_DespawnReasonDeath>사망 직전</BA_DespawnReasonDeath>
   <BA_DespawnMessage>{0} ({1})이 {2} 키보토스로 강제 송환됩니다.</BA_DespawnMessage>
 </LanguageData>

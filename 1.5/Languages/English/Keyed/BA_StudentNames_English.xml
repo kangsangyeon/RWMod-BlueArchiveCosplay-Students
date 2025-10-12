@@ -118,4 +118,5 @@
 
   <BA_PawnDespawnAlert>Notice: Forced Repatriation of Students</BA_PawnDespawnAlert>
   <BA_DespawnMessage>{0} ({1}) is being forcibly repatriated to {2} Kivotos.</BA_DespawnMessage>
+  
 </LanguageData>

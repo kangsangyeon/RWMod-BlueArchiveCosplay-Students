@@ -9,5 +9,6 @@
         public static string StudentFirstName(string name) => StudentFirstNamePrefix + name;
 
         public static string DespawnMessage => "BA_DespawnMessage";
+        public static string DespawnReasonDeath => "BA_DespawnReasonDeath";
     }
 }

@@ -7,8 +7,8 @@
   <EmotionalBond.degreeDatas.0.description>{0}의 감정을 강력한 힘으로 바꾸고 전투 능력과 저항력을 강화합니다.</EmotionalBond.degreeDatas.0.description>
 
   <Ignore.label>무시</Ignore.label>
-  <Ignore.description>{0}'s transcendent physique ignores or significantly reduces most damage. This physique possesses such formidable resistance that it can convert bullet damage into bruises.\n\n    90% chance to ignore damage\n\n    Bullet damage taken is converted into bruises.</Ignore.description>
+  <Ignore.description>{0}의 초월적인 육체는 대부분의 피해를 무시하거나 크게 감소시킵니다. 이러한 육체는 총탄 피해를 타박상으로 바꿀만큼 강한 저항력을 가지고 있습니다.\n\n    -피해를 무시할 확률 90%\n\n    -받는 총탄피해를 타박상으로 받습니다.</Ignore.description>
   <Ignore.degreeDatas.0.label>무시</Ignore.degreeDatas.0.label>
-  <Ignore.degreeDatas.0.description>Thanks to {0}'s transcendent physique, damage is ignored or reduced.\n\n    90% chance to ignore damage\n\n    All bullet damage taken is converted to bruising.</Ignore.degreeDatas.0.description>
+  <Ignore.degreeDatas.0.description>{0}의 초월적인 육체 덕분에 피해를 무시하거나 감소시킵니다.\n\n    -피해를 무시할 확률 90%\n\n    -받는 총탄피해를 타박상으로 받습니다.</Ignore.degreeDatas.0.description>
   
 </LanguageData>

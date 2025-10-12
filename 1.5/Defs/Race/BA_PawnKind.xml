@@ -108,7 +108,7 @@
     <defName>BA_PawnKind_Midori</defName>
     <label>Midori</label>
     <healthScale>10.0</healthScale>
-    <studentId>1004</studentId>
+    <studentId>1005</studentId>
     <skinColorOverride>(255,236,228)</skinColorOverride>
     <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
     <forcedHeadTypeFemale>BA_HeadType_Kid</forcedHeadTypeFemale>
