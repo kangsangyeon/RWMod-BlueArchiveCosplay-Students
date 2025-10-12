@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <EmotionalBond.label>EmotionalBond</EmotionalBond.label>
+  <EmotionalBond.description>This mysterious ring changes according to {0}‘s emotions. If there are no major issues, this ring greatly enhances the girls’ combat and work abilities.</EmotionalBond.description>
+  <EmotionalBond.degreeDatas.0.label>EmotionalBond</EmotionalBond.degreeDatas.0.label>
+  <EmotionalBond.degreeDatas.0.description>Transforms {0}'s emotions into a powerful force, enhancing combat prowess and resilience.</EmotionalBond.degreeDatas.0.description>
+
+  <Ignore.label>Ignore</Ignore.label>
+  <Ignore.description>{0}'s transcendent physique ignores or significantly reduces most damage. This physique possesses such formidable resistance that it can convert bullet damage into bruises.\n\n    90% chance to ignore damage\n\n    Bullet damage taken is converted into bruises.</Ignore.description>
+  <Ignore.degreeDatas.0.label>Ignore</Ignore.degreeDatas.0.label>
+  <Ignore.degreeDatas.0.description>Thanks to {0}'s transcendent physique, damage is ignored or reduced.\n\n    90% chance to ignore damage\n\n    All bullet damage taken is converted to bruising.</Ignore.degreeDatas.0.description>
+  
+</LanguageData>

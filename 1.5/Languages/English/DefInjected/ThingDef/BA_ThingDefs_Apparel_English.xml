@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  note: 초기에 Languages/Korean/DefInjected의 하위에 Things과 Thing라는 이름으로 폴더를 만들고 이 파일을 추가했으나,
+  알 수 없는 오류(Critical error while injecting translations into defs: System.ArgumentException: Invalid generic arguments)가
+  계속 발생해 불가피하게 폴더명을 ThingDefs로 변경함.
+  modified: The folders inside of the DefInjected folder should match the Def type of the Def you are trying to translate. Thus, translations for ThingDefs must be inside the ThingDef folder.
+  각 def 타입별로 폴더명을 정확히 설정해야 하는 제약이 있기 때문임.
+-->
+<LanguageData>
+
+  <BA_Apparel_Makoto_Apparel.label>마코토 의상</BA_Apparel_Makoto_Apparel.label>
+  <BA_Apparel_Makoto_Apparel.description>마코토 의상입니다.</BA_Apparel_Makoto_Apparel.description>
+
+</LanguageData>

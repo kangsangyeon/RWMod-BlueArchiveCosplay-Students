@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Last name이 성, First name이 이름임. -->
-<!-- 블루아카이브에서는 성은 한자, 이름은 가타카나로 표기하고 있음. -->
 <LanguageData>
 
   <BA_Keyed_Student_LastName_Yuzu>하나오카</BA_Keyed_Student_LastName_Yuzu>
@@ -118,6 +116,6 @@
   <BA_Keyed_Student_LastName_Kai>신타니</BA_Keyed_Student_LastName_Kai>
   <BA_Keyed_Student_FirstName_Kai>카이</BA_Keyed_Student_FirstName_Kai>
 
-  <BA_PawnDespawnAlert>알림: 학생의 강제 송환</BA_PawnDespawnAlert>
-  <BA_DespawnMessage>{0} ({1})이 {2} 키보토스로 강제 송환됩니다.</BA_DespawnMessage>
+  <BA_PawnDespawnAlert>Notice: Forced Repatriation of Students</BA_PawnDespawnAlert>
+  <BA_DespawnMessage>{0} ({1}) is being forcibly repatriated to {2} Kivotos.</BA_DespawnMessage>
 </LanguageData>

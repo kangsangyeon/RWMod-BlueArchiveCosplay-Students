@@ -7,5 +7,7 @@
 
         public static string StudentLastName(string name) => StudentLastNamePrefix + name;
         public static string StudentFirstName(string name) => StudentFirstNamePrefix + name;
+
+        public static string DespawnMessage => "BA_DespawnMessage";
     }
 }
