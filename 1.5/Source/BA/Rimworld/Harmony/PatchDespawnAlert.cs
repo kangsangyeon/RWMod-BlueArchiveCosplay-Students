@@ -84,9 +84,6 @@ namespace BA
             if (__result > 0.1f)
                 return;
 
-            // Despawn 트리거 시 Letter 출력
-            Utils.SendDespawnLetter(pawn, "consciousness below 10%.");
-
             // 의식(consciousness)이 10% 이하면 despawn 대상임.
             Current.Game.GetComponent<GameComponent_DelayedPawnDestroy>().TryAdd(pawn);
         }
@@ -103,9 +100,6 @@ namespace BA
                 // 해당 시체 폰이 BA.PawnKindDef 인지 체크
                 if (corpse.InnerPawn.kindDef.defName == "BA_PawnKindDefName") // 실제 이름으로 교체
                 {
-                    // Despawn 전에 Letter 출력
-                    Utils.SendDespawnLetter(corpse.InnerPawn, "corpse spawn.");
-
                     // 시체가 스폰되자마자 삭제 (Despawn)
                     corpse.DeSpawn(DestroyMode.Vanish);
                 }
@@ -126,7 +120,7 @@ namespace BA
                 if (__instance.Spawned && __instance.Map != null)
                 {
                     // Despawn 전에 Letter 출력
-                    Utils.SendDespawnLetter(__instance, "death.");
+                    Utils.SendDespawnLetter(__instance, BALocalizeKey.DespawnReasonDeath.Translate());
 
                     __instance.DeSpawn(DestroyMode.Vanish);
                     return false;

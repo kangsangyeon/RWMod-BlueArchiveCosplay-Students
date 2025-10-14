@@ -3,7 +3,12 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.MvpFramework.Mono
 {
-    public abstract class DocumentPresenter<TView, TState>
+    public interface IMonoPresenter
+    {
+        Task InitializeAsync();
+    }
+
+    public abstract class MonoPresenter<TView, TState> : IMonoPresenter
         where TView : MonoView<TState>
         where TState : MonoViewState, new()
     {
@@ -12,7 +17,7 @@ namespace Infrastructure.MvpFramework.Mono
         private bool _isDisposed;
         private bool _isInitialized;
 
-        protected DocumentPresenter(TView view)
+        protected MonoPresenter(TView view)
         {
             _view = view;
         }
@@ -20,7 +25,7 @@ namespace Infrastructure.MvpFramework.Mono
         public async Task InitializeAsync()
         {
             if (_isDisposed)
-                throw new ObjectDisposedException(nameof(DocumentPresenter<TView, TState>));
+                throw new ObjectDisposedException(nameof(MonoPresenter<TView, TState>));
             if (_isInitialized)
                 throw new InvalidOperationException($"{GetType().Name} is already initialized.");
             OnInitialize(_view, _state);
