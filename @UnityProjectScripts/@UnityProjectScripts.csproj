@@ -577,6 +577,7 @@
     <Compile Include="Shared\MonoSingleton.cs" />
     <Compile Include="Shared\SlicedProgressBar.cs" />
     <Compile Include="Shared\UtilProcedure.cs" />
+    <Compile Include="UI\GachaSelector.cs" />
     <Compile Include="UI\UIShape\ButtonAlphaHit.cs" />
   </ItemGroup>
   <ItemGroup>
