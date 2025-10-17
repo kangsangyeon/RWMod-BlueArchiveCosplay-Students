@@ -8,59 +8,55 @@ using UnityEngine.Video;
 
 public class GachaSelector : MonoBehaviour
 {
-    class GachaInfo
+    public class GachaInfo
     {
         public string schedule;
         public string infoText;
         public VideoClip backVideoClip;
         public Sprite btnImage;
 
-        List<int>[] _table = new List<int>[3];
+        public PerInfo per;
 
-        public List<int> getTable(int rarity)
+        List<int>[] _table = new List<int>[5];
+
+        public List<int> getTable(GachaManager.Rarity rarity)
         {
-            --rarity;
-            if (rarity >= _table.Length)
-                rarity = _table.Length - 1;
-            else if (rarity < 0)
-                rarity = 0;
-
-            if (_table[rarity] == null)
-                _table[rarity] = new List<int>();
-
-            return _table[rarity];
+            if (_table[(int)rarity] == null)
+                _table[(int)rarity] = new List<int>();
+            return _table[(int)rarity];
         }
     }
 
     [System.Serializable]
     struct GachaInfoJsonWrapper
     {
-        [System.Serializable]
-        public struct Per
-        {
-
-            [System.Serializable]
-            public struct PerInfo
-            {
-                public float pickup, fes, per_s3, per_s2, per_s1;
-                public string s
-                {
-                    get
-                    {
-                        return $"pickup: {pickup}\nfes: {fes}\ns3{per_s3}\ts2{per_s2}\ts1{per_s1}";
-                    }
-                }
-            }
-            public PerInfo normal, last;
-        }
-
-        public Per per;
+        public PerInfo per;
         public string schedule;
         public string infoText;
         public int[] pickup;
+        public int[] fes;
         public int[] s3;
         public int[] s2;
         public int[] s1;
+    }
+
+    [System.Serializable]
+    public struct PerInfo
+    {
+        public float pickup, fes, per_s3, per_s2, per_s1;
+        public override string ToString()
+        {
+            return $"pickup: {pickup}\nfes: {fes}\ns3: {per_s3}\ts2: {per_s2}\ts1: {per_s1}";
+        }
+
+        public PerInfo(float pickup, float fes, float per_s3, float per_s2, float per_s1)
+        {
+            this.pickup = pickup;
+            this.fes = fes;
+            this.per_s3 = per_s3;
+            this.per_s2 = per_s2;
+            this.per_s1 = per_s1;
+        }
     }
 
     [Header("buttons")]
@@ -75,6 +71,12 @@ public class GachaSelector : MonoBehaviour
     public Transform gachaInfoTextParent;
 
     List<GachaInfo> gachaInfos = new List<GachaInfo>();
+    int nowSelect = 0;
+
+    public GachaInfo GetNowInfo
+    {
+        get { return gachaInfos[nowSelect]; }
+    }
 
     readonly string address = "UI/GachaList/";
 
@@ -118,9 +120,12 @@ public class GachaSelector : MonoBehaviour
             temp.backVideoClip = Resources.Load<VideoClip>(add);
             temp.btnImage = img();
 
-            temp.getTable(1).AddRange(wrapper.s1);
-            temp.getTable(2).AddRange(wrapper.s2);
-            temp.getTable(3).AddRange(wrapper.s3);
+            temp.per = wrapper.per;
+
+            temp.getTable(GachaManager.Rarity.s1).AddRange(wrapper.s1);
+            temp.getTable(GachaManager.Rarity.s2).AddRange(wrapper.s2);
+            temp.getTable(GachaManager.Rarity.s3).AddRange(wrapper.s3);
+
 
             gachaInfos.Add(temp);
         }
@@ -180,6 +185,8 @@ public class GachaSelector : MonoBehaviour
             if (i != texts.Length - 1)
                 Instantiate(hrPrefab, gachaInfoTextParent);
         }
+
+        Debug.Log(gi.per.ToString());
 
         backVideoPlayer.clip = gi.backVideoClip;
         backVideoPlayer.Play();

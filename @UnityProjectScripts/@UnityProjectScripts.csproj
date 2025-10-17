@@ -578,7 +578,8 @@
     <Compile Include="Shared\MonoSingleton.cs" />
     <Compile Include="Shared\SlicedProgressBar.cs" />
     <Compile Include="Shared\UtilProcedure.cs" />
-    <Compile Include="UI\GachaSelector.cs" />
+    <Compile Include="UI\Gacha\GachaManager.cs" />
+    <Compile Include="UI\Gacha\GachaSelector.cs" />
     <Compile Include="UI\UIShape\ButtonAlphaHit.cs" />
     <Compile Include="UI\Events\TransitionEvents.cs" />
     <Compile Include="UI\Factories\PresenterFactory.cs" />
