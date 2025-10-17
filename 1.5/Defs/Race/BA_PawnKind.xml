@@ -36,6 +36,7 @@
 
     <!-- BA.PawnKindDef 속성 -->
     <haloOffset>(0,0,0.6)</haloOffset> <!-- 헤일로 위치 설정값. (0,0,0)은 폰의 중심점임. -->
+    
   </PawnKindDef>
 
   <PawnKindDef Name="BA_PawnKind_Yuzu" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">

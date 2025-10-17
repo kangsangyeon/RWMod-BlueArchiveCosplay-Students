@@ -13,49 +13,49 @@
   <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Momoi</defName>
     <label>BA Momoi Tail</label>
-    <texPath>BA/Momoi/Momoi_Tail</texPath>
+    <texPath>BA/Momoi/Tail/Momoi_Tail</texPath>
   </BA.TailDef>
 
   <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Midori</defName>
     <label>BA Midori Tail</label>
-    <texPath>BA/Midori/Midori_Tail</texPath>
+    <texPath>BA/Midori/Tail/Midori_Tail</texPath>
   </BA.TailDef>
 
   <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Ibuki</defName>
     <label>BA Ibuki Tail</label>
-    <texPath>BA/Ibuki/Ibuki_Tail</texPath>
+    <texPath>BA/Ibuki/Tail/Ibuki_Tail</texPath>
   </BA.TailDef>
 
   <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Seia</defName>
     <label>BA Seia Tail</label>
-    <texPath>BA/Seia/Seia_Tail</texPath>
+    <texPath>BA/Seia/Tail/Seia_Tail</texPath>
   </BA.TailDef>
 
   <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Michiru</defName>
     <label>BA Michiru Tail</label>
-    <texPath>BA/Michiru/Michiru_Tail</texPath>
+    <texPath>BA/Michiru/Tail/Michiru_Tail</texPath>
   </BA.TailDef>
 
   <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Izuna</defName>
     <label>BA Izuna Tail</label>
-    <texPath>BA/Izuna/Izuna_Tail</texPath>
+    <texPath>BA/Izuna/Tail/Izuna_Tail</texPath>
   </BA.TailDef>
 
   <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Wakamo</defName>
     <label>BA Wakamo Tail</label>
-    <texPath>BA/Wakamo/Wakamo_Tail</texPath>
+    <texPath>BA/Wakamo/Tail/Wakamo_Tail</texPath>
   </BA.TailDef>
 
   <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Akira</defName>
     <label>BA Akira Tail</label>
-    <texPath>BA/Akira/Akira_Tail</texPath>
+    <texPath>BA/Akira/Tail/Akira_Tail</texPath>
   </BA.TailDef>
 
 </Defs>
