@@ -13,253 +13,253 @@
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Yuzu</defName>
     <label>Yuzu Face</label>
-    <texPath>BA/Yuzu/Yuzu_Face</texPath>
+    <texPath>BA/Yuzu/Face/Yuzu_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Momoi</defName>
     <label>Momoi Face</label>
-    <texPath>BA/Momoi/Momoi_Face</texPath>
+    <texPath>BA/Momoi/Face/Momoi_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Midori</defName>
     <label>Midori Face</label>
-    <texPath>BA/Midori/Midori_Face</texPath>
+    <texPath>BA/Midori/Face/Midori_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Aris</defName>
     <label>Aris Face</label>
-    <texPath>BA/Aris/Aris_Face</texPath>
+    <texPath>BA/Aris/Face/Aris_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Hoshino</defName>
     <label>Hoshino Face</label>
-    <texPath>BA/Hoshino/Hoshino_Face</texPath>
+    <texPath>BA/Hoshino/Face/Hoshino_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Shiroko</defName>
     <label>Shiroko Face</label>
-    <texPath>BA/Shiroko/Shiroko_Face</texPath>
+    <texPath>BA/Shiroko/Face/Shiroko_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Nonomi</defName>
     <label>Nonomi Face</label>
-    <texPath>BA/Nonomi/Nonomi_Face</texPath>
+    <texPath>BA/Nonomi/Face/Nonomi_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Serika</defName>
     <label>Serika Face</label>
-    <texPath>BA/Serika/Serika_Face</texPath>
+    <texPath>BA/Serika/Face/Serika_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Ayane</defName>
     <label>Ayane Face</label>
-    <texPath>BA/Ayane/Ayane_Face</texPath>
+    <texPath>BA/Ayane/Face/Ayane_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Makoto</defName>
     <label>Makoto Face</label>
-    <texPath>BA/Makoto/Makoto_Face</texPath>
+    <texPath>BA/Makoto/Face/Makoto_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Satsuki</defName>
     <label>Satsuki Face</label>
-    <texPath>BA/Satsuki/Satsuki_Face</texPath>
+    <texPath>BA/Satsuki/Face/Satsuki_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Ibuki</defName>
     <label>Ibuki Face</label>
-    <texPath>BA/Ibuki/Ibuki_Face</texPath>
+    <texPath>BA/Ibuki/Face/Ibuki_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Nagisa</defName>
     <label>Nagisa Face</label>
-    <texPath>BA/Nagisa/Nagisa_Face</texPath>
+    <texPath>BA/Nagisa/Face/Nagisa_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Mika</defName>
     <label>Mika Face</label>
-    <texPath>BA/Mika/Mika_Face</texPath>
+    <texPath>BA/Mika/Face/Mika_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Seia</defName>
     <label>Seia Face</label>
-    <texPath>BA/Seia/Seia_Face</texPath>
+    <texPath>BA/Seia/Face/Seia_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Tsurugi</defName>
     <label>Tsurugi Face</label>
-    <texPath>BA/Tsurugi/Tsurugi_Face</texPath>
+    <texPath>BA/Tsurugi/Face/Tsurugi_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Hasumi</defName>
     <label>Hasumi Face</label>
-    <texPath>BA/Hasumi/Hasumi_Face</texPath>
+    <texPath>BA/Hasumi/Face/Hasumi_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Ichika</defName>
     <label>Ichika Face</label>
-    <texPath>BA/Ichika/Ichika_Face</texPath>
+    <texPath>BA/Ichika/Face/Ichika_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Mashiro</defName>
     <label>Mashiro Face</label>
-    <texPath>BA/Mashiro/Mashiro_Face</texPath>
+    <texPath>BA/Mashiro/Face/Mashiro_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_JTFMob</defName>
     <label>JTFMob Face</label>
-    <texPath>BA/JTFMob/JTFMob_Face</texPath>
+    <texPath>BA/JTFMob/Face/JTFMob_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Mine</defName>
     <label>Mine Face</label>
-    <texPath>BA/Mine/Mine_Face</texPath>
+    <texPath>BA/Mine/Face/Mine_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Serina</defName>
     <label>Serina Face</label>
-    <texPath>BA/Serina/Serina_Face</texPath>
+    <texPath>BA/Serina/Face/Serina_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Hanae</defName>
     <label>Hanae Face</label>
-    <texPath>BA/Hanae/Hanae_Face</texPath>
+    <texPath>BA/Hanae/Face/Hanae_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Hifumi</defName>
     <label>Hifumi Face</label>
-    <texPath>BA/Hifumi/Hifumi_Face</texPath>
+    <texPath>BA/Hifumi/Face/Hifumi_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Azusa</defName>
     <label>Azusa Face</label>
-    <texPath>BA/Azusa/Azusa_Face</texPath>
+    <texPath>BA/Azusa/Face/Azusa_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Hanako</defName>
     <label>Hanako Face</label>
-    <texPath>BA/Hanako/Hanako_Face</texPath>
+    <texPath>BA/Hanako/Face/Hanako_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Koharu</defName>
     <label>Koharu Face</label>
-    <texPath>BA/Koharu/Koharu_Face</texPath>
+    <texPath>BA/Koharu/Face/Koharu_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Sakurako</defName>
     <label>Sakurako Face</label>
-    <texPath>BA/Sakurako/Sakurako_Face</texPath>
+    <texPath>BA/Sakurako/Face/Sakurako_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Hinata</defName>
     <label>Hinata Face</label>
-    <texPath>BA/Hinata/Hinata_Face</texPath>
+    <texPath>BA/Hinata/Face/Hinata_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Mari</defName>
     <label>Mari Face</label>
-    <texPath>BA/Mari/Mari_Face</texPath>
+    <texPath>BA/Mari/Face/Mari_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Michiru</defName>
     <label>Michiru Face</label>
-    <texPath>BA/Michiru/Michiru_Face</texPath>
+    <texPath>BA/Michiru/Face/Michiru_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Izuna</defName>
     <label>Izuna Face</label>
-    <texPath>BA/Izuna/Izuna_Face</texPath>
+    <texPath>BA/Izuna/Face/Izuna_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Tsukuyo</defName>
     <label>Tsukuyo Face</label>
-    <texPath>BA/Tsukuyo/Tsukuyo_Face</texPath>
+    <texPath>BA/Tsukuyo/Face/Tsukuyo_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Aru</defName>
     <label>Aru Face</label>
-    <texPath>BA/Aru/Aru_Face</texPath>
+    <texPath>BA/Aru/Face/Aru_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Mutsuki</defName>
     <label>Mutsuki Face</label>
-    <texPath>BA/Mutsuki/Mutsuki_Face</texPath>
+    <texPath>BA/Mutsuki/Face/Mutsuki_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Kayoko</defName>
     <label>Kayoko Face</label>
-    <texPath>BA/Kayoko/Kayoko_Face</texPath>
+    <texPath>BA/Kayoko/Face/Kayoko_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Haruka</defName>
     <label>Haruka Face</label>
-    <texPath>BA/Haruka/Haruka_Face</texPath>
+    <texPath>BA/Haruka/Face/Haruka_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Wakamo</defName>
     <label>Wakamo Face</label>
-    <texPath>BA/Wakamo/Wakamo_Face</texPath>
+    <texPath>BA/Wakamo/Face/Wakamo_Face</texPath>
   </BA.FaceDef>  
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Akira</defName>
     <label>Akira Face</label>
-    <texPath>BA/Akira/Akira_Face</texPath>
+    <texPath>BA/Akira/Face/Akira_Face</texPath>
   </BA.FaceDef>  
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Kai</defName>
     <label>Kai Face</label>
-    <texPath>BA/Kai/Kai_Face</texPath>
+    <texPath>BA/Kai/Face/Kai_Face</texPath>
   </BA.FaceDef>  
   
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_ShirokoTerror</defName>
     <label>ShirokoTerror Face</label>
-    <texPath>BA/ShirokoTerror/ShirokoTerror_Face</texPath>
+    <texPath>BA/ShirokoTerror/Face/ShirokoTerror_Face</texPath>
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Hoshino1stGrade</defName>
     <label>Hoshino1stGrade Face</label>
-    <texPath>BA/Hoshino1stGrade/Hoshino1stGrade_Face</texPath>
+    <texPath>BA/Hoshino1stGrade/Face/Hoshino1stGrade_Face</texPath>
   </BA.FaceDef>
 
 </Defs>

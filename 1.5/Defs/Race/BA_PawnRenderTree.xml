@@ -177,9 +177,22 @@
             <li>
               <debugLabel>BA_Face</debugLabel>
               <nodeClass>BA.PawnRenderNode_Face</nodeClass>
-              <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+              <workerClass>BA.PawnRenderNodeWorker_Face</workerClass>  <!-- 여기 추가/변경: 우리의 Worker 클래스 풀 네임스페이스 지정 -->
               <rotDrawMode>Fresh, Rotting</rotDrawMode>
               <baseLayer>51</baseLayer>
+              <!-- 추가 옵션 (필요 시): Worker의 동작을 세밀하게 제어 -->
+              <shaderType>Cutout</shaderType>  <!-- 예: 셰이더 타입 (기본 CutoutHair 대신) -->
+              <layerOffset>0.01</layerOffset>  <!-- 레이어 오프셋 (고통 오버레이를 위해) -->
+              <!-- 자식 노드 추가 가능: 고통 오버레이를 별도 노드로 분리 시 -->
+              <children>
+                <li>
+                  <debugLabel>BA_Face_PainOverlay</debugLabel>
+                  <nodeClass>Verse.PawnRenderNode</nodeClass>  <!-- 기본 노드 사용 -->
+                  <workerClass>BA.PawnRenderNodeWorker_Face</workerClass>  <!-- 고통 시만 활성화되도록 Worker 로직 확장 -->
+                  <baseLayer>52</baseLayer>  <!-- Face 위에 오버레이 -->
+                  <showIf>IsInPain</showIf>  <!-- Worker의 CanDrawNow에서 조건 체크 (커스텀 필요) -->
+                </li>
+              </children>
             </li>
 
             <li Class="PawnRenderNodeProperties_Tattoo" MayRequire="Ludeon.RimWorld.Ideology">
