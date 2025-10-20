@@ -125,6 +125,8 @@ public class GachaSelector : MonoBehaviour
             temp.getTable(GachaManager.Rarity.s1).AddRange(wrapper.s1);
             temp.getTable(GachaManager.Rarity.s2).AddRange(wrapper.s2);
             temp.getTable(GachaManager.Rarity.s3).AddRange(wrapper.s3);
+            temp.getTable(GachaManager.Rarity.fes).AddRange(wrapper.fes);
+            temp.getTable(GachaManager.Rarity.pickup).AddRange(wrapper.pickup);
 
 
             gachaInfos.Add(temp);

@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Linq;
 using System.Reflection.Emit;
+using System.Text;
 using UnityEngine;
 
 public class GachaManager : MonoBehaviour
@@ -19,6 +21,9 @@ public class GachaManager : MonoBehaviour
 
     public bool danchaBtn;
     public bool renchaBtn;
+    public bool toManyDanchaBtn;
+    public bool toManyRenchaBtn;
+    public int howMany = 100000;
     void Update()
     {
         if (danchaBtn)
@@ -31,6 +36,17 @@ public class GachaManager : MonoBehaviour
         {
             renchaBtn = false;
             Debug.Log(string.Join(" ", Rencha()));
+        }
+
+        if (toManyDanchaBtn)
+        {
+            toManyDanchaBtn = false;
+            ToManyDancha();
+        }
+        if (toManyRenchaBtn)
+        {
+            toManyRenchaBtn = false;
+            ToManyRencha();
         }
     }
 
@@ -53,10 +69,58 @@ public class GachaManager : MonoBehaviour
         return r;
     }
 
+    void ToManyDancha()
+    {
+        Dictionary<int, int> dic = new Dictionary<int, int>();
+        for (int i = 0; i < howMany; ++i)
+        {
+            int g = Dancha();
+            if (dic.ContainsKey(g))
+                ++dic[g];
+            else
+                dic.Add(g, 1);
+        }
+        dic = dic.OrderBy(v => v.Key).ToDictionary(x => x.Key, x => x.Value);
+
+        StringBuilder result = new StringBuilder();
+        foreach (var i in dic)
+        {
+            result.AppendLine($"{i.Key}\t{i.Value}");
+        }
+
+        Debug.Log(result.ToString());
+    }
+
+    void ToManyRencha()
+    {
+        Dictionary<int, int> dic = new Dictionary<int, int>();
+        for (int i = 0; i < howMany; ++i)
+        {
+            var rg = Rencha();
+            for(int j = 0; j < rg.Length; ++j)
+            {
+                int g = rg[j];
+                if (dic.ContainsKey(g))
+                    ++dic[g];
+                else
+                    dic.Add(g, 1);
+            }
+        }
+        dic = dic.OrderBy(v => v.Key).ToDictionary(x => x.Key, x => x.Value);
+
+        StringBuilder result = new StringBuilder();
+        foreach (var i in dic)
+        {
+            result.AppendLine($"{i.Key}\t{i.Value}");
+        }
+
+        Debug.Log(result.ToString());
+    }
+
     void GachaTest()
     {
         int[][] results = new int[4][];
-        for(int i = 0; i < 4; ++i)
+        for (int i = 0; i < 4; ++i)
             results[i] = new int[6];
         int num = 100000;
 
@@ -88,8 +152,6 @@ public class GachaManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 4 = fes
-    /// 5 = pickup
     /// </summary>
     /// <param name="per"></param>
     /// <param name="isLast"></param>
@@ -102,22 +164,22 @@ public class GachaManager : MonoBehaviour
 
         // 1~3
         if (roll < per.per_s1)
-            result = 1;
+            result = 0;
         else if (roll < per.per_s1 + per.per_s2)
-            result = 2;
+            result = 1;
         else
-            result = 3;
-
-        if (isLast && result == 1)
             result = 2;
 
-        if (result == 3)
+        if (isLast && result == 0)
+            result = 1;
+
+        if (result == 2)
         {
             float highRoll = Random.Range(0, per.per_s3);
             if (highRoll < per.fes)
-                result = 4; // fes
+                result = 3; // fes
             else if (highRoll < per.fes + per.pickup)
-                result = 5; // pickup
+                result = 4; // pickup
         }
 
         return (Rarity)result;
