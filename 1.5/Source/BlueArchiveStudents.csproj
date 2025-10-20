@@ -106,7 +106,6 @@
     <Compile Include="BA\Rimworld\Comp\CompUseEffect_UseEffectBAPawnGainExp.cs" />
     <Compile Include="BA\Rimworld\Comp\Comp_BAPawn.cs" />
     <Compile Include="BA\Rimworld\Comp\GameComponent_DelayedPawnDestroy.cs" />
-    <Compile Include="BA\Rimworld\Harmony\Harmony_PawnRenderNode_Head.cs" />
     <Compile Include="BA\Rimworld\Harmony\PatchDespawnAlert.cs" />
     <Compile Include="BA\Rimworld\Harmony\PatchDisableCamera.cs" />
     <Compile Include="BA\Rimworld\Harmony\PatchDisableIMGUI.cs" />
@@ -132,6 +131,7 @@
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeProperties_ThingLayer.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeProperties_Wing.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\NodePropertiesExtensions.cs" />
+    <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeWorker_Face.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeWorker_Halo.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeWorker_LayerByDirection.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNodeWorker_Tail.cs" />
@@ -141,6 +141,7 @@
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_Eyebrow.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_Face.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_Halo.cs" />
+    <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_Head.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_HeadgearLayer.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_HornLayer.cs" />
     <Compile Include="BA\Rimworld\PawnRenderNode\PawnRenderNode_OuterApparelLayer.cs" />

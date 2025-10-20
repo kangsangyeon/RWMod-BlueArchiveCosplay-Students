@@ -175,11 +175,11 @@
           <children>
             <!-- 얼굴 레이어 -->
             <li>
-              <debugLabel>BA_Face</debugLabel>
-              <nodeClass>BA.PawnRenderNode_Face</nodeClass>
-              <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-              <rotDrawMode>Fresh, Rotting</rotDrawMode>
-              <baseLayer>51</baseLayer>
+              <debugLabel>BA_Face</debugLabel>  <!-- 노드 식별자 (디버깅용) -->
+              <nodeClass>BA.PawnRenderNode_Face</nodeClass>  <!-- 커스텀 노드 클래스 지정 -->
+              <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>  <!-- 현재 Worker: 크롤링 시 플립하는 기본 Worker -->
+              <rotDrawMode>Fresh, Rotting</rotDrawMode>  <!-- 회전 드로우 모드 (신선/부패 상태) -->
+              <baseLayer>51</baseLayer>  <!-- 렌더링 레이어 (높을수록 위에 그려짐) -->
             </li>
 
             <li Class="PawnRenderNodeProperties_Tattoo" MayRequire="Ludeon.RimWorld.Ideology">
