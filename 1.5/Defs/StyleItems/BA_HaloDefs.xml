@@ -71,6 +71,30 @@
   </BA.HaloDef>
 
   <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Hina</defName>
+    <label>Hina Halo</label>
+    <texPath>BA/Hina/Halo/Hina_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Ako</defName>
+    <label>Ako Halo</label>
+    <texPath>BA/Ako/Halo/Ako_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Iori</defName>
+    <label>Iori Halo</label>
+    <texPath>BA/Iori/Halo/Iori_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
+    <defName>BA_Halo_Chinatsu</defName>
+    <label>Chinatsu Halo</label>
+    <texPath>BA/Chinatsu/Halo/Chinatsu_Halo</texPath>
+  </BA.HaloDef>
+
+  <BA.HaloDef ParentName="BA_Halo_Base">
     <defName>BA_Halo_Nagisa</defName>
     <label>Nagisa Halo</label>
     <texPath>BA/Nagisa/Halo/Nagisa_Halo</texPath>

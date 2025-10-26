@@ -23,6 +23,12 @@
   </BA.HornDef>
 
   <BA.HornDef ParentName="BA_Horn_Base">
+    <defName>BA_Horn_Hina</defName>
+    <label>Hina Horn</label>
+    <texPath>BA/Hina/Horn/Hina_Horn</texPath>
+  </BA.HornDef>
+  
+  <BA.HornDef ParentName="BA_Horn_Base">
     <category>BA_StyleItemCategory_Horn</category>
     <defName>BA_Horn_Koharu</defName>
     <label>Koharu Horn</label>

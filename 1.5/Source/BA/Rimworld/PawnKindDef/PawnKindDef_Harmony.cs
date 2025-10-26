@@ -130,10 +130,21 @@ namespace BA
             }
 
             pawn.story.traits.GainTrait(new Trait(TraitDefOf.Beauty, 2));
+            
+            // 8) Biotech Gene 강제 적용 (Biotech DLC 필요)
+            if (kindDef.genes != null && kindDef.genes.Count > 0 && pawn.genes != null)
+            {
+                foreach (var geneDef in kindDef.genes)
+                {
+                    if (!pawn.genes.HasGene(geneDef))
+                    {
+                        pawn.genes.AddGene(geneDef, xenogene: false); // endogene으로 추가 (WoundHealing_Fast는 germline 적합)
+                    }
+                }
+            }
         }
     }
-
-
+    
     [HarmonyPatch(
         typeof(Pawn_AgeTracker),
         nameof(Pawn_AgeTracker.AgeTick))]

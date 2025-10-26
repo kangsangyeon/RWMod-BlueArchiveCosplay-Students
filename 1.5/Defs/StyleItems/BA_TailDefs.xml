@@ -29,6 +29,12 @@
   </BA.TailDef>
 
   <BA.TailDef ParentName="BA_Tail_Base">
+    <defName>BA_Tail_Iori</defName>
+    <label>BA Iori Tail</label>
+    <texPath>BA/Iori/Tail/Iori_Tail</texPath>
+  </BA.TailDef>
+
+  <BA.TailDef ParentName="BA_Tail_Base">
     <defName>BA_Tail_Seia</defName>
     <label>BA Seia Tail</label>
     <texPath>BA/Seia/Tail/Seia_Tail</texPath>

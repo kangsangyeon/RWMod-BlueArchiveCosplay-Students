@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
+using Verse;
 
 namespace BA
 {
@@ -22,6 +23,9 @@ namespace BA
 
         // XML 내 <traits> 태그와 매핑할 리스트
         public List<TraitDef> traits = new List<TraitDef>();
+
+        // Biotech Gene 추가: XML <genes> 태그와 매핑
+        public List<GeneDef> genes = new List<GeneDef>();
 
         // healthScale 추가 (체력 배수용)
         public float healthScale = 1f;

@@ -109,6 +109,38 @@
     <texPathFrontLayer>BA/Ibuki/Hair/Ibuki_FrontHair</texPathFrontLayer>
   </HairDef>
 
+  <HairDef Name="BA_Hair_Hina" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Hina</defName>
+    <label>Hina Hair</label>
+    <texPath>BA/Hina/Hair/Hina_Hair</texPath>
+    <texPathBackLayer>BA/Hina/Hair/Hina_BackHair</texPathBackLayer>
+    <texPathFrontLayer>BA/Hina/Hair/Hina_FrontHair</texPathFrontLayer>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Ako" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Ako</defName>
+    <label>Ako Hair</label>
+    <texPath>BA/Ako/Hair/Ako_Hair</texPath>
+    <texPathBackLayer>BA/Ako/Hair/Ako_BackHair</texPathBackLayer>
+    <texPathFrontLayer>BA/Ako/Hair/Ako_FrontHair</texPathFrontLayer>
+  </HairDef> 
+
+  <HairDef Name="BA_Hair_Iori" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Iori</defName>
+    <label>Iori Hair</label>
+    <texPath>BA/Iori/Hair/Iori_Hair</texPath>
+    <texPathBackLayer>BA/Iori/Hair/Iori_BackHair</texPathBackLayer>
+    <texPathFrontLayer>BA/Iori/Hair/Iori_FrontHair</texPathFrontLayer>
+  </HairDef>
+
+  <HairDef Name="BA_Hair_Chinatsu" ParentName="BA_Hair_Base" Class="BA.HairDef">
+    <defName>BA_Hair_Chinatsu</defName>
+    <label>Chinatsu Hair</label>
+    <texPath>BA/Chinatsu/Hair/Chinatsu_Hair</texPath>
+    <texPathBackLayer>BA/Chinatsu/Hair/Chinatsu_BackHair</texPathBackLayer>
+    <texPathFrontLayer>BA/Chinatsu/Hair/Chinatsu_FrontHair</texPathFrontLayer>
+  </HairDef>
+  
   <HairDef Name="BA_Hair_Nagisa" ParentName="BA_Hair_Base" Class="BA.HairDef">
     <defName>BA_Hair_Nagisa</defName>
     <label>Nagisa Hair</label>

@@ -18,6 +18,13 @@
   </BA.WingDef>
 
   <BA.WingDef ParentName="BA_Wing_Base">
+    <defName>BA_Wing_Hina</defName>
+    <label>Hina Wing</label>
+    <texPath>BA/Hina/Wing/Hina_Wing</texPath>
+    <texPathRight>BA/Hina/Wing/Hina_RightWing</texPathRight>
+  </BA.WingDef>
+
+  <BA.WingDef ParentName="BA_Wing_Base">
     <defName>BA_Wing_Nagisa</defName>
     <label>Nagisa Wing</label>
     <texPath>BA/Nagisa/Wing/Nagisa_Wing</texPath>

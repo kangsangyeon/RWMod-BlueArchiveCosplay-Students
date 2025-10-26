@@ -412,11 +412,156 @@
       <li>BA_Apparel_Ibuki_OuterApparel</li>
     </apparelRequired>
 
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
+
     <fixedChildBackstories>
       <li>BA_Backstory_Childhood_Gehenna</li>
     </fixedChildBackstories>
     <fixedAdultBackstories>
       <li>BA_Backstory_Adulthood_Ibuki</li>
+    </fixedAdultBackstories>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Hina" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Hina</defName>
+    <label>Hina</label>
+    <healthScale>20.0</healthScale>
+    <studentId>1017</studentId>
+    <skinColorOverride>(255,245,242)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Kid_A</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Kid</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Hina</forcedHair>
+    <faceDef>BA_Face_Hina</faceDef>
+    <earDef>BA_Ear_Pointy</earDef>
+    <eyebrowDef>BA_Eyebrow_Hina</eyebrowDef>
+    <wingDef>BA_Wing_Hina</wingDef>
+    <haloDef>BA_Halo_Hina</haloDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Hina_Apparel</li>
+      <li>BA_Apparel_Hina_OuterApparel</li>
+    </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
+
+  <!-- Biotech DLC의 Gene 기능 적용: 빠른 치유 (WoundHealing_Fast) Gene 추가 -->
+    <genes MayRequire="Ludeon.RimWorld.Biotech">
+      <li>WoundHealing_Fast</li>
+      <li>Immutable</li>  <!-- offset Gene -->
+    </genes>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Gehenna</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Hina</li>
+    </fixedAdultBackstories>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Ako" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Ako</defName>
+    <label>Ako</label>
+    <healthScale>7.0</healthScale>
+    <studentId>1018</studentId>
+    <skinColorOverride>(255,236,228)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_F</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Ako</forcedHair>
+    <faceDef>BA_Face_Ako</faceDef>
+    <earDef>BA_Ear_Normal</earDef>
+    <eyebrowDef>BA_Eyebrow_Ako</eyebrowDef>
+    <haloDef>BA_Halo_Ako</haloDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Ako_Headgear</li>
+      <li>BA_Apparel_Ako_Apparel</li>
+    </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Gehenna</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Ako</li>
+    </fixedAdultBackstories>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Iori" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Iori</defName>
+    <label>Iori</label>
+    <healthScale>10.0</healthScale>
+    <studentId>1019</studentId>
+    <skinColorOverride>(227,198,181)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Type2_C</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Iori</forcedHair>
+    <faceDef>BA_Face_Iori</faceDef>
+    <earDef>BA_Ear_Pointy</earDef>
+    <eyebrowDef>BA_Eyebrow_Iori</eyebrowDef>
+    <tailDef>BA_Tail_Iori</tailDef>
+    <haloDef>BA_Halo_Iori</haloDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Iori_Apparel</li>
+    </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Gehenna</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Iori</li>
+    </fixedAdultBackstories>
+  </PawnKindDef>
+
+  <PawnKindDef Name="BA_PawnKind_Chinatsu" ParentName="BA_PawnKind_Base" Class="BA.PawnKindDef">
+    <defName>BA_PawnKind_Chinatsu</defName>
+    <label>Chinatsu</label>
+    <healthScale>7.0</healthScale>
+    <studentId>1020</studentId>
+    <skinColorOverride>(255,236,228)</skinColorOverride>
+    <forcedBodyTypeFemale>BA_BodyType_Female_Normal_D</forcedBodyTypeFemale>
+    <forcedHeadTypeFemale>BA_HeadType_Normal</forcedHeadTypeFemale>
+    <forcedHair>BA_Hair_Chinatsu</forcedHair>
+    <faceDef>BA_Face_Chinatsu</faceDef>
+    <earDef>BA_Ear_Pointy</earDef>
+    <eyebrowDef>BA_Eyebrow_Chinatsu</eyebrowDef>
+    <haloDef>BA_Halo_Chinatsu</haloDef>
+
+    <apparelRequired>
+      <li>BA_Apparel_Chinatsu_Headgear</li>
+      <li>BA_Apparel_Chinatsu_Apparel</li>
+    </apparelRequired>
+
+    <traits>
+      <li>EmotionalBond</li>
+      <li>Ignore</li>
+      <li>BodyPurist</li>    <!-- 정상 -->
+    </traits>
+
+    <fixedChildBackstories>
+      <li>BA_Backstory_Childhood_Gehenna</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>BA_Backstory_Adulthood_Chinatsu</li>
     </fixedAdultBackstories>
   </PawnKindDef>
 

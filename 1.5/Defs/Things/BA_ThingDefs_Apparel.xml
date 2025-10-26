@@ -647,6 +647,125 @@
     </apparel>
   </ThingDef>
 
+  <ThingDef Name="BA_Apparel_Hina_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hina_Apparel</defName>
+    <label>BA Hina Apparel</label>
+    <description>this is a Hina apparel.</description>
+    <graphicData>
+      <texPath>BA/Hina/Apparel/Hina_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleKidA</li>
+      </tags>
+      <wornGraphicPath>BA/Hina/Apparel/Hina_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Hina_OuterApparel" ParentName="BA_OuterApparel_Base"
+    Class="BA.ApparelDef">
+    <defName>BA_Apparel_Hina_OuterApparel</defName>
+    <label>BA Hina Outer Apparel</label>
+    <description>this is a Hina apparel.</description>
+    <graphicData>
+      <texPath>BA/Hina/Apparel/Hina_Outer_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleKidA</li>
+      </tags>
+      <wornGraphicPath>BA/Hina/Apparel/Hina_Outer</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Ako_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Ako_Apparel</defName>
+    <label>BA Ako Apparel</label>
+    <description>this is a Ako apparel.</description>
+    <graphicData>
+      <texPath>BA/Ako/Apparel/Ako_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalF</li>
+      </tags>
+      <wornGraphicPath>BA/Ako/Apparel/Ako_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Ako_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Ako_Headgear</defName>
+    <label>BA Ako Headgear</label>
+    <description>Ako Headgear</description>
+    <graphicData>
+      <texPath>BA/Ako/Apparel/Ako_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Ako/Apparel/Ako_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Iori_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Iori_Apparel</defName>
+    <label>BA Iori Apparel</label>
+    <description>this is a Iori apparel.</description>
+    <graphicData>
+      <texPath>BA/Iori/Apparel/Iori_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleType2C</li>
+      </tags>
+      <wornGraphicPath>BA/Iori/Apparel/Iori_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Chinatsu_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Chinatsu_Apparel</defName>
+    <label>BA Chinatsu Apparel</label>
+    <description>this is a Chinatsu apparel.</description>
+    <graphicData>
+      <texPath>BA/Chinatsu/Apparel/Chinatsu_Apparel_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+
+    <apparel>
+      <tags>
+        <li>BA_ApparelTag_FemaleNormalD</li>
+      </tags>
+      <wornGraphicPath>BA/Chinatsu/Apparel/Chinatsu_Apparel</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef Name="BA_Apparel_Chinatsu_Headgear" ParentName="BA_Headgear_Base" Class="BA.ApparelDef">
+    <defName>BA_Apparel_Chinatsu_Headgear</defName>
+    <label>BA Chinatsu Headgear</label>
+    <description>Chinatsu Headgear</description>
+    <graphicData>
+      <texPath>BA/Chinatsu/Apparel/Chinatsu_Headgear_1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <apparel>
+      <wornGraphicPath>BA/Chinatsu/Apparel/Chinatsu_Headgear</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
   <ThingDef Name="BA_Apparel_Nagisa_Apparel" ParentName="BA_Apparel_Base" Class="BA.ApparelDef">
     <defName>BA_Apparel_Nagisa_Apparel</defName>
     <label>BA Nagisa Apparel</label>

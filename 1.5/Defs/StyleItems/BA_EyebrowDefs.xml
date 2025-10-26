@@ -77,6 +77,30 @@
   </BA.EyebrowDef>
 
   <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
+    <defName>BA_Eyebrow_Hina</defName>
+    <label>Hina Eyebrow</label>
+    <texPath>BA/Hina/Eyebrow/Hina_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
+    <defName>BA_Eyebrow_Ako</defName>
+    <label>Ako Eyebrow</label>
+    <texPath>BA/Ako/Eyebrow/Ako_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
+    <defName>BA_Eyebrow_Iori</defName>
+    <label>Iori Eyebrow</label>
+    <texPath>BA/Iori/Eyebrow/Iori_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
+    <defName>BA_Eyebrow_Chinatsu</defName>
+    <label>Chinatsu Eyebrow</label>
+    <texPath>BA/Chinatsu/Eyebrow/Chinatsu_Eyebrow</texPath>
+  </BA.EyebrowDef>
+
+  <BA.EyebrowDef ParentName="BA_Eyebrow_Base">
     <defName>BA_Eyebrow_Nagisa</defName>
     <label>Nagisa Eyebrow</label>
     <texPath>BA/Nagisa/Eyebrow/Nagisa_Eyebrow</texPath>
