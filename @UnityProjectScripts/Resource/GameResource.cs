@@ -17,10 +17,11 @@ namespace BA
         public static TemplateTable<int, WeaponData> WeaponTable;
         public static TemplateTable<int, PassiveSkillData> PassiveSkillTable;
         public static TemplateTable<StudentAttribute, StudentAttributeData> StudentAttributeTable;
+        public static TemplateTable<string, StudentAttributeBonusData> StudentAttributeBonusTable;
         public static TemplateTable<(StudentAttribute, int), StudentAttributeLevelData> StudentAttributeLevelTable;
         public static TemplateTable<int, StudentLevelRequiredExpData> StudentLevelRequiredExpTable;
         public static TemplateTable<int, ShinbiData> ShinbiTable;
-        public static TemplateTable<string, object> ConstValueTable;
+        public static Dictionary<StudentAttribute, StudentAttributeBonusMap> StudentAttributeBonusMaps;
 
         public static AssetBundle Bundle;
         public static GameObject ClubPrefab;

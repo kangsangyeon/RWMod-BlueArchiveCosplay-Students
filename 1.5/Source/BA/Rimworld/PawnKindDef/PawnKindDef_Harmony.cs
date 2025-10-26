@@ -191,4 +191,26 @@ namespace BA
             return true; // 기본 로직 실행
         }
     }
+
+    [HarmonyPatch(typeof(Thing), nameof(Thing.PreApplyDamage))]
+    public static class Patch_Thing_PreApplyDamage
+    {
+        static bool Prefix(ref DamageInfo dinfo, Thing __instance)
+        {
+            var instigatorDamageMulPercentage = 100;
+            Pawn instigator = dinfo.Instigator as Pawn;
+            if (instigator != null)
+            {
+                var instigatorComp = instigator.GetComp<Comp_BAPawn>();
+                if (instigatorComp != null)
+                    instigatorDamageMulPercentage += instigatorComp.DamageAddition;
+            }
+
+            var defaultDamage = dinfo.Amount;
+            var damage = dinfo.Amount * (instigatorDamageMulPercentage / 100f);
+            dinfo.SetAmount(damage);
+            Log.Message($"[BA] PreApplyDamage: {__instance.LabelCap} takes {dinfo.Amount} damage (default: {defaultDamage}, multiplier: {instigatorDamageMulPercentage}%) from {dinfo.Instigator?.LabelCap}");
+            return true;
+        }
+    }
 }
