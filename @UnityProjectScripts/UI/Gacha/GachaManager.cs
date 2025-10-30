@@ -17,6 +17,13 @@ public class GachaManager : MonoBehaviour
         fes,
         pickup,
     }
+
+    public struct GachaResultInfo
+    {
+        public Rarity rarity;
+        public int id;
+    }
+
     public GachaSelector gs;
 
     public bool danchaBtn;
@@ -50,23 +57,30 @@ public class GachaManager : MonoBehaviour
         }
     }
 
-    public int Dancha(bool isLast = false)
+    public GachaResultInfo Dancha(bool isLast = false)
     {
+        var result = new GachaResultInfo();
+
         var now = gs.GetNowInfo;
         var r = GetGachaedRarity(now.per, isLast);
         var table = now.getTable(r);
 
-        return table[Random.Range(0, table.Count)];
+        result.rarity = r;
+        result.id = table[Random.Range(0, table.Count)];
+
+        return result;
     }
 
-    public int[] Rencha()
+    public GachaResultInfo[] Rencha()
     {
-        int[] r = new int[10];
+        GachaResultInfo[] results = new GachaResultInfo[10];
         for (int i = 0; i < 9; ++i)
-            r[i] = Dancha(false);
-        r[9] = Dancha(true);
+        {
+            results[i] = Dancha(false);
+        }
+        results[9] = Dancha(true);
 
-        return r;
+        return results;
     }
 
     void ToManyDancha()
@@ -74,7 +88,7 @@ public class GachaManager : MonoBehaviour
         Dictionary<int, int> dic = new Dictionary<int, int>();
         for (int i = 0; i < howMany; ++i)
         {
-            int g = Dancha();
+            int g = Dancha().id;
             if (dic.ContainsKey(g))
                 ++dic[g];
             else
@@ -99,7 +113,7 @@ public class GachaManager : MonoBehaviour
             var rg = Rencha();
             for(int j = 0; j < rg.Length; ++j)
             {
-                int g = rg[j];
+                int g = rg[j].id;
                 if (dic.ContainsKey(g))
                     ++dic[g];
                 else

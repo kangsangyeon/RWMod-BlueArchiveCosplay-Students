@@ -626,3 +626,4 @@ fabric.properties
 bin
 obj
 .sln
+@UnityProjectScripts/@UnityProjectScripts.sln

@@ -581,6 +581,9 @@
     <Compile Include="UI\Gacha\GachaManager.cs" />
     <Compile Include="UI\Gacha\GachaSelector.cs" />
     <Compile Include="UI\Gacha\GachaPopup.cs" />
+    <Compile Include="UI\Gacha\GachaVideoManager.cs" />
+    <Compile Include="UI\Gacha\GachaCardAnimation.cs" />
+    <Compile Include="UI\Gacha\GachaResultTrain.cs" />
     <Compile Include="UI\UIShape\ButtonAlphaHit.cs" />
     <Compile Include="UI\Events\TransitionEvents.cs" />
     <Compile Include="UI\Factories\PresenterFactory.cs" />
