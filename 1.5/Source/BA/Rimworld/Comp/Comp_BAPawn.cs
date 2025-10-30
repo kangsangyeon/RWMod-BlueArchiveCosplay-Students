@@ -55,6 +55,76 @@ namespace BA
             }
         }
 
+        public int DamageAddition
+        {
+            get
+            {
+                var attributeBonus = GameResource.StudentAttributeBonusMaps[StudentData.Attribute]
+                    .GetValue(BonusTarget.DamageAddition);
+                return attributeBonus;
+            }
+        }
+
+        public int WeaponRangeAddition
+        {
+            get
+            {
+                var attributeBonus = GameResource.StudentAttributeBonusMaps[StudentData.Attribute]
+                    .GetValue(BonusTarget.WeaponRangeAddition);
+                return attributeBonus;
+            }
+        }
+
+        public int StunResistanceAddition
+        {
+            get
+            {
+                var attributeBonus = GameResource.StudentAttributeBonusMaps[StudentData.Attribute]
+                    .GetValue(BonusTarget.StunResistanceAddition);
+                return attributeBonus;
+            }
+        }
+
+        public int TargetAttentionRateAddition
+        {
+            get
+            {
+                var attributeBonus = GameResource.StudentAttributeBonusMaps[StudentData.Attribute]
+                    .GetValue(BonusTarget.TargetAttentionRateAddition);
+                return attributeBonus;
+            }
+        }
+
+        public int CooldownReductionAddition
+        {
+            get
+            {
+                var attributeBonus = GameResource.StudentAttributeBonusMaps[StudentData.Attribute]
+                    .GetValue(BonusTarget.CooldownReductionAddition);
+                return attributeBonus;
+            }
+        }
+
+        public int MoveSpeedAddition
+        {
+            get
+            {
+                var attributeBonus = GameResource.StudentAttributeBonusMaps[StudentData.Attribute]
+                    .GetValue(BonusTarget.MoveSpeedAddition);
+                return attributeBonus;
+            }
+        }
+
+        public int SelfHealingAddition
+        {
+            get
+            {
+                var attributeBonus = GameResource.StudentAttributeBonusMaps[StudentData.Attribute]
+                    .GetValue(BonusTarget.SelfHealingAddition);
+                return attributeBonus;
+            }
+        }
+
         public int LevelLimit =>
             GameResource.ShinbiTable[Shinbi].StudentLevelLimit;
 
@@ -87,7 +157,8 @@ namespace BA
             bonusDelta = Mathf.Clamp01(bonusDelta);
             float bonusMultiplier =
                 Mathf.Lerp(1f, GainExpBonusMultiplier, bonusDelta);
-            float dayLimitMultiplier = dayCount > GainExpDayLimitCount ? GainExpDayLimitMultiplier : 1f; // 하루 경험치 제한 횟수보다 카운팅이 높아지면 곱 적용
+            float dayLimitMultiplier =
+                dayCount > GainExpDayLimitCount ? GainExpDayLimitMultiplier : 1f; // 하루 경험치 제한 횟수보다 카운팅이 높아지면 곱 적용
             float exp = xp * bonusMultiplier * dayLimitMultiplier;
             Exp += Mathf.RoundToInt(exp);
         }
@@ -164,7 +235,8 @@ namespace BA
         private void TryClearDayLimitTick()
         {
             if (GenLocalDate.HourInteger(Owner) == 0 &&
-                (_lastDayLimitResetTimestamp < 0 || Find.TickManager.TicksGame - _lastDayLimitResetTimestamp >= 30000)) // 30000은 1일동안의 총 tick 수
+                (_lastDayLimitResetTimestamp < 0 ||
+                 Find.TickManager.TicksGame - _lastDayLimitResetTimestamp >= 30000)) // 30000은 1일동안의 총 tick 수
             {
                 // 날이 지나면 하루 경험치 제한 카운팅 값을 초기화
                 foreach (var k in _gainExpDayCount.Keys)

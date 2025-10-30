@@ -1,0 +1,13 @@
+<Defs>
+
+  <GeneDef>
+    <defName>Immutable</defName>
+    <label>Immutable</label>
+    <description>초월적인 유전자. 모든 대사 효율 계산을 무효화한다.</description>
+    <displayCategory>Archite</displayCategory>
+    <biostatMet>0</biostatMet>
+    <iconPath>Genes/ImmutableIcon</iconPath>
+    <geneClass>BA.Gene_Immutable</geneClass>
+  </GeneDef>
+  
+</Defs>

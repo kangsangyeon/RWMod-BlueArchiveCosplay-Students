@@ -150,6 +150,7 @@
     <Compile Include="BA\Rimworld\TraitDef\Trait_Harmony.cs" />
     <Compile Include="BA\Rimworld\TraitDef\Trait.cs" />
     <Compile Include="BA\Rimworld\WeightTable\CharacterTable.cs" />
+    <Compile Include="BA\Rimworld\XenoTypeDef\XenoType_Harmony.cs" />
     <Compile Include="BA\UI\ContentsWindow.cs" />
     <Compile Include="Common\RimworldEvent\RimworldEvent_Harmony.cs" />
     <Compile Include="Common\RimWorld\PawnKindTemplate\PawnKindTemplateDef.cs" />

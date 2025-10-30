@@ -540,6 +540,7 @@
     <Compile Include="Resource\Data\ShinbiData.cs" />
     <Compile Include="Resource\Data\SkillActionData.cs" />
     <Compile Include="Resource\Data\SkillData.cs" />
+    <Compile Include="Resource\Data\StudentAttributeBonusData.cs" />
     <Compile Include="Resource\Data\StudentAttributeData.cs" />
     <Compile Include="Resource\Data\StudentAttributeLevelData.cs" />
     <Compile Include="Resource\Data\StudentData.cs" />
@@ -547,6 +548,7 @@
     <Compile Include="Resource\Data\WeaponData.cs" />
     <Compile Include="Resource\GameResource.cs" />
     <Compile Include="Resource\SaveData.cs" />
+    <Compile Include="Resource\StudentAttributeBonusMap.cs" />
     <Compile Include="Rimworld\ProcedureBridge.cs" />
     <Compile Include="Scene\Accessor\ContentsAccessor.cs" />
     <Compile Include="Scene\Accessor\CoreAccessor.cs" />

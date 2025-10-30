@@ -83,6 +83,30 @@
   </BA.FaceDef>
 
   <BA.FaceDef ParentName="BA_Face_Base">
+    <defName>BA_Face_Hina</defName>
+    <label>Hina Face</label>
+    <texPath>BA/Hina/Face/Hina_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef ParentName="BA_Face_Base">
+    <defName>BA_Face_Ako</defName>
+    <label>Ako Face</label>
+    <texPath>BA/Ako/Face/Ako_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef ParentName="BA_Face_Base">
+    <defName>BA_Face_Iori</defName>
+    <label>Iori Face</label>
+    <texPath>BA/Iori/Face/Iori_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef ParentName="BA_Face_Base">
+    <defName>BA_Face_Chinatsu</defName>
+    <label>Chinatsu Face</label>
+    <texPath>BA/Chinatsu/Face/Chinatsu_Face</texPath>
+  </BA.FaceDef>
+
+  <BA.FaceDef ParentName="BA_Face_Base">
     <defName>BA_Face_Nagisa</defName>
     <label>Nagisa Face</label>
     <texPath>BA/Nagisa/Face/Nagisa_Face</texPath>

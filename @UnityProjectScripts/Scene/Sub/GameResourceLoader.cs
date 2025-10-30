@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Coffee.UIExtensions;
@@ -18,8 +19,10 @@ namespace BA
             GameResource.StudentPrefab = GameResource.Load<GameObject>("Prefab/UI", "Student");
             GameResource.ClubPrefab = GameResource.Load<GameObject>("Prefab/UI", "Club");
             GameResource.ExSkillInfoPrefab = GameResource.Load<GameObject>("Prefab/UI", "ExSkillInfo");
-            GameResource.SynergyActivatedSprite = GameResource.Load<Sprite>("UI/Texture/Access/Synergy", "Synergy_Icon_True");
-            GameResource.SynergyDeactivatedSprite = GameResource.Load<Sprite>("UI/Texture/Access/Synergy", "Synergy_Icon_False");
+            GameResource.SynergyActivatedSprite =
+                GameResource.Load<Sprite>("UI/Texture/Access/Synergy", "Synergy_Icon_True");
+            GameResource.SynergyDeactivatedSprite =
+                GameResource.Load<Sprite>("UI/Texture/Access/Synergy", "Synergy_Icon_False");
             GameResource.SchoolLogoSprites =
                 GameResource.SchoolTable.ToDictionary(
                     x => x.Key,
@@ -61,8 +64,12 @@ namespace BA
             var weaponTableJson = GameResource.Load<TextAsset>("Data", "DataTable_6000_Weapon").text;
             var passiveSkillTableJson = GameResource.Load<TextAsset>("Data", "DataTable_7000_PassiveSkill").text;
             var studentAttributeTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttribute").text;
-            var studentAttributeLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttributeLevel").text;
-            var studentLevelRequiredExpTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentLevelRequiredExp").text;
+            var studentAttributeBonusTableJson =
+                GameResource.Load<TextAsset>("Data", "DataTable_StudentAttributeBonus").text;
+            var studentAttributeLevelTableJson =
+                GameResource.Load<TextAsset>("Data", "DataTable_StudentAttributeLevel").text;
+            var studentLevelRequiredExpTableJson =
+                GameResource.Load<TextAsset>("Data", "DataTable_StudentLevelRequiredExp").text;
             var shinbiTableJson = GameResource.Load<TextAsset>("Data", "DataTable_Shinbi").text;
             var constValueTableJson = GameResource.Load<TextAsset>("Data", "DataTable_ConstValue").text;
             GameResource.StudentTable = LoadTemplateTable<int, StudentData>(studentTableJson);
@@ -74,6 +81,8 @@ namespace BA
             GameResource.PassiveSkillTable = LoadTemplateTable<int, PassiveSkillData>(passiveSkillTableJson);
             GameResource.StudentAttributeTable =
                 LoadTemplateTable<StudentAttribute, StudentAttributeData>(studentAttributeTableJson);
+            GameResource.StudentAttributeBonusTable =
+                LoadTemplateTable<string, StudentAttributeBonusData>(studentAttributeBonusTableJson);
             GameResource.StudentAttributeLevelTable =
                 LoadTemplateTable<(StudentAttribute, int), StudentAttributeLevelData>(studentAttributeLevelTableJson);
             GameResource.StudentLevelRequiredExpTable =
@@ -86,6 +95,25 @@ namespace BA
             {
                 PawnCompSettings = constValueTable.TryGet(nameof(PawnCompSettings)).Value as PawnCompSettings,
             };
+
+            var studentAttributeBonusMaps = new Dictionary<StudentAttribute, StudentAttributeBonusMap>();
+            foreach (var pair in GameResource.StudentAttributeBonusTable)
+            {
+                if (!studentAttributeBonusMaps.ContainsKey(pair.Value.Attribute))
+                    studentAttributeBonusMaps[pair.Value.Attribute] = new StudentAttributeBonusMap();
+                ref int target = ref studentAttributeBonusMaps[pair.Value.Attribute].Values[(int)pair.Value.Bonus];
+                switch (pair.Value.Operation)
+                {
+                    case BonusOperation.Add:
+                        target += pair.Value.Value;
+                        break;
+                    case BonusOperation.Set:
+                        target = pair.Value.Value;
+                        break;
+                }
+            }
+
+            GameResource.StudentAttributeBonusMaps = studentAttributeBonusMaps;
         }
 
         private TemplateTable<TKey, TValue> LoadTemplateTable<TKey, TValue>(string json)

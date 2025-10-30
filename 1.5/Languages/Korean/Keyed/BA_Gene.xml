@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- 초월 유전인자 -->
+  <BA_Immutable.label>불변</BA_Immutable.label>
+  <BA_Immutable.description>시공간에 고정되지 않아, 어떠한 방법으로든 유전자가 변질되지 않습니다. 같은 이유로 대사 효율 또한 영향을 받지 않습니다.</BA_Immutable.description>
+
+</LanguageData>
