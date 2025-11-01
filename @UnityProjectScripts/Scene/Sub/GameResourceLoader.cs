@@ -56,13 +56,13 @@ namespace BA
 
         private void LoadDataTable()
         {
-            var studentTableJson = GameResource.Load<TextAsset>("Data", "DataTable_1000_Student").text;
-            var clubTableJson = GameResource.Load<TextAsset>("Data", "DataTable_2000_Club").text;
-            var schoolTableJson = GameResource.Load<TextAsset>("Data", "DataTable_3000_School").text;
-            var skillTableJson = GameResource.Load<TextAsset>("Data", "DataTable_4000_Skill").text;
-            var skillLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_5000_SkillLevel").text;
-            var weaponTableJson = GameResource.Load<TextAsset>("Data", "DataTable_6000_Weapon").text;
-            var passiveSkillTableJson = GameResource.Load<TextAsset>("Data", "DataTable_7000_PassiveSkill").text;
+            var studentTableJson = GameResource.Load<TextAsset>("Data", "DataTable_Student").text;
+            var clubTableJson = GameResource.Load<TextAsset>("Data", "DataTable_Club").text;
+            var schoolTableJson = GameResource.Load<TextAsset>("Data", "DataTable_School").text;
+            var skillTableJson = GameResource.Load<TextAsset>("Data", "DataTable_Skill").text;
+            var skillLevelTableJson = GameResource.Load<TextAsset>("Data", "DataTable_SkillLevel").text;
+            var weaponTableJson = GameResource.Load<TextAsset>("Data", "DataTable_Weapon").text;
+            var passiveSkillTableJson = GameResource.Load<TextAsset>("Data", "DataTable_PassiveSkill").text;
             var studentAttributeTableJson = GameResource.Load<TextAsset>("Data", "DataTable_StudentAttribute").text;
             var studentAttributeBonusTableJson =
                 GameResource.Load<TextAsset>("Data", "DataTable_StudentAttributeBonus").text;
