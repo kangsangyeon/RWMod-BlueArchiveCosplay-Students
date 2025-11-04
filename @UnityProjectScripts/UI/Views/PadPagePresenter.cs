@@ -1,8 +1,9 @@
-﻿using Infrastructure.MvpFramework.Mono;
+﻿using System.Threading.Tasks;
+using Infrastructure.MvpFramework.Mono;
 using UniRx;
 using UniRx.Triggers;
 
-namespace UI.Views
+namespace BA
 {
     public abstract class PadPagePresenter<TView, TState> : MonoPresenter<TView, TState>
         where TView : MonoView<TState>
@@ -15,12 +16,14 @@ namespace UI.Views
         {
         }
 
-        protected override void OnInitialize(TView view, TState state)
+        protected override Task OnInitialize(TView view, TState state)
         {
             view.gameObject.OnEnableAsObservable()
                 .Subscribe(_ => OnEnable(_disposables));
             view.gameObject.OnDisableAsObservable()
                 .Subscribe(_ => OnDisable());
+
+            return Task.CompletedTask;
         }
 
         protected virtual void OnEnable(CompositeDisposable disposables)

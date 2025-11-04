@@ -1,31 +1,41 @@
-﻿using Infrastructure.MvpFramework.Mono;
+﻿using System.Threading.Tasks;
+using Infrastructure.MvpFramework.Mono;
 using UI.Events;
-using UI.Presenters.MainPage;
-using UI.Views.MainPage;
-using UI.Views.Pad;
 using UniRx;
 using UnityEngine;
 
-namespace UI.Presenters.Pad
+namespace BA
 {
     public class PadPresenter : MonoPresenter<PadView, PadViewState>
     {
+        [SerializeField] private MainPageView _mainPageView;
+
         private MainPagePresenter _mainPagePresenter;
 
         public PadPresenter(PadView view) : base(view)
         {
         }
 
-        protected override void OnInitialize(PadView view, PadViewState state)
+        protected override Task OnInitialize(PadView view, PadViewState state)
         {
+            // temp
             state.HomeButtonClicked.Subscribe(_ => Debug.Log("패드 홈 버튼 클릭함."))
                 .AddTo(view.gameObject);
 
             MessageBroker.Default.Receive<ShowMainPageEvent>()
                 .Subscribe(_ => SwitchPage<MainPageView>(state))
                 .AddTo(view.gameObject);
+            MessageBroker.Default.Receive<ShowStudentListPageEvent>()
+                .Subscribe(_ => SwitchPage<ShowStudentListPageEvent>(state))
+                .AddTo(view.gameObject);
 
             SwitchPage<MainPageView>(state);
+
+            _mainPagePresenter = new MainPagePresenter(_mainPageView, state.MainPageViewState);
+
+            return Task.WhenAll(
+                _mainPagePresenter.InitializeAsync()
+            );
         }
 
         private void SwitchPage<T>(PadViewState state)

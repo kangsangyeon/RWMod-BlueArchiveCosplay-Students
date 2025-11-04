@@ -7,7 +7,7 @@ using UniRx.Triggers;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.Views.MainPage
+namespace BA
 {
     public class MainPageView : MonoView<MainPageViewState>
     {

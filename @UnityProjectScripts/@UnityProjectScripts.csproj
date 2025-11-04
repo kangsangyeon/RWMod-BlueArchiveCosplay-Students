@@ -7,8 +7,7 @@
     <ProjectGuid>{9C86F8D2-0923-447B-8730-EECDE4F6062C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace>BA</RootNamespace>
     <AssemblyName>UnityProjectScripts</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -231,6 +230,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation\ShinbiLiberationAnimation.cs" />
+    <Compile Include="Compositions\ApplicationComposition.cs" />
+    <Compile Include="Compositions\ApplicationEntryPoint.cs" />
     <Compile Include="Development\MainSceneDevelopment.cs" />
     <Compile Include="Development\MainScreenDevelopment.cs" />
     <Compile Include="Development\ShinbiLiberationAnimationDevelopment.cs" />
@@ -564,7 +565,6 @@
     <Compile Include="Scene\Accessor\StudentInfoScreenAccessor.cs" />
     <Compile Include="Scene\Accessor\StudentListScreenAccessor.cs" />
     <Compile Include="Scene\Accessor\WeaponPopupAccessor.cs" />
-    <Compile Include="Scene\ApplicationComposition.cs" />
     <Compile Include="Scene\UIUtilProcedure.cs" />
     <Compile Include="Scene\Sub\GameResourceLoader.cs" />
     <Compile Include="Scene\UI\Contents.cs" />

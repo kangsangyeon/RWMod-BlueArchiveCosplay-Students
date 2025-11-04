@@ -13,13 +13,20 @@ namespace Infrastructure.MvpFramework.Mono
         where TState : MonoViewState, new()
     {
         private TView _view;
-        private TState _state = new TState();
+        private TState _state;
         private bool _isDisposed;
         private bool _isInitialized;
 
         protected MonoPresenter(TView view)
         {
             _view = view;
+            _state = new TState();
+        }
+
+        protected MonoPresenter(TView view, TState state)
+        {
+            _view = view;
+            _state = state;
         }
 
         public async Task InitializeAsync()
@@ -28,11 +35,11 @@ namespace Infrastructure.MvpFramework.Mono
                 throw new ObjectDisposedException(nameof(MonoPresenter<TView, TState>));
             if (_isInitialized)
                 throw new InvalidOperationException($"{GetType().Name} is already initialized.");
-            OnInitialize(_view, _state);
             await _view.InitializeAsync(_state);
+            await OnInitialize(_view, _state);
             _isInitialized = true;
         }
 
-        protected abstract void OnInitialize(TView view, TState state);
+        protected abstract Task OnInitialize(TView view, TState state);
     }
 }

@@ -1,18 +1,15 @@
 ﻿using System.Threading.Tasks;
 using Infrastructure.MvpFramework.Mono;
-using UI.Presenters.MainPage;
-using UI.Presenters.Pad;
-using UI.Views.MainPage;
-using UI.Views.Pad;
+using BA;
 using UnityEngine;
 
-namespace UI.Factories
+namespace BA
 {
     public interface IPresenterFactory
     {
         IMonoPresenter CreatePadPresenter();
 
-        IMonoPresenter CreateMainPagePresenter();
+        IMonoPresenter CreateMainPagePresenter(MainPageViewState state);
     }
 
     public class PresenterFactory : IPresenterFactory
@@ -32,9 +29,9 @@ namespace UI.Factories
             return presenter;
         }
 
-        public IMonoPresenter CreateMainPagePresenter()
+        public IMonoPresenter CreateMainPagePresenter(MainPageViewState state)
         {
-            var presenter = new MainPagePresenter(_mainPageView);
+            var presenter = new MainPagePresenter(_mainPageView, state);
             return presenter;
         }
     }

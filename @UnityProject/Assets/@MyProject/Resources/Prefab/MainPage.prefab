@@ -1804,8 +1804,9 @@ GameObject:
   - component: {fileID: 7103726873120999748}
   - component: {fileID: 7103726873120999755}
   - component: {fileID: 7103726873120999754}
+  - component: {fileID: 9045442270362112503}
   m_Layer: 5
-  m_Name: MainScreen
+  m_Name: MainPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1907,6 +1908,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Accessor: {fileID: 7103726873120999755}
+--- !u!114 &9045442270362112503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7103726873120999752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 655522485, guid: 477597f24b209a1418aa54c1dbbdf476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gachaButton: {fileID: 7103726873497456665}
+  _missionButton: {fileID: 7103726872781199744}
+  _shopButton: {fileID: 7103726873641866688}
+  _studentListButton: {fileID: 7103726872259387870}
+  _aronaButton: {fileID: 7103726873090939694}
+  _senseiButton: {fileID: 7103726872919633219}
+  _updateButton: {fileID: 7103726873011223422}
+  _blueStoneText: {fileID: 7103726873621690739}
+  _aronaPopup: {fileID: 7103726873397427514}
+  _aronaPopupCanvasGroup: {fileID: 7103726873397427508}
+  _aronaPopupRectTransform: {fileID: 7103726873397427515}
 --- !u!1 &7103726873146461298
 GameObject:
   m_ObjectHideFlags: 0

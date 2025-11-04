@@ -1,18 +1,19 @@
-﻿using DG.Tweening;
+﻿using System.Threading.Tasks;
+using DG.Tweening;
 using Infrastructure.MvpFramework.Mono;
 using UI.Events;
-using UI.Views.MainPage;
+using BA;
 using UniRx;
 
-namespace UI.Presenters.MainPage
+namespace BA
 {
     public class MainPagePresenter : MonoPresenter<MainPageView, MainPageViewState>
     {
-        public MainPagePresenter(MainPageView view) : base(view)
+        public MainPagePresenter(MainPageView view, MainPageViewState state) : base(view, state)
         {
         }
 
-        protected override void OnInitialize(MainPageView view, MainPageViewState state)
+        protected override Task OnInitialize(MainPageView view, MainPageViewState state)
         {
             state.StudentListButtonClicked.Subscribe(_ => StudentListButtonClicked())
                 .AddTo(view.gameObject);
@@ -30,6 +31,8 @@ namespace UI.Presenters.MainPage
                 .AddTo(view.gameObject);
             state.UpdateButtonClicked.Subscribe(_ => PlayAronaPopupTween(state))
                 .AddTo(view.gameObject);
+
+            return Task.CompletedTask;
         }
 
         private void StudentListButtonClicked()
