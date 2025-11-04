@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using DG.Tweening;
 using Infrastructure.MvpFramework.Mono;
+using Shared.Extensions;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
@@ -11,6 +12,8 @@ namespace BA
 {
     public class MainPageView : MonoView<MainPageViewState>
     {
+        private const string AronaPopupTweenId = "AronaPopupTween";
+
         [SerializeField] private Button _gachaButton;
         [SerializeField] private Button _missionButton;
         [SerializeField] private Button _shopButton;
@@ -22,7 +25,6 @@ namespace BA
         [SerializeField] private GameObject _aronaPopup;
         [SerializeField] private CanvasGroup _aronaPopupCanvasGroup;
         [SerializeField] private RectTransform _aronaPopupRectTransform;
-        private Tween _reusableAronaPopupTween;
 
         protected override Task OnInitialize(MainPageViewState state)
         {
@@ -58,8 +60,7 @@ namespace BA
                 .Subscribe(count => _blueStoneText.text = count)
                 .AddTo(gameObject);
 
-            _reusableAronaPopupTween = CreateShowAronaPopupTween();
-            state.SetPlayShowAronaPopupTween(() => _reusableAronaPopupTween);
+            state.CachedPlayShowAronaPopupTween = CreateShowAronaPopupTween().AsReusable(gameObject, AronaPopupTweenId);
 
             return Task.CompletedTask;
         }
@@ -83,7 +84,7 @@ namespace BA
         private readonly Subject<Unit> _aronaButtonClicked = new();
         private readonly Subject<Unit> _senseiButtonClicked = new();
         private readonly Subject<Unit> _updateButtonClicked = new();
-        private Func<Tween> _playShowAronaPopupTween;
+        internal Tween CachedPlayShowAronaPopupTween { private get; set; }
 
         public UniRx.IObservable<Unit> GachaButtonClicked => _gachaButtonClicked;
         public UniRx.IObservable<Unit> MissionButtonClicked => _missionButtonClicked;
@@ -95,8 +96,6 @@ namespace BA
         public ReactiveProperty<bool> Active { get; } = new();
         public ReactiveProperty<string> BlueStoneCount { get; } = new();
 
-        internal void SetPlayShowAronaPopupTween(Func<Tween> func) => _playShowAronaPopupTween = func;
-
         public void InvokeGachaButtonClicked() => _gachaButtonClicked.OnNext(Unit.Default);
         public void InvokeMissionButtonClicked() => _missionButtonClicked.OnNext(Unit.Default);
         public void InvokeShopButtonClicked() => _shopButtonClicked.OnNext(Unit.Default);
@@ -105,10 +104,7 @@ namespace BA
         public void InvokeSenseiButtonClicked() => _senseiButtonClicked.OnNext(Unit.Default);
         public void InvokeUpdateButtonClicked() => _updateButtonClicked.OnNext(Unit.Default);
 
-        public Tween GetShowAronaPopupTween()
-        {
-            return _playShowAronaPopupTween.Invoke();
-        }
+        public Tween GetShowAronaPopupTween() => CachedPlayShowAronaPopupTween;
 
         protected override void OnDispose()
         {

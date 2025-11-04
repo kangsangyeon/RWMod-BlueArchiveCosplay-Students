@@ -576,6 +576,7 @@
     <Compile Include="Scene\UI\StudentListScreenUI.cs" />
     <Compile Include="Scene\UI\WeaponPopupUI.cs" />
     <Compile Include="Shared\DropdownSizeFitter.cs" />
+    <Compile Include="Shared\Extensions\TweenExtensions.cs" />
     <Compile Include="Shared\Extensions\UniRxExtensions.cs" />
     <Compile Include="Shared\MonoSingleton.cs" />
     <Compile Include="Shared\SlicedProgressBar.cs" />
