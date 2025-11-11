@@ -233,7 +233,7 @@
     <Compile Include="Compositions\ApplicationComposition.cs" />
     <Compile Include="Compositions\ApplicationEntryPoint.cs" />
     <Compile Include="Development\MainSceneDevelopment.cs" />
-    <Compile Include="Development\MainScreenDevelopment.cs" />
+    <Compile Include="Development\MainPageDevelopment.cs" />
     <Compile Include="Development\ShinbiLiberationAnimationDevelopment.cs" />
     <Compile Include="Development\StudentInfoScreenDevelopment.cs" />
     <Compile Include="Development\StudentListScreenDevelopment.cs" />

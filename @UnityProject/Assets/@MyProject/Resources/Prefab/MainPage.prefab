@@ -1802,8 +1802,6 @@ GameObject:
   - component: {fileID: 7103726873120999753}
   - component: {fileID: 7103726873120999749}
   - component: {fileID: 7103726873120999748}
-  - component: {fileID: 7103726873120999755}
-  - component: {fileID: 7103726873120999754}
   - component: {fileID: 9045442270362112503}
   m_Layer: 5
   m_Name: MainPage
@@ -1874,40 +1872,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &7103726873120999755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7103726873120999752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 628380310, guid: 477597f24b209a1418aa54c1dbbdf476, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GachaButton: {fileID: 7103726873497456665}
-  MissionButton: {fileID: 7103726872781199744}
-  ShopButton: {fileID: 7103726873641866688}
-  StudentListButton: {fileID: 7103726872259387870}
-  AronaButton: {fileID: 7103726873090939694}
-  SenseiButton: {fileID: 7103726872919633219}
-  UpdateButton: {fileID: 7103726873011223422}
-  BlueStoneText: {fileID: 7103726873621690739}
-  AronaPopup: {fileID: 7103726873397427514}
---- !u!114 &7103726873120999754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7103726873120999752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -2083603996, guid: 477597f24b209a1418aa54c1dbbdf476, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Accessor: {fileID: 7103726873120999755}
 --- !u!114 &9045442270362112503
 MonoBehaviour:
   m_ObjectHideFlags: 0
