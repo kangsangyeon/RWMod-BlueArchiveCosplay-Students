@@ -21,10 +21,15 @@ namespace Shared.Extensions
             if (isIdValid)
                 tween.SetId(id);
 
-            tween.onComplete = () => tween.Rewind();
-
             gameObject.OnDestroyAsObservable().Subscribe(_ => tween.Kill());
             return tween;
+        }
+
+        public static T RewindAndPlay<T>(this T tween)
+            where T : Tween
+        {
+            tween.Rewind();
+            return tween.Play();
         }
     }
 }

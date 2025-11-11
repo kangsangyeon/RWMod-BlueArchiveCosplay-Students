@@ -3,6 +3,7 @@ using DG.Tweening;
 using Infrastructure.MvpFramework.Mono;
 using UI.Events;
 using BA;
+using Shared.Extensions;
 using UniRx;
 
 namespace BA
@@ -43,7 +44,7 @@ namespace BA
 
         private void PlayAronaPopupTween(MainPageViewState state)
         {
-            state.GetShowAronaPopupTween().Play();
+            state.GetShowAronaPopupTween().RewindAndPlay();
         }
     }
 }
